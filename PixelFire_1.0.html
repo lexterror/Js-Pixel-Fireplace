@@ -1,0 +1,310 @@
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+        <meta name="mainWindow" content="user-scalable=no">
+        
+<script src="pixel.js"></script>
+        <script type="text/javascript">
+            
+            var CJS_TICKER_FPS =20;
+            var FIRE_WIDTH =  30;
+            var FIRE_HEIGHT = 30;
+    
+            var palette = [];
+
+            // Palette based framebuffer. Coordinate system origin upper-left.
+            var firePixels = [];
+            
+            var rgbs = [
+                0x07,0x07,0x07,
+   
+     
+     
+                0x57,0x17,0x07,
+         
+     
+             
+                0x9F,0x2F,0x07,
+             
+      
+          
+                0xDF,0x4F,0x07,
+             
+   
+            
+                0xD7,0x5F,0x07,
+           
+   
+           
+            ];
+
+             // Populate pallete.
+            for(var i = 0; i < rgbs.length / 3; i++) {
+                palette[i] = {
+                    r : rgbs[i * 3 + 0], 
+                    g : rgbs[i * 3 + 1], 
+                    b : rgbs[i * 3 + 2] 
+                }
+            }
+
+            y_scrolling = 120;
+            function setup() {
+                // Set whole screen to 0 (color: 0x07,0x07,0x07)
+                for(var i = 0; i < FIRE_WIDTH*FIRE_HEIGHT; i++) {
+                    firePixels[i] = 0;
+                }
+                
+                // Set bottom line to 36 (color white: 0xFF,0xFF,0xFF)
+                for(var i = 0; i < FIRE_WIDTH; i++) {
+                    firePixels[(FIRE_HEIGHT-1)*FIRE_WIDTH + i] = 3;
+                }
+                y_scrolling = 90;
+            }
+
+            function start() {
+                stage = new createjs.Stage("backbuffer");
+                createjs.Ticker.addEventListener("tick", hostFrame);
+                createjs.Ticker.setFPS(CJS_TICKER_FPS);
+                container = new createjs.Container();
+                stage.addChild(container);
+                setup();
+            }
+            
+
+            /***********************************************/
+            /**************** MEAT STARTS HERE *************/
+            function spreadFire(src) {
+                var pixel = firePixels[src];
+                if(pixel == 0) {
+                    firePixels[src - FIRE_WIDTH] = 0;
+                } else {
+                    var randIdx = Math.round(Math.random() * 90.0);// & 3;
+                    var dst = src - randIdx + 1;
+                    firePixels[dst - FIRE_WIDTH ] = pixel - (randIdx & 1);
+                }
+            }
+            
+            function doFire() {
+                for(x=0 ; x < FIRE_WIDTH; x++) {
+                    for (y = 1; y < FIRE_HEIGHT; y++) {
+                        spreadFire(y * FIRE_WIDTH + x);
+                    }
+                }
+            }
+            /***********************************************/
+            /*************** MEAT ENDS HERE ****************/
+            /***********************************************/
+
+            y_scrolling = 120;
+            function hostFrame() {
+
+                // Update palette buffer
+                doFire();
+                
+                canvas = document.getElementById('backbuffer')
+                color = canvas.getContext("2d").getImageData(0, 0, 30, 30);
+                
+                // Convert palette buffer to RGB and write it to ouput.
+                for(var y = 0; y < 30; y++) {
+                    for(var x = 0; x < 30; x++) {
+                        var index = firePixels[y *  30 + x];
+                        var pixel = palette[index];
+
+                        color.data[((30 * y) + x) * 4 + 0] = pixel.r;
+                        color.data[((30  * y) + x) * 4 + 1] = pixel.g;
+                        color.data[((30  * y) + x) * 4 + 2] = pixel.b;
+                        if (pixel.r == 0x07 && pixel.g == 0x07 && pixel.b == 0x07) {
+                            color.data[((30  * y) + x) * 4 + 3] = 0;
+                        } else 
+                            // Black pixels need to be transparent to show DOOM logo
+                            color.data[((30  * y) + x) * 4 + 3] = 255;
+                    }
+                }
+
+                
+                canvas.getContext("2d").putImageData(color, 0, 0);
+                
+                var frontbuffer = document.getElementById('frontbuffer');
+                frontbuffer.getContext("2d").fillStyle = 'black';
+                frontbuffer.getContext("2d").fillRect(0, 0, frontbuffer.width, frontbuffer.height);
+                //frontbuffer.getContext("2d").drawImage(document.getElementById('doom'), 50, y_scrolling,  (frontbuffer.width - 100) , frontbuffer.height/2);
+                frontbuffer.getContext("2d").drawImage(canvas,0,0, frontbuffer.width, frontbuffer.height);
+                if (y_scrolling != 7)
+                    y_scrolling-=2;
+                // Swap buffer
+                stage.update();
+            }
+            
+        </script>
+    </head>
+    
+    <body onload="start();">
+        <canvas id="backbuffer" width="30" height="30" style="border: 1px solid black;" hidden=true></canvas>
+ <style>
+        table {
+    border-collapse: collapse;
+}
+canvas {
+width: 600px;
+height: 600px;
+position:absolute;
+left:0;
+right:0;
+margin: 0 auto;
+}
+html {
+background: #000 !important;
+overflow:hidden;
+}
+table {
+width: 600px;
+height: 600px;
+position:absolute;
+left:0;
+right:0;
+margin: 0 auto;
+}
+.blurry {
+width: 3.333%;
+height: 3.333%;
+backdrop-filter: blur(30px);
+}
+.lower1 td {
+background: #A52A2A;
+}
+.lower2 td {
+background: #A52A2A;
+}
+.lower4 td{
+background: #A52A2A;
+}
+        </style>
+
+<br>
+<table style="position:absolute:width:600px;height:600px;z-index:99999999999;">
+<tr><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"</td><td class="blurry"></td>
+<td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"</td><td class="blurry"></td>
+<td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"</td><td class="blurry"></td>
+</tr>
+<tr><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"</td><td class="blurry"></td>
+<td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"</td><td class="blurry"></td>
+<td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"</td><td class="blurry"></td>
+</tr>
+<tr><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"</td><td class="blurry"></td>
+<td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"</td><td class="blurry"></td>
+<td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"</td><td class="blurry"></td>
+</tr>
+<tr><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"</td><td class="blurry"></td>
+<td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"</td><td class="blurry"></td>
+<td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"</td><td class="blurry"></td>
+</tr>
+<tr><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"</td><td class="blurry"></td>
+<td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"</td><td class="blurry"></td>
+<td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"</td><td class="blurry"></td>
+</tr>
+<tr><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"</td><td class="blurry"></td>
+<td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"</td><td class="blurry"></td>
+<td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"</td><td class="blurry"></td>
+</tr>
+<tr><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"</td><td class="blurry"></td>
+<td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"</td><td class="blurry"></td>
+<td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"</td><td class="blurry"></td>
+</tr>
+<tr><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"</td><td class="blurry"></td>
+<td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"</td><td class="blurry"></td>
+<td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"</td><td class="blurry"></td>
+</tr>
+<tr><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"</td><td class="blurry"></td>
+<td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"</td><td class="blurry"></td>
+<td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"</td><td class="blurry"></td>
+</tr>
+<tr><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"</td><td class="blurry"></td>
+<td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"</td><td class="blurry"></td>
+<td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"</td><td class="blurry"></td>
+</tr>
+<tr><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"</td><td class="blurry"></td>
+<td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"</td><td class="blurry"></td>
+<td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"</td><td class="blurry"></td>
+</tr>
+<tr><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"</td><td class="blurry"></td>
+<td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"</td><td class="blurry"></td>
+<td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"</td><td class="blurry"></td>
+</tr>
+<tr><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"</td><td class="blurry"></td>
+<td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"</td><td class="blurry"></td>
+<td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"</td><td class="blurry"></td>
+</tr>
+<tr><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"</td><td class="blurry"></td>
+<td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"</td><td class="blurry"></td>
+<td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"</td><td class="blurry"></td>
+</tr>
+<tr><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"</td><td class="blurry"></td>
+<td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"</td><td class="blurry"></td>
+<td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"</td><td class="blurry"></td>
+</tr>
+<tr><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"</td><td class="blurry"></td>
+<td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"</td><td class="blurry"></td>
+<td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"</td><td class="blurry"></td>
+</tr>
+<tr><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"</td><td class="blurry"></td>
+<td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"</td><td class="blurry"></td>
+<td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"</td><td class="blurry"></td>
+</tr>
+<tr><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"</td><td class="blurry"></td>
+<td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"</td><td class="blurry"></td>
+<td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"</td><td class="blurry"></td>
+</tr>
+<tr><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"</td><td class="blurry"></td>
+<td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"</td><td class="blurry"></td>
+<td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"</td><td class="blurry"></td>
+</tr>
+<tr><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"</td><td class="blurry"></td>
+<td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"</td><td class="blurry"></td>
+<td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"</td><td class="blurry"></td>
+</tr>
+<tr><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"</td><td class="blurry"></td>
+<td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"</td><td class="blurry"></td>
+<td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"</td><td class="blurry"></td>
+</tr>
+<tr><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"</td><td class="blurry"></td>
+<td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"</td><td class="blurry"></td>
+<td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"</td><td class="blurry"></td>
+</tr>
+<tr><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"</td><td class="blurry"></td>
+<td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"</td><td class="blurry"></td>
+<td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"</td><td class="blurry"></td>
+</tr>
+<tr><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"</td><td class="blurry"></td>
+<td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"</td><td class="blurry"></td>
+<td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"</td><td class="blurry"></td>
+</tr>
+<tr><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"</td><td class="blurry"></td>
+<td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"</td><td class="blurry"></td>
+<td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"</td><td class="blurry"></td>
+</tr>
+<tr><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"</td><td class="blurry"></td>
+<td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"</td><td class="blurry"></td>
+<td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"</td><td class="blurry"></td>
+</tr>
+<tr><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"</td><td class="blurry"></td>
+<td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"</td><td class="blurry"></td>
+<td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"</td><td class="blurry"></td>
+</tr>
+<tr><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"</td><td class="blurry"></td>
+<td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"</td><td class="blurry"></td>
+<td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"</td><td class="blurry"></td>
+</tr>
+<tr><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"</td><td class="blurry"></td>
+<td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"</td><td class="blurry"></td>
+<td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"</td><td class="blurry"></td>
+</tr>
+<tr><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"</td><td class="blurry"></td>
+<td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"</td><td class="blurry"></td>
+<td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"></td><td class="blurry"</td><td class="blurry"></td>
+</tr>
+</table>
+      <canvas id="frontbuffer" width="30" height="30" style="border: 1px solid black;"></canvas>
+
+    </body>
+</html>
