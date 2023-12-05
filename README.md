@@ -3,4 +3,5 @@ A minimal Javascript Pixel Fireplace<br><br>
 
 Inspired by: Ted Martens, George Ford, Wally Hall, Fabien Sanglard<br><br>
 
-![preview_JS-Pixel](https://github.com/lexterror/Js-Pixel-Fireplace/assets/16135535/940c86d4-bc55-41bb-bf6b-06f3615f125e)
+![Screenshot_20231205-074010](https://github.com/lexterror/Js-Pixel-Fireplace/assets/16135535/8aa842a5-d49e-4342-aeb2-b64259653200)
+
