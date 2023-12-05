@@ -1,0 +1,566 @@
+<html>
+<!-- 
+
+Pixel Fireplace Js 
+By: Alex Terranova
+Date: Tue, Dec 5th, 2023
+
+-->
+<script src="jquery.min.js"></script>
+<script src="Pizzicato.js"></script>
+
+<body>
+
+<div id="fireplace" style="width:640px;height:640px;margin:0 auto; left:0; right:0;position:absolute">
+<div class="rowz" id="row15">
+<div class="pixel" id="a15"></div>
+<div class="pixel" id="b15"></div>
+<div class="pixel" id="c15"></div>
+<div class="pixel" id="d15"></div>
+<div class="pixel" id="e15"></div>
+<div class="pixel" id="f15"></div>
+<div class="pixel" id="g15"></div>
+<div class="pixel" id="h15"></div>
+<div class="pixel" id="i15"></div>
+<div class="pixel" id="j15"></div>
+<div class="pixel" id="k15"></div>
+<div class="pixel" id="l15"></div>
+<div class="pixel" id="m15"></div>
+<div class="pixel" id="n15"></div>
+<div class="pixel" id="o15"></div>
+<div class="pixel" id="p15"></div>
+</div>
+<div class="rowz" id="row14">
+<div class="pixel" id="a14"></div>
+<div class="pixel" id="b14"></div>
+<div class="pixel" id="c14"></div>
+<div class="pixel" id="d14"></div>
+<div class="pixel" id="e14"></div>
+<div class="pixel" id="f14"></div>
+<div class="pixel" id="g14"></div>
+<div class="pixel" id="h14"></div>
+<div class="pixel" id="i14"></div>
+<div class="pixel" id="j14"></div>
+<div class="pixel" id="k14"></div>
+<div class="pixel" id="l14"></div>
+<div class="pixel" id="m14"></div>
+<div class="pixel" id="n14"></div>
+<div class="pixel" id="o14"></div>
+<div class="pixel" id="p14"></div>
+</div>
+<div class="rowz" id="row13">
+<div class="pixel" id="a13"></div>
+<div class="pixel" id="b13"></div>
+<div class="pixel" id="c13"></div>
+<div class="pixel" id="d13"></div>
+<div class="pixel" id="e13"></div>
+<div class="pixel" id="f13"></div>
+<div class="pixel" id="g13"></div>
+<div class="pixel" id="h13"></div>
+<div class="pixel" id="i13"></div>
+<div class="pixel" id="j13"></div>
+<div class="pixel" id="k13"></div>
+<div class="pixel" id="l13"></div>
+<div class="pixel" id="m13"></div>
+<div class="pixel" id="n13"></div>
+<div class="pixel" id="o13"></div>
+<div class="pixel" id="p13"></div>
+</div>
+<div class="rowz" id="row12">
+<div class="pixel" id="a12"></div>
+<div class="pixel" id="b12"></div>
+<div class="pixel" id="c12"></div>
+<div class="pixel" id="d12"></div>
+<div class="pixel" id="e12"></div>
+<div class="pixel" id="f12"></div>
+<div class="pixel" id="g12"></div>
+<div class="pixel" id="h12"></div>
+<div class="pixel" id="i12"></div>
+<div class="pixel" id="j12"></div>
+<div class="pixel" id="k12"></div>
+<div class="pixel" id="l12"></div>
+<div class="pixel" id="m12"></div>
+<div class="pixel" id="n12"></div>
+<div class="pixel" id="o12"></div>
+<div class="pixel" id="p12"></div>
+</div>
+<div class="rowz" id="row11">
+<div class="pixel" id="a11"></div>
+<div class="pixel" id="b11"></div>
+<div class="pixel" id="c11"></div>
+<div class="pixel" id="d11"></div>
+<div class="pixel" id="e11"></div>
+<div class="pixel" id="f11"></div>
+<div class="pixel" id="g11"></div>
+<div class="pixel" id="h11"></div>
+<div class="pixel" id="i11"></div>
+<div class="pixel" id="j11"></div>
+<div class="pixel" id="k11"></div>
+<div class="pixel" id="l11"></div>
+<div class="pixel" id="m11"></div>
+<div class="pixel" id="n11"></div>
+<div class="pixel" id="o11"></div>
+<div class="pixel" id="p11"></div>
+</div>
+<div class="rowz" id="row10">
+<div class="pixel" id="a10"></div>
+<div class="pixel" id="b10"></div>
+<div class="pixel" id="c10"></div>
+<div class="pixel" id="d10"></div>
+<div class="pixel" id="e15"></div>
+<div class="pixel" id="f10"></div>
+<div class="pixel" id="g10"></div>
+<div class="pixel" id="h10"></div>
+<div class="pixel" id="i10"></div>
+<div class="pixel" id="j10"></div>
+<div class="pixel" id="k10"></div>
+<div class="pixel" id="l10"></div>
+<div class="pixel" id="m10"></div>
+<div class="pixel" id="n10"></div>
+<div class="pixel" id="o10"></div>
+<div class="pixel" id="p10"></div>
+</div>
+<div class="rowz" id="row9">
+<div class="pixel" id="a9"></div>
+<div class="pixel" id="b9"></div>
+<div class="pixel" id="c9"></div>
+<div class="pixel" id="d9"></div>
+<div class="pixel" id="e9"></div>
+<div class="pixel" id="f9"></div>
+<div class="pixel" id="g9"></div>
+<div class="pixel" id="h9"></div>
+<div class="pixel" id="i9"></div>
+<div class="pixel" id="j9"></div>
+<div class="pixel" id="k9"></div>
+<div class="pixel" id="l9"></div>
+<div class="pixel" id="m9"></div>
+<div class="pixel" id="n9"></div>
+<div class="pixel" id="o9"></div>
+<div class="pixel" id="p9"></div>
+</div>
+<div class="rowz" id="row8">
+<div class="pixel" id="a8"></div>
+<div class="pixel" id="b8"></div>
+<div class="pixel" id="c8"></div>
+<div class="pixel" id="d8"></div>
+<div class="pixel" id="e8"></div>
+<div class="pixel" id="f8"></div>
+<div class="pixel" id="g8"></div>
+<div class="pixel" id="h8"></div>
+<div class="pixel" id="i8"></div>
+<div class="pixel" id="j8"></div>
+<div class="pixel" id="k8"></div>
+<div class="pixel" id="l8"></div>
+<div class="pixel" id="m8"></div>
+<div class="pixel" id="n8"></div>
+<div class="pixel" id="o8"></div>
+<div class="pixel" id="p8"></div>
+</div>
+<div class="rowz" id="row7">
+<div class="pixel" id="a7"></div>
+<div class="pixel" id="b7"></div>
+<div class="pixel" id="c7"></div>
+<div class="pixel" id="d7"></div>
+<div class="pixel" id="e7"></div>
+<div class="pixel" id="f7"></div>
+<div class="pixel" id="g7"></div>
+<div class="pixel" id="h7"></div>
+<div class="pixel" id="i7"></div>
+<div class="pixel" id="j7"></div>
+<div class="pixel" id="k7"></div>
+<div class="pixel" id="l7"></div>
+<div class="pixel" id="m7"></div>
+<div class="pixel" id="n7"></div>
+<div class="pixel" id="o7"></div>
+<div class="pixel" id="p7"></div>
+</div>
+<div class="rowz" id="row6">
+<div class="pixel" id="a6"></div>
+<div class="pixel" id="b6"></div>
+<div class="pixel" id="c6"></div>
+<div class="pixel" id="d6"></div>
+<div class="pixel" id="e6"></div>
+<div class="pixel" id="f6"></div>
+<div class="pixel" id="g6"></div>
+<div class="pixel" id="h6"></div>
+<div class="pixel" id="i6"></div>
+<div class="pixel" id="j6"></div>
+<div class="pixel" id="k6"></div>
+<div class="pixel" id="l6"></div>
+<div class="pixel" id="m6"></div>
+<div class="pixel" id="n6"></div>
+<div class="pixel" id="o6"></div>
+<div class="pixel" id="p6"></div>
+</div>
+<div class="rowz" id="row5">
+<div class="pixel" id="a5"></div>
+<div class="pixel" id="b5"></div>
+<div class="pixel" id="c5"></div>
+<div class="pixel" id="d5"></div>
+<div class="pixel" id="e5"></div>
+<div class="pixel" id="f5"></div>
+<div class="pixel" id="g5"></div>
+<div class="pixel" id="h5"></div>
+<div class="pixel" id="i5"></div>
+<div class="pixel" id="j5"></div>
+<div class="pixel" id="k5"></div>
+<div class="pixel" id="l5"></div>
+<div class="pixel" id="m5"></div>
+<div class="pixel" id="n5"></div>
+<div class="pixel" id="o5"></div>
+<div class="pixel" id="p5"></div>
+</div>
+<div class="rowz" id="row4">
+<div class="pixel" id="a4"></div>
+<div class="pixel" id="b4"></div>
+<div class="pixel" id="c4"></div>
+<div class="pixel" id="d4"></div>
+<div class="pixel" id="e4"></div>
+<div class="pixel" id="f4"></div>
+<div class="pixel" id="g4"></div>
+<div class="pixel" id="h4"></div>
+<div class="pixel" id="i4"></div>
+<div class="pixel" id="j4"></div>
+<div class="pixel" id="k4"></div>
+<div class="pixel" id="l4"></div>
+<div class="pixel" id="m4"></div>
+<div class="pixel" id="n4"></div>
+<div class="pixel" id="o4"></div>
+<div class="pixel" id="p4"></div>
+</div>
+<div class="rowz" id="row3">
+<div class="pixel" id="a3"></div>
+<div class="pixel" id="b3"></div>
+<div class="pixel" id="c3"></div>
+<div class="pixel" id="d3"></div>
+<div class="pixel" id="e3"></div>
+<div class="pixel" id="f3"></div>
+<div class="pixel" id="g3"></div>
+<div class="pixel" id="h3"></div>
+<div class="pixel" id="i3"></div>
+<div class="pixel" id="j3"></div>
+<div class="pixel" id="k3"></div>
+<div class="pixel" id="l3"></div>
+<div class="pixel" id="m3"></div>
+<div class="pixel" id="n3"></div>
+<div class="pixel" id="o3"></div>
+<div class="pixel" id="p3"></div>
+</div>
+<div class="rowz" id="row2">
+<div class="pixel" id="a2"></div>
+<div class="pixel" id="b2"></div>
+<div class="pixel" id="c2"></div>
+<div class="pixel" id="d2"></div>
+<div class="pixel" id="e2"></div>
+<div class="pixel" id="f2"></div>
+<div class="pixel" id="g2"></div>
+<div class="pixel" id="h2"></div>
+<div class="pixel" id="i2"></div>
+<div class="pixel" id="j2"></div>
+<div class="pixel" id="k2"></div>
+<div class="pixel" id="l2"></div>
+<div class="pixel" id="m2"></div>
+<div class="pixel" id="n2"></div>
+<div class="pixel" id="o2"></div>
+<div class="pixel" id="p2"></div>
+</div>
+<div class="rowz" id="row1">
+<div class="pixel" id="a1"></div>
+<div class="pixel" id="b1"></div>
+<div class="pixel" id="c1"></div>
+<div class="pixel" id="d1"></div>
+<div class="pixel" id="e1"></div>
+<div class="pixel" id="f1"></div>
+<div class="pixel" id="g1"></div>
+<div class="pixel" id="h1"></div>
+<div class="pixel" id="i1"></div>
+<div class="pixel" id="j1"></div>
+<div class="pixel" id="k1"></div>
+<div class="pixel" id="l1"></div>
+<div class="pixel" id="m1"></div>
+<div class="pixel" id="n1"></div>
+<div class="pixel" id="o1"></div>
+<div class="pixel" id="p1"></div>
+</div>
+<div class="rowz" id="row0">
+<div class="pixel" id="a0"></div>
+<div class="pixel" id="b0"></div>
+<div class="pixel" id="c0"></div>
+<div class="pixel" id="d0"></div>
+<div class="pixel" id="e0"></div>
+<div class="pixel" id="f0"></div>
+<div class="pixel" id="g0"></div>
+<div class="pixel" id="h0"></div>
+<div class="pixel" id="i0"></div>
+<div class="pixel" id="j0"></div>
+<div class="pixel" id="k0"></div>
+<div class="pixel" id="l0"></div>
+<div class="pixel" id="m0"></div>
+<div class="pixel" id="n0"></div>
+<div class="pixel" id="o0"></div>
+<div class="pixel" id="p0"></div>
+</div></div>
+<div style="margin:0 auto;left:0;right:0;color:#fff;text-align:center;top:700px;position:absolute;">Js Pixel Fireplace, by: Alex Terranova 2023</div>
+<style>
+.rowz {
+  display: block;
+  width:640px;
+  height:40px;
+}
+.pixel {
+  
+  width:40px;
+  height:40px;
+  float:left;
+  background:transparent;
+}
+body {
+  background: black;
+}
+
+html {
+  
+  background: black;
+}
+</style>
+<script>
+var forever=true;
+var myfirecolorslow=["#FBEC5D", "#3e3131", "#4d3737", "#633b3b"];
+var myfirecolorsmid=["gold", "amber", "transparent", "#FFEA00", ];
+var myfirecolorshigh=["transparent", "#FFBF00", "transparent", "transparent", "#ffffeo", "transparent","  transparent"];
+var mypixels=["b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o"]
+var randfcolor1 = "";
+var randfcolor2 = "";
+var randfcolor3 = "";
+var randfcolor4 = "";
+var randfcolor5 = "";
+var randfcolor6 = "";
+var randfcolor7 = "";
+var randfcolor8 = "";
+var randfcolor9 = "";
+var randfcolor10 = "";
+var randfcolor11 = "";
+var randfcolor12 = "";
+var randfcolor13 = "";
+var randfcolor14 = "";
+
+var a=0;
+var b=0;
+var c=0;
+var d=0;
+var e=0;
+var f=0;
+var g=0;
+var h=0;
+var i=0;
+var j=0;
+var k=0;
+var l=0;
+var m=0;
+var n=0;
+var o=0;
+var p=0;
+function firex()
+{
+if (b > 6)
+b = Math.floor(Math.random()*6)
+if (c > 8)
+c = Math.floor(Math.random()*6);
+if (d > 10)
+d = Math.floor(Math.random()*6);
+if (e > 10)
+e = Math.floor(Math.random()*6);
+if (f > 15)
+f = Math.floor(Math.random()*6);
+if (g > 15)
+g = Math.floor(Math.random()*6);
+if (h > 15)
+h = Math.floor(Math.random()*6);
+if (i > 15)
+i = Math.floor(Math.random()*6);
+if (j > 15)
+j = Math.floor(Math.random()*6);
+if (k > 15)
+k = Math.floor(Math.random()*6);
+if (l > 12)
+l = Math.floor(Math.random()*6);
+if (m > 10)
+m = Math.floor(Math.random()*6);
+if (n > 8)
+n = Math.floor(Math.random()*6);
+if (o > 6)
+o = Math.floor(Math.random()*6);
+
+var currstrb = "#b" + b.toString();
+var currstrc = "#c" + c.toString();
+var currstrd = "#d" + d.toString();
+var currstre = "#e" + e.toString();
+var currstrf = "#f" + f.toString();
+var currstrg = "#g" + g.toString();
+var currstrh = "#h" + h.toString();
+var currstri = "#i" + i.toString();
+var currstrj = "#j" + j.toString();
+var currstrk = "#k" + k.toString();
+var currstrl = "#l" + l.toString();
+var currstrm = "#m" + m.toString();
+var currstrn = "#n" + n.toString();
+var currstro = "#o" + o.toString();
+
+    if (b < 2)
+    randfcolor1 = myfirecolorslow[Math.floor(Math.random()*myfirecolorslow.length)];
+    if (b > 1&& b < 9)
+    randfcolor1 = myfirecolorsmid[Math.floor(Math.random()*myfirecolorsmid.length)];
+    if (b > 8 && b < 16)
+    randfcolor1 = myfirecolorshigh[Math.floor(Math.random()*myfirecolorshigh.length)];
+    $(currstrb).css("background", randfcolor1);
+    
+if (c < 2)
+  randfcolor2 = myfirecolorslow[Math.floor(Math.random()*myfirecolorslow.length)];
+    if (c > 1&& c < 9)
+    randfcolor2 = myfirecolorsmid[Math.floor(Math.random()*myfirecolorsmid.length)];
+    if (c > 8 && c < 16)
+    randfcolor2 = myfirecolorshigh[Math.floored(Math.random()*myfirecolorshigh.length)];
+    $(currstrc).css("background", randfcolor2);
+    
+    if (d < 2)
+    randfcolor3 = myfirecolorslow[Math.floor(Math.random()*myfirecolorslow.length)];
+    if (d > 1&& d < 9)
+    randfcolor3 = myfirecolorsmid[Math.floor(Math.random()*myfirecolorsmid.length)];
+    if (d > 8 && d < 16)
+    randfcolor3 = myfirecolorshigh[Math.floor(Math.random()*myfirecolorshigh.length)];
+    $(currstrd).css("background", randfcolor3);
+    
+    if (e < 2)
+    randfcolor4 = myfirecolorslow[Math.floor(Math.random()*myfirecolorslow.length)];
+    if (e > 1&& e < 9)
+    randfcolor4 = myfirecolorsmid[Math.floor(Math.random()*myfirecolorsmid.length)];
+    if (e > 8 &&  e < 16)
+    randfcolor4 = myfirecolorshigh[Math.floor(Math.random()*myfirecolorshigh.length)];
+    $(currstre).css("background", randfcolor4);
+    
+    if (f < 2)
+    randfcolor5 = myfirecolorslow[Math.floor(Math.random()*myfirecolorslow.length)];
+    if (f > 1&& f < 9)
+    randfcolor5 = myfirecolorsmid[Math.floor(Math.random()*myfirecolorsmid.length)];
+    if (f > 8 && f < 16)
+    randfcolor5 = myfirecolorshigh[Math.floor(Math.random()*myfirecolorshigh.length)];
+    $(currstrf).css("background", randfcolor5);
+   
+   if (g < 2)
+    randfcolor6 = myfirecolorslow[Math.floor(Math.random()*myfirecolorslow.length)];
+    if (g > 1&& g < 9)
+    randfcolor6 = myfirecolorsmid[Math.floor(Math.random()*myfirecolorsmid.length)];
+    if (g > 8 && g < 16)
+    randfcolor6 = myfirecolorshigh[Math.floor(Math.random()*myfirecolorshigh.length)];
+    $(currstrg).css("background", randfcolor6);
+    
+    if (h < 2)
+    randfcolor7 = myfirecolorslow[Math.floor(Math.random()*myfirecolorslow.length)];
+    if (h > 1&& h < 9)
+    randfcolor7 = myfirecolorsmid[Math.floor(Math.random()*myfirecolorsmid.length)];
+    if (h > 8 && h < 16)
+    randfcolor7 = myfirecolorshigh[Math.floor(Math.random()*myfirecolorshigh.length)];
+    $(currstrh).css("background", randfcolor7);
+    
+    
+if (i < 2)
+    randfcolor8 = myfirecolorslow[Math.floor(Math.random()*myfirecolorslow.length)];
+    if (i > 1&& i < 9)
+    randfcolor8 = myfirecolorsmid[Math.floor(Math.random()*myfirecolorsmid.length)];
+    if (i > 8 && i < 16)
+    randfcolor8 = myfirecolorshigh[Math.floor(Math.random()*myfirecolorshigh.length)];
+    $(currstri).css("background", randfcolor8);
+    
+    if (j < 2)
+    randfcolor9 = myfirecolorslow[Math.floor(Math.random()*myfirecolorslow.length)];
+    if (j > 1&& j < 9)
+    randfcolor9 = myfirecolorsmid[Math.floor(Math.random()*myfirecolorsmid.length)];
+    if (j > 8 && j < 16)
+    randfcolor9 = myfirecolorshigh[Math.floor(Math.random()*myfirecolorshigh.length)];
+    $(currstrj).css("background", randfcolor9);
+    
+    if (k < 2)
+    randfcolor10 = myfirecolorslow[Math.floor(Math.random()*myfirecolorslow.length)];
+    if (k > 1&& k < 9)
+    randfcolor10 = myfirecolorsmid[Math.floor(Math.random()*myfirecolorsmid.length)];
+    if (k > 8 && k < 16)
+    randfcolor10 = myfirecolorshigh[Math.floor(Math.random()*myfirecolorshigh.length)];
+    $(currstrk).css("background", randfcolor10);
+    
+  if (l < 2)
+    randfcolor11 = myfirecolorslow[Math.floor(Math.random()*myfirecolorslow.length)];
+    if (l > 1&& l < 9)
+    randfcolor11 = myfirecolorsmid[Math.floor(Math.random()*myfirecolorsmid.length)];
+    if (l > 8 && l < 16)
+    randfcolor11 = myfirecolorshigh[Math.floor(Math.random()*myfirecolorshigh.length)];
+    $(currstrl).css("background", randfcolor11);
+    
+    
+    if (m < 2)
+    randfcolor12 = myfirecolorslow[Math.floor(Math.random()*myfirecolorslow.length)];
+    if (m > 1&& m < 9)
+    randfcolor12 = myfirecolorsmid[Math.floor(Math.random()*myfirecolorsmid.length)];
+    if (m > 8 && m < 16)
+    randfcolor12 = myfirecolorshigh[Math.floor(Math.random()*myfirecolorshigh.length)];
+    $(currstrm).css("background", randfcolor12);
+    
+    if (n < 2)
+    randfcolor13 = myfirecolorslow[Math.floor(Math.random()*myfirecolorslow.length)];
+    if (n > 1&& n < 9)
+    randfcolor13 = myfirecolorsmid[Math.floor(Math.random()*myfirecolorsmid.length)];
+    if (n > 8 && n < 16)
+    randfcolor13 = myfirecolorshigh[Math.floor(Math.random()*myfirecolorshigh.length)];
+    $(currstrn).css("background", randfcolor13);
+    
+    if (o < 2)
+    randfcolor14 = myfirecolorslow[Math.floor(Math.random()*myfirecolorslow.length)];
+    if (o > 1&& o < 9)
+    randfcolor14 = myfirecolorsmid[Math.floor(Math.random()*myfirecolorsmid.length)];
+    if (o > 8 && o < 16)
+    randfcolor14 = myfirecolorshigh[Math.floor(Math.random()*myfirecolorshigh.length)];
+    $(currstro).css("background", randfcolor14);
+  b++;
+  c++;
+d++;
+e++;
+  f++;
+  g++;
+h++;
+i++;
+  j++;
+  k++;
+l++;
+m++;
+  n++;
+  o++;
+  
+fireanim();  
+}
+function fireanim()
+{
+setTimeout(firex,10);
+}
+fireanim();
+    $( document ).ready(function() {
+       
+
+
+var firesound = new Pizzicato.Sound({ 
+  source: 'file', 
+  options: { 
+    path: 'fire.ogg', 
+    loop: true 
+  }
+});
+
+window.addEventListener( 'click', () => {
+
+firesound.play();
+
+      
+    });
+    });
+</script>
+
+</body>
+</html>
