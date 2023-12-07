@@ -5,7 +5,8 @@ Live Demo: http://alext.rf.gd
 
 Inspired by: Ted Martens, George Ford, Wally Hall, Fabien Sanglard<br><br>
 
-![Screenshot_20231206-230243](https://github.com/lexterror/Js-Pixel-Fireplace/assets/16135535/641c2413-5da5-45bc-aeb6-4e1deb54eb17)
+![Screenshot_20231206-234839](https://github.com/lexterror/Js-Pixel-Fireplace/assets/16135535/27d01c03-d6fa-41d5-a140-7f750b8bbb4c)
+
 
 
 
