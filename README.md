@@ -1,4 +1,4 @@
-0# Js-Pixel-Fireplace<br><br>
+# Js-Pixel-Fireplace<br><br>
 A minimal Javascript Pixel Fireplace<br><br>
 
 Live Demo: http://alext.rf.gd
