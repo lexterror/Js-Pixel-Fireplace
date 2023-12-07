@@ -1066,6 +1066,7 @@ html {
 var varz=["b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "z1", "z2", "z3", "z4", "z5", "z6", "z7", "z8", "z9", "z10", "z11", "z12", "z13", "z14", "z15"];
 var varo=["b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "za", "zb", "zc", "zd", "ze", "zf", "zg", "zh", "zi", "zj", "zk", "zl", "zm", "zn", "zo"];
 var smoke =0;
+var smokewait = 0;
 var lock = 0;
 var smoketransition=0;
 var chooserandomsmoke=0;
@@ -1074,6 +1075,21 @@ var smoke2 =0;
 var lock2 = 0;
 var smoketransition2=0;
 var chooserandomsmoke2=0;
+
+var smoke3 =0;
+var lock3 = 0;
+var smoketransition3=0;
+var chooserandomsmoke3=0;
+
+var smoke4 =0;
+var lock4 = 0;
+var smoketransition4=0;
+var chooserandomsmoke4=0;
+
+var smoke5 =0;
+var lock5 = 0;
+var smoketransition5=0;
+var chooserandomsmoke5=0;
 for (count = 0; count < varz.length; count++)
 {
    varz[count] = 0;
@@ -1114,13 +1130,13 @@ var randfcolor1 = "";
 
 function firex()
 {
-if (varz[0] > 4)
+if (varz[0] > 5)
 varz[0] = Math.floor(Math.random()*3)
-if (varz[1] > 4)
+if (varz[1] > 5)
 varz[1] = Math.floor(Math.random()*3);
-if (varz[2] > 4)
+if (varz[2] > 5)
 varz[2] = Math.floor(Math.random()*3);
-if (varz[3] > 4)
+if (varz[3] > 5)
 varz[3] = Math.floor(Math.random()*3);
 if (varz[4] > 5)
 varz[4] = Math.floor(Math.random()*3);
@@ -1167,13 +1183,13 @@ if (varz[24] > 5)
 varz[24] = Math.floor(Math.random()*3);
 if (varz[25] > 5)
 varz[25] = Math.floor(Math.random()*3);
-if (varz[26] > 4)
+if (varz[26] > 5)
 varz[26] = Math.floor(Math.random()*3);
-if (varz[27] > 4)
+if (varz[27] > 5)
 varz[27] = Math.floor(Math.random()*3);
-if (varz[28] > 4)
+if (varz[28] > 5)
 varz[28] = Math.floor(Math.random()*3);
-if (varz[29] > 4)
+if (varz[29] > 5)
 varz[29] = Math.floor(Math.random()*3);
 
 
@@ -1324,24 +1340,25 @@ for (count = 0; count < varz.length; count++)
 	lock = 1;
 	chooserandomsmoke = Math.floor(Math.random()*30);
 	}
-    if (smoketransition < 5)
+ 
+    if (smokewait == 5)
 	{
-    var current = (varo[chooserandomsmoke].length - 1);
+    var current = (varo[chooserandomsmoke].length);
 	var currstrb = "#" + varo[chooserandomsmoke].toString() + varz[smoke].toString();
 	if (smoke == 0)
-    $(currstrb).css("background", "#666666");
+    $(currstrb).css("background", "orange");
 	if (smoke == 1)
-    $(currstrb).css("background", "#888888");
+    $(currstrb).css("background", "gold");
 	if (smoke == 2)
-    $(currstrb).css("background", "#aaaaaa");
+    $(currstrb).css("background", "gold");
 	if (smoke == 3)
-    $(currstrb).css("background", "#cccccc");
+    $(currstrb).css("background", "gold");
 	if (smoke == 4)
-    $(currstrb).css("background", "#ffffff");
+    $(currstrb).css("background", "yellow");
 	smoke++;
 	}
 	smoketransition++;
-	if (smoketransition > 50)
+	if (smoketransition > 25)
 	{
 	smoketransition = 0;
 	lock = 0;
@@ -1356,31 +1373,141 @@ for (count = 0; count < varz.length; count++)
 	lock2 = 1;
 	chooserandomsmoke2 = Math.floor(Math.random()*30);
 	}
-    if (smoketransition2 < 5)
+  
+   
+    if (smokewait == 5)
 	{
-    var current2 = (varo[chooserandomsmoke2].length - 1);
+    var current2 = (varo[chooserandomsmoke2].length);
 	var currstrb2 = "#" + varo[chooserandomsmoke2].toString() + varz[smoke2].toString();
 	if (smoke2 == 0)
-    $(currstrb2).css("background", "#666666");
+    $(currstrb2).css("background", "orange");
 	if (smoke2 == 1)
-    $(currstrb2).css("background", "#888888");
+    $(currstrb2).css("background", "gold");
 	if (smoke2 == 2)
-    $(currstrb2).css("background", "#aaaaaa");
+    $(currstrb2).css("background", "gold");
 	if (smoke2 == 3)
-    $(currstrb2).css("background", "#cccccc");
+    $(currstrb2).css("background", "gold");
 	if (smoke2 == 4)
-    $(currstrb2).css("background", "#ffffff");
+    $(currstrb2).css("background", "yellow");
 	smoke2++;
 	}
 	smoketransition2++;
-	if (smoketransition2 > 75)
+	if (smoketransition2 > 25)
 	{
 	smoketransition2 = 0;
 	lock2 = 0;
 	}
     if (smoke2 > current2)
 	smoke2 = 0;
+	
+
+// Smoke3
+
+	if (lock3 == 0)
+	{
+	lock3 = 1;
+	chooserandomsmoke3 = Math.floor(Math.random()*30);
+	}
+  
    
+    if (smokewait == 5)
+	{
+    var current3 = (varo[chooserandomsmoke3].length);
+	var currstrb3 = "#" + varo[chooserandomsmoke3].toString() + varz[smoke3].toString();
+	if (smoke3 == 0)
+    $(currstrb3).css("background", "orange");
+	if (smoke3 == 1)
+    $(currstrb3).css("background", "gold");
+	if (smoke3 == 2)
+    $(currstrb3).css("background", "gold");
+	if (smoke3 == 3)
+    $(currstrb3).css("background", "gold");
+	if (smoke3 == 4)
+    $(currstrb3).css("background", "yellow");
+	smoke3++;
+	}
+	smoketransition3++;
+	if (smoketransition3 > 25)
+	{
+	smoketransition3 = 0;
+	lock3 = 0;
+	}
+    if (smoke3 > current3)
+	smoke3 = 0;	
+	
+
+// Smoke4
+
+	if (lock4 == 0)
+	{
+	lock4 = 1;
+	chooserandomsmoke4 = Math.floor(Math.random()*30);
+	}
+  
+   
+    if (smokewait == 5)
+	{
+    var current4 = (varo[chooserandomsmoke4].length);
+	var currstrb4 = "#" + varo[chooserandomsmoke4].toString() + varz[smoke4].toString();
+	if (smoke4 == 0)
+    $(currstrb4).css("background", "orange");
+	if (smoke4 == 1)
+    $(currstrb4).css("background", "gold");
+	if (smoke4 == 2)
+    $(currstrb4).css("background", "gold");
+	if (smoke4 == 3)
+    $(currstrb4).css("background", "gold");
+	if (smoke4 == 4)
+    $(currstrb4).css("background", "yellow");
+	smoke4++;
+	}
+	smoketransition4++;
+	if (smoketransition4 > 25)
+	{
+	smoketransition4 = 0;
+	lock4 = 0;
+	}
+    if (smoke4 > current4)
+	smoke4 = 0;	
+
+
+// Smoke5
+
+	if (lock5 == 0)
+	{
+	lock5 = 1;
+	chooserandomsmoke5 = Math.floor(Math.random()*30);
+	}
+  
+   
+    if (smokewait == 5)
+	{
+    var current5 = (varo[chooserandomsmoke5].length);
+	var currstrb5 = "#" + varo[chooserandomsmoke5].toString() + varz[smoke5].toString();
+	if (smoke5 == 0)
+    $(currstrb5).css("background", "orange");
+	if (smoke5 == 1)
+    $(currstrb5).css("background", "gold");
+	if (smoke5 == 2)
+    $(currstrb5).css("background", "gold");
+	if (smoke5 == 3)
+    $(currstrb5).css("background", "gold");
+	if (smoke5 == 4)
+    $(currstrb5).css("background", "yellow");
+	smoke5++;
+	}
+	smoketransition5++;
+	if (smoketransition5 > 25)
+	{
+	smoketransition5 = 0;
+	lock5 = 0;
+	}
+    if (smoke5 > current5)
+	smoke5 = 0;	
+	
+if (smokewait > 5)
+smokewait = 0;
+ smokewait++;
 
 for (count = 0; count < varz.length; count++)
 {
