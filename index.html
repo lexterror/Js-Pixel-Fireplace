@@ -1054,12 +1054,12 @@ Date: Tue, Dec 5th, 2023
   background:transparent;
 }
 body {
-  background: #111;
+  
 }
 
 html {
   
-  background:#111;
+  background: linear-gradient(#111, #333);
 }
 </style>
 <script>
@@ -1084,14 +1084,28 @@ var level2on = ["#8f5b01"];
 var level3on = ["#b57401"];
 var level4on = ["#da8c00"];
 var level5on = ["orange"];
-var level1 = ["#140e00","#140e00","#140e00","#140e00","#140e00","#140e00","#140e00","#140e00","#140e00","#140e00"];
-var level2 = ["#22160b","#22160b","#22160b","#22160b","#22160b","#22160b","#22160b","#22160b","#22160b","#22160b"];
-var level3 = ["#2a1b0e","#2a1b0e","#2a1b0e","#2a1b0e","#2a1b0e","#2a1b0e","#2a1b0e","#2a1b0e","#2a1b0e","#2a1b0e"];
-var level4 = ["#342211","#342211","#342211","#342211","#342211","#342211","#342211","#342211","#342211","#342211"];
-var level5 = ["#412b15","#412b15","#412b15","#412b15","#412b15","#412b15","#412b15","#412b15","#412b15","#412b15"];
-var myfirecolorsmidnoglow=[ "#ffce00", "#ffe808",  "transparent", "transparent"];
-var myfirecolorsmid=[ "yellow", "gold", "transparent", "transparent"];
-var myfirecolorshigh=["transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent", "transparent", "#FFBF00", "transparent", "transparent", "#ffffeo", "transparent","  transparent",];
+var level5 = ["#140e00","#140e00","#140e00","#140e00","#140e00","#140e00","#140e00","#140e00","#140e00","#140e00", "#22160b"];
+var level4 = ["#22160b","#22160b","#22160b","#22160b","#22160b","#22160b","#22160b","#22160b","#22160b","#22160b", "#2a1b0e"];
+var level3 = ["#2a1b0e","#2a1b0e","#2a1b0e","#2a1b0e","#2a1b0e","#2a1b0e","#2a1b0e","#2a1b0e","#2a1b0e","#2a1b0e", "#342211"];
+var level2 = ["#342211","#342211","#342211","#342211","#342211","#342211","#342211","#342211","#342211","#342211"];
+var level1 = ["#412b15","#412b15","#412b15","#412b15","#412b15","#412b15","#412b15","#412b15","#412b15","#412b15"];
+var myfirecolorsmidnoglowlev1=["#ff9a00","transparent","transparent","transparent","transparent"];
+var myfirecolorsmidnoglowlev2=["#ff9a00", "transparent","transparent","transparent","transparent"];
+var myfirecolorsmidnoglowlev3=["#ff9a00", "yellow","transparent","transparent","transparent"];
+var myfirecolorsmidnoglowlev4=["#ffce00", "yellow","transparent","transparent","transparent"];
+var myfirecolorsmidnoglowlev5=["#ffe808", "yellow","transparent","transparent","transparent"];
+var myfirecolorsmidnoglowlev1t=["#ff9a00","transparent","transparent"];
+var myfirecolorsmidnoglowlev2t=["#ff9a00", "transparent","transparent"];
+var myfirecolorsmidnoglowlev3t=["#ff9a00", "yellow", "transparent","transparent"];
+var myfirecolorsmidnoglowlev4t=["#ffce00", "yellow", "transparent","transparent"];
+var myfirecolorsmidnoglowlev5t=["#ffe808", "yellow", "transparent","transparent"];
+var myfirecolorsmidnoglowlev1tx=["#ff9a00","transparent", "#ff9a00","#ff9a00","#ff9a00","#ff9a00",];
+var myfirecolorsmidnoglowlev2tx=["#ff9a00", "transparent","#ff9a00","#ff9a00","#ff9a00","#ff9a00",];
+var myfirecolorsmidnoglowlev3tx=["#ff9a00", "yellow", "transparent","#ff9a00","#ff9a00","#ff9a00",];
+var myfirecolorsmidnoglowlev4tx=["#ffce00", "yellow", "transparent","#ffce00","#ffce00","#ffce00",];
+var myfirecolorsmidnoglowlev5tx=["#ffe808", "yellow", "transparent","#ffe808","#ffe808","#ffe808",];
+var myfirecolorsmid=[ "yellow", "gold", "transparent", "black"];
+var myfirecolorshigh=["transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent", "transparent", "#FFBF00", "transparent", "transparent", "#ffffeo", "transparent","  transparent","orange"];
 var mypixels=["b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15",]
 var randfcolor1 = "";
 
@@ -1112,42 +1126,42 @@ if (varz[4] > 5)
 varz[4] = Math.floor(Math.random()*3);
 if (varz[5] > 5)
 varz[5] = Math.floor(Math.random()*3);
-if (varz[6] > 6)
+if (varz[6] > 9 )
 varz[6] = Math.floor(Math.random()*3);
 if (varz[7] > 12)
 varz[7] = Math.floor(Math.random()*3);
-if (varz[8] > 6)
+if (varz[8] > 24)
 varz[8] = Math.floor(Math.random()*3);
-if (varz[9] > 16)
+if (varz[9] > 17)
 varz[9] = Math.floor(Math.random()*3);
-if (varz[10] > 8)
+if (varz[10] > 24)
 varz[10] = Math.floor(Math.random()*3);
-if (varz[11] > 16)
+if (varz[11] > 23)
 varz[11] = Math.floor(Math.random()*3);
-if (varz[12] > 12)
+if (varz[12] > 24)
 varz[12] = Math.floor(Math.random()*3);
-if (varz[13] > 20)
+if (varz[13] > 24)
 varz[13] = Math.floor(Math.random()*3);
 if (varz[14] > 32)
 varz[14] = Math.floor(Math.random()*3);
 
 if (varz[15] > 32)
 varz[15] = Math.floor(Math.random()*3)
-if (varz[16] > 20)
+if (varz[16] > 24)
 varz[16] = Math.floor(Math.random()*3);
-if (varz[17] >  8)
+if (varz[17] > 26)
 varz[17] = Math.floor(Math.random()*3);
-if (varz[18] > 16)
+if (varz[18] > 24)
 varz[18] = Math.floor(Math.random()*3);
-if (varz[19] > 8)
+if (varz[19] > 24)
 varz[19] = Math.floor(Math.random()*3);
-if (varz[20] > 16)
+if (varz[20] > 19)
 varz[20] = Math.floor(Math.random()*3);
-if (varz[21] > 6)
+if (varz[21] > 24)
 varz[21] = Math.floor(Math.random()*3);
-if (varz[22] > 12)
+if (varz[22] > 13)
 varz[22] = Math.floor(Math.random()*3);
-if (varz[23] > 6)
+if (varz[23] > 9)
 varz[23] = Math.floor(Math.random()*3);
 if (varz[24] > 5)
 varz[24] = Math.floor(Math.random()*3);
@@ -1177,10 +1191,128 @@ for (count = 0; count < varz.length; count++)
     randfcolor1 = level4[Math.floor(Math.random()*level4.length)];
     if (varz[count] < 6 && varz[count] > 4)
     randfcolor1 = level5[Math.floor(Math.random()*level5.length)];
-    if (varz[count] > 5 && varz[count] < 18)
-    randfcolor1 = myfirecolorsmid[Math.floor(Math.random()*myfirecolorsmid.length)];
-    if (varz[count] > 17 && varz[count] < 32)
+    
+    //MID
+    if (varz[count] > 5 && varz[count] < 32)
+    if (count == 6 || count == 23)
+    randfcolor1 = myfirecolorsmidnoglowlev2[Math.floor(Math.random()*myfirecolorsmidnoglowlev1.length)];
+    if (varz[count] > 5 && varz[count] < 32)
+    if (count == 7 || count == 22)
+    randfcolor1 = myfirecolorsmidnoglowlev3[Math.floor(Math.random()*myfirecolorsmidnoglowlev2.length)];
+    if (varz[count] > 5 && varz[count] < 32)
+    if (count == 8 || count == 21)
+    randfcolor1 = myfirecolorsmidnoglowlev3[Math.floor(Math.random()*myfirecolorsmidnoglowlev2.length)];
+    if (varz[count] > 5 && varz[count] < 32)
+    if (count == 9 || count == 20)
+    randfcolor1 = myfirecolorsmidnoglowlev4[Math.floor(Math.random()*myfirecolorsmidnoglowlev3.length)];
+    if (varz[count] > 5 && varz[count] < 32)
+    if (count == 10 || count == 19)
+    randfcolor1 = myfirecolorsmidnoglowlev4[Math.floor(Math.random()*myfirecolorsmidnoglowlev3.length)];
+   if (varz[count] > 5 && varz[count] < 32)
+    if (count == 11 || count == 18)
+    randfcolor1 = myfirecolorsmidnoglowlev5[Math.floor(Math.random()*myfirecolorsmidnoglowlev5.length)];
+   if (varz[count] > 5 && varz[count] < 32)
+    if (count == 12 || count == 17)
+    randfcolor1 = myfirecolorsmidnoglowlev5[Math.floor(Math.random()*myfirecolorsmidnoglowlev5.length)];
+  if (varz[count] > 5 && varz[count] < 32)
+    if (count == 13 || count == 16)
+    randfcolor1 = myfirecolorsmidnoglowlev5[Math.floor(Math.random()*myfirecolorsmidnoglowlev5.length)];
+  if (varz[count] > 5 && varz[count] < 32)
+    if (count == 14 || count == 15)
+    randfcolor1 = myfirecolorsmidnoglowlev5[Math.floor(Math.random()*myfirecolorsmidnoglowlev5.length)];
+ 
+     //MIDt
+    if (varz[count] > 10)
+    if (count == 6 || count == 23)
+    randfcolor1 = myfirecolorsmidnoglowlev2t[Math.floor(Math.random()*myfirecolorsmidnoglowlev1t.length)];
+    if (varz[count] > 10)
+    if (count == 7 || count == 22)
+    randfcolor1 = myfirecolorsmidnoglowlev3t[Math.floor(Math.random()*myfirecolorsmidnoglowlev2t.length)];
+    if (varz[count] > 10)
+    if (count == 8 || count == 21)
+    randfcolor1 = myfirecolorsmidnoglowlev3t[Math.floor(Math.random()*myfirecolorsmidnoglowlev2t.length)];
+    if (varz[count] > 10)
+    if (count == 9 || count == 20)
+    randfcolor1 = myfirecolorsmidnoglowlev4t[Math.floor(Math.random()*myfirecolorsmidnoglowlev3t.length)];
+    if (varz[count] > 10)
+    if (count == 10 || count == 19)
+    randfcolor1 = myfirecolorsmidnoglowlev4t[Math.floor(Math.random()*myfirecolorsmidnoglowlev3t.length)];
+	if (varz[count] > 10)
+    if (count == 11 || count == 18)
+    randfcolor1 = myfirecolorsmidnoglowlev5t[Math.floor(Math.random()*myfirecolorsmidnoglowlev5t.length)];
+	if (varz[count] > 10)
+    if (count == 12 || count == 17)
+    randfcolor1 = myfirecolorsmidnoglowlev5t[Math.floor(Math.random()*myfirecolorsmidnoglowlev5t.length)];
+	if (varz[count] > 10)
+    if (count == 13 || count == 16)
+    randfcolor1 = myfirecolorsmidnoglowlev5t[Math.floor(Math.random()*myfirecolorsmidnoglowlev5t.length)];
+	if (varz[count] > 10)
+    if (count == 14 || count == 15)
+    randfcolor1 = myfirecolorsmidnoglowlev5t[Math.floor(Math.random()*myfirecolorsmidnoglowlev5t.length)];
+ 
+     //MIDtx
+    if (varz[count] > 5)
+    if (count == 6 || count == 23)
+    randfcolor1 = myfirecolorsmidnoglowlev2tx[Math.floor(Math.random()*myfirecolorsmidnoglowlev1tx.length)];
+    if (varz[count] > 5)
+    if (count == 7 || count == 22)
+    randfcolor1 = myfirecolorsmidnoglowlev3tx[Math.floor(Math.random()*myfirecolorsmidnoglowlev2tx.length)];
+    if (varz[count] > 5)
+    if (count == 8 || count == 21)
+    randfcolor1 = myfirecolorsmidnoglowlev3tx[Math.floor(Math.random()*myfirecolorsmidnoglowlev2tx.length)];
+    if (varz[count] > 5)
+    if (count == 9 || count == 20)
+    randfcolor1 = myfirecolorsmidnoglowlev4tx[Math.floor(Math.random()*myfirecolorsmidnoglowlev3tx.length)];
+    if (varz[count] > 5)
+    if (count == 10 || count == 19)
+    randfcolor1 = myfirecolorsmidnoglowlev4tx[Math.floor(Math.random()*myfirecolorsmidnoglowlev3tx.length)];
+	if (varz[count] > 5)
+    if (count == 11 || count == 18)
+    randfcolor1 = myfirecolorsmidnoglowlev5tx[Math.floor(Math.random()*myfirecolorsmidnoglowlev5tx.length)];
+	if (varz[count] > 5)
+    if (count == 12 || count == 17)
+    randfcolor1 = myfirecolorsmidnoglowlev5tx[Math.floor(Math.random()*myfirecolorsmidnoglowlev5tx.length)];
+	if (varz[count] > 5)
+    if (count == 13 || count == 16)
+    randfcolor1 = myfirecolorsmidnoglowlev5tx[Math.floor(Math.random()*myfirecolorsmidnoglowlev5tx.length)];
+	if (varz[count] > 5)
+    if (count == 14 || count == 15)
+    randfcolor1 = myfirecolorsmidnoglowlev5tx[Math.floor(Math.random()*myfirecolorsmidnoglowlev5tx.length)];
+   
+   
+   //superhigh
+   
+    if (varz[count] > 20 && varz[count] < 32)
+    if (count == 6 || count == 23)
     randfcolor1 = myfirecolorshigh[Math.floor(Math.random()*myfirecolorshigh.length)];
+    if (varz[count] > 26 && varz[count] < 32)
+    if (count == 7 || count == 22)
+    randfcolor1 = myfirecolorshigh[Math.floor(Math.random()*myfirecolorshigh.length)];
+    if (varz[count] > 20 && varz[count] < 32)
+    if (count == 8 || count == 21)
+    randfcolor1 = myfirecolorshigh[Math.floor(Math.random()*myfirecolorshigh.length)];
+    if (varz[count] > 26&& varz[count] < 32)
+    if (count == 9 || count == 20)
+    randfcolor1 = myfirecolorshigh[Math.floor(Math.random()*myfirecolorshigh.length)];
+    if (varz[count] > 20 && varz[count] < 32)
+    if (count == 10 || count == 19)
+    randfcolor1 = myfirecolorshigh[Math.floor(Math.random()*myfirecolorshigh.length)];
+	if (varz[count] > 26 && varz[count] < 32)
+    if (count == 11 || count == 18)
+    randfcolor1 = myfirecolorshigh[Math.floor(Math.random()*myfirecolorshigh.length)];
+	if (varz[count] > 20 && varz[count] < 32)
+    if (count == 12 || count == 17)
+    randfcolor1 = myfirecolorshigh[Math.floor(Math.random()*myfirecolorshigh.length)];
+	if (varz[count] > 26 && varz[count] < 32)
+    if (count == 13 || count == 16)
+    randfcolor1 = myfirecolorshigh[Math.floor(Math.random()*myfirecolorshigh.length)];
+	if (varz[count] > 20 && varz[count] < 32)
+    if (count == 14 || count == 15)
+    randfcolor1 = myfirecolorshigh[Math.floor(Math.random()*myfirecolorshigh.length)];
+     
+   
+   // if (varz[count] > 20 && varz[count] < 32)
+  //  randfcolor1 = myfirecolorshigh[Math.floor(Math.random()*myfirecolorshigh.length)];
 	
 	var currstrb = "#" + varo[count].toString() + varz[count].toString();
     $(currstrb).css("background", randfcolor1);
@@ -1258,7 +1390,7 @@ fireanim();
 }
 function fireanim()
 {
-setTimeout(firex,20);
+setTimeout(firex,10);
 }
 fireanim();
 
