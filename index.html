@@ -1207,7 +1207,7 @@ for (count = 0; count < varz.length; count++)
     randfcolor1 = level4[Math.floor(Math.random()*level4.length)];
     if (varz[count] < 6 && varz[count] > 4)
     randfcolor1 = level5[Math.floor(Math.random()*level5.length)];
-    
+
     //MID
     if (varz[count] > 5 && varz[count] < 32)
     if (count == 6 || count == 23)
@@ -1230,10 +1230,10 @@ for (count = 0; count < varz.length; count++)
    if (varz[count] > 5 && varz[count] < 32)
     if (count == 12 || count == 17)
     randfcolor1 = myfirecolorsmidnoglowlev5[Math.floor(Math.random()*myfirecolorsmidnoglowlev5.length)];
-  if (varz[count] > 5 && varz[count] < 32)
+  if (varz[count] > 4 && varz[count] < 32)
     if (count == 13 || count == 16)
     randfcolor1 = myfirecolorsmidnoglowlev5[Math.floor(Math.random()*myfirecolorsmidnoglowlev5.length)];
-  if (varz[count] > 5 && varz[count] < 32)
+  if (varz[count] > 3 && varz[count] < 32)
     if (count == 14 || count == 15)
     randfcolor1 = myfirecolorsmidnoglowlev5[Math.floor(Math.random()*myfirecolorsmidnoglowlev5.length)];
  
@@ -1341,7 +1341,7 @@ for (count = 0; count < varz.length; count++)
 	chooserandomsmoke = Math.floor(Math.random()*30);
 	}
  
-    if (smokewait == 5)
+    if (smokewait == 1)
 	{
     var current = (varo[chooserandomsmoke].length);
 	var currstrb = "#" + varo[chooserandomsmoke].toString() + varz[smoke].toString();
@@ -1358,7 +1358,7 @@ for (count = 0; count < varz.length; count++)
 	smoke++;
 	}
 	smoketransition++;
-	if (smoketransition > 25)
+	if (smoketransition > 5)
 	{
 	smoketransition = 0;
 	lock = 0;
@@ -1375,7 +1375,7 @@ for (count = 0; count < varz.length; count++)
 	}
   
    
-    if (smokewait == 5)
+    if (smokewait == 1)
 	{
     var current2 = (varo[chooserandomsmoke2].length);
 	var currstrb2 = "#" + varo[chooserandomsmoke2].toString() + varz[smoke2].toString();
@@ -1392,7 +1392,7 @@ for (count = 0; count < varz.length; count++)
 	smoke2++;
 	}
 	smoketransition2++;
-	if (smoketransition2 > 25)
+	if (smoketransition2 > 5)
 	{
 	smoketransition2 = 0;
 	lock2 = 0;
@@ -1410,7 +1410,7 @@ for (count = 0; count < varz.length; count++)
 	}
   
    
-    if (smokewait == 5)
+    if (smokewait == 1)
 	{
     var current3 = (varo[chooserandomsmoke3].length);
 	var currstrb3 = "#" + varo[chooserandomsmoke3].toString() + varz[smoke3].toString();
@@ -1427,7 +1427,7 @@ for (count = 0; count < varz.length; count++)
 	smoke3++;
 	}
 	smoketransition3++;
-	if (smoketransition3 > 25)
+	if (smoketransition3 > 5)
 	{
 	smoketransition3 = 0;
 	lock3 = 0;
@@ -1445,7 +1445,7 @@ for (count = 0; count < varz.length; count++)
 	}
   
    
-    if (smokewait == 5)
+    if (smokewait == 1)
 	{
     var current4 = (varo[chooserandomsmoke4].length);
 	var currstrb4 = "#" + varo[chooserandomsmoke4].toString() + varz[smoke4].toString();
@@ -1462,7 +1462,7 @@ for (count = 0; count < varz.length; count++)
 	smoke4++;
 	}
 	smoketransition4++;
-	if (smoketransition4 > 25)
+	if (smoketransition4 > 5)
 	{
 	smoketransition4 = 0;
 	lock4 = 0;
@@ -1480,7 +1480,7 @@ for (count = 0; count < varz.length; count++)
 	}
   
    
-    if (smokewait == 5)
+    if (smokewait == 1)
 	{
     var current5 = (varo[chooserandomsmoke5].length);
 	var currstrb5 = "#" + varo[chooserandomsmoke5].toString() + varz[smoke5].toString();
@@ -1497,7 +1497,7 @@ for (count = 0; count < varz.length; count++)
 	smoke5++;
 	}
 	smoketransition5++;
-	if (smoketransition5 > 25)
+	if (smoketransition5 > 400)
 	{
 	smoketransition5 = 0;
 	lock5 = 0;
