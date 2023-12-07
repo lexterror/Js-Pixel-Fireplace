@@ -1,7 +1,7 @@
 # Js-Pixel-Fireplace<br><br>
 A minimal Javascript Pixel Fireplace<br><br>
 
-Live Demo: http://alext.rf.gd
+Live Demo: https://js-pixel-fireplace.sourceforge.io/index.html
 
 Inspired by: Ted Martens, George Ford, Wally Hall, Fabien Sanglard<br><br>
 
