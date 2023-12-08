@@ -1,4 +1,5 @@
 <html>
+
 <!-- 
 
 Pixel Fireplace Js 
@@ -10,8 +11,8 @@ Date: Tue, Dec 5th, 2023
 <script src="Pizzicato.js"></script>
 
 <body>
-<div id="pit" style="width:800px;height:640px;background:linear-gradient(black, #333); left:0;right:0;margin:0 auto;position:absolute;border-radius:400px 400px 0 0;display:none;"></div>
-<div id="fireplace" style="width:640px;height:640px;margin:0 auto; left:0; right:0;position:absolute">
+<div id="pit" style="display:none"></div>
+<div id="fireplace" style="">
 
 <div class="rowz" id="row30">
 <div class="pixel" id="a30"></div>
@@ -1039,10 +1040,14 @@ Date: Tue, Dec 5th, 2023
 <div class="pixel" id="zp1"></div>
 </div>
 </div>
-<div style="margin:0 auto;left:0;right:0;color:#fff;text-align:center;top:700px;position:absolute;">Js Pixel Fireplace, by: Alex Terranova 2023</div>
 <style>
+* {
+  padding:0;
+  margin:0;
+}
+
 .rowz {
-  display: block;
+  
   width:640px;
   height:20px;
 }
@@ -1053,13 +1058,28 @@ Date: Tue, Dec 5th, 2023
   float:left;
   background:transparent;
 }
+#fireplace {
+width: 640px;
+left: 0;
+right:0;
+margin: 0 auto;
+left: 50% !important;
+top: 50% !important;
+transform: translate(-50%, -%50) !important
+position:absolute !important;
+}
+
 body {
 background: #000;
+width:100%;
+height:100%;
 }
 
 html {
-  
+  width:100%;
+  height:100%;
   background: #000;
+
 }
 </style>
 <script>
@@ -1702,10 +1722,10 @@ fireanim();
 
 function chimx()
 {
-  var mycolorspit=[  "#9C3600", "#874107", "#8F3500", "#925010"];
-  var randcolorpit= mycolorspit[Math.floor(Math.random()*mycolorspit.length)];
-  var colorstr = "linear-gradient(" + randcolorpit + ", transparent)";
-  $("#pit").css("background", colorstr);
+  
+  var randcolorpit= Math.floor(Math.random()*4);
+  var colorstr = "0." + (5 + randcolorpit);
+  $("#pit").css("opacity", colorstr);
   chimanim();
 }
 chimx();
@@ -1732,6 +1752,36 @@ firesound.play();
       
     });
     });
+
+function adaptsize()
+{
+
+
+
+var height = window.outerHeight;
+var width = window.outerWidth;
+
+
+var getpixelsize= width / 32;
+var pixelsize = Math.round(getpixelsize);
+var pixelstr = pixelsize.toString() + "px !important";
+$(".pixel").css("width", pixelstr);
+$(".pixel").css("height", pixelstr);
+  
+var myrows = pixelsize * 32;
+var rowstr = myrows.toString() + "px !important";
+$(".rows").css("width", rowstr);
+$(".rows").css("height", pixelstr);
+
+}
+ $(document).ready(adaptsize);
+
+ $(window).resize(adaptsize);
+ 
+ jQuery(window).on('orientationchange resize', function () {
+   adaptsize();
+});
+adaptsize();
 </script>
 
 </body>
