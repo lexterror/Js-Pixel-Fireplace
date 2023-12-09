@@ -1057,6 +1057,7 @@ left: 0;
 right:0;
 margin: 0 auto;
 position:absolute !important;
+bottom: 0 !important;
 }
 
 body {
@@ -1085,6 +1086,7 @@ var chooserandomsmoke=0;
 
 var smoke2 =0;
 var lock2 = 0;
+var smoketransition1=0;
 var smoketransition2=0;
 var chooserandomsmoke2=0;
 
@@ -1104,36 +1106,64 @@ var smoketransition5=0;
 var chooserandomsmoke5=0;
 
 
-var extrawait =0;
-var extra = 3;
+var extrawait =1;
+var extra = 0;
 var lock6 = 0;
 var extratransition1=0;
 var chooserandomextra=0;
 
-var extrawait1 =3;
+var extrawait1 =2;
 var extra1 = 3;
 var lock7 = 0;
 var extratransition1=0;
 var chooserandomextra1=0;
 
-var extrawait2 =6;
+var extrawait2 =3;
 var extra2 = 3;
 var lock8 = 0;
 var extratransition2=0;
 var chooserandomextra2=0;
 
 
-var extrawait3 =7;
+var extrawait3 =4;
 var extra3 = 3;
 var lock9 = 0;
 var extratransition3=0;
 var chooserandomextra3=0;
 
-var extrawait4 =9;
+var extrawait4 =5;
 var extra4 = 3;
 var lock10 = 0;
 var extratransition4=0;
 var chooserandomextra4=0;
+//sparks
+
+var smokex =16;
+var smokewaitx = 0;
+var lockx = 0;
+var smoketransitionx=0;
+var chooserandomsmokex=0;
+
+var smoke2x =20;
+var lock2x = 0;
+var smoketransition1x=0;
+var smoketransition2x=0;
+var chooserandomsmoke2x=0;
+
+var smoke3x =24;
+var lock3x = 0;
+var smoketransition3x=0;
+var chooserandomsmoke3x=0;
+
+var smoke4x =20;
+var lock4x = 0;
+var smoketransition4x=0;
+var chooserandomsmoke4x=0;
+
+var smoke5x =15;
+var lock5x = 0;
+var smoketransition5x=0;
+var chooserandomsmoke5x=0;
 
 var prevval = 3;
 for (count = 0; count < varz.length; count++)
@@ -1162,12 +1192,16 @@ var myfirecolorsmidnoglowlev3t=["#ff9a00", "yellow"];
 var myfirecolorsmidnoglowlev4t=["#ffce00", "yellow"];
 var myfirecolorsmidnoglowlev5t=["#ffe808", "yellow"];
 var myfirecolorsmidnoglowlev1tx=["#ff9a00", "#ff9a00","#ff9a00","#ff9a00","#ff9a00","transparent"];
+var topz=["orange", "gold"];
 var myfirecolorsmidnoglowlev2tx=["#ff9a00","#ff9a00","#ff9a00","#ff9a00","#ff9a00","transparent"];
 var myfirecolorsmidnoglowlev3tx=["#ff9a00", "yellow","#ff9a00","#ff9a00","#ff9a00"];
 var myfirecolorsmidnoglowlev4tx=["#ffce00", "yellow","#ffce00","#ffce00","#ffce00"];
 var myfirecolorsmidnoglowlev5tx=["#ffe808", "yellow","#ffe808","#ffe808","#ffe808"];
 var myfirecolorsmid=[ "yellow", "gold", "transparent", "black"];
-var myfirecolorshigh=[ "transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent", "transparent", "transparent", "transparent","#FFBF00", "transparent", "transparent", "#ffffeo", "transparent","  transparent","orange"];
+var myfirecolorshigh=[ "transparent"];
+
+var myfirecolorshighx=[  "transparent", "transparent","orange", "transparent", "transparent", "orange", "transparent","  transparent","orange"];
+
 var mypixels=["b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15",]
 var randfcolor1 = "";
 
@@ -1177,67 +1211,67 @@ var randfcolor1 = "";
 function firex()
 {
   
-var edgeztopz = ["4", "4", "4", "4", "4", "4", "4", "4",  "4", "4", "4", "4", "4", "4", "4", "4", "4", "4", "4", "4", "4", "4", "4", "4", "4", "4", "4", "4", "4", "4"];
-if (varz[0] > 4)
+var edgeztopz = ["1", "1", "1", "2", "2", "3", "3", "3",  "3", "3", "3", "3", "3", "3", "3", "3", "3", "3", "3", "3", "3", "3", "3", "3", "3", "2", "2", "1", "1", "1"];
+if (varz[0] > 3)
 varz[0] = 1;
-if (varz[1] > 4)
+if (varz[1] > 3)
 varz[1] =1;
-if (varz[2] > 4)
+if (varz[2] > 3)
 varz[2] = 1;
-if (varz[3] > 4)
+if (varz[3] > 3)
 varz[3] = 1;
-if (varz[4] > 4)
+if (varz[4] > 3)
 varz[4] = 1;
-if (varz[5] > 4)
+if (varz[5] > 3)
 varz[5] = 1;
-if (varz[6] > 13 )
+if (varz[6] > 7 )
 varz[6] = 1;
 if (varz[7] > 12)
 varz[7] = 1;
-if (varz[8] > 24)
+if (varz[8] > 26)
 varz[8] = 1;
-if (varz[9] > 20)
+if (varz[9] > 26)
 varz[9] = 1;
-if (varz[10] > 20)
+if (varz[10] > 26)
 varz[10] = 1;
-if (varz[11] > 20)
+if (varz[11] > 26)
 varz[11] = 1;
-if (varz[12] > 20)
+if (varz[12] > 26)
 varz[12] = 1;
-if (varz[13] > 20)
+if (varz[13] > 26)
 varz[13] = 1;
 if (varz[14] > 32)
 varz[14] = 1;
 
 if (varz[15] > 32)
 varz[15] = 1
-if (varz[16] > 20)
+if (varz[16] > 26)
 varz[16] = 1;
-if (varz[17] > 20)
+if (varz[17] > 26)
 varz[17] = 1;
-if (varz[18] > 20)
+if (varz[18] > 26)
 varz[18] = 1;
-if (varz[19] > 20)
+if (varz[19] > 26)
 varz[19] = 1;
-if (varz[20] > 20)
+if (varz[20] > 26)
 varz[20] = 1;
-if (varz[21] > 24)
+if (varz[21] > 26)
 varz[21] = 1;
 if (varz[22] > 13)
 varz[22] = 1;
-if (varz[23] > 13)
+if (varz[23] > 7)
 varz[23] = 1;
-if (varz[24] > 4)
+if (varz[24] > 3)
 varz[24] = 1;
-if (varz[25] > 4)
+if (varz[25] > 3)
 varz[25] = 1;
-if (varz[26] > 4)
+if (varz[26] > 3)
 varz[26] = 1;
-if (varz[27] > 4)
+if (varz[27] > 3)
 varz[27] = 1;
-if (varz[28] > 4)
+if (varz[28] > 3)
 varz[28] = 1;
-if (varz[29] > 4)
+if (varz[29] > 3)
 varz[29] = 1;
 
 
@@ -1246,28 +1280,57 @@ for (count = 0; count < varz.length; count++)
 {
 
     if (varz[count] < 2)
-    randfcolor1 = level2[Math.floor(Math.random()*level2.length)];
-	if (varz[count] < 3 && varz[count] > 1)
     randfcolor1 = level3[Math.floor(Math.random()*level3.length)];
-    if (varz[count] < 4 && varz[count] > 2)
+	if (varz[count] < 3 && varz[count] > 1)
     randfcolor1 = level4[Math.floor(Math.random()*level4.length)];
+    if (varz[count] < 4 && varz[count] > 2)
+    randfcolor1 = level5[Math.floor(Math.random()*level5.length)];
     if (varz[count] < 5 && varz[count] > 3)
     randfcolor1 = level5[Math.floor(Math.random()*level5.length)];	
+    if (varz[count] < 6 && varz[count] > 4)
+    randfcolor1 = level5[Math.floor(Math.random()*level5.length)];	
 
+
+//log 
+
+if (varz[count] > 2 && varz[count] < 32)
+    if (count == 5 || count == 24)
+    randfcolor1 = "transparent";
+if (varz[count] > 2 && varz[count] < 32)
+    if (count == 4 || count == 25)
+    randfcolor1 = "transparent";
+if (varz[count] > 2&& varz[count] < 32)
+    if (count == 3 || count == 26)
+    randfcolor1 = "transparent";
+if (varz[count] > 2 && varz[count] < 32)
+    if (count == 2 || count == 27)
+    randfcolor1 = "transparent";
+if (varz[count] > 2 && varz[count] < 32)
+    if (count == 1 || count == 28)
+    randfcolor1 = "transparent";
+if (varz[count] > 1 && varz[count] < 32)
+    if (count == 0)
+    randfcolor1 = "transparent";
+    if (varz[count] == 1 && varz[count] < 32)
+    if (count == 29)
+    randfcolor1 = "transparent";
+    if (varz[count] == 3 && varz[count] < 32)
+    if (count == 29)
+    randfcolor1 = "transparent";
     //MID
-    if (varz[count] > 3 && varz[count] < 32)
+    if (varz[count] > 2 && varz[count] < 32)
     if (count == 6 || count == 23)
     randfcolor1 = myfirecolorsmidnoglowlev2[Math.floor(Math.random()*myfirecolorsmidnoglowlev1.length)];
-    if (varz[count] > 3 && varz[count] < 32)
+    if (varz[count] > 2 && varz[count] < 32)
     if (count == 7 || count == 22)
     randfcolor1 = myfirecolorsmidnoglowlev3[Math.floor(Math.random()*myfirecolorsmidnoglowlev2.length)];
-    if (varz[count] > 3 && varz[count] < 32)
+    if (varz[count] > 2 && varz[count] < 32)
     if (count == 8 || count == 21)
     randfcolor1 = myfirecolorsmidnoglowlev3[Math.floor(Math.random()*myfirecolorsmidnoglowlev2.length)];
-    if (varz[count] > 3 && varz[count] < 32)
+    if (varz[count] > 2 && varz[count] < 32)
     if (count == 9 || count == 20)
     randfcolor1 = myfirecolorsmidnoglowlev4[Math.floor(Math.random()*myfirecolorsmidnoglowlev3.length)];
-    if (varz[count] > 3 && varz[count] < 32)
+    if (varz[count] > 2 && varz[count] < 32)
     if (count == 10 || count == 19)
     randfcolor1 = myfirecolorsmidnoglowlev4[Math.floor(Math.random()*myfirecolorsmidnoglowlev3.length)];
    if (varz[count] > 3 && varz[count] < 32)
@@ -1279,8 +1342,14 @@ for (count = 0; count < varz.length; count++)
   if (varz[count] > 3 && varz[count] < 32)
     if (count == 13 || count == 16)
     randfcolor1 = myfirecolorsmidnoglowlev5[Math.floor(Math.random()*myfirecolorsmidnoglowlev5.length)];
-  if (varz[count] > 3 && varz[count] < 32)
+  if (varz[count] > 2 && varz[count] < 32)
     if (count == 14 || count == 15)
+    randfcolor1 = myfirecolorsmidnoglowlev5[Math.floor(Math.random()*myfirecolorsmidnoglowlev5.length)];
+  if (varz[count] > 1 && varz[count] < 32)
+    if (count == 15)
+    randfcolor1 = myfirecolorsmidnoglowlev5[Math.floor(Math.random()*myfirecolorsmidnoglowlev5.length)];
+  if (varz[count] > 1 && varz[count] < 3)
+    if (count == 16)
     randfcolor1 = myfirecolorsmidnoglowlev5[Math.floor(Math.random()*myfirecolorsmidnoglowlev5.length)];
  
      //MIDt
@@ -1341,19 +1410,51 @@ for (count = 0; count < varz.length; count++)
     if (count == 14 || count == 15)
     randfcolor1 = myfirecolorsmidnoglowlev5tx[Math.floor(Math.random()*myfirecolorsmidnoglowlev5tx.length)];
    
+   //topzorange
+   
+   
+     //MIDtx
+    if (varz[count] > 10)
+    if (count == 6 || count == 23)
+    randfcolor1 = topz[Math.floor(Math.random()*topz.length)];
+    if (varz[count] > 10)
+    if (count == 7 || count == 22)
+    randfcolor1 = topz[Math.floor(Math.random()*topz.length)];
+    if (varz[count] > 10)
+    if (count == 8 || count == 21)
+    randfcolor1 = topz[Math.floor(Math.random()*topz.length)];
+    if (varz[count] > 10)
+    if (count == 9 || count == 20)
+    randfcolor1 = topz[Math.floor(Math.random()*topz.length)];
+    if (varz[count] > 10)
+    if (count == 10 || count == 19)
+    randfcolor1 = topz[Math.floor(Math.random()*topz.length)];
+	if (varz[count] > 10)
+    if (count == 11 || count == 18)
+    randfcolor1 = topz[Math.floor(Math.random()*topz.length)];
+	if (varz[count] > 10)
+    if (count == 12 || count == 17)
+    randfcolor1 = topz[Math.floor(Math.random()*topz.length)];
+	if (varz[count] > 10)
+    if (count == 13 || count == 16)
+    randfcolor1 = topz[Math.floor(Math.random()*topz.length)];
+	if (varz[count] > 10)
+    if (count == 14 || count == 15)
+    randfcolor1 = topz[Math.floor(Math.random()*topz.length)];
+   
    
    //superhigh
-   var randtop = Math.floor(Math.random()*5) + 12;
-   var randtop1 = Math.floor(Math.random()*5) + 12;
-   var randtop2 = Math.floor(Math.random()*5) + 12;
-   var randtop3 = Math.floor(Math.random()*5) + 12;
-   var randtop4 = Math.floor(Math.random()*5) + 12;
-   var randtop5 = Math.floor(Math.random()*5) + 12;
-   var randtop7 = Math.floor(Math.random()*5) + 12;
-   var randtop6 = Math.floor(Math.random()*5) + 12;
-   var randtop8 = Math.floor(Math.random()*5) + 12;
-   var randtop9 = Math.floor(Math.random()*5) + 12;
-  var randtop11 = Math.floor(Math.random()*5) + 6;
+   var randtop = Math.floor(Math.random()*7) + 10;
+   var randtop1 = Math.floor(Math.random()*5) + 10;
+   var randtop2 = Math.floor(Math.random()*6) + 10;
+   var randtop3 = Math.floor(Math.random()*4) + 10;
+   var randtop4 = Math.floor(Math.random()*6) + 10;
+   var randtop5 = Math.floor(Math.random()*6) + 9;
+   var randtop7 = Math.floor(Math.random()*3) + 9;
+   var randtop6 = Math.floor(Math.random()*6) + 7;
+   var randtop8 = Math.floor(Math.random()*4) + 6;
+   var randtop9 = Math.floor(Math.random()*6) + 6;
+  var randtop11 = Math.floor(Math.random()*5) + 7;
   
    
    if (varz[count] > randtop11 && varz[count] < 32)
@@ -1362,10 +1463,10 @@ for (count = 0; count < varz.length; count++)
     if (varz[count] > randtop11 && varz[count] < 32)
     if (count == 6 || count == 23)
     randfcolor1 = myfirecolorshigh[Math.floor(Math.random()*myfirecolorshigh.length)];
-    if (varz[count] > randtop11 && varz[count] < 32)
+    if (varz[count] > randtop9 && varz[count] < 32)
     if (count == 7 || count == 22)
     randfcolor1 = myfirecolorshigh[Math.floor(Math.random()*myfirecolorshigh.length)];
-    if (varz[count] > randtop7 && varz[count] < 32)
+    if (varz[count] > randtop8 && varz[count] < 32)
     if (count == 8 || count == 21)
     randfcolor1 = myfirecolorshigh[Math.floor(Math.random()*myfirecolorshigh.length)];
     if (varz[count] > randtop6 && varz[count] < 32)
@@ -1386,7 +1487,10 @@ for (count = 0; count < varz.length; count++)
 	if (varz[count] > randtop && varz[count] < 32)
     if (count == 14 || count == 15)
     randfcolor1 = myfirecolorshigh[Math.floor(Math.random()*myfirecolorshigh.length)];
-     
+    
+    //highx
+    
+
    
    // if (varz[count] > 20 && varz[count] < 32)
   //  randfcolor1 = myfirecolorshigh[Math.floor(Math.random()*myfirecolorshigh.length)];
@@ -1394,144 +1498,7 @@ for (count = 0; count < varz.length; count++)
 	var currstrb = "#" + varo[count].toString() + varz[count].toString();
     $(currstrb).css("background", randfcolor1);
 }
-// extrafire 
 
-	if (lock6 == 0)
-	{
-	lock6 = 1;
-	chooserandomextra = Math.floor(Math.random()*12) + 8;
-	}
- 
-  if (extrawait > 1)
-  if (varz[extra] > 3)
-  if (extrawait == 9)
-	{
-	  
-	
-	var currstrzzz = "#" + varo[chooserandomextra].toString() + varz[extra].toString();
-    $(currstrzzz).css("background", "transparent");
-
-	extra++;	
-	}
-	extrawait++;
-	if (extrawait > 10)
-	extrawait =0;
-	
-    if (extra > 12)
-	{
-	lock6 = 0;
-	extra = 3;
-	}
-	
-
-// extrafire2 
-
-	if (lock7 == 0)
-	{
-	lock7 = 1;
-	chooserandomextra1 = Math.floor(Math.random()*10) + 10;
-	}
- 
-   if (extrawait1 > 1)
-    if (varz[extra1] > 3)
-    if (extrawait1 == 9)
-	{
-	var currstrzzz1 = "#" + varo[chooserandomextra1].toString() + varz[extra1].toString();
-    $(currstrzzz1).css("background", "transparent");
-    extra1++;
-	}
-	extrawait1++;
-	if (extrawait1 > 10)
-	extrawait1 =0;
-	
-	
-    if (extra1 > 26)
-	{
-	lock7 = 0;
-	extra1 = 0;
-	}
-		
-// extrafire3 
-
-	if (lock8 == 0)
-	{
-	lock8 = 1;
-	chooserandomextra2 = Math.floor(Math.random()*10) + 10;
-	}
- 
-   if (extrawait2 > 1)
-    if (varz[extra2] > 3)
-    if (extrawait2 == 9)
-	{
-	var currstrzzz2 = "#" + varo[chooserandomextra2].toString() + varz[extra2].toString();
-    $(currstrzzz2).css("background", "transparent");
-    extra2++;
-	}
-	extrawait2++;
-	if (extrawait2 > 10)
-	extrawait2 =0;
-	
-	
-    if (extra2 > 26)
-	{
-	lock8 = 0;
-	extra2 = 0;
-	}
-
-// extrafire4 
-
-	if (lock9 == 0)
-	{
-	lock9 = 1;
-	chooserandomextra3 = Math.floor(Math.random()*14) + 6;
-	}
- 
- if (extrawait3 > 1)
-    if (varz[extra3] > 3)
-    if (extrawait3 == 9)
-	{
-	var currstrzzz3 = "#" + varo[chooserandomextra3].toString() + varz[extra3].toString();
-    $(currstrzzz3).css("background", "transparent");
-    extra3++;
-	}
-	extrawait3++;
-	if (extrawait3 > 10)
-	extrawait3 =0;
-	
-	
-    if (extra3 > 26)
-	{
-	lock9 = 0;
-	extra3 = 0;
-	}
-	
-// extrafire5 
-
-	if (lock10 == 0)
-	{
-	lock10 = 1;
-	chooserandomextra4 = Math.floor(Math.random()*10) + 10;
-	}
- 
-   if (extrawait4 > 1)
-    if (varz[extra4] > 3)
-    if (extrawait4 == 9)
-	{
-	var currstrzzz4 = "#" + varo[chooserandomextra4].toString() + varz[extra4].toString();
-    $(currstrzzz4).css("background", "transparent");
-    extra4++;
-	}
-	extrawait4++;
-	if (extrawait4 > 10)
-	extrawait4 =0;
-	
-	
-    if (extra4 > 26)
-	{
-	lock10 = 0;
-	extra4 = 0;
-	}	
-	
 
 // Smoke1
 
@@ -1541,8 +1508,8 @@ for (count = 0; count < varz.length; count++)
 	chooserandomsmoke = Math.floor(Math.random()*30);
 	}
  
-  
-	if (smokewait > 1)
+
+	if (varz[smoke] > smoke && varz[smoke] < (smoke + 2))
 	{
 	var currstrb = "#" + varo[chooserandomsmoke].toString() + varz[smoke].toString();
 	if (smoke == 0)
@@ -1555,14 +1522,22 @@ for (count = 0; count < varz.length; count++)
     $(currstrb).css("background", "gold");
 	if (smoke == 4)
     $(currstrb).css("background", "yellow");
+  if (smoke == 5)
+    $(currstrb).css("background", "yellow");
 	
 	
-	smoke++;
 	}
-    if (edgeztopz[chooserandomsmoke] < smoke)
+	smoketransition++;
+	if (smoketransition > 15)
+	{
+	  smoketransition=0;
+	  smoke++;
+
+	}
+  if (smoke > 3)
 	{
 	lock = 0;
-	smoke = 1;
+	smoke = 0;
 	}
 	
 // Smoke2
@@ -1574,8 +1549,7 @@ for (count = 0; count < varz.length; count++)
 	}
   
    
-    
- 	if (smokewait > 1)
+ 	if (varz[smoke2] > smoke2 && varz[smoke2] < (smoke2 + 2))
 	{
 	var currstrb2 = "#" + varo[chooserandomsmoke2].toString() + varz[smoke2].toString();
 	if (smoke2 == 0)
@@ -1588,18 +1562,22 @@ for (count = 0; count < varz.length; count++)
     $(currstrb2).css("background", "gold");
 	if (smoke2 == 4)
     $(currstrb2).css("background", "yellow");
+if (smoke2 == 5)
+    $(currstrb2).css("background", "yellow");
 	
-	
-	
-    smoke2++;
 	}
-    if (edgeztopz[chooserandomsmoke2] < smoke2)
+    smoketransition1++;
+	if (smoketransition1 > 20)
 	{
-	smoke2 = 1;
-	lock2 = 0;
-	}
-	
+	  smoketransition1=0;
+	  smoke2++;
 
+	}
+  if (smoke2 > 3)
+	{
+	lock2 = 0;
+	smoke2 = 0;
+	}
 // Smoke3
 
 	if (lock3 == 0)
@@ -1608,8 +1586,7 @@ for (count = 0; count < varz.length; count++)
 	chooserandomsmoke3 = Math.floor(Math.random()*30);
 	}
   
-   
-   	if (smokewait > 1)
+   if (varz[smoke3] > smoke3 && varz[smoke3] < (smoke3 + 2))
 	{
 	var currstrb3 = "#" + varo[chooserandomsmoke3].toString() + varz[smoke3].toString();
 	if (smoke3 == 0)
@@ -1622,16 +1599,22 @@ for (count = 0; count < varz.length; count++)
     $(currstrb3).css("background", "gold");
 	if (smoke3 == 4)
     $(currstrb3).css("background", "yellow");
-	
-	
-	smoke3++;
+	if (smoke3 == 5)
+    $(currstrb3).css("background", "yellow");
+
 	}
-    if (edgeztopz[chooserandomsmoke3] < smoke3)
+    smoketransition2++;
+	if (smoketransition2 > 15)
 	{
-	smoke3 = 1;	
-	lock3 = 0;
+	  smoketransition2=0;
+	  smoke3++;
+
 	}
-	
+  if (smoke3 > 3)
+	{
+	lock3 = 0;
+	smoke3 = 0;
+	}
 
 // Smoke4
 
@@ -1642,7 +1625,7 @@ for (count = 0; count < varz.length; count++)
 	}
   
    
-	if (smokewait > 1)
+	if (varz[smoke4] > smoke4 && varz[smoke4] < (smoke4 + 2))
 	{
 	var currstrb4 = "#" + varo[chooserandomsmoke4].toString() + varz[smoke4].toString();
 	if (smoke4 == 0)
@@ -1655,14 +1638,21 @@ for (count = 0; count < varz.length; count++)
     $(currstrb4).css("background", "gold");
 	if (smoke4 == 4)
     $(currstrb4).css("background", "yellow");
+	if (smoke4 == 5)
+    $(currstrb4).css("background", "yellow");
 	
-	
-	smoke4++;
 	}
-    if (edgeztopz[chooserandomsmoke4] < smoke4)
+    smoketransition3++;
+	if (smoketransition3 > 20)
 	{
-	smoke4 = 1;	
+	  smoketransition3=0;
+	  smoke4++;
+
+	}
+  if (smoke4 > 3)
+	{
 	lock4 = 0;
+	smoke4 = 0;
 	}
 	
 
@@ -1674,8 +1664,8 @@ for (count = 0; count < varz.length; count++)
 	chooserandomsmoke5 = Math.floor(Math.random()*30);
 	}
   
-   
-	if (smokewait > 1)
+  
+	if (varz[smoke5] > smoke5 && varz[smoke5] < (smoke5 + 2))
 	{
 	var currstrb5 = "#" + varo[chooserandomsmoke5].toString() + varz[smoke5].toString();
 	if (smoke5 == 0)
@@ -1688,22 +1678,328 @@ for (count = 0; count < varz.length; count++)
     $(currstrb5).css("background", "gold");
 	if (smoke5 == 4)
     $(currstrb5).css("background", "yellow");
+  if (smoke5 == 5)
+    $(currstrb5).css("background", "yellow");
 	
-	smoke5++;
 	}
-    if (edgeztopz[chooserandomsmoke5] < smoke5)
+    smoketransition4++;
+	if (smoketransition4 > 15)
 	{
-	smoke5 =1;
-	lock5 = 0;
+	  smoketransition4=0;
+	  smoke5++;
+
 	}
-	smokewait++;
-	if (smokewait > 4)
-	smokewait = 0;
+  if (smoke5 > 3)
+	{
+	lock5 = 0;
+	smoke5 = 0;
+	}
+	
+	//sparks
+	
+	
+
+// Smoke1
+
+	if (lockx == 0)
+	{
+	lockx = 1;
+	chooserandomsmokex = Math.floor(Math.random()*10) + 10;
+	}
+ 
+  
+	if (varz[smokex] > smokex && varz[smokex] < (smokex + 2))
+	{
+	var currstrbx = "#" + varo[chooserandomsmokex].toString() + varz[smokex].toString();
+	
+	
+    $(currstrbx).css("background", "gold");
+	
+	
+	}
+	smoketransitionx++;
+	if (smoketransitionx > 15)
+	{
+	  smoketransitionx=0;
+	  smokex++;
+
+	}
+  if (smokex > 26)
+	{
+	lockx = 0;
+	smokex = 15;
+	}
+	
+// Smoke2
+
+	if (lock2x == 0)
+	{
+	lock2x = 1;
+	chooserandomsmoke2x = Math.floor(Math.random()*10) + 10;
+	}
+  
+   
+    
+ 	if (varz[smoke2x] > smoke2x && varz[smoke2x] < (smoke2x + 2))
+	{
+	var currstrb2x = "#" + varo[chooserandomsmoke2x].toString() + varz[smoke2x].toString();
+
+    $(currstrb2x).css("background", "gold");
+	
+	}
+    smoketransition1x++;
+	if (smoketransition1x > 20)
+	{
+	  smoketransition1x=0;
+	  smoke2x++;
+
+	}
+  if (smoke2x > 26)
+	{
+	lock2x = 0;
+	smoke2x = 15;
+	}
+// Smoke3
+
+	if (lock3x == 0)
+	{
+	lock3x = 1;
+	chooserandomsmoke3x = Math.floor(Math.random()*10) + 10;
+	}
+  
+   
+   	if (varz[smoke3x] > smoke3x && varz[smoke3x] < (smoke3x + 2))
+	{
+	var currstrb3x = "#" + varo[chooserandomsmoke3x].toString() + varz[smoke3x].toString();
+	
+    $(currstrb3x).css("background", "gold");
+
+
+	}
+    smoketransition2x++;
+	if (smoketransition2x > 15)
+	{
+	  smoketransition2x=0;
+	  smoke3x++;
+
+	}
+  if (smoke3x > 26)
+	{
+	lock3x = 0;
+	smoke3x = 15;
+	}
+
+// Smoke4
+
+	if (lock4x == 0)
+	{
+	lock4x = 1;
+	chooserandomsmoke4x = Math.floor(Math.random()*10) + 10;
+	}
+  
+   
+	if (varz[smoke4x] > smoke4x && varz[smoke4x] < (smoke4x + 2))
+	{
+	var currstrb4x = "#" + varo[chooserandomsmoke4x].toString() + varz[smoke4x].toString();
+	
+    $(currstrb4x).css("background", "gold");
+
+	}
+    smoketransition3x++;
+	if (smoketransition3x > 20)
+	{
+	  smoketransition3x=0;
+	  smoke4x++;
+
+	}
+  if (smoke4x > 26)
+	{
+	lock4x = 0;
+	smoke4x = 15;
+	}
+	
+
+// Smoke5
+
+	if (lock5x == 0)
+	{
+	lock5x = 1;
+	chooserandomsmoke5x = Math.floor(Math.random()*10) + 10;
+	}
+  
+   
+	if (varz[smoke5x] > smoke5x && varz[smoke5x] < (smoke5x + 2))
+	{
+	var currstrb5x = "#" + varo[chooserandomsmoke5x].toString() + varz[smoke5x].toString();
+
+    $(currstrb5x).css("background", "gold");
+	
+	
+	}
+    smoketransition4x++;
+	if (smoketransition4x > 15)
+	{
+	  smoketransition4x=0;
+	  smoke5x++;
+
+	}
+  if (smoke5x > 26)
+	{
+	lock5x = 0;
+	smoke5x = 15;
+	}
+
+
+// extrafire 
+
+	if (lock6 == 0)
+	{
+	lock6 = 1;
+	chooserandomextra = Math.floor(Math.random()*10) + 10;
+	}
+ 
+ // if (extrawait > 1)
+ if (varz[extra] > 3)
+  if (varz[extra] < (extra -1) && varz[extra] > (extra -3))
+	{
+	  
+	
+	var currstrzzz = "#" + varo[chooserandomextra].toString() + varz[extra].toString();
+    $(currstrzzz).css("background", "transparent");
+
+	
+	}
+  
+//	if (extrawait > 10)
+//	extrawait =0;
+	
+  if (extrawait > 30)
+	{
+	extra++;	
+	extrawait=0;
+	}
+	if (extra > 16)
+	{
+	lock6 = 0;
+	extra = 4;
+	}
+	
+
+// extrafire2 
+
+	if (lock7 == 0)
+	{
+	lock7 = 1;
+	chooserandomextra1 = Math.floor(Math.random()*10) + 10;
+	}
+ 
+   if (varz[extra1] > 3)
+  if (varz[extra1] < (extra1-1) && varz[extra1] > (extra1 -3))
+	{
+	var currstrzzz1 = "#" + varo[chooserandomextra1].toString() + varz[extra1].toString();
+    $(currstrzzz1).css("background", "transparent");
+    
+	}
+	if (extrawait1 > 5)
+	{
+	extra1++;	
+	extrawait1=0;
+	}
+	if (extra1 > 18)
+	{
+	lock7 = 0;
+	extra1 = 4;
+	}
+		
+// extrafire3 
+
+	if (lock8 == 0)
+	{
+	lock8 = 1;
+	chooserandomextra2 = Math.floor(Math.random()*10) + 10;
+	}
+ 
+   if (varz[extra2] > 3)
+    if (varz[extra2] < (extra2-1) && varz[extra2] > (extra2 -3))
+	{
+	var currstrzzz2 = "#" + varo[chooserandomextra2].toString() + varz[extra2].toString();
+    $(currstrzzz2).css("background", "transparent");
+    
+	}
+	if (extrawait2 > 5)
+	{
+	extra2++;	
+	extrawait2=0;
+	}
+	if (extra2 > 18)
+	{
+	lock8 = 0;
+	extra2 = 4;
+	}
+
+// extrafire4 
+
+	if (lock9 == 0)
+	{
+	lock9 = 1;
+	chooserandomextra3 = Math.floor(Math.random()*10) + 10;
+	}
+ 
+ if (varz[extra3] > 3)
+    if (varz[extra3] < (extra3-1) && varz[extra3] > (extra3 -3))
+	{
+	var currstrzzz3 = "#" + varo[chooserandomextra3].toString() + varz[extra3].toString();
+    $(currstrzzz3).css("background", "transparent");
+    
+	}
+	if (extrawait3 > 10)
+	{
+	extra3++;	
+	extrawait3=0;
+	}
+	if (extra3 > 18)
+	{
+	lock9 = 0;
+	extra3 = 4;
+	}
+// extrafire5 
+
+	if (lock10 == 0)
+	{
+	lock10 = 1;
+	chooserandomextra4 = Math.floor(Math.random()*10) + 10;
+	}
+ 
+  if (varz[extra4] > 3)
+    if (varz[extra4] < (extra4-1) && varz[extra4] > (extra4 -3))
+	{
+	var currstrzzz4 = "#" + varo[chooserandomextra4].toString() + varz[extra4].toString();
+    $(currstrzzz4).css("background", "transparent");
+    
+	}
+	if (extrawait4 > 15)
+	{
+	extra4++;	
+	extrawait4=0;
+	}
+	if (extra4 > 18)
+	{
+	lock10 = 0;
+	extra4 = 4;
+	}
+	
+extrawait++;
+extrawait1++;
+extrawait2++;
+extrawait3++;
+extrawait4++;
 
 for (count = 0; count < varz.length; count++)
 {
    varz[count] = varz[count] + 1;
 }
+if (count > 32)
+count = 0;
 fireanim();  
 }
 function fireanim()
