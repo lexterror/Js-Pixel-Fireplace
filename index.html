@@ -1041,31 +1041,21 @@ Date: Tue, Dec 5th, 2023
 </div>
 </div>
 <style>
-* {
-  padding:0;
-  margin:0;
-}
 
 .rowz {
+
+float: left;
   
-  width:640px;
-  height:20px;
 }
 .pixel {
   
-  width:20px;
-  height:20px;
-  float:left;
+  float: left;
   background:transparent;
 }
 #fireplace {
-width: 640px;
 left: 0;
 right:0;
 margin: 0 auto;
-left: 50% !important;
-top: 50% !important;
-transform: translate(-50%, -%50) !important
 position:absolute !important;
 }
 
@@ -1080,6 +1070,7 @@ html {
   height:100%;
   background: #000;
   overflow:hidden;
+  
 
 }
 </style>
@@ -1720,6 +1711,49 @@ function fireanim()
 setTimeout(firex,10);
 }
 fireanim();
+adaptsize();
+
+function adaptsize()
+{
+
+var width = $(document).width();
+var height = $(document).height();
+
+if (height > width)
+{
+var pixelsize = (width / 32);
+var px = Math.round(pixelsize)
+$(".pixel").width(px);
+$(".pixel").height(px);
+  
+var myrows = px * 32;
+$(".rows").width(myrows);
+$(".rows").height(px);
+$("#fireplace").width(myrows);
+$("#fireplace").height(myrows);
+}
+
+if (height < width)
+{
+var pixelsize = (height / 32);
+var px = Math.round(pixelsize)
+$(".pixel").width(px);
+$(".pixel").height(px);
+  
+var myrows = px * 32;
+$(".rows").width(myrows);
+$(".rows").height(px);
+$("#fireplace").width(myrows);
+$("#fireplace").height(myrows);
+}
+
+
+
+}
+ 
+$(window).resize(adaptsize);
+
+
 
 function chimx()
 {
@@ -1754,35 +1788,6 @@ firesound.play();
     });
     });
 
-function adaptsize()
-{
-
-
-
-var height = window.outerHeight;
-var width = window.outerWidth;
-
-
-var getpixelsize= width / 32;
-var pixelsize = Math.round(getpixelsize);
-var pixelstr = pixelsize.toString() + "px !important";
-$(".pixel").css("width", pixelstr);
-$(".pixel").css("height", pixelstr);
-  
-var myrows = pixelsize * 32;
-var rowstr = myrows.toString() + "px !important";
-$(".rows").css("width", rowstr);
-$(".rows").css("height", pixelstr);
-
-}
- $(document).ready(adaptsize);
-
- $(window).resize(adaptsize);
- 
- jQuery(window).on('orientationchange resize', function () {
-   adaptsize();
-});
-adaptsize();
 </script>
 
 </body>
