@@ -1083,7 +1083,7 @@ var smokewait = 0;
 var lock = 0;
 var smoketransition=0;
 var chooserandomsmoke=0;
-
+var bounce = 0;
 var smoke2 =0;
 var lock2 = 0;
 var smoketransition1=0;
@@ -1442,21 +1442,39 @@ if (varz[count] > 1 && varz[count] < 32)
     if (count == 14 || count == 15)
     randfcolor1 = topz[Math.floor(Math.random()*topz.length)];
    
-   
+   if (bounce%2 == 0)
+   {
    //superhigh
-   var randtop = Math.floor(Math.random()*7) + 10;
-   var randtop1 = Math.floor(Math.random()*5) + 10;
-   var randtop2 = Math.floor(Math.random()*6) + 10;
-   var randtop3 = Math.floor(Math.random()*4) + 10;
-   var randtop4 = Math.floor(Math.random()*6) + 10;
-   var randtop5 = Math.floor(Math.random()*6) + 9;
-   var randtop7 = Math.floor(Math.random()*3) + 9;
-   var randtop6 = Math.floor(Math.random()*6) + 7;
+   var randtop = Math.floor(Math.random()*5) + 10;
+   var randtop1 = Math.floor(Math.random()*3) + 10;
+   var randtop2 = Math.floor(Math.random()*4) + 10;
+   var randtop3 = Math.floor(Math.random()*2) + 10;
+   var randtop4 = Math.floor(Math.random()*4) + 10;
+   var randtop5 = Math.floor(Math.random()*4) + 9;
+   var randtop7 = Math.floor(Math.random()*2) + 9;
+   var randtop6 = Math.floor(Math.random()*4) + 7;
    var randtop8 = Math.floor(Math.random()*4) + 6;
-   var randtop9 = Math.floor(Math.random()*6) + 6;
-  var randtop11 = Math.floor(Math.random()*5) + 7;
-  
-   
+   var randtop9 = Math.floor(Math.random()*6) + 3;
+  var randtop11 = Math.floor(Math.random()*3) + 3;
+   }
+   if (bounce%2 !=0 )
+   {
+      //superhigh
+   var randtop = Math.floor(Math.random()*2) + 10;
+   var randtop1 = Math.floor(Math.random()*2) + 10;
+   var randtop2 = Math.floor(Math.random()*2) + 10;
+   var randtop3 = Math.floor(Math.random()*2) + 10;
+   var randtop4 = Math.floor(Math.random()*2) + 10;
+   var randtop5 = Math.floor(Math.random()*2) + 9;
+   var randtop7 = Math.floor(Math.random()*2) + 9;
+   var randtop6 = Math.floor(Math.random()*2) + 7;
+   var randtop8 = Math.floor(Math.random()*2) + 6;
+   var randtop9 = Math.floor(Math.random()*2) + 3;
+  var randtop11 = Math.floor(Math.random()*2) + 3;
+   }
+   bounce++;
+   if (bounce  >11)
+   bounce =0;
    if (varz[count] > randtop11 && varz[count] < 32)
     if (count == 5 || count == 24)
     randfcolor1 = myfirecolorshigh[Math.floor(Math.random()*myfirecolorshigh.length)];
@@ -1713,7 +1731,7 @@ if (smoke2 == 5)
 	var currstrbx = "#" + varo[chooserandomsmokex].toString() + varz[smokex].toString();
 	
 	
-    $(currstrbx).css("background", "gold");
+    $(currstrbx).css("background", "orange");
 	
 	
 	}
@@ -1744,7 +1762,7 @@ if (smoke2 == 5)
 	{
 	var currstrb2x = "#" + varo[chooserandomsmoke2x].toString() + varz[smoke2x].toString();
 
-    $(currstrb2x).css("background", "gold");
+    $(currstrb2x).css("background", "orange");
 	
 	}
     smoketransition1x++;
@@ -1772,7 +1790,7 @@ if (smoke2 == 5)
 	{
 	var currstrb3x = "#" + varo[chooserandomsmoke3x].toString() + varz[smoke3x].toString();
 	
-    $(currstrb3x).css("background", "gold");
+    $(currstrb3x).css("background", "orange");
 
 
 	}
@@ -1802,7 +1820,7 @@ if (smoke2 == 5)
 	{
 	var currstrb4x = "#" + varo[chooserandomsmoke4x].toString() + varz[smoke4x].toString();
 	
-    $(currstrb4x).css("background", "gold");
+    $(currstrb4x).css("background", "orange");
 
 	}
     smoketransition3x++;
@@ -1832,7 +1850,7 @@ if (smoke2 == 5)
 	{
 	var currstrb5x = "#" + varo[chooserandomsmoke5x].toString() + varz[smoke5x].toString();
 
-    $(currstrb5x).css("background", "gold");
+    $(currstrb5x).css("background", "orange");
 	
 	
 	}
