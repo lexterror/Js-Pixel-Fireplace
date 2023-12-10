@@ -5,6 +5,7 @@
 Pixel Fireplace Js 
 By: Alex Terranova
 Date: Tue, Dec 5th, 2023
+v17.0 > 12/10/2023
 
 -->
 <script src="jquery.min.js"></script>
@@ -1076,6 +1077,111 @@ html {
 }
 </style>
 <script>
+var myflames=["fl1", "fl2", "fl3", "fl4", "fl5", "fl6", "fl7", "fl8", "fl9", "fl10", "fl11", "fl12", "fl13", "fl14", "fl15", "fl16", "fl17", "fl18", "fl19", "fl20", "fl21", "fl22", "fl23", "fl24", "fl25", "fl26", "fl27", "fl28", "fl29", "fl30"]
+  for (countzzz = 0; countzzz < myflames.length; countzzz++)
+{
+   myflames[countzzz] = 0;
+}
+var flamelocks=["lockfl1", "lockfl2", "lockfl3", "lockfl4", "lockfl5", "lockfl6", "lockfl7", "lockfl8", "lockfl9", "lockfl10", "lockfl11", "lockfl12", "lockfl13", "lockfl14", "lockfl15", "lockfl16", "lockfl17", "lockfl18", "lockfl19", "lockfl20", "lockfl21", "lockfl22", "lockfl23", "lockfl24", "lockfl25", "lockfl26", "lockfl27", "lockfl28", "lockfl29", "lockfl30"];
+for (countzzz = 0; countzzz < flamelocks.length; countzzz++)
+{
+   flamelocks[countzzz] = 0;
+}
+
+var lockfl1 = 0;
+var lockfl2 = 0;
+var lockfl3 = 0;
+var lockfl4 = 0;
+var lockfl5 = 0;
+var lockfl6 = 0;
+var lockfl7 = 0;
+var lockfl8 = 0;
+var lockfl9 = 0;
+var lockfl10 = 0;
+var lockfl11 = 0;
+var lockfl12 = 0;
+var lockfl13 = 0;
+var lockfl14 = 0;
+var lockfl15 = 0;
+var lockfl16 = 0;
+var lockfl17 = 0;
+var lockfl18 = 0;
+var lockfl19 = 0;
+var lockfl20 = 0;
+var lockfl21 = 0;
+var lockfl22 = 0;
+var lockfl23 = 0;
+var lockfl24 = 0;
+var lockfl25 = 0;
+var lockfl26 = 0;
+var lockfl27 = 0;
+var lockfl28 = 0;
+var lockfl29 = 0;
+var lockfl30 = 0;
+var fl1 = 0;
+var fl2 = 0;
+var fl3 = 0;
+var fl4 = 0;
+var fl5 = 0;
+var fl6 = 0;
+var fl7 = 0;
+var fl8 = 0;
+var fl9 = 0;
+var fl10 =0;
+var fl11 = 0;
+var fl12 = 0;
+var fl13 = 0;
+var fl14 = 0;
+var fl15 = 0;
+var fl16 = 0;
+var fl17 = 0;
+var fl18 = 0;
+var fl19 = 0;
+var fl20 = 0;
+var fl21 = 0;
+var fl22 = 0;
+var fl23 = 0;
+var fl24 = 0;
+var fl25 = 0;
+var fl26 = 0;
+var fl27 = 0;
+var fl28 = 0;
+var fl29 = 0;
+var fl30 = 0;
+
+var flametrans1 = 0;
+var flametrans2 = 0;
+var flametrans3 = 0;
+var flametrans4 = 0;
+var flametrans5 = 0;
+var flametrans6 = 0;
+var flametrans7 = 0;
+var flametrans8 = 0;
+var flametrans9 = 0;
+var flametrans10 = 0;
+
+var flametrans11 = 0;
+var flametrans12 = 0;
+var flametrans13 = 0;
+var flametrans14 = 0;
+var flametrans15 = 0;
+var flametrans16 = 0;
+var flametrans17 = 0;
+var flametrans18 = 0;
+var flametrans19 = 0;
+var flametrans20 = 0;
+
+var flametrans21 = 0;
+var flametrans22 = 0;
+var flametrans23 = 0;
+var flametrans24 = 0;
+var flametrans25 = 0;
+var flametrans26 = 0;
+var flametrans27 = 0;
+var flametrans28 = 0;
+var flametrans29 = 0;
+var flametrans30 = 0;
+
 var varz=["b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "z1", "z2", "z3", "z4", "z5", "z6", "z7", "z8", "z9", "z10", "z11", "z12", "z13", "z14", "z15"];
 var varo=["b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "za", "zb", "zc", "zd", "ze", "zf", "zg", "zh", "zi", "zj", "zk", "zl", "zm", "zn", "zo"];
 var smoke =0;
@@ -1171,6 +1277,7 @@ for (count = 0; count < varz.length; count++)
    varz[count] = 0;
 }
 var forever=true;
+var flamep =["red", "#ff5a00", "#ff9a00", "#ffce00", "#ffe808"]
 var level1on = ["#563601"];
 var level2on = ["#8f5b01"];
 var level3on = ["#b57401"];
@@ -1210,8 +1317,8 @@ var randfcolor1 = "";
 
 function firex()
 {
-  
-var edgeztopz = ["1", "1", "1", "2", "2", "3", "3", "3",  "3", "3", "3", "3", "3", "3", "3", "3", "3", "3", "3", "3", "3", "3", "3", "3", "3", "2", "2", "1", "1", "1"];
+
+//var edgeztopz = ["3", "3", "3", "3", "3", "3", "7", "12",  "26", "26", "26", "26", "26", "26", "32", "32", "26", "26", "26", "26", "3", "3", "3", "3", "3", "2", "2", "1", "1", "1"];
 if (varz[0] > 3)
 varz[0] = 1;
 if (varz[1] > 3)
@@ -1240,11 +1347,11 @@ if (varz[12] > 26)
 varz[12] = 1;
 if (varz[13] > 26)
 varz[13] = 1;
-if (varz[14] > 32)
+if (varz[14] > 26)
 varz[14] = 1;
 
-if (varz[15] > 32)
-varz[15] = 1
+if (varz[15] > 26)
+varz[15] = 1;
 if (varz[16] > 26)
 varz[16] = 1;
 if (varz[17] > 26)
@@ -1292,10 +1399,12 @@ for (count = 0; count < varz.length; count++)
 
 
 //log 
-
+if (varz[count] > 2)
+randfcolor1 ="transparent";
 if (varz[count] > 2 && varz[count] < 32)
-    if (count == 5 || count == 24)
-    randfcolor1 = "transparent";
+randfcolor1 = "transparent";
+
+
 if (varz[count] > 2 && varz[count] < 32)
     if (count == 4 || count == 25)
     randfcolor1 = "transparent";
@@ -1311,13 +1420,1006 @@ if (varz[count] > 2 && varz[count] < 32)
 if (varz[count] > 1 && varz[count] < 32)
     if (count == 0)
     randfcolor1 = "transparent";
-    if (varz[count] == 1 && varz[count] < 32)
-    if (count == 29)
+    if (varz[count] == 2 && varz[count] < 32)
+    if (count == 29 || count==28 ||count == 27)
     randfcolor1 = "transparent";
     if (varz[count] == 3 && varz[count] < 32)
     if (count == 29)
     randfcolor1 = "transparent";
-    //MID
+    
+    
+    //actual flames
+    
+	if (lockfl1 == 0)
+	{
+	lockfl1 = 1;
+	randomx1 = 7;
+	randomx1h = Math.floor(Math.random()*3) + 4;
+	}
+  if (lockfl2 == 0)
+	{
+	lockfl2 = 1;
+	randomx2 = 8;
+	randomx2h = Math.floor(Math.random()*3) + 5;
+	}
+	if (lockfl3 == 0)
+	{
+	lockfl3 = 1;
+	randomx3 = 9;
+	randomx3h = Math.floor(Math.random()*4) + 8;
+	}
+	if (lockfl4 == 0)
+	{
+	lockfl4 = 1;
+	randomx4 = 10;
+	randomx4h = Math.floor(Math.random()*4) + 10;
+	}
+	if (lockfl5 == 0)
+	{
+	lockfl5 = 1;
+	randomx5 = 11;
+	randomx5h = Math.floor(Math.random()*4) + 10;
+	}
+	if (lockfl6 == 0)
+	{
+	lockfl6 = 1;
+	randomx6 = 12;
+    randomx6h = Math.floor(Math.random()*4) + 10;
+	}
+	if (lockfl7 == 0)
+	{
+	lockfl7 = 1;
+	randomx7 = 13;
+	randomx7h = Math.floor(Math.random()*4) + 10;
+	}
+	if (lockfl8 == 0)
+	{
+	lockfl8 = 1;
+	randomx8 = 14;
+	randomx8h = Math.floor(Math.random()*5) + 10;
+	}
+	if (lockfl9 == 0)
+	{
+	lockfl9 = 1;
+	randomx9 = 15;
+	randomx9h = Math.floor(Math.random()*5) +10;
+	}
+	if (lockfl10 == 0)
+	{
+	lockfl10 = 1;
+	randomx10 = 16;
+	randomx10h = Math.floor(Math.random()*4) +10;
+	}
+ 
+ 
+	if (lockfl11 == 0)
+	{
+	lockfl11 = 1;
+	randomx11 = 17;
+	randomx11h = Math.floor(Math.random()*4) +10;
+	}
+  if (lockfl12 == 0)
+	{
+	lockfl12 = 1;
+	randomx12 = 18;
+	randomx12h = Math.floor(Math.random()*4) +10;
+	}
+	if (lockfl13 == 0)
+	{
+	lockfl13 = 1;
+	randomx13 = 19;
+	randomx13h = Math.floor(Math.random()*4) +6;
+	}
+	if (lockfl14 == 0)
+	{
+	lockfl14 = 1;
+	randomx14 = 20;
+	randomx14h = Math.floor(Math.random()*3) +5;
+	}
+	if (lockfl15 == 0)
+	{
+	lockfl15 = 1;
+	randomx15 = 21;
+	randomx15h = Math.floor(Math.random()*3) +4;
+	}
+	
+	
+	
+	
+	
+	if (lockfl16 == 0)
+	{
+	lockfl16 = 1;
+	randomx16 = 7;
+	randomx16h = Math.floor(Math.random()*4) +6;
+	}
+	
+	if (lockfl17 == 0)
+	{
+	lockfl17 = 1;
+	randomx17 = 8;
+	randomx17h = Math.floor(Math.random()*4) +6;
+	}
+	if (lockfl18 == 0)
+	{
+	lockfl18 = 1;
+	randomx18 = 9;
+	randomx18h = Math.floor(Math.random()*4) +6;
+	}
+	if (lockfl19 == 0)
+	{
+	lockfl19 = 1;
+	randomx19 = 10;
+	randomx19h = Math.floor(Math.random()*4) +8;
+	}
+	if (lockfl20 == 0)
+	{
+	lockfl20 = 1;
+	randomx20 = 11;
+	randomx20h = Math.floor(Math.random()*4) +10;
+	}
+ 
+	if (lockfl21 == 0)
+	{
+	lockfl21 = 1;
+	randomx21 = 12;
+	randomx21h = Math.floor(Math.random()*4) +  10;
+	}
+  if (lockfl22 == 0)
+	{
+	lockfl22 = 1;
+	randomx22 = 13;
+	randomx22h = Math.floor(Math.random()*4) + 10;
+	}
+	if (lockfl23 == 0)
+	{
+	lockfl23 = 1;
+	randomx23 = 14;
+	randomx23h = Math.floor(Math.random()*6) + 10;
+	}
+
+	if (lockfl24 == 0)
+	{
+	lockfl24 = 1;
+	randomx24 = 15;
+	randomx24h = Math.floor(Math.random()*6) + 10;
+	}
+	if (lockfl25 == 0)
+	{
+	lockfl25 = 1;
+	randomx25 = 16;
+	randomx25h = Math.floor(Math.random()*4) + 10;
+	}
+	if (lockfl26 == 0)
+	{
+	lockfl26 = 1;
+	randomx26 = 17;
+	randomx26h = Math.floor(Math.random()*4) + 10;
+	}
+	if (lockfl27 == 0)
+	{
+	lockfl27 = 1;
+	randomx27 = 18;
+	randomx27h = Math.floor(Math.random()*4) + 10;
+	}
+	if (lockfl28 == 0)
+	{
+	lockfl28 = 1;
+	randomx28 = 19;
+	randomx28h = Math.floor(Math.random()*4) + 8;
+	}
+	if (lockfl29 == 0)
+	{
+	lockfl29 = 1;
+	randomx29 = 20;
+	randomx29h = Math.floor(Math.random()*4) + 6;
+	}
+	if (lockfl30 == 0)
+	{
+	lockfl30 = 1;
+	randomx30 = 21;
+	randomx30h = Math.floor(Math.random()*4) + 6;
+	}
+ 
+ 
+
+ 
+ 
+ 
+ 
+	
+	if (varz[fl1] > 2 && varz[fl1] < randomx1h)
+	{
+	var flammy = "#" + varo[randomx1].toString() + varz[fl1].toString();
+	if (varz[fl1] > 2 &&  varz[fl1] < randomx1h)
+    $( flammy).css("background", flamep[4]);
+	if (varz[fl1] > (randomx1h - 4))
+	$( flammy).css("background", flamep[3]);
+	if (varz[fl1] > (randomx1h - 3))
+	$( flammy).css("background", flamep[2]);
+	if (varz[fl1] > (randomx1h - 2))
+	$( flammy).css("background", flamep[1]);
+	if (varz[fl1] > (randomx1h - 1))
+	$( flammy).css("background", flamep[0]);
+	}
+	flametrans1++;
+	if (flametrans1 > 60)
+	{
+	  flametrans1=0;
+	  fl1++;
+	}
+	if (varz[fl2] > 2 && varz[fl2] < randomx2h)
+	{
+	var flammy = "#" + varo[randomx2].toString() + varz[fl2].toString();
+	if (varz[fl2] > 2 &&  varz[fl2] < randomx2h)
+    $( flammy).css("background", flamep[4]);
+	if (varz[fl2] > (randomx2h - 4))
+	$( flammy).css("background", flamep[3]);
+	if (varz[fl2] > (randomx2h - 3))
+	$( flammy).css("background", flamep[2]);
+	if (varz[fl2] > (randomx2h - 2))
+	$( flammy).css("background", flamep[1]);
+	if (varz[fl2] > (randomx2h - 1))
+	$( flammy).css("background", flamep[0]);
+	}
+	flametrans2++;
+	if (flametrans2 > 60)
+	{
+	  flametrans2=0;
+	  fl2++;
+	}	
+	
+	if (varz[fl3] > 2 && varz[fl3] < randomx3h)
+	{
+	var flammy = "#" + varo[randomx3].toString() + varz[fl3].toString();
+	if (varz[fl3] > 2 &&  varz[fl3] < randomx3h)
+    $( flammy).css("background", flamep[4]);
+	if (varz[fl3] > (randomx3h - 4))
+	$( flammy).css("background", flamep[3]);
+	if (varz[fl3] > (randomx3h - 3))
+	$( flammy).css("background", flamep[2]);
+	if (varz[fl3] > (randomx3h - 2))
+	$( flammy).css("background", flamep[1]);
+	if (varz[fl3] > (randomx3h - 1))
+	$( flammy).css("background", flamep[0]);
+	}
+	flametrans3++;
+	if (flametrans3 > 60)
+	{
+	  flametrans3=0;
+	  fl3++;
+	}
+	
+	if (varz[fl4] > 2 && varz[fl4] < randomx4h)
+	{
+	var flammy = "#" + varo[randomx4].toString() + varz[fl4].toString();
+	if (varz[fl4] > 2 &&  varz[fl4] < randomx4h)
+    $( flammy).css("background", flamep[4]);
+	if (varz[fl4] > (randomx4h - 4))
+	$( flammy).css("background", flamep[3]);
+	if (varz[fl4] > (randomx4h - 3))
+	$( flammy).css("background", flamep[2]);
+	if (varz[fl4] > (randomx4h - 2))
+	$( flammy).css("background", flamep[1]);
+	if (varz[fl4] > (randomx4h - 1))
+	$( flammy).css("background", flamep[0]);
+	}
+	flametrans4++;
+	if (flametrans4 > 60)
+	{
+	  flametrans4=0;
+	  fl4++;
+	}
+	if (varz[fl5] > 2 && varz[fl5] < randomx5h)
+	{
+	var flammy = "#" + varo[randomx5].toString() + varz[fl5].toString();
+	if (varz[fl5] > 2 &&  varz[fl5] < randomx5h)
+    $( flammy).css("background", flamep[4]);
+	if (varz[fl5] > (randomx5h - 4))
+	$( flammy).css("background", flamep[3]);
+	if (varz[fl5] > (randomx5h - 3))
+	$( flammy).css("background", flamep[2]);
+	if (varz[fl5] > (randomx5h - 2))
+	$( flammy).css("background", flamep[1]);
+	if (varz[fl5] > (randomx5h - 1))
+	$( flammy).css("background", flamep[0]);
+	}
+	flametrans5++;
+	if (flametrans5 > 60)
+	{
+	  flametrans5=0;
+	  fl5++;
+	}
+	
+	if (varz[fl6] > 2 && varz[fl6] < randomx6h)
+	{
+	var flammy = "#" + varo[randomx6].toString() + varz[fl6].toString();
+	if (varz[fl6] > 2 &&  varz[fl6] < randomx6h)
+    $( flammy).css("background", flamep[4]);
+	if (varz[fl6] > (randomx6h - 4))
+	$( flammy).css("background", flamep[3]);
+	if (varz[fl6] > (randomx6h - 3))
+	$( flammy).css("background", flamep[2]);
+	if (varz[fl6] > (randomx6h - 2))
+	$( flammy).css("background", flamep[1]);
+	if (varz[fl6] > (randomx6h - 1))
+	$( flammy).css("background", flamep[0]);
+	}
+	flametrans6++;
+	if (flametrans6 > 60)
+	{
+	  flametrans6=0;
+	  fl6++;
+	}
+	if (varz[fl7] > 2 && varz[fl7] < randomx7h)
+	{
+	var flammy = "#" + varo[randomx7].toString() + varz[fl7].toString();
+	if (varz[fl7] > 2 &&  varz[fl7] < randomx7h)
+    $( flammy).css("background", flamep[4]);
+	if (varz[fl7] > (randomx7h - 4))
+	$( flammy).css("background", flamep[3]);
+	if (varz[fl7] > (randomx7h - 3))
+	$( flammy).css("background", flamep[2]);
+	if (varz[fl7] > (randomx7h - 2))
+	$( flammy).css("background", flamep[1]);
+	if (varz[fl7] > (randomx7h - 1))
+	$( flammy).css("background", flamep[0]);
+	}
+	flametrans7++;
+	if (flametrans7 > 60)
+	{
+	  flametrans7=0;
+	  fl7++;
+	}	
+	if (varz[fl8] > 2 && varz[fl8] < randomx8h)
+	{
+	var flammy = "#" + varo[randomx8].toString() + varz[fl8].toString();
+	if (varz[fl8] > 2 &&  varz[fl8] < randomx8h)
+    $( flammy).css("background", flamep[4]);
+	if (varz[fl8] > (randomx8h - 4))
+	$( flammy).css("background", flamep[3]);
+	if (varz[fl8] > (randomx8h - 3))
+	$( flammy).css("background", flamep[2]);
+	if (varz[fl8] > (randomx8h - 2))
+	$( flammy).css("background", flamep[1]);
+	if (varz[fl8] > (randomx8h - 1))
+	$( flammy).css("background", flamep[0]);
+	}
+	flametrans8++;
+	if (flametrans8 > 60)
+	{
+	  flametrans8=0;
+	  fl8++;
+	}
+	if (varz[fl9] > 2 && varz[fl9] < randomx9h)
+	{
+	var flammy = "#" + varo[randomx9].toString() + varz[fl9].toString();
+	if (varz[fl9] > 2 &&  varz[fl9] < randomx9h)
+    $( flammy).css("background", flamep[4]);
+	if (varz[fl9] > (randomx9h - 4))
+	$( flammy).css("background", flamep[3]);
+	if (varz[fl9] > (randomx9h - 3))
+	$( flammy).css("background", flamep[2]);
+	if (varz[fl9] > (randomx9h - 2))
+	$( flammy).css("background", flamep[1]);
+	if (varz[fl9] > (randomx9h - 1))
+	$( flammy).css("background", flamep[0]);
+	}
+	flametrans9++;
+	if (flametrans9 > 60)
+	{
+	  flametrans9=0;
+	  fl9++;
+	}
+ 	if (varz[fl10] > 2 && varz[fl10] < randomx10h)
+	{
+	var flammy = "#" + varo[randomx10].toString() + varz[fl10].toString();
+	if (varz[fl10] > 2 &&  varz[fl10] < randomx10h)
+    $( flammy).css("background", flamep[4]);
+	if (varz[fl10] > (randomx10h - 4))
+	$( flammy).css("background", flamep[3]);
+	if (varz[fl10] > (randomx10h - 3))
+	$( flammy).css("background", flamep[2]);
+	if (varz[fl10] > (randomx10h - 2))
+	$( flammy).css("background", flamep[1]);
+	if (varz[fl10] > (randomx10h - 1))
+	$( flammy).css("background", flamep[0]);
+	}
+	flametrans10++;
+	if (flametrans10 > 60)
+	{
+	  flametrans10=0;
+	  fl10++;
+	}
+	
+	
+	
+	
+	
+
+	if (varz[fl11] > 2 && varz[fl11] < randomx11h)
+	{
+	var flammy = "#" + varo[randomx11].toString() + varz[fl11].toString();
+	if (varz[fl11] > 2 &&  varz[fl11] < randomx11h)
+    $( flammy).css("background", flamep[4]);
+	if (varz[fl11] > (randomx11h - 4))
+	$( flammy).css("background", flamep[3]);
+	if (varz[fl11] > (randomx11h - 3))
+	$( flammy).css("background", flamep[2]);
+	if (varz[fl11] > (randomx11h - 2))
+	$( flammy).css("background", flamep[1]);
+	if (varz[fl11] > (randomx11h - 1))
+	$( flammy).css("background", flamep[0]);
+	}
+	flametrans11++;
+	if (flametrans11 > 60)
+	{
+	  flametrans11=0;
+	  fl11++;
+	}
+	if (varz[fl12] > 2 && varz[fl12] < randomx12h)
+	{
+	var flammy = "#" + varo[randomx12].toString() + varz[fl12].toString();
+	if (varz[fl12] > 2 &&  varz[fl12] < randomx12h)
+    $( flammy).css("background", flamep[4]);
+	if (varz[fl12] > (randomx12h - 4))
+	$( flammy).css("background", flamep[3]);
+	if (varz[fl12] > (randomx12h - 3))
+	$( flammy).css("background", flamep[2]);
+	if (varz[fl12] > (randomx12h - 2))
+	$( flammy).css("background", flamep[1]);
+	if (varz[fl12] > (randomx12h - 1))
+	$( flammy).css("background", flamep[0]);
+	}
+	flametrans12++;
+	if (flametrans12 > 60)
+	{
+	  flametrans12=0;
+	  fl12++;
+	}	
+	
+	if (varz[fl13] > 2 && varz[fl13] < randomx13h)
+	{
+	var flammy = "#" + varo[randomx13].toString() + varz[fl13].toString();
+	if (varz[fl13] > 2 &&  varz[fl13] < randomx13h)
+    $( flammy).css("background", flamep[4]);
+	if (varz[fl13] > (randomx13h - 4))
+	$( flammy).css("background", flamep[3]);
+	if (varz[fl13] > (randomx13h - 3))
+	$( flammy).css("background", flamep[2]);
+	if (varz[fl13] > (randomx13h - 2))
+	$( flammy).css("background", flamep[1]);
+	if (varz[fl13] > (randomx13h - 1))
+	$( flammy).css("background", flamep[0]);
+	}
+	flametrans13++;
+	if (flametrans13 > 60)
+	{
+	  flametrans13=0;
+	  fl13++;
+	}
+	
+	if (varz[fl14] > 2 && varz[fl14] < randomx14h)
+	{
+	var flammy = "#" + varo[randomx14].toString() + varz[fl14].toString();
+	if (varz[fl14] > 2 &&  varz[fl14] < randomx14h)
+    $( flammy).css("background", flamep[4]);
+	if (varz[fl14] > (randomx14h - 4))
+	$( flammy).css("background", flamep[3]);
+	if (varz[fl14] > (randomx14h - 3))
+	$( flammy).css("background", flamep[2]);
+	if (varz[fl14] > (randomx14h - 2))
+	$( flammy).css("background", flamep[1]);
+	if (varz[fl14] > (randomx14h - 1))
+	$( flammy).css("background", flamep[0]);
+	}
+	flametrans14++;
+	if (flametrans14 > 60)
+	{
+	  flametrans14=0;
+	  fl14++;
+	}
+	if (varz[fl15] > 2 && varz[fl15] < randomx15h)
+	{
+	var flammy = "#" + varo[randomx15].toString() + varz[fl15].toString();
+	if (varz[fl15] > 2 &&  varz[fl15] < randomx15h)
+    $( flammy).css("background", flamep[4]);
+	if (varz[fl15] > (randomx15h - 4))
+	$( flammy).css("background", flamep[3]);
+	if (varz[fl15] > (randomx15h - 3))
+	$( flammy).css("background", flamep[2]);
+	if (varz[fl15] > (randomx15h - 2))
+	$( flammy).css("background", flamep[1]);
+	if (varz[fl15] > (randomx15h - 1))
+	$( flammy).css("background", flamep[0]);
+	}
+	flametrans15++;
+	if (flametrans15 > 60)
+	{
+	  flametrans15=0;
+	  fl15++;
+	}
+	
+	if (varz[fl16] > 2 && varz[fl16] < randomx16h)
+	{
+	var flammy = "#" + varo[randomx16].toString() + varz[fl16].toString();
+	if (varz[fl16] > 2 &&  varz[fl16] < randomx16h)
+    $( flammy).css("background", flamep[4]);
+	if (varz[fl16] > (randomx16h - 4))
+	$( flammy).css("background", flamep[3]);
+	if (varz[fl16] > (randomx16h - 3))
+	$( flammy).css("background", flamep[2]);
+	if (varz[fl16] > (randomx16h - 2))
+	$( flammy).css("background", flamep[1]);
+	if (varz[fl16] > (randomx16h - 1))
+	$( flammy).css("background", flamep[0]);
+	}
+	flametrans16++;
+	if (flametrans16 > 60)
+	{
+	  flametrans16=0;
+	  fl16++;
+	}
+	
+	
+	
+	if (varz[fl17] > 2 && varz[fl17] < randomx17h)
+	{
+	var flammy = "#" + varo[randomx17].toString() + varz[fl17].toString();
+	if (varz[fl17] > 2 &&  varz[fl17] < randomx17h)
+    $( flammy).css("background", flamep[4]);
+	if (varz[fl17] > (randomx17h - 4))
+	$( flammy).css("background", flamep[3]);
+	if (varz[fl17] > (randomx17h - 3))
+	$( flammy).css("background", flamep[2]);
+	if (varz[fl17] > (randomx17h - 2))
+	$( flammy).css("background", flamep[1]);
+	if (varz[fl17] > (randomx17h - 1))
+	$( flammy).css("background", flamep[0]);
+	}
+	flametrans17++;
+	if (flametrans17 > 60)
+	{
+	  flametrans17=0;
+	  fl17++;
+	}	
+	if (varz[fl18] > 2 && varz[fl18] < randomx18h)
+	{
+	var flammy = "#" + varo[randomx18].toString() + varz[fl18].toString();
+	if (varz[fl18] > 2 &&  varz[fl18] < randomx18h)
+    $( flammy).css("background", flamep[4]);
+	if (varz[fl18] > (randomx18h - 4))
+	$( flammy).css("background", flamep[3]);
+	if (varz[fl18] > (randomx18h - 3))
+	$( flammy).css("background", flamep[2]);
+	if (varz[fl18] > (randomx18h - 2))
+	$( flammy).css("background", flamep[1]);
+	if (varz[fl18] > (randomx18h - 1))
+	$( flammy).css("background", flamep[0]);
+	}
+	flametrans18++;
+	if (flametrans18 > 60)
+	{
+	  flametrans18=0;
+	  fl18++;
+	}
+	if (varz[fl19] > 2 && varz[fl19] < randomx19h)
+	{
+	var flammy = "#" + varo[randomx19].toString() + varz[fl19].toString();
+	if (varz[fl19] > 2 &&  varz[fl19] < randomx19h)
+    $( flammy).css("background", flamep[4]);
+	if (varz[fl19] > (randomx19h - 4))
+	$( flammy).css("background", flamep[3]);
+	if (varz[fl19] > (randomx19h - 3))
+	$( flammy).css("background", flamep[2]);
+	if (varz[fl19] > (randomx19h - 2))
+	$( flammy).css("background", flamep[1]);
+	if (varz[fl19] > (randomx19h - 1))
+	$( flammy).css("background", flamep[0]);
+	}
+	flametrans19++;
+	if (flametrans19 > 60)
+	{
+	  flametrans19=0;
+	  fl19++;
+	}
+ 	if (varz[fl20] > 2 && varz[fl20] < randomx20h)
+	{
+	var flammy = "#" + varo[randomx20].toString() + varz[fl20].toString();
+	if (varz[fl20] > 2 &&  varz[fl20] < randomx20h)
+    $( flammy).css("background", flamep[4]);
+	if (varz[fl20] > (randomx20h - 4))
+	$( flammy).css("background", flamep[3]);
+	if (varz[fl20] > (randomx20h - 3))
+	$( flammy).css("background", flamep[2]);
+	if (varz[fl20] > (randomx20h - 2))
+	$( flammy).css("background", flamep[1]);
+	if (varz[fl20] > (randomx20h - 1))
+	$( flammy).css("background", flamep[0]);
+	}
+	flametrans20++;
+	if (flametrans20 > 60)
+	{
+	  flametrans20=0;
+	  fl20++;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	if (varz[fl21] > 2 && varz[fl21] < randomx21h)
+	{
+	var flammy = "#" + varo[randomx21].toString() + varz[fl21].toString();
+	if (varz[fl21] > 2 &&  varz[fl21] < randomx21h)
+    $( flammy).css("background", flamep[4]);
+	if (varz[fl21] > (randomx21h - 4))
+	$( flammy).css("background", flamep[3]);
+	if (varz[fl21] > (randomx21h - 3))
+	$( flammy).css("background", flamep[2]);
+	if (varz[fl21] > (randomx21h - 2))
+	$( flammy).css("background", flamep[1]);
+	if (varz[fl21] > (randomx21h - 1))
+	$( flammy).css("background", flamep[0]);
+	}
+	flametrans21++;
+	if (flametrans21 > 60)
+	{
+	  flametrans21=0;
+	  fl21++;
+	}
+	if (varz[fl22] > 2 && varz[fl22] < randomx22h)
+	{
+	var flammy = "#" + varo[randomx22].toString() + varz[fl22].toString();
+	if (varz[fl22] > 2 &&  varz[fl22] < randomx22h)
+    $( flammy).css("background", flamep[4]);
+	if (varz[fl22] > (randomx22h - 4))
+	$( flammy).css("background", flamep[3]);
+	if (varz[fl22] > (randomx22h - 3))
+	$( flammy).css("background", flamep[2]);
+	if (varz[fl22] > (randomx22h - 2))
+	$( flammy).css("background", flamep[1]);
+	if (varz[fl22] > (randomx22h - 1))
+	$( flammy).css("background", flamep[0]);
+	}
+	flametrans22++;
+	if (flametrans22 > 60)
+	{
+	  flametrans22=0;
+	  fl22++;
+	}	
+	
+	if (varz[fl23] > 2 && varz[fl23] < randomx23h)
+	{
+	var flammy = "#" + varo[randomx23].toString() + varz[fl23].toString();
+	if (varz[fl23] > 2 &&  varz[fl23] < randomx23h)
+    $( flammy).css("background", flamep[4]);
+	if (varz[fl23] > (randomx23h - 4))
+	$( flammy).css("background", flamep[3]);
+	if (varz[fl23] > (randomx23h - 3))
+	$( flammy).css("background", flamep[2]);
+	if (varz[fl23] > (randomx23h - 2))
+	$( flammy).css("background", flamep[1]);
+	if (varz[fl23] > (randomx23h - 1))
+	$( flammy).css("background", flamep[0]);
+	}
+	flametrans23++;
+	if (flametrans23 > 60)
+	{
+	  flametrans23=0;
+	  fl23++;
+	}
+	
+	if (varz[fl24] > 2 && varz[fl24] < randomx24h)
+	{
+	var flammy = "#" + varo[randomx24].toString() + varz[fl24].toString();
+	if (varz[fl24] > 2 &&  varz[fl24] < randomx24h)
+    $( flammy).css("background", flamep[4]);
+	if (varz[fl24] > (randomx24h - 4))
+	$( flammy).css("background", flamep[3]);
+	if (varz[fl24] > (randomx24h - 3))
+	$( flammy).css("background", flamep[2]);
+	if (varz[fl24] > (randomx24h - 2))
+	$( flammy).css("background", flamep[1]);
+	if (varz[fl24] > (randomx24h - 1))
+	$( flammy).css("background", flamep[0]);
+	}
+	flametrans24++;
+	if (flametrans24 > 60)
+	{
+	  flametrans24=0;
+	  fl24++;
+	}
+	if (varz[fl25] > 2 && varz[fl25] < randomx25h)
+	{
+	var flammy = "#" + varo[randomx25].toString() + varz[fl25].toString();
+	if (varz[fl25] > 2 &&  varz[fl25] < randomx25h)
+    $( flammy).css("background", flamep[4]);
+	if (varz[fl25] > (randomx25h - 4))
+	$( flammy).css("background", flamep[3]);
+	if (varz[fl25] > (randomx25h - 3))
+	$( flammy).css("background", flamep[2]);
+	if (varz[fl25] > (randomx25h - 2))
+	$( flammy).css("background", flamep[1]);
+	if (varz[fl25] > (randomx25h - 1))
+	$( flammy).css("background", flamep[0]);
+	}
+	flametrans25++;
+	if (flametrans25 > 60)
+	{
+	  flametrans25=0;
+	  fl25++;
+	}
+	
+	if (varz[fl26] > 2 && varz[fl26] < randomx26h)
+	{
+	var flammy = "#" + varo[randomx26].toString() + varz[fl26].toString();
+	if (varz[fl26] > 2 &&  varz[fl26] < randomx26h)
+    $( flammy).css("background", flamep[4]);
+	if (varz[fl26] > (randomx26h - 4))
+	$( flammy).css("background", flamep[3]);
+	if (varz[fl26] > (randomx26h - 3))
+	$( flammy).css("background", flamep[2]);
+	if (varz[fl26] > (randomx26h - 2))
+	$( flammy).css("background", flamep[1]);
+	if (varz[fl26] > (randomx26h - 1))
+	$( flammy).css("background", flamep[0]);
+	}
+	flametrans26++;
+	if (flametrans26 > 60)
+	{
+	  flametrans26=0;
+	  fl26++;
+	}
+	if (varz[fl27] > 2 && varz[fl27] < randomx27h)
+	{
+	var flammy = "#" + varo[randomx27].toString() + varz[fl27].toString();
+	if (varz[fl27] > 2 &&  varz[fl27] < randomx27h)
+    $( flammy).css("background", flamep[4]);
+	if (varz[fl27] > (randomx27h - 4))
+	$( flammy).css("background", flamep[3]);
+	if (varz[fl27] > (randomx27h - 3))
+	$( flammy).css("background", flamep[2]);
+	if (varz[fl27] > (randomx27h - 2))
+	$( flammy).css("background", flamep[1]);
+	if (varz[fl27] > (randomx27h - 1))
+	$( flammy).css("background", flamep[0]);
+	}
+	flametrans27++;
+	if (flametrans27 > 60)
+	{
+	  flametrans27=0;
+	  fl27++;
+	}	
+	if (varz[fl28] > 2 && varz[fl28] < randomx28h)
+	{
+	var flammy = "#" + varo[randomx18].toString() + varz[fl28].toString();
+	if (varz[fl28] > 2 &&  varz[fl28] < randomx28h)
+    $( flammy).css("background", flamep[4]);
+	if (varz[fl28] > (randomx28h - 4))
+	$( flammy).css("background", flamep[3]);
+	if (varz[fl28] > (randomx28h - 3))
+	$( flammy).css("background", flamep[2]);
+	if (varz[fl28] > (randomx28h - 2))
+	$( flammy).css("background", flamep[1]);
+	if (varz[fl28] > (randomx28h - 1))
+	$( flammy).css("background", flamep[0]);
+	}
+	flametrans28++;
+	if (flametrans28 > 60)
+	{
+	  flametrans28=0;
+	  fl28++;
+	}
+	if (varz[fl29] > 2 && varz[fl29] < randomx29h)
+	{
+	var flammy = "#" + varo[randomx29].toString() + varz[fl29].toString();
+	if (varz[fl29] > 2 &&  varz[fl29] < randomx29h)
+    $( flammy).css("background", flamep[4]);
+	if (varz[fl29] > (randomx29h - 4))
+	$( flammy).css("background", flamep[3]);
+	if (varz[fl29] > (randomx29h - 3))
+	$( flammy).css("background", flamep[2]);
+	if (varz[fl29] > (randomx29h - 2))
+	$( flammy).css("background", flamep[1]);
+	if (varz[fl29] > (randomx29h - 1))
+	$( flammy).css("background", flamep[0]);
+	}
+	flametrans29++;
+	if (flametrans29 > 60)
+	{
+	  flametrans29=0;
+	  fl29++;
+	}
+ 	if (varz[fl30] > 2 && varz[fl30] < randomx30h)
+	{
+	var flammy = "#" + varo[randomx30].toString() + varz[fl30].toString();
+	if (varz[fl30] > 2 &&  varz[fl30] < randomx30h)
+    $( flammy).css("background", flamep[4]);
+	if (varz[fl30] > (randomx30h - 4))
+	$( flammy).css("background", flamep[3]);
+	if (varz[fl30] > (randomx30h - 3))
+	$( flammy).css("background", flamep[2]);
+	if (varz[fl30] > (randomx30h - 2))
+	$( flammy).css("background", flamep[1]);
+	if (varz[fl30] > (randomx30h - 1))
+	$( flammy).css("background", flamep[0]);
+	}
+	flametrans30++;
+	if (flametrans30 > 60)
+	{
+	  flametrans30=0;
+	  fl30++;
+	}
+	
+
+
+	
+	
+ if (fl1 > randomx1h)
+	{
+	lockfl1 = 0;
+	fl1 = 10;
+	}
+  if (fl2 > randomx2h)
+	{
+	lockfl2 = 0;
+	fl2 = 6;
+	}
+ if (fl3 > randomx3h)
+	{
+	lockfl3 = 0;
+	fl3 = 6;
+	}
+  if (fl4 > randomx4h)
+	{
+	lockfl4 = 0;
+	fl4 = 8;
+	}
+  if (fl5 > randomx5h)
+	{
+	lockfl5 = 0;
+	fl5 = 8;
+	}
+  if (fl6 > randomx6h)
+	{
+	lockfl6 = 0;
+	fl6 = 10;
+	}
+  if (fl7 > randomx7h)
+	{
+	lockfl7= 0;
+	fl7 = 10;
+	}
+  if (fl8 > randomx8h)
+	{
+	lockfl8= 0;
+	fl8 = 10;
+	}
+   if (fl9 > randomx9h)
+	{
+	lockfl9= 0;
+	fl9 = 10;
+	}
+
+
+   if (fl10 > randomx10h)
+	{
+	lockfl10= 0;
+	fl10 = 10;
+	}	
+ if (fl11 > randomx11h)
+	{
+	lockfl11 = 0;
+	fl11 = 10;
+	}
+  if (fl12 > randomx12h)
+	{
+	lockfl12 = 0;
+	fl12 = 10;
+	}
+ if (fl13 > randomx13h)
+	{
+	lockfl13 = 0;
+	fl13 = 8;
+	}
+  if (fl14 > randomx14h)
+	{
+	lockfl14 = 0;
+	fl14 = 6;
+	}
+  if (fl15 > randomx15h)
+	{
+	lockfl15 = 0;
+	fl15 = 6;
+	}
+  if (fl16 > randomx16h)
+	{
+	lockfl16 = 0;
+	fl16 = 6;
+	}
+	
+	
+  if (fl17 > randomx17h)
+	{
+	lockfl17= 0;
+	fl17 = 10;
+	}
+  if (fl18 > randomx18h)
+	{
+	lockfl18= 0;
+	fl18 = 10;
+	}
+   if (fl19 > randomx19h)
+	{
+	lockfl19= 0;
+	fl19 = 8;
+	}  
+if (fl20 > randomx20h)
+	{
+	lockfl20 = 0;
+	fl20 = 10;
+	}	
+	
+ if (fl21 > randomx21h)
+	{
+	lockfl21 = 0;
+	fl21 = 10;
+	}
+  if (fl22 > randomx22h)
+	{
+	lockfl22 = 0;
+	fl22 = 10;
+	}
+ if (fl23 > randomx23h)
+	{
+	lockfl23 = 0;
+	fl23 = 10;
+	}
+  if (fl24 > randomx24h)
+	{
+	lockfl24 = 0;
+	fl24 = 10;
+	}
+  if (fl25 > randomx25h)
+	{
+	lockfl25 = 0;
+	fl25 = 10;
+	}
+  if (fl26 > randomx26h)
+	{
+	lockfl26 = 0;
+	fl26 = 10;
+	}
+  if (fl27 > randomx27h)
+	{
+	lockfl27= 0;
+	fl27 = 8;
+	}
+  if (fl28 > randomx28h)
+	{
+	lockfl28= 0;
+	fl28 = 6;
+	}
+   if (fl29 > randomx29h)
+	{
+	lockfl29= 0;
+	fl29 = 6;
+	}
+   if (fl30 > randomx30h)
+	{
+	lockfl30= 0;
+	fl30 = 6;
+	}	
+	
+    //MID 
+    /*
     if (varz[count] > 2 && varz[count] < 32)
     if (count == 6 || count == 23)
     randfcolor1 = myfirecolorsmidnoglowlev2[Math.floor(Math.random()*myfirecolorsmidnoglowlev1.length)];
@@ -1351,7 +2453,7 @@ if (varz[count] > 1 && varz[count] < 32)
   if (varz[count] > 1 && varz[count] < 3)
     if (count == 16)
     randfcolor1 = myfirecolorsmidnoglowlev5[Math.floor(Math.random()*myfirecolorsmidnoglowlev5.length)];
- 
+ /*
      //MIDt
     if (varz[count] > 10)
     if (count == 6 || count == 23)
@@ -1409,10 +2511,22 @@ if (varz[count] > 1 && varz[count] < 32)
 	if (varz[count] > 5)
     if (count == 14 || count == 15)
     randfcolor1 = myfirecolorsmidnoglowlev5tx[Math.floor(Math.random()*myfirecolorsmidnoglowlev5tx.length)];
-   
+   */
    //topzorange
+   /*
+   var fheight = varz[count];
+   if (varz[count] > 2)
    
-   
+   randfcolor1 = flamep[4];
+   if (varz[count] > (fheight - 4))
+   randfcolor1 = flamep[3];
+   if (varz[count] > (fheight - 3))
+   randfcolor1 = flamep[2];
+   if (varz[count] > (fheight - 2))
+   randfcolor1 = flamep[1];
+   if (varz[count] > (fheight - 1))
+   randfcolor1 = flamep[0];
+   /*
      //MIDtx
     if (varz[count] > 10)
     if (count == 6 || count == 23)
@@ -1440,21 +2554,21 @@ if (varz[count] > 1 && varz[count] < 32)
     randfcolor1 = topz[Math.floor(Math.random()*topz.length)];
 	if (varz[count] > 10)
     if (count == 14 || count == 15)
-    randfcolor1 = topz[Math.floor(Math.random()*topz.length)];
-   
+    randfcolor1 = topz[Math.floor(Math.random()*topz.length)];*/
+   /*
    if (bounce%2 == 0)
    {
    //superhigh
-   var randtop = Math.floor(Math.random()*5) + 10;
+   var randtop = Math.floor(Math.random()*3) + 10;
    var randtop1 = Math.floor(Math.random()*3) + 10;
-   var randtop2 = Math.floor(Math.random()*4) + 10;
-   var randtop3 = Math.floor(Math.random()*2) + 10;
-   var randtop4 = Math.floor(Math.random()*4) + 10;
-   var randtop5 = Math.floor(Math.random()*4) + 9;
-   var randtop7 = Math.floor(Math.random()*2) + 9;
-   var randtop6 = Math.floor(Math.random()*4) + 7;
-   var randtop8 = Math.floor(Math.random()*4) + 6;
-   var randtop9 = Math.floor(Math.random()*6) + 3;
+   var randtop2 = Math.floor(Math.random()*3) + 10;
+   var randtop3 = Math.floor(Math.random()*3) + 10;
+   var randtop4 = Math.floor(Math.random()*3) + 10;
+   var randtop5 = Math.floor(Math.random()*3) + 9;
+   var randtop7 = Math.floor(Math.random()*3) + 9;
+   var randtop6 = Math.floor(Math.random()*3) + 7;
+   var randtop8 = Math.floor(Math.random()*3) + 6;
+   var randtop9 = Math.floor(Math.random()*3) + 3;
   var randtop11 = Math.floor(Math.random()*3) + 3;
    }
    if (bounce%2 !=0 )
@@ -1507,7 +2621,7 @@ if (varz[count] > 1 && varz[count] < 32)
     randfcolor1 = myfirecolorshigh[Math.floor(Math.random()*myfirecolorshigh.length)];
     
     //highx
-    
+  */
 
    
    // if (varz[count] > 20 && varz[count] < 32)
@@ -1877,8 +2991,8 @@ if (smoke2 == 5)
 	}
  
  // if (extrawait > 1)
- if (varz[extra] > 3)
-  if (varz[extra] < (extra -1) && varz[extra] > (extra -3))
+ if (varz[extra] > 2)
+  if (varz[extra] < (extra -2) && varz[extra] > (extra -4))
 	{
 	  
 	
@@ -1911,8 +3025,8 @@ if (smoke2 == 5)
 	chooserandomextra1 = Math.floor(Math.random()*10) + 10;
 	}
  
-   if (varz[extra1] > 3)
-  if (varz[extra1] < (extra1-1) && varz[extra1] > (extra1 -3))
+   if (varz[extra1] > 2)
+  if (varz[extra1] < (extra1-2) && varz[extra1] > (extra1 -4))
 	{
 	var currstrzzz1 = "#" + varo[chooserandomextra1].toString() + varz[extra1].toString();
     $(currstrzzz1).css("background", "transparent");
@@ -1937,8 +3051,8 @@ if (smoke2 == 5)
 	chooserandomextra2 = Math.floor(Math.random()*10) + 10;
 	}
  
-   if (varz[extra2] > 3)
-    if (varz[extra2] < (extra2-1) && varz[extra2] > (extra2 -3))
+   if (varz[extra2] > 2)
+    if (varz[extra2] < (extra2-2) && varz[extra2] > (extra2 -4))
 	{
 	var currstrzzz2 = "#" + varo[chooserandomextra2].toString() + varz[extra2].toString();
     $(currstrzzz2).css("background", "transparent");
@@ -1963,8 +3077,8 @@ if (smoke2 == 5)
 	chooserandomextra3 = Math.floor(Math.random()*10) + 10;
 	}
  
- if (varz[extra3] > 3)
-    if (varz[extra3] < (extra3-1) && varz[extra3] > (extra3 -3))
+ if (varz[extra3] > 2)
+    if (varz[extra3] < (extra3-2) && varz[extra3] > (extra3 -4))
 	{
 	var currstrzzz3 = "#" + varo[chooserandomextra3].toString() + varz[extra3].toString();
     $(currstrzzz3).css("background", "transparent");
@@ -1988,8 +3102,8 @@ if (smoke2 == 5)
 	chooserandomextra4 = Math.floor(Math.random()*10) + 10;
 	}
  
-  if (varz[extra4] > 3)
-    if (varz[extra4] < (extra4-1) && varz[extra4] > (extra4 -3))
+  if (varz[extra4] > 2)
+    if (varz[extra4] < (extra4-2) && varz[extra4] > (extra4 -4))
 	{
 	var currstrzzz4 = "#" + varo[chooserandomextra4].toString() + varz[extra4].toString();
     $(currstrzzz4).css("background", "transparent");
@@ -2016,8 +3130,12 @@ for (count = 0; count < varz.length; count++)
 {
    varz[count] = varz[count] + 1;
 }
-if (count > 32)
+if (count > 31)
+{
 count = 0;
+
+
+}
 fireanim();  
 }
 function fireanim()
