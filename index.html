@@ -5,7 +5,7 @@
 Pixel Fireplace Js 
 By: Alex Terranova
 Date: Tue, Dec 5th, 2023
-v24.1 > 12/10/2023
+v26.0 > 12/10/2023
 
 -->
 <script src="jquery.min.js"></script>
@@ -1306,7 +1306,8 @@ var myfirecolorsmidnoglowlev4tx=["#ffce00", "yellow","#ffce00","#ffce00","#ffce0
 var myfirecolorsmidnoglowlev5tx=["#ffe808", "yellow","#ffe808","#ffe808","#ffe808"];
 var myfirecolorsmid=[ "#fff16b"];
 var myfirecolorshigh=[ "transparent"];
-
+var bounceit=[1,2];
+var bounceitmodulus=0;
 var myfirecolorshighx=[  "transparent", "transparent","orange", "transparent", "transparent", "orange", "transparent","  transparent","orange"];
 
 var mypixels=["b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15",]
@@ -1433,62 +1434,92 @@ if (varz[count] > 1 && varz[count] < 32)
 	if (lockfl1 == 0)
 	{
 	lockfl1 = 1;
-	randomx1 = 5;
-	randomx1h = Math.floor(Math.random()*3) + 1;
+	randomx1 = 6;
+	if (bounceitmodulus%2 == 0)
+	randomx1h = Math.floor(Math.random()*3) + 1 + bounceit[0];
+	if (bounceitmodulus%2 != 0)
+	randomx1h = Math.floor(Math.random()*3) + 1 + bounceit[1];
 	}
   if (lockfl2 == 0)
 	{
 	lockfl2 = 1;
 	randomx2 = 6;
-	randomx2h = Math.floor(Math.random()*3) + 2;
+	if (bounceitmodulus%2 == 0)
+	randomx2h = Math.floor(Math.random()*3) + 2 + bounceit[0];
+	if (bounceitmodulus%2 != 0)
+	randomx2h = Math.floor(Math.random()*3) + 2 + bounceit[1];
 	}
 	if (lockfl3 == 0)
 	{
 	lockfl3 = 1;
 	randomx3 = 7;
-	randomx3h = Math.floor(Math.random()*3) + 4;
+	if (bounceitmodulus%2 == 0)
+	randomx3h = Math.floor(Math.random()*3) + 4 + bounceit[0];
+	if (bounceitmodulus%2 != 0)
+	randomx3h = Math.floor(Math.random()*3) + 4 + bounceit[1];
 	}
 	if (lockfl4 == 0)
 	{
 	lockfl4 = 1;
 	randomx4 = 8;
-	randomx4h = Math.floor(Math.random()*3) + 5;
+	if (bounceitmodulus%2 == 0)
+	randomx4h = Math.floor(Math.random()*3) + 5 + bounceit[0];
+	if (bounceitmodulus%2 != 0)
+	randomx4h = Math.floor(Math.random()*3) + 5 + bounceit[1];
 	}
 	if (lockfl5 == 0)
 	{
 	lockfl5 = 1;
 	randomx5 = 9;
-	randomx5h = Math.floor(Math.random()*3) + 8;
+	if (bounceitmodulus%2 == 0)
+	randomx5h = Math.floor(Math.random()*3) + 8 + bounceit[0];
+	if (bounceitmodulus%2 != 0)
+	randomx5h = Math.floor(Math.random()*3) + 8 + bounceit[1];
 	}
 	if (lockfl6 == 0)
 	{
 	lockfl6 = 1;
 	randomx6 = 10;
-    randomx6h = Math.floor(Math.random()*3) + 7;
+	if (bounceitmodulus%2 == 0)
+    randomx6h = Math.floor(Math.random()*3) + 7 + bounceit[0];
+	if (bounceitmodulus%2 != 0)
+    randomx6h = Math.floor(Math.random()*3) + 7 + bounceit[1];
 	}
 	if (lockfl7 == 0)
 	{
 	lockfl7 = 1;
 	randomx7 = 11;
-	randomx7h = Math.floor(Math.random()*3) + 8;
+	if (bounceitmodulus%2 == 0)
+	randomx7h = Math.floor(Math.random()*3) + 8 + bounceit[0];
+	if (bounceitmodulus%2 != 0)
+	randomx7h = Math.floor(Math.random()*3) + 8 + bounceit[1];
 	}
 	if (lockfl8 == 0)
 	{
 	lockfl8 = 1;
 	randomx8 = 12;
-	randomx8h = Math.floor(Math.random()*3) + 8;
+	if (bounceitmodulus%2 == 0)
+	randomx8h = Math.floor(Math.random()*3) + 8 + bounceit[0];
+	if (bounceitmodulus%2 != 0)
+	randomx8h = Math.floor(Math.random()*3) + 8 + bounceit[1];
 	}
 	if (lockfl9 == 0)
 	{
 	lockfl9 = 1;
 	randomx9 = 13;
-	randomx9h = Math.floor(Math.random()*3) +9;
+	if (bounceitmodulus%2 == 0)
+	randomx9h = Math.floor(Math.random()*3) +9 + bounceit[0];
+	if (bounceitmodulus%2 != 0)
+	randomx9h = Math.floor(Math.random()*3) +9 + bounceit[1];
 	}
 	if (lockfl10 == 0)
 	{
 	lockfl10 = 1;
 	randomx10 = 14;
-	randomx10h = Math.floor(Math.random()*3) +9;
+	if (bounceitmodulus%2 == 0)
+	randomx10h = Math.floor(Math.random()*3) +9 + bounceit[0];
+	if (bounceitmodulus%2 != 0)
+	randomx10h = Math.floor(Math.random()*3) +9 + bounceit[1];
 	}
  
  
@@ -1496,31 +1527,47 @@ if (varz[count] > 1 && varz[count] < 32)
 	{
 	lockfl11 = 1;
 	randomx11 = 15;
-	randomx11h = Math.floor(Math.random()*3) +9;
+	if (bounceitmodulus%2 == 0)
+	randomx11h = Math.floor(Math.random()*3) +9 + bounceit[0];
+	if (bounceitmodulus%2 != 0)
+	randomx11h = Math.floor(Math.random()*3) +9 + bounceit[1];
 	}
   if (lockfl12 == 0)
 	{
 	lockfl12 = 1;
 	randomx12 = 16;
-	randomx12h = Math.floor(Math.random()*3) +9;
+	if (bounceitmodulus%2 == 0)
+	randomx12h = Math.floor(Math.random()*3) +9 + bounceit[0];
+	if (bounceitmodulus%2 != 0)
+	randomx12h = Math.floor(Math.random()*3) +9 + bounceit[1];
 	}
+	
 	if (lockfl13 == 0)
 	{
 	lockfl13 = 1;
 	randomx13 = 17;
-	randomx13h = Math.floor(Math.random()*3) +8;
+	if (bounceitmodulus%2 == 0)
+	randomx13h = Math.floor(Math.random()*3) +8 + bounceit[0];
+	if (bounceitmodulus%2 != 0)
+	randomx13h = Math.floor(Math.random()*3) +8 + bounceit[1];
 	}
 	if (lockfl14 == 0)
 	{
 	lockfl14 = 1;
 	randomx14 = 18;
-	randomx14h = Math.floor(Math.random()*3) +7;
+	if (bounceitmodulus%2 == 0)
+	randomx14h = Math.floor(Math.random()*3) +7 + bounceit[0];
+	if (bounceitmodulus%2 != 0)
+	randomx14h = Math.floor(Math.random()*3) +7 + bounceit[1];
 	}
 	if (lockfl15 == 0)
 	{
 	lockfl15 = 1;
 	randomx15 = 19;
-	randomx15h = Math.floor(Math.random()*3) +8;
+	if (bounceitmodulus%2 == 0)
+	randomx15h = Math.floor(Math.random()*3) +8 + bounceit[0];
+	if (bounceitmodulus%2 != 0)
+	randomx15h = Math.floor(Math.random()*3) +8 + bounceit[1];
 	}
 	
 	
@@ -1531,33 +1578,51 @@ if (varz[count] > 1 && varz[count] < 32)
 	{
 	lockfl16 = 1;
 	randomx16 = 19;
-	randomx16h = Math.floor(Math.random()*3) +6;
+	if (bounceitmodulus%2 == 0)
+	randomx16h = Math.floor(Math.random()*3) +6 + bounceit[0];
+	if (bounceitmodulus%2 != 0)
+	randomx16h = Math.floor(Math.random()*3) +6 + bounceit[1];
 	}
 	
 	if (lockfl17 == 0)
 	{
 	lockfl17 = 1;
 	randomx17 = 20;
-	randomx17h = Math.floor(Math.random()*3) +5;
+	if (bounceitmodulus%2 == 0)
+	randomx17h = Math.floor(Math.random()*3) +5 + bounceit[0];
+	if (bounceitmodulus%2 != 0)
+	randomx17h = Math.floor(Math.random()*3) +5 + bounceit[1];
 	}
 	if (lockfl18 == 0)
 	{
 	lockfl18 = 1;
 	randomx18 = 21;
-	randomx18h = Math.floor(Math.random()*3) +4;
+	if (bounceitmodulus%2 == 0)
+	randomx18h = Math.floor(Math.random()*3) +4 + bounceit[0];
+	if (bounceitmodulus%2 != 0)
+	randomx18h = Math.floor(Math.random()*3) +4 + bounceit[1];
 	}
 	if (lockfl19 == 0)
 	{
 	lockfl19 = 1;
 	randomx19 = 22;
-	randomx19h = Math.floor(Math.random()*3) +2;
+	if (bounceitmodulus%2 == 0)
+	randomx19h = Math.floor(Math.random()*3) +2 + bounceit[0];
+	if (bounceitmodulus%2 != 0)
+	randomx19h = Math.floor(Math.random()*3) +2 + bounceit[1];
 	}
 	if (lockfl20 == 0)
 	{
 	lockfl20 = 1;
 	randomx20 = 23;
-	randomx20h = Math.floor(Math.random()*3) +1;
+	if (bounceitmodulus%2 == 0)
+	randomx20h = Math.floor(Math.random()*3) +1 + bounceit[0];
+	if (bounceitmodulus%2 != 0)
+	randomx20h = Math.floor(Math.random()*3) +1 + bounceit[1];
 	}
+	bounceitmodulus++;
+	if (bounceitmodulus > 30)
+	bounceitmodulus == 1;
  /*
 	if (lockfl21 == 0)
 	{
