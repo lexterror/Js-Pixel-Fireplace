@@ -1,6 +1,8 @@
 # Js-Pixel-Fireplace<br><br>
 A minimal Javascript Pixel Fireplace<br><br>
 
+Also for Android Live Wallpaper: "Apk" installer in the files section. 
+
 Live Demo: https://js-pixel-fireplace.sourceforge.io/index.html
 
 Inspired by: Ted Martens, George Ford, Wally Hall, Fabien Sanglard<br><br>
