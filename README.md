@@ -1,7 +1,7 @@
 # Js-Pixel-Fireplace<br><br>
 A minimal Javascript Pixel Fireplace<br><br>
 
-Also for Android Live Wallpaper: "Apk" installer in the files section. 
+Also for Android Live Wallpaper (Low Cpu Usage): "Apk" installer in the files section. 
 
 Live Demo: https://js-pixel-fireplace.sourceforge.io/index.html
 
