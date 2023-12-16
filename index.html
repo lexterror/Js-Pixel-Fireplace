@@ -5,529 +5,19 @@
 Pixel Fireplace Js 
 By: Alex Terranova
 Date: Tue, Dec 5th, 2023
-v26.0 > 12/10/2023
+v24.0 > 12/10/2023
 
 -->
-<script src="jquery.min.js"></script>
-<script src="Pizzicato.js"></script>
 
-<body>
-<div id="pit" style="display:none"></div>
+<script>
+/*! jQuery v3.7.1 | (c) OpenJS Foundation and other contributors | jquery.org/license */
+!function(e,t){"use strict";"object"==typeof module&&"object"==typeof module.exports?module.exports=e.document?t(e,!0):function(e){if(!e.document)throw new Error("jQuery requires a window with a document");return t(e)}:t(e)}("undefined"!=typeof window?window:this,function(ie,e){"use strict";var oe=[],r=Object.getPrototypeOf,ae=oe.slice,g=oe.flat?function(e){return oe.flat.call(e)}:function(e){return oe.concat.apply([],e)},s=oe.push,se=oe.indexOf,n={},i=n.toString,ue=n.hasOwnProperty,o=ue.toString,a=o.call(Object),le={},v=function(e){return"function"==typeof e&&"number"!=typeof e.nodeType&&"function"!=typeof e.item},y=function(e){return null!=e&&e===e.window},C=ie.document,u={type:!0,src:!0,nonce:!0,noModule:!0};function m(e,t,n){var r,i,o=(n=n||C).createElement("script");if(o.text=e,t)for(r in u)(i=t[r]||t.getAttribute&&t.getAttribute(r))&&o.setAttribute(r,i);n.head.appendChild(o).parentNode.removeChild(o)}function x(e){return null==e?e+"":"object"==typeof e||"function"==typeof e?n[i.call(e)]||"object":typeof e}var t="3.7.1",l=/HTML$/i,ce=function(e,t){return new ce.fn.init(e,t)};function c(e){var t=!!e&&"length"in e&&e.length,n=x(e);return!v(e)&&!y(e)&&("array"===n||0===t||"number"==typeof t&&0<t&&t-1 in e)}function fe(e,t){return e.nodeName&&e.nodeName.toLowerCase()===t.toLowerCase()}ce.fn=ce.prototype={jquery:t,constructor:ce,length:0,toArray:function(){return ae.call(this)},get:function(e){return null==e?ae.call(this):e<0?this[e+this.length]:this[e]},pushStack:function(e){var t=ce.merge(this.constructor(),e);return t.prevObject=this,t},each:function(e){return ce.each(this,e)},map:function(n){return this.pushStack(ce.map(this,function(e,t){return n.call(e,t,e)}))},slice:function(){return this.pushStack(ae.apply(this,arguments))},first:function(){return this.eq(0)},last:function(){return this.eq(-1)},even:function(){return this.pushStack(ce.grep(this,function(e,t){return(t+1)%2}))},odd:function(){return this.pushStack(ce.grep(this,function(e,t){return t%2}))},eq:function(e){var t=this.length,n=+e+(e<0?t:0);return this.pushStack(0<=n&&n<t?[this[n]]:[])},end:function(){return this.prevObject||this.constructor()},push:s,sort:oe.sort,splice:oe.splice},ce.extend=ce.fn.extend=function(){var e,t,n,r,i,o,a=arguments[0]||{},s=1,u=arguments.length,l=!1;for("boolean"==typeof a&&(l=a,a=arguments[s]||{},s++),"object"==typeof a||v(a)||(a={}),s===u&&(a=this,s--);s<u;s++)if(null!=(e=arguments[s]))for(t in e)r=e[t],"__proto__"!==t&&a!==r&&(l&&r&&(ce.isPlainObject(r)||(i=Array.isArray(r)))?(n=a[t],o=i&&!Array.isArray(n)?[]:i||ce.isPlainObject(n)?n:{},i=!1,a[t]=ce.extend(l,o,r)):void 0!==r&&(a[t]=r));return a},ce.extend({expando:"jQuery"+(t+Math.random()).replace(/\D/g,""),isReady:!0,error:function(e){throw new Error(e)},noop:function(){},isPlainObject:function(e){var t,n;return!(!e||"[object Object]"!==i.call(e))&&(!(t=r(e))||"function"==typeof(n=ue.call(t,"constructor")&&t.constructor)&&o.call(n)===a)},isEmptyObject:function(e){var t;for(t in e)return!1;return!0},globalEval:function(e,t,n){m(e,{nonce:t&&t.nonce},n)},each:function(e,t){var n,r=0;if(c(e)){for(n=e.length;r<n;r++)if(!1===t.call(e[r],r,e[r]))break}else for(r in e)if(!1===t.call(e[r],r,e[r]))break;return e},text:function(e){var t,n="",r=0,i=e.nodeType;if(!i)while(t=e[r++])n+=ce.text(t);return 1===i||11===i?e.textContent:9===i?e.documentElement.textContent:3===i||4===i?e.nodeValue:n},makeArray:function(e,t){var n=t||[];return null!=e&&(c(Object(e))?ce.merge(n,"string"==typeof e?[e]:e):s.call(n,e)),n},inArray:function(e,t,n){return null==t?-1:se.call(t,e,n)},isXMLDoc:function(e){var t=e&&e.namespaceURI,n=e&&(e.ownerDocument||e).documentElement;return!l.test(t||n&&n.nodeName||"HTML")},merge:function(e,t){for(var n=+t.length,r=0,i=e.length;r<n;r++)e[i++]=t[r];return e.length=i,e},grep:function(e,t,n){for(var r=[],i=0,o=e.length,a=!n;i<o;i++)!t(e[i],i)!==a&&r.push(e[i]);return r},map:function(e,t,n){var r,i,o=0,a=[];if(c(e))for(r=e.length;o<r;o++)null!=(i=t(e[o],o,n))&&a.push(i);else for(o in e)null!=(i=t(e[o],o,n))&&a.push(i);return g(a)},guid:1,support:le}),"function"==typeof Symbol&&(ce.fn[Symbol.iterator]=oe[Symbol.iterator]),ce.each("Boolean Number String Function Array Date RegExp Object Error Symbol".split(" "),function(e,t){n["[object "+t+"]"]=t.toLowerCase()});var pe=oe.pop,de=oe.sort,he=oe.splice,ge="[\\x20\\t\\r\\n\\f]",ve=new RegExp("^"+ge+"+|((?:^|[^\\\\])(?:\\\\.)*)"+ge+"+$","g");ce.contains=function(e,t){var n=t&&t.parentNode;return e===n||!(!n||1!==n.nodeType||!(e.contains?e.contains(n):e.compareDocumentPosition&&16&e.compareDocumentPosition(n)))};var f=/([\0-\x1f\x7f]|^-?\d)|^-$|[^\x80-\uFFFF\w-]/g;function p(e,t){return t?"\0"===e?"\ufffd":e.slice(0,-1)+"\\"+e.charCodeAt(e.length-1).toString(16)+" ":"\\"+e}ce.escapeSelector=function(e){return(e+"").replace(f,p)};var ye=C,me=s;!function(){var e,b,w,o,a,T,r,C,d,i,k=me,S=ce.expando,E=0,n=0,s=W(),c=W(),u=W(),h=W(),l=function(e,t){return e===t&&(a=!0),0},f="checked|selected|async|autofocus|autoplay|controls|defer|disabled|hidden|ismap|loop|multiple|open|readonly|required|scoped",t="(?:\\\\[\\da-fA-F]{1,6}"+ge+"?|\\\\[^\\r\\n\\f]|[\\w-]|[^\0-\\x7f])+",p="\\["+ge+"*("+t+")(?:"+ge+"*([*^$|!~]?=)"+ge+"*(?:'((?:\\\\.|[^\\\\'])*)'|\"((?:\\\\.|[^\\\\\"])*)\"|("+t+"))|)"+ge+"*\\]",g=":("+t+")(?:\\((('((?:\\\\.|[^\\\\'])*)'|\"((?:\\\\.|[^\\\\\"])*)\")|((?:\\\\.|[^\\\\()[\\]]|"+p+")*)|.*)\\)|)",v=new RegExp(ge+"+","g"),y=new RegExp("^"+ge+"*,"+ge+"*"),m=new RegExp("^"+ge+"*([>+~]|"+ge+")"+ge+"*"),x=new RegExp(ge+"|>"),j=new RegExp(g),A=new RegExp("^"+t+"$"),D={ID:new RegExp("^#("+t+")"),CLASS:new RegExp("^\\.("+t+")"),TAG:new RegExp("^("+t+"|[*])"),ATTR:new RegExp("^"+p),PSEUDO:new RegExp("^"+g),CHILD:new RegExp("^:(only|first|last|nth|nth-last)-(child|of-type)(?:\\("+ge+"*(even|odd|(([+-]|)(\\d*)n|)"+ge+"*(?:([+-]|)"+ge+"*(\\d+)|))"+ge+"*\\)|)","i"),bool:new RegExp("^(?:"+f+")$","i"),needsContext:new RegExp("^"+ge+"*[>+~]|:(even|odd|eq|gt|lt|nth|first|last)(?:\\("+ge+"*((?:-\\d)?\\d*)"+ge+"*\\)|)(?=[^-]|$)","i")},N=/^(?:input|select|textarea|button)$/i,q=/^h\d$/i,L=/^(?:#([\w-]+)|(\w+)|\.([\w-]+))$/,H=/[+~]/,O=new RegExp("\\\\[\\da-fA-F]{1,6}"+ge+"?|\\\\([^\\r\\n\\f])","g"),P=function(e,t){var n="0x"+e.slice(1)-65536;return t||(n<0?String.fromCharCode(n+65536):String.fromCharCode(n>>10|55296,1023&n|56320))},M=function(){V()},R=J(function(e){return!0===e.disabled&&fe(e,"fieldset")},{dir:"parentNode",next:"legend"});try{k.apply(oe=ae.call(ye.childNodes),ye.childNodes),oe[ye.childNodes.length].nodeType}catch(e){k={apply:function(e,t){me.apply(e,ae.call(t))},call:function(e){me.apply(e,ae.call(arguments,1))}}}function I(t,e,n,r){var i,o,a,s,u,l,c,f=e&&e.ownerDocument,p=e?e.nodeType:9;if(n=n||[],"string"!=typeof t||!t||1!==p&&9!==p&&11!==p)return n;if(!r&&(V(e),e=e||T,C)){if(11!==p&&(u=L.exec(t)))if(i=u[1]){if(9===p){if(!(a=e.getElementById(i)))return n;if(a.id===i)return k.call(n,a),n}else if(f&&(a=f.getElementById(i))&&I.contains(e,a)&&a.id===i)return k.call(n,a),n}else{if(u[2])return k.apply(n,e.getElementsByTagName(t)),n;if((i=u[3])&&e.getElementsByClassName)return k.apply(n,e.getElementsByClassName(i)),n}if(!(h[t+" "]||d&&d.test(t))){if(c=t,f=e,1===p&&(x.test(t)||m.test(t))){(f=H.test(t)&&U(e.parentNode)||e)==e&&le.scope||((s=e.getAttribute("id"))?s=ce.escapeSelector(s):e.setAttribute("id",s=S)),o=(l=Y(t)).length;while(o--)l[o]=(s?"#"+s:":scope")+" "+Q(l[o]);c=l.join(",")}try{return k.apply(n,f.querySelectorAll(c)),n}catch(e){h(t,!0)}finally{s===S&&e.removeAttribute("id")}}}return re(t.replace(ve,"$1"),e,n,r)}function W(){var r=[];return function e(t,n){return r.push(t+" ")>b.cacheLength&&delete e[r.shift()],e[t+" "]=n}}function F(e){return e[S]=!0,e}function $(e){var t=T.createElement("fieldset");try{return!!e(t)}catch(e){return!1}finally{t.parentNode&&t.parentNode.removeChild(t),t=null}}function B(t){return function(e){return fe(e,"input")&&e.type===t}}function _(t){return function(e){return(fe(e,"input")||fe(e,"button"))&&e.type===t}}function z(t){return function(e){return"form"in e?e.parentNode&&!1===e.disabled?"label"in e?"label"in e.parentNode?e.parentNode.disabled===t:e.disabled===t:e.isDisabled===t||e.isDisabled!==!t&&R(e)===t:e.disabled===t:"label"in e&&e.disabled===t}}function X(a){return F(function(o){return o=+o,F(function(e,t){var n,r=a([],e.length,o),i=r.length;while(i--)e[n=r[i]]&&(e[n]=!(t[n]=e[n]))})})}function U(e){return e&&"undefined"!=typeof e.getElementsByTagName&&e}function V(e){var t,n=e?e.ownerDocument||e:ye;return n!=T&&9===n.nodeType&&n.documentElement&&(r=(T=n).documentElement,C=!ce.isXMLDoc(T),i=r.matches||r.webkitMatchesSelector||r.msMatchesSelector,r.msMatchesSelector&&ye!=T&&(t=T.defaultView)&&t.top!==t&&t.addEventListener("unload",M),le.getById=$(function(e){return r.appendChild(e).id=ce.expando,!T.getElementsByName||!T.getElementsByName(ce.expando).length}),le.disconnectedMatch=$(function(e){return i.call(e,"*")}),le.scope=$(function(){return T.querySelectorAll(":scope")}),le.cssHas=$(function(){try{return T.querySelector(":has(*,:jqfake)"),!1}catch(e){return!0}}),le.getById?(b.filter.ID=function(e){var t=e.replace(O,P);return function(e){return e.getAttribute("id")===t}},b.find.ID=function(e,t){if("undefined"!=typeof t.getElementById&&C){var n=t.getElementById(e);return n?[n]:[]}}):(b.filter.ID=function(e){var n=e.replace(O,P);return function(e){var t="undefined"!=typeof e.getAttributeNode&&e.getAttributeNode("id");return t&&t.value===n}},b.find.ID=function(e,t){if("undefined"!=typeof t.getElementById&&C){var n,r,i,o=t.getElementById(e);if(o){if((n=o.getAttributeNode("id"))&&n.value===e)return[o];i=t.getElementsByName(e),r=0;while(o=i[r++])if((n=o.getAttributeNode("id"))&&n.value===e)return[o]}return[]}}),b.find.TAG=function(e,t){return"undefined"!=typeof t.getElementsByTagName?t.getElementsByTagName(e):t.querySelectorAll(e)},b.find.CLASS=function(e,t){if("undefined"!=typeof t.getElementsByClassName&&C)return t.getElementsByClassName(e)},d=[],$(function(e){var t;r.appendChild(e).innerHTML="<a id='"+S+"' href='' disabled='disabled'></a><select id='"+S+"-\r\\' disabled='disabled'><option selected=''></option></select>",e.querySelectorAll("[selected]").length||d.push("\\["+ge+"*(?:value|"+f+")"),e.querySelectorAll("[id~="+S+"-]").length||d.push("~="),e.querySelectorAll("a#"+S+"+*").length||d.push(".#.+[+~]"),e.querySelectorAll(":checked").length||d.push(":checked"),(t=T.createElement("input")).setAttribute("type","hidden"),e.appendChild(t).setAttribute("name","D"),r.appendChild(e).disabled=!0,2!==e.querySelectorAll(":disabled").length&&d.push(":enabled",":disabled"),(t=T.createElement("input")).setAttribute("name",""),e.appendChild(t),e.querySelectorAll("[name='']").length||d.push("\\["+ge+"*name"+ge+"*="+ge+"*(?:''|\"\")")}),le.cssHas||d.push(":has"),d=d.length&&new RegExp(d.join("|")),l=function(e,t){if(e===t)return a=!0,0;var n=!e.compareDocumentPosition-!t.compareDocumentPosition;return n||(1&(n=(e.ownerDocument||e)==(t.ownerDocument||t)?e.compareDocumentPosition(t):1)||!le.sortDetached&&t.compareDocumentPosition(e)===n?e===T||e.ownerDocument==ye&&I.contains(ye,e)?-1:t===T||t.ownerDocument==ye&&I.contains(ye,t)?1:o?se.call(o,e)-se.call(o,t):0:4&n?-1:1)}),T}for(e in I.matches=function(e,t){return I(e,null,null,t)},I.matchesSelector=function(e,t){if(V(e),C&&!h[t+" "]&&(!d||!d.test(t)))try{var n=i.call(e,t);if(n||le.disconnectedMatch||e.document&&11!==e.document.nodeType)return n}catch(e){h(t,!0)}return 0<I(t,T,null,[e]).length},I.contains=function(e,t){return(e.ownerDocument||e)!=T&&V(e),ce.contains(e,t)},I.attr=function(e,t){(e.ownerDocument||e)!=T&&V(e);var n=b.attrHandle[t.toLowerCase()],r=n&&ue.call(b.attrHandle,t.toLowerCase())?n(e,t,!C):void 0;return void 0!==r?r:e.getAttribute(t)},I.error=function(e){throw new Error("Syntax error, unrecognized expression: "+e)},ce.uniqueSort=function(e){var t,n=[],r=0,i=0;if(a=!le.sortStable,o=!le.sortStable&&ae.call(e,0),de.call(e,l),a){while(t=e[i++])t===e[i]&&(r=n.push(i));while(r--)he.call(e,n[r],1)}return o=null,e},ce.fn.uniqueSort=function(){return this.pushStack(ce.uniqueSort(ae.apply(this)))},(b=ce.expr={cacheLength:50,createPseudo:F,match:D,attrHandle:{},find:{},relative:{">":{dir:"parentNode",first:!0}," ":{dir:"parentNode"},"+":{dir:"previousSibling",first:!0},"~":{dir:"previousSibling"}},preFilter:{ATTR:function(e){return e[1]=e[1].replace(O,P),e[3]=(e[3]||e[4]||e[5]||"").replace(O,P),"~="===e[2]&&(e[3]=" "+e[3]+" "),e.slice(0,4)},CHILD:function(e){return e[1]=e[1].toLowerCase(),"nth"===e[1].slice(0,3)?(e[3]||I.error(e[0]),e[4]=+(e[4]?e[5]+(e[6]||1):2*("even"===e[3]||"odd"===e[3])),e[5]=+(e[7]+e[8]||"odd"===e[3])):e[3]&&I.error(e[0]),e},PSEUDO:function(e){var t,n=!e[6]&&e[2];return D.CHILD.test(e[0])?null:(e[3]?e[2]=e[4]||e[5]||"":n&&j.test(n)&&(t=Y(n,!0))&&(t=n.indexOf(")",n.length-t)-n.length)&&(e[0]=e[0].slice(0,t),e[2]=n.slice(0,t)),e.slice(0,3))}},filter:{TAG:function(e){var t=e.replace(O,P).toLowerCase();return"*"===e?function(){return!0}:function(e){return fe(e,t)}},CLASS:function(e){var t=s[e+" "];return t||(t=new RegExp("(^|"+ge+")"+e+"("+ge+"|$)"))&&s(e,function(e){return t.test("string"==typeof e.className&&e.className||"undefined"!=typeof e.getAttribute&&e.getAttribute("class")||"")})},ATTR:function(n,r,i){return function(e){var t=I.attr(e,n);return null==t?"!="===r:!r||(t+="","="===r?t===i:"!="===r?t!==i:"^="===r?i&&0===t.indexOf(i):"*="===r?i&&-1<t.indexOf(i):"$="===r?i&&t.slice(-i.length)===i:"~="===r?-1<(" "+t.replace(v," ")+" ").indexOf(i):"|="===r&&(t===i||t.slice(0,i.length+1)===i+"-"))}},CHILD:function(d,e,t,h,g){var v="nth"!==d.slice(0,3),y="last"!==d.slice(-4),m="of-type"===e;return 1===h&&0===g?function(e){return!!e.parentNode}:function(e,t,n){var r,i,o,a,s,u=v!==y?"nextSibling":"previousSibling",l=e.parentNode,c=m&&e.nodeName.toLowerCase(),f=!n&&!m,p=!1;if(l){if(v){while(u){o=e;while(o=o[u])if(m?fe(o,c):1===o.nodeType)return!1;s=u="only"===d&&!s&&"nextSibling"}return!0}if(s=[y?l.firstChild:l.lastChild],y&&f){p=(a=(r=(i=l[S]||(l[S]={}))[d]||[])[0]===E&&r[1])&&r[2],o=a&&l.childNodes[a];while(o=++a&&o&&o[u]||(p=a=0)||s.pop())if(1===o.nodeType&&++p&&o===e){i[d]=[E,a,p];break}}else if(f&&(p=a=(r=(i=e[S]||(e[S]={}))[d]||[])[0]===E&&r[1]),!1===p)while(o=++a&&o&&o[u]||(p=a=0)||s.pop())if((m?fe(o,c):1===o.nodeType)&&++p&&(f&&((i=o[S]||(o[S]={}))[d]=[E,p]),o===e))break;return(p-=g)===h||p%h==0&&0<=p/h}}},PSEUDO:function(e,o){var t,a=b.pseudos[e]||b.setFilters[e.toLowerCase()]||I.error("unsupported pseudo: "+e);return a[S]?a(o):1<a.length?(t=[e,e,"",o],b.setFilters.hasOwnProperty(e.toLowerCase())?F(function(e,t){var n,r=a(e,o),i=r.length;while(i--)e[n=se.call(e,r[i])]=!(t[n]=r[i])}):function(e){return a(e,0,t)}):a}},pseudos:{not:F(function(e){var r=[],i=[],s=ne(e.replace(ve,"$1"));return s[S]?F(function(e,t,n,r){var i,o=s(e,null,r,[]),a=e.length;while(a--)(i=o[a])&&(e[a]=!(t[a]=i))}):function(e,t,n){return r[0]=e,s(r,null,n,i),r[0]=null,!i.pop()}}),has:F(function(t){return function(e){return 0<I(t,e).length}}),contains:F(function(t){return t=t.replace(O,P),function(e){return-1<(e.textContent||ce.text(e)).indexOf(t)}}),lang:F(function(n){return A.test(n||"")||I.error("unsupported lang: "+n),n=n.replace(O,P).toLowerCase(),function(e){var t;do{if(t=C?e.lang:e.getAttribute("xml:lang")||e.getAttribute("lang"))return(t=t.toLowerCase())===n||0===t.indexOf(n+"-")}while((e=e.parentNode)&&1===e.nodeType);return!1}}),target:function(e){var t=ie.location&&ie.location.hash;return t&&t.slice(1)===e.id},root:function(e){return e===r},focus:function(e){return e===function(){try{return T.activeElement}catch(e){}}()&&T.hasFocus()&&!!(e.type||e.href||~e.tabIndex)},enabled:z(!1),disabled:z(!0),checked:function(e){return fe(e,"input")&&!!e.checked||fe(e,"option")&&!!e.selected},selected:function(e){return e.parentNode&&e.parentNode.selectedIndex,!0===e.selected},empty:function(e){for(e=e.firstChild;e;e=e.nextSibling)if(e.nodeType<6)return!1;return!0},parent:function(e){return!b.pseudos.empty(e)},header:function(e){return q.test(e.nodeName)},input:function(e){return N.test(e.nodeName)},button:function(e){return fe(e,"input")&&"button"===e.type||fe(e,"button")},text:function(e){var t;return fe(e,"input")&&"text"===e.type&&(null==(t=e.getAttribute("type"))||"text"===t.toLowerCase())},first:X(function(){return[0]}),last:X(function(e,t){return[t-1]}),eq:X(function(e,t,n){return[n<0?n+t:n]}),even:X(function(e,t){for(var n=0;n<t;n+=2)e.push(n);return e}),odd:X(function(e,t){for(var n=1;n<t;n+=2)e.push(n);return e}),lt:X(function(e,t,n){var r;for(r=n<0?n+t:t<n?t:n;0<=--r;)e.push(r);return e}),gt:X(function(e,t,n){for(var r=n<0?n+t:n;++r<t;)e.push(r);return e})}}).pseudos.nth=b.pseudos.eq,{radio:!0,checkbox:!0,file:!0,password:!0,image:!0})b.pseudos[e]=B(e);for(e in{submit:!0,reset:!0})b.pseudos[e]=_(e);function G(){}function Y(e,t){var n,r,i,o,a,s,u,l=c[e+" "];if(l)return t?0:l.slice(0);a=e,s=[],u=b.preFilter;while(a){for(o in n&&!(r=y.exec(a))||(r&&(a=a.slice(r[0].length)||a),s.push(i=[])),n=!1,(r=m.exec(a))&&(n=r.shift(),i.push({value:n,type:r[0].replace(ve," ")}),a=a.slice(n.length)),b.filter)!(r=D[o].exec(a))||u[o]&&!(r=u[o](r))||(n=r.shift(),i.push({value:n,type:o,matches:r}),a=a.slice(n.length));if(!n)break}return t?a.length:a?I.error(e):c(e,s).slice(0)}function Q(e){for(var t=0,n=e.length,r="";t<n;t++)r+=e[t].value;return r}function J(a,e,t){var s=e.dir,u=e.next,l=u||s,c=t&&"parentNode"===l,f=n++;return e.first?function(e,t,n){while(e=e[s])if(1===e.nodeType||c)return a(e,t,n);return!1}:function(e,t,n){var r,i,o=[E,f];if(n){while(e=e[s])if((1===e.nodeType||c)&&a(e,t,n))return!0}else while(e=e[s])if(1===e.nodeType||c)if(i=e[S]||(e[S]={}),u&&fe(e,u))e=e[s]||e;else{if((r=i[l])&&r[0]===E&&r[1]===f)return o[2]=r[2];if((i[l]=o)[2]=a(e,t,n))return!0}return!1}}function K(i){return 1<i.length?function(e,t,n){var r=i.length;while(r--)if(!i[r](e,t,n))return!1;return!0}:i[0]}function Z(e,t,n,r,i){for(var o,a=[],s=0,u=e.length,l=null!=t;s<u;s++)(o=e[s])&&(n&&!n(o,r,i)||(a.push(o),l&&t.push(s)));return a}function ee(d,h,g,v,y,e){return v&&!v[S]&&(v=ee(v)),y&&!y[S]&&(y=ee(y,e)),F(function(e,t,n,r){var i,o,a,s,u=[],l=[],c=t.length,f=e||function(e,t,n){for(var r=0,i=t.length;r<i;r++)I(e,t[r],n);return n}(h||"*",n.nodeType?[n]:n,[]),p=!d||!e&&h?f:Z(f,u,d,n,r);if(g?g(p,s=y||(e?d:c||v)?[]:t,n,r):s=p,v){i=Z(s,l),v(i,[],n,r),o=i.length;while(o--)(a=i[o])&&(s[l[o]]=!(p[l[o]]=a))}if(e){if(y||d){if(y){i=[],o=s.length;while(o--)(a=s[o])&&i.push(p[o]=a);y(null,s=[],i,r)}o=s.length;while(o--)(a=s[o])&&-1<(i=y?se.call(e,a):u[o])&&(e[i]=!(t[i]=a))}}else s=Z(s===t?s.splice(c,s.length):s),y?y(null,t,s,r):k.apply(t,s)})}function te(e){for(var i,t,n,r=e.length,o=b.relative[e[0].type],a=o||b.relative[" "],s=o?1:0,u=J(function(e){return e===i},a,!0),l=J(function(e){return-1<se.call(i,e)},a,!0),c=[function(e,t,n){var r=!o&&(n||t!=w)||((i=t).nodeType?u(e,t,n):l(e,t,n));return i=null,r}];s<r;s++)if(t=b.relative[e[s].type])c=[J(K(c),t)];else{if((t=b.filter[e[s].type].apply(null,e[s].matches))[S]){for(n=++s;n<r;n++)if(b.relative[e[n].type])break;return ee(1<s&&K(c),1<s&&Q(e.slice(0,s-1).concat({value:" "===e[s-2].type?"*":""})).replace(ve,"$1"),t,s<n&&te(e.slice(s,n)),n<r&&te(e=e.slice(n)),n<r&&Q(e))}c.push(t)}return K(c)}function ne(e,t){var n,v,y,m,x,r,i=[],o=[],a=u[e+" "];if(!a){t||(t=Y(e)),n=t.length;while(n--)(a=te(t[n]))[S]?i.push(a):o.push(a);(a=u(e,(v=o,m=0<(y=i).length,x=0<v.length,r=function(e,t,n,r,i){var o,a,s,u=0,l="0",c=e&&[],f=[],p=w,d=e||x&&b.find.TAG("*",i),h=E+=null==p?1:Math.random()||.1,g=d.length;for(i&&(w=t==T||t||i);l!==g&&null!=(o=d[l]);l++){if(x&&o){a=0,t||o.ownerDocument==T||(V(o),n=!C);while(s=v[a++])if(s(o,t||T,n)){k.call(r,o);break}i&&(E=h)}m&&((o=!s&&o)&&u--,e&&c.push(o))}if(u+=l,m&&l!==u){a=0;while(s=y[a++])s(c,f,t,n);if(e){if(0<u)while(l--)c[l]||f[l]||(f[l]=pe.call(r));f=Z(f)}k.apply(r,f),i&&!e&&0<f.length&&1<u+y.length&&ce.uniqueSort(r)}return i&&(E=h,w=p),c},m?F(r):r))).selector=e}return a}function re(e,t,n,r){var i,o,a,s,u,l="function"==typeof e&&e,c=!r&&Y(e=l.selector||e);if(n=n||[],1===c.length){if(2<(o=c[0]=c[0].slice(0)).length&&"ID"===(a=o[0]).type&&9===t.nodeType&&C&&b.relative[o[1].type]){if(!(t=(b.find.ID(a.matches[0].replace(O,P),t)||[])[0]))return n;l&&(t=t.parentNode),e=e.slice(o.shift().value.length)}i=D.needsContext.test(e)?0:o.length;while(i--){if(a=o[i],b.relative[s=a.type])break;if((u=b.find[s])&&(r=u(a.matches[0].replace(O,P),H.test(o[0].type)&&U(t.parentNode)||t))){if(o.splice(i,1),!(e=r.length&&Q(o)))return k.apply(n,r),n;break}}}return(l||ne(e,c))(r,t,!C,n,!t||H.test(e)&&U(t.parentNode)||t),n}G.prototype=b.filters=b.pseudos,b.setFilters=new G,le.sortStable=S.split("").sort(l).join("")===S,V(),le.sortDetached=$(function(e){return 1&e.compareDocumentPosition(T.createElement("fieldset"))}),ce.find=I,ce.expr[":"]=ce.expr.pseudos,ce.unique=ce.uniqueSort,I.compile=ne,I.select=re,I.setDocument=V,I.tokenize=Y,I.escape=ce.escapeSelector,I.getText=ce.text,I.isXML=ce.isXMLDoc,I.selectors=ce.expr,I.support=ce.support,I.uniqueSort=ce.uniqueSort}();var d=function(e,t,n){var r=[],i=void 0!==n;while((e=e[t])&&9!==e.nodeType)if(1===e.nodeType){if(i&&ce(e).is(n))break;r.push(e)}return r},h=function(e,t){for(var n=[];e;e=e.nextSibling)1===e.nodeType&&e!==t&&n.push(e);return n},b=ce.expr.match.needsContext,w=/^<([a-z][^\/\0>:\x20\t\r\n\f]*)[\x20\t\r\n\f]*\/?>(?:<\/\1>|)$/i;function T(e,n,r){return v(n)?ce.grep(e,function(e,t){return!!n.call(e,t,e)!==r}):n.nodeType?ce.grep(e,function(e){return e===n!==r}):"string"!=typeof n?ce.grep(e,function(e){return-1<se.call(n,e)!==r}):ce.filter(n,e,r)}ce.filter=function(e,t,n){var r=t[0];return n&&(e=":not("+e+")"),1===t.length&&1===r.nodeType?ce.find.matchesSelector(r,e)?[r]:[]:ce.find.matches(e,ce.grep(t,function(e){return 1===e.nodeType}))},ce.fn.extend({find:function(e){var t,n,r=this.length,i=this;if("string"!=typeof e)return this.pushStack(ce(e).filter(function(){for(t=0;t<r;t++)if(ce.contains(i[t],this))return!0}));for(n=this.pushStack([]),t=0;t<r;t++)ce.find(e,i[t],n);return 1<r?ce.uniqueSort(n):n},filter:function(e){return this.pushStack(T(this,e||[],!1))},not:function(e){return this.pushStack(T(this,e||[],!0))},is:function(e){return!!T(this,"string"==typeof e&&b.test(e)?ce(e):e||[],!1).length}});var k,S=/^(?:\s*(<[\w\W]+>)[^>]*|#([\w-]+))$/;(ce.fn.init=function(e,t,n){var r,i;if(!e)return this;if(n=n||k,"string"==typeof e){if(!(r="<"===e[0]&&">"===e[e.length-1]&&3<=e.length?[null,e,null]:S.exec(e))||!r[1]&&t)return!t||t.jquery?(t||n).find(e):this.constructor(t).find(e);if(r[1]){if(t=t instanceof ce?t[0]:t,ce.merge(this,ce.parseHTML(r[1],t&&t.nodeType?t.ownerDocument||t:C,!0)),w.test(r[1])&&ce.isPlainObject(t))for(r in t)v(this[r])?this[r](t[r]):this.attr(r,t[r]);return this}return(i=C.getElementById(r[2]))&&(this[0]=i,this.length=1),this}return e.nodeType?(this[0]=e,this.length=1,this):v(e)?void 0!==n.ready?n.ready(e):e(ce):ce.makeArray(e,this)}).prototype=ce.fn,k=ce(C);var E=/^(?:parents|prev(?:Until|All))/,j={children:!0,contents:!0,next:!0,prev:!0};function A(e,t){while((e=e[t])&&1!==e.nodeType);return e}ce.fn.extend({has:function(e){var t=ce(e,this),n=t.length;return this.filter(function(){for(var e=0;e<n;e++)if(ce.contains(this,t[e]))return!0})},closest:function(e,t){var n,r=0,i=this.length,o=[],a="string"!=typeof e&&ce(e);if(!b.test(e))for(;r<i;r++)for(n=this[r];n&&n!==t;n=n.parentNode)if(n.nodeType<11&&(a?-1<a.index(n):1===n.nodeType&&ce.find.matchesSelector(n,e))){o.push(n);break}return this.pushStack(1<o.length?ce.uniqueSort(o):o)},index:function(e){return e?"string"==typeof e?se.call(ce(e),this[0]):se.call(this,e.jquery?e[0]:e):this[0]&&this[0].parentNode?this.first().prevAll().length:-1},add:function(e,t){return this.pushStack(ce.uniqueSort(ce.merge(this.get(),ce(e,t))))},addBack:function(e){return this.add(null==e?this.prevObject:this.prevObject.filter(e))}}),ce.each({parent:function(e){var t=e.parentNode;return t&&11!==t.nodeType?t:null},parents:function(e){return d(e,"parentNode")},parentsUntil:function(e,t,n){return d(e,"parentNode",n)},next:function(e){return A(e,"nextSibling")},prev:function(e){return A(e,"previousSibling")},nextAll:function(e){return d(e,"nextSibling")},prevAll:function(e){return d(e,"previousSibling")},nextUntil:function(e,t,n){return d(e,"nextSibling",n)},prevUntil:function(e,t,n){return d(e,"previousSibling",n)},siblings:function(e){return h((e.parentNode||{}).firstChild,e)},children:function(e){return h(e.firstChild)},contents:function(e){return null!=e.contentDocument&&r(e.contentDocument)?e.contentDocument:(fe(e,"template")&&(e=e.content||e),ce.merge([],e.childNodes))}},function(r,i){ce.fn[r]=function(e,t){var n=ce.map(this,i,e);return"Until"!==r.slice(-5)&&(t=e),t&&"string"==typeof t&&(n=ce.filter(t,n)),1<this.length&&(j[r]||ce.uniqueSort(n),E.test(r)&&n.reverse()),this.pushStack(n)}});var D=/[^\x20\t\r\n\f]+/g;function N(e){return e}function q(e){throw e}function L(e,t,n,r){var i;try{e&&v(i=e.promise)?i.call(e).done(t).fail(n):e&&v(i=e.then)?i.call(e,t,n):t.apply(void 0,[e].slice(r))}catch(e){n.apply(void 0,[e])}}ce.Callbacks=function(r){var e,n;r="string"==typeof r?(e=r,n={},ce.each(e.match(D)||[],function(e,t){n[t]=!0}),n):ce.extend({},r);var i,t,o,a,s=[],u=[],l=-1,c=function(){for(a=a||r.once,o=i=!0;u.length;l=-1){t=u.shift();while(++l<s.length)!1===s[l].apply(t[0],t[1])&&r.stopOnFalse&&(l=s.length,t=!1)}r.memory||(t=!1),i=!1,a&&(s=t?[]:"")},f={add:function(){return s&&(t&&!i&&(l=s.length-1,u.push(t)),function n(e){ce.each(e,function(e,t){v(t)?r.unique&&f.has(t)||s.push(t):t&&t.length&&"string"!==x(t)&&n(t)})}(arguments),t&&!i&&c()),this},remove:function(){return ce.each(arguments,function(e,t){var n;while(-1<(n=ce.inArray(t,s,n)))s.splice(n,1),n<=l&&l--}),this},has:function(e){return e?-1<ce.inArray(e,s):0<s.length},empty:function(){return s&&(s=[]),this},disable:function(){return a=u=[],s=t="",this},disabled:function(){return!s},lock:function(){return a=u=[],t||i||(s=t=""),this},locked:function(){return!!a},fireWith:function(e,t){return a||(t=[e,(t=t||[]).slice?t.slice():t],u.push(t),i||c()),this},fire:function(){return f.fireWith(this,arguments),this},fired:function(){return!!o}};return f},ce.extend({Deferred:function(e){var o=[["notify","progress",ce.Callbacks("memory"),ce.Callbacks("memory"),2],["resolve","done",ce.Callbacks("once memory"),ce.Callbacks("once memory"),0,"resolved"],["reject","fail",ce.Callbacks("once memory"),ce.Callbacks("once memory"),1,"rejected"]],i="pending",a={state:function(){return i},always:function(){return s.done(arguments).fail(arguments),this},"catch":function(e){return a.then(null,e)},pipe:function(){var i=arguments;return ce.Deferred(function(r){ce.each(o,function(e,t){var n=v(i[t[4]])&&i[t[4]];s[t[1]](function(){var e=n&&n.apply(this,arguments);e&&v(e.promise)?e.promise().progress(r.notify).done(r.resolve).fail(r.reject):r[t[0]+"With"](this,n?[e]:arguments)})}),i=null}).promise()},then:function(t,n,r){var u=0;function l(i,o,a,s){return function(){var n=this,r=arguments,e=function(){var e,t;if(!(i<u)){if((e=a.apply(n,r))===o.promise())throw new TypeError("Thenable self-resolution");t=e&&("object"==typeof e||"function"==typeof e)&&e.then,v(t)?s?t.call(e,l(u,o,N,s),l(u,o,q,s)):(u++,t.call(e,l(u,o,N,s),l(u,o,q,s),l(u,o,N,o.notifyWith))):(a!==N&&(n=void 0,r=[e]),(s||o.resolveWith)(n,r))}},t=s?e:function(){try{e()}catch(e){ce.Deferred.exceptionHook&&ce.Deferred.exceptionHook(e,t.error),u<=i+1&&(a!==q&&(n=void 0,r=[e]),o.rejectWith(n,r))}};i?t():(ce.Deferred.getErrorHook?t.error=ce.Deferred.getErrorHook():ce.Deferred.getStackHook&&(t.error=ce.Deferred.getStackHook()),ie.setTimeout(t))}}return ce.Deferred(function(e){o[0][3].add(l(0,e,v(r)?r:N,e.notifyWith)),o[1][3].add(l(0,e,v(t)?t:N)),o[2][3].add(l(0,e,v(n)?n:q))}).promise()},promise:function(e){return null!=e?ce.extend(e,a):a}},s={};return ce.each(o,function(e,t){var n=t[2],r=t[5];a[t[1]]=n.add,r&&n.add(function(){i=r},o[3-e][2].disable,o[3-e][3].disable,o[0][2].lock,o[0][3].lock),n.add(t[3].fire),s[t[0]]=function(){return s[t[0]+"With"](this===s?void 0:this,arguments),this},s[t[0]+"With"]=n.fireWith}),a.promise(s),e&&e.call(s,s),s},when:function(e){var n=arguments.length,t=n,r=Array(t),i=ae.call(arguments),o=ce.Deferred(),a=function(t){return function(e){r[t]=this,i[t]=1<arguments.length?ae.call(arguments):e,--n||o.resolveWith(r,i)}};if(n<=1&&(L(e,o.done(a(t)).resolve,o.reject,!n),"pending"===o.state()||v(i[t]&&i[t].then)))return o.then();while(t--)L(i[t],a(t),o.reject);return o.promise()}});var H=/^(Eval|Internal|Range|Reference|Syntax|Type|URI)Error$/;ce.Deferred.exceptionHook=function(e,t){ie.console&&ie.console.warn&&e&&H.test(e.name)&&ie.console.warn("jQuery.Deferred exception: "+e.message,e.stack,t)},ce.readyException=function(e){ie.setTimeout(function(){throw e})};var O=ce.Deferred();function P(){C.removeEventListener("DOMContentLoaded",P),ie.removeEventListener("load",P),ce.ready()}ce.fn.ready=function(e){return O.then(e)["catch"](function(e){ce.readyException(e)}),this},ce.extend({isReady:!1,readyWait:1,ready:function(e){(!0===e?--ce.readyWait:ce.isReady)||(ce.isReady=!0)!==e&&0<--ce.readyWait||O.resolveWith(C,[ce])}}),ce.ready.then=O.then,"complete"===C.readyState||"loading"!==C.readyState&&!C.documentElement.doScroll?ie.setTimeout(ce.ready):(C.addEventListener("DOMContentLoaded",P),ie.addEventListener("load",P));var M=function(e,t,n,r,i,o,a){var s=0,u=e.length,l=null==n;if("object"===x(n))for(s in i=!0,n)M(e,t,s,n[s],!0,o,a);else if(void 0!==r&&(i=!0,v(r)||(a=!0),l&&(a?(t.call(e,r),t=null):(l=t,t=function(e,t,n){return l.call(ce(e),n)})),t))for(;s<u;s++)t(e[s],n,a?r:r.call(e[s],s,t(e[s],n)));return i?e:l?t.call(e):u?t(e[0],n):o},R=/^-ms-/,I=/-([a-z])/g;function W(e,t){return t.toUpperCase()}function F(e){return e.replace(R,"ms-").replace(I,W)}var $=function(e){return 1===e.nodeType||9===e.nodeType||!+e.nodeType};function B(){this.expando=ce.expando+B.uid++}B.uid=1,B.prototype={cache:function(e){var t=e[this.expando];return t||(t={},$(e)&&(e.nodeType?e[this.expando]=t:Object.defineProperty(e,this.expando,{value:t,configurable:!0}))),t},set:function(e,t,n){var r,i=this.cache(e);if("string"==typeof t)i[F(t)]=n;else for(r in t)i[F(r)]=t[r];return i},get:function(e,t){return void 0===t?this.cache(e):e[this.expando]&&e[this.expando][F(t)]},access:function(e,t,n){return void 0===t||t&&"string"==typeof t&&void 0===n?this.get(e,t):(this.set(e,t,n),void 0!==n?n:t)},remove:function(e,t){var n,r=e[this.expando];if(void 0!==r){if(void 0!==t){n=(t=Array.isArray(t)?t.map(F):(t=F(t))in r?[t]:t.match(D)||[]).length;while(n--)delete r[t[n]]}(void 0===t||ce.isEmptyObject(r))&&(e.nodeType?e[this.expando]=void 0:delete e[this.expando])}},hasData:function(e){var t=e[this.expando];return void 0!==t&&!ce.isEmptyObject(t)}};var _=new B,z=new B,X=/^(?:\{[\w\W]*\}|\[[\w\W]*\])$/,U=/[A-Z]/g;function V(e,t,n){var r,i;if(void 0===n&&1===e.nodeType)if(r="data-"+t.replace(U,"-$&").toLowerCase(),"string"==typeof(n=e.getAttribute(r))){try{n="true"===(i=n)||"false"!==i&&("null"===i?null:i===+i+""?+i:X.test(i)?JSON.parse(i):i)}catch(e){}z.set(e,t,n)}else n=void 0;return n}ce.extend({hasData:function(e){return z.hasData(e)||_.hasData(e)},data:function(e,t,n){return z.access(e,t,n)},removeData:function(e,t){z.remove(e,t)},_data:function(e,t,n){return _.access(e,t,n)},_removeData:function(e,t){_.remove(e,t)}}),ce.fn.extend({data:function(n,e){var t,r,i,o=this[0],a=o&&o.attributes;if(void 0===n){if(this.length&&(i=z.get(o),1===o.nodeType&&!_.get(o,"hasDataAttrs"))){t=a.length;while(t--)a[t]&&0===(r=a[t].name).indexOf("data-")&&(r=F(r.slice(5)),V(o,r,i[r]));_.set(o,"hasDataAttrs",!0)}return i}return"object"==typeof n?this.each(function(){z.set(this,n)}):M(this,function(e){var t;if(o&&void 0===e)return void 0!==(t=z.get(o,n))?t:void 0!==(t=V(o,n))?t:void 0;this.each(function(){z.set(this,n,e)})},null,e,1<arguments.length,null,!0)},removeData:function(e){return this.each(function(){z.remove(this,e)})}}),ce.extend({queue:function(e,t,n){var r;if(e)return t=(t||"fx")+"queue",r=_.get(e,t),n&&(!r||Array.isArray(n)?r=_.access(e,t,ce.makeArray(n)):r.push(n)),r||[]},dequeue:function(e,t){t=t||"fx";var n=ce.queue(e,t),r=n.length,i=n.shift(),o=ce._queueHooks(e,t);"inprogress"===i&&(i=n.shift(),r--),i&&("fx"===t&&n.unshift("inprogress"),delete o.stop,i.call(e,function(){ce.dequeue(e,t)},o)),!r&&o&&o.empty.fire()},_queueHooks:function(e,t){var n=t+"queueHooks";return _.get(e,n)||_.access(e,n,{empty:ce.Callbacks("once memory").add(function(){_.remove(e,[t+"queue",n])})})}}),ce.fn.extend({queue:function(t,n){var e=2;return"string"!=typeof t&&(n=t,t="fx",e--),arguments.length<e?ce.queue(this[0],t):void 0===n?this:this.each(function(){var e=ce.queue(this,t,n);ce._queueHooks(this,t),"fx"===t&&"inprogress"!==e[0]&&ce.dequeue(this,t)})},dequeue:function(e){return this.each(function(){ce.dequeue(this,e)})},clearQueue:function(e){return this.queue(e||"fx",[])},promise:function(e,t){var n,r=1,i=ce.Deferred(),o=this,a=this.length,s=function(){--r||i.resolveWith(o,[o])};"string"!=typeof e&&(t=e,e=void 0),e=e||"fx";while(a--)(n=_.get(o[a],e+"queueHooks"))&&n.empty&&(r++,n.empty.add(s));return s(),i.promise(t)}});var G=/[+-]?(?:\d*\.|)\d+(?:[eE][+-]?\d+|)/.source,Y=new RegExp("^(?:([+-])=|)("+G+")([a-z%]*)$","i"),Q=["Top","Right","Bottom","Left"],J=C.documentElement,K=function(e){return ce.contains(e.ownerDocument,e)},Z={composed:!0};J.getRootNode&&(K=function(e){return ce.contains(e.ownerDocument,e)||e.getRootNode(Z)===e.ownerDocument});var ee=function(e,t){return"none"===(e=t||e).style.display||""===e.style.display&&K(e)&&"none"===ce.css(e,"display")};function te(e,t,n,r){var i,o,a=20,s=r?function(){return r.cur()}:function(){return ce.css(e,t,"")},u=s(),l=n&&n[3]||(ce.cssNumber[t]?"":"px"),c=e.nodeType&&(ce.cssNumber[t]||"px"!==l&&+u)&&Y.exec(ce.css(e,t));if(c&&c[3]!==l){u/=2,l=l||c[3],c=+u||1;while(a--)ce.style(e,t,c+l),(1-o)*(1-(o=s()/u||.5))<=0&&(a=0),c/=o;c*=2,ce.style(e,t,c+l),n=n||[]}return n&&(c=+c||+u||0,i=n[1]?c+(n[1]+1)*n[2]:+n[2],r&&(r.unit=l,r.start=c,r.end=i)),i}var ne={};function re(e,t){for(var n,r,i,o,a,s,u,l=[],c=0,f=e.length;c<f;c++)(r=e[c]).style&&(n=r.style.display,t?("none"===n&&(l[c]=_.get(r,"display")||null,l[c]||(r.style.display="")),""===r.style.display&&ee(r)&&(l[c]=(u=a=o=void 0,a=(i=r).ownerDocument,s=i.nodeName,(u=ne[s])||(o=a.body.appendChild(a.createElement(s)),u=ce.css(o,"display"),o.parentNode.removeChild(o),"none"===u&&(u="block"),ne[s]=u)))):"none"!==n&&(l[c]="none",_.set(r,"display",n)));for(c=0;c<f;c++)null!=l[c]&&(e[c].style.display=l[c]);return e}ce.fn.extend({show:function(){return re(this,!0)},hide:function(){return re(this)},toggle:function(e){return"boolean"==typeof e?e?this.show():this.hide():this.each(function(){ee(this)?ce(this).show():ce(this).hide()})}});var xe,be,we=/^(?:checkbox|radio)$/i,Te=/<([a-z][^\/\0>\x20\t\r\n\f]*)/i,Ce=/^$|^module$|\/(?:java|ecma)script/i;xe=C.createDocumentFragment().appendChild(C.createElement("div")),(be=C.createElement("input")).setAttribute("type","radio"),be.setAttribute("checked","checked"),be.setAttribute("name","t"),xe.appendChild(be),le.checkClone=xe.cloneNode(!0).cloneNode(!0).lastChild.checked,xe.innerHTML="<textarea>x</textarea>",le.noCloneChecked=!!xe.cloneNode(!0).lastChild.defaultValue,xe.innerHTML="<option></option>",le.option=!!xe.lastChild;var ke={thead:[1,"<table>","</table>"],col:[2,"<table><colgroup>","</colgroup></table>"],tr:[2,"<table><tbody>","</tbody></table>"],td:[3,"<table><tbody><tr>","</tr></tbody></table>"],_default:[0,"",""]};function Se(e,t){var n;return n="undefined"!=typeof e.getElementsByTagName?e.getElementsByTagName(t||"*"):"undefined"!=typeof e.querySelectorAll?e.querySelectorAll(t||"*"):[],void 0===t||t&&fe(e,t)?ce.merge([e],n):n}function Ee(e,t){for(var n=0,r=e.length;n<r;n++)_.set(e[n],"globalEval",!t||_.get(t[n],"globalEval"))}ke.tbody=ke.tfoot=ke.colgroup=ke.caption=ke.thead,ke.th=ke.td,le.option||(ke.optgroup=ke.option=[1,"<select multiple='multiple'>","</select>"]);var je=/<|&#?\w+;/;function Ae(e,t,n,r,i){for(var o,a,s,u,l,c,f=t.createDocumentFragment(),p=[],d=0,h=e.length;d<h;d++)if((o=e[d])||0===o)if("object"===x(o))ce.merge(p,o.nodeType?[o]:o);else if(je.test(o)){a=a||f.appendChild(t.createElement("div")),s=(Te.exec(o)||["",""])[1].toLowerCase(),u=ke[s]||ke._default,a.innerHTML=u[1]+ce.htmlPrefilter(o)+u[2],c=u[0];while(c--)a=a.lastChild;ce.merge(p,a.childNodes),(a=f.firstChild).textContent=""}else p.push(t.createTextNode(o));f.textContent="",d=0;while(o=p[d++])if(r&&-1<ce.inArray(o,r))i&&i.push(o);else if(l=K(o),a=Se(f.appendChild(o),"script"),l&&Ee(a),n){c=0;while(o=a[c++])Ce.test(o.type||"")&&n.push(o)}return f}var De=/^([^.]*)(?:\.(.+)|)/;function Ne(){return!0}function qe(){return!1}function Le(e,t,n,r,i,o){var a,s;if("object"==typeof t){for(s in"string"!=typeof n&&(r=r||n,n=void 0),t)Le(e,s,n,r,t[s],o);return e}if(null==r&&null==i?(i=n,r=n=void 0):null==i&&("string"==typeof n?(i=r,r=void 0):(i=r,r=n,n=void 0)),!1===i)i=qe;else if(!i)return e;return 1===o&&(a=i,(i=function(e){return ce().off(e),a.apply(this,arguments)}).guid=a.guid||(a.guid=ce.guid++)),e.each(function(){ce.event.add(this,t,i,r,n)})}function He(e,r,t){t?(_.set(e,r,!1),ce.event.add(e,r,{namespace:!1,handler:function(e){var t,n=_.get(this,r);if(1&e.isTrigger&&this[r]){if(n)(ce.event.special[r]||{}).delegateType&&e.stopPropagation();else if(n=ae.call(arguments),_.set(this,r,n),this[r](),t=_.get(this,r),_.set(this,r,!1),n!==t)return e.stopImmediatePropagation(),e.preventDefault(),t}else n&&(_.set(this,r,ce.event.trigger(n[0],n.slice(1),this)),e.stopPropagation(),e.isImmediatePropagationStopped=Ne)}})):void 0===_.get(e,r)&&ce.event.add(e,r,Ne)}ce.event={global:{},add:function(t,e,n,r,i){var o,a,s,u,l,c,f,p,d,h,g,v=_.get(t);if($(t)){n.handler&&(n=(o=n).handler,i=o.selector),i&&ce.find.matchesSelector(J,i),n.guid||(n.guid=ce.guid++),(u=v.events)||(u=v.events=Object.create(null)),(a=v.handle)||(a=v.handle=function(e){return"undefined"!=typeof ce&&ce.event.triggered!==e.type?ce.event.dispatch.apply(t,arguments):void 0}),l=(e=(e||"").match(D)||[""]).length;while(l--)d=g=(s=De.exec(e[l])||[])[1],h=(s[2]||"").split(".").sort(),d&&(f=ce.event.special[d]||{},d=(i?f.delegateType:f.bindType)||d,f=ce.event.special[d]||{},c=ce.extend({type:d,origType:g,data:r,handler:n,guid:n.guid,selector:i,needsContext:i&&ce.expr.match.needsContext.test(i),namespace:h.join(".")},o),(p=u[d])||((p=u[d]=[]).delegateCount=0,f.setup&&!1!==f.setup.call(t,r,h,a)||t.addEventListener&&t.addEventListener(d,a)),f.add&&(f.add.call(t,c),c.handler.guid||(c.handler.guid=n.guid)),i?p.splice(p.delegateCount++,0,c):p.push(c),ce.event.global[d]=!0)}},remove:function(e,t,n,r,i){var o,a,s,u,l,c,f,p,d,h,g,v=_.hasData(e)&&_.get(e);if(v&&(u=v.events)){l=(t=(t||"").match(D)||[""]).length;while(l--)if(d=g=(s=De.exec(t[l])||[])[1],h=(s[2]||"").split(".").sort(),d){f=ce.event.special[d]||{},p=u[d=(r?f.delegateType:f.bindType)||d]||[],s=s[2]&&new RegExp("(^|\\.)"+h.join("\\.(?:.*\\.|)")+"(\\.|$)"),a=o=p.length;while(o--)c=p[o],!i&&g!==c.origType||n&&n.guid!==c.guid||s&&!s.test(c.namespace)||r&&r!==c.selector&&("**"!==r||!c.selector)||(p.splice(o,1),c.selector&&p.delegateCount--,f.remove&&f.remove.call(e,c));a&&!p.length&&(f.teardown&&!1!==f.teardown.call(e,h,v.handle)||ce.removeEvent(e,d,v.handle),delete u[d])}else for(d in u)ce.event.remove(e,d+t[l],n,r,!0);ce.isEmptyObject(u)&&_.remove(e,"handle events")}},dispatch:function(e){var t,n,r,i,o,a,s=new Array(arguments.length),u=ce.event.fix(e),l=(_.get(this,"events")||Object.create(null))[u.type]||[],c=ce.event.special[u.type]||{};for(s[0]=u,t=1;t<arguments.length;t++)s[t]=arguments[t];if(u.delegateTarget=this,!c.preDispatch||!1!==c.preDispatch.call(this,u)){a=ce.event.handlers.call(this,u,l),t=0;while((i=a[t++])&&!u.isPropagationStopped()){u.currentTarget=i.elem,n=0;while((o=i.handlers[n++])&&!u.isImmediatePropagationStopped())u.rnamespace&&!1!==o.namespace&&!u.rnamespace.test(o.namespace)||(u.handleObj=o,u.data=o.data,void 0!==(r=((ce.event.special[o.origType]||{}).handle||o.handler).apply(i.elem,s))&&!1===(u.result=r)&&(u.preventDefault(),u.stopPropagation()))}return c.postDispatch&&c.postDispatch.call(this,u),u.result}},handlers:function(e,t){var n,r,i,o,a,s=[],u=t.delegateCount,l=e.target;if(u&&l.nodeType&&!("click"===e.type&&1<=e.button))for(;l!==this;l=l.parentNode||this)if(1===l.nodeType&&("click"!==e.type||!0!==l.disabled)){for(o=[],a={},n=0;n<u;n++)void 0===a[i=(r=t[n]).selector+" "]&&(a[i]=r.needsContext?-1<ce(i,this).index(l):ce.find(i,this,null,[l]).length),a[i]&&o.push(r);o.length&&s.push({elem:l,handlers:o})}return l=this,u<t.length&&s.push({elem:l,handlers:t.slice(u)}),s},addProp:function(t,e){Object.defineProperty(ce.Event.prototype,t,{enumerable:!0,configurable:!0,get:v(e)?function(){if(this.originalEvent)return e(this.originalEvent)}:function(){if(this.originalEvent)return this.originalEvent[t]},set:function(e){Object.defineProperty(this,t,{enumerable:!0,configurable:!0,writable:!0,value:e})}})},fix:function(e){return e[ce.expando]?e:new ce.Event(e)},special:{load:{noBubble:!0},click:{setup:function(e){var t=this||e;return we.test(t.type)&&t.click&&fe(t,"input")&&He(t,"click",!0),!1},trigger:function(e){var t=this||e;return we.test(t.type)&&t.click&&fe(t,"input")&&He(t,"click"),!0},_default:function(e){var t=e.target;return we.test(t.type)&&t.click&&fe(t,"input")&&_.get(t,"click")||fe(t,"a")}},beforeunload:{postDispatch:function(e){void 0!==e.result&&e.originalEvent&&(e.originalEvent.returnValue=e.result)}}}},ce.removeEvent=function(e,t,n){e.removeEventListener&&e.removeEventListener(t,n)},ce.Event=function(e,t){if(!(this instanceof ce.Event))return new ce.Event(e,t);e&&e.type?(this.originalEvent=e,this.type=e.type,this.isDefaultPrevented=e.defaultPrevented||void 0===e.defaultPrevented&&!1===e.returnValue?Ne:qe,this.target=e.target&&3===e.target.nodeType?e.target.parentNode:e.target,this.currentTarget=e.currentTarget,this.relatedTarget=e.relatedTarget):this.type=e,t&&ce.extend(this,t),this.timeStamp=e&&e.timeStamp||Date.now(),this[ce.expando]=!0},ce.Event.prototype={constructor:ce.Event,isDefaultPrevented:qe,isPropagationStopped:qe,isImmediatePropagationStopped:qe,isSimulated:!1,preventDefault:function(){var e=this.originalEvent;this.isDefaultPrevented=Ne,e&&!this.isSimulated&&e.preventDefault()},stopPropagation:function(){var e=this.originalEvent;this.isPropagationStopped=Ne,e&&!this.isSimulated&&e.stopPropagation()},stopImmediatePropagation:function(){var e=this.originalEvent;this.isImmediatePropagationStopped=Ne,e&&!this.isSimulated&&e.stopImmediatePropagation(),this.stopPropagation()}},ce.each({altKey:!0,bubbles:!0,cancelable:!0,changedTouches:!0,ctrlKey:!0,detail:!0,eventPhase:!0,metaKey:!0,pageX:!0,pageY:!0,shiftKey:!0,view:!0,"char":!0,code:!0,charCode:!0,key:!0,keyCode:!0,button:!0,buttons:!0,clientX:!0,clientY:!0,offsetX:!0,offsetY:!0,pointerId:!0,pointerType:!0,screenX:!0,screenY:!0,targetTouches:!0,toElement:!0,touches:!0,which:!0},ce.event.addProp),ce.each({focus:"focusin",blur:"focusout"},function(r,i){function o(e){if(C.documentMode){var t=_.get(this,"handle"),n=ce.event.fix(e);n.type="focusin"===e.type?"focus":"blur",n.isSimulated=!0,t(e),n.target===n.currentTarget&&t(n)}else ce.event.simulate(i,e.target,ce.event.fix(e))}ce.event.special[r]={setup:function(){var e;if(He(this,r,!0),!C.documentMode)return!1;(e=_.get(this,i))||this.addEventListener(i,o),_.set(this,i,(e||0)+1)},trigger:function(){return He(this,r),!0},teardown:function(){var e;if(!C.documentMode)return!1;(e=_.get(this,i)-1)?_.set(this,i,e):(this.removeEventListener(i,o),_.remove(this,i))},_default:function(e){return _.get(e.target,r)},delegateType:i},ce.event.special[i]={setup:function(){var e=this.ownerDocument||this.document||this,t=C.documentMode?this:e,n=_.get(t,i);n||(C.documentMode?this.addEventListener(i,o):e.addEventListener(r,o,!0)),_.set(t,i,(n||0)+1)},teardown:function(){var e=this.ownerDocument||this.document||this,t=C.documentMode?this:e,n=_.get(t,i)-1;n?_.set(t,i,n):(C.documentMode?this.removeEventListener(i,o):e.removeEventListener(r,o,!0),_.remove(t,i))}}}),ce.each({mouseenter:"mouseover",mouseleave:"mouseout",pointerenter:"pointerover",pointerleave:"pointerout"},function(e,i){ce.event.special[e]={delegateType:i,bindType:i,handle:function(e){var t,n=e.relatedTarget,r=e.handleObj;return n&&(n===this||ce.contains(this,n))||(e.type=r.origType,t=r.handler.apply(this,arguments),e.type=i),t}}}),ce.fn.extend({on:function(e,t,n,r){return Le(this,e,t,n,r)},one:function(e,t,n,r){return Le(this,e,t,n,r,1)},off:function(e,t,n){var r,i;if(e&&e.preventDefault&&e.handleObj)return r=e.handleObj,ce(e.delegateTarget).off(r.namespace?r.origType+"."+r.namespace:r.origType,r.selector,r.handler),this;if("object"==typeof e){for(i in e)this.off(i,t,e[i]);return this}return!1!==t&&"function"!=typeof t||(n=t,t=void 0),!1===n&&(n=qe),this.each(function(){ce.event.remove(this,e,n,t)})}});var Oe=/<script|<style|<link/i,Pe=/checked\s*(?:[^=]|=\s*.checked.)/i,Me=/^\s*<!\[CDATA\[|\]\]>\s*$/g;function Re(e,t){return fe(e,"table")&&fe(11!==t.nodeType?t:t.firstChild,"tr")&&ce(e).children("tbody")[0]||e}function Ie(e){return e.type=(null!==e.getAttribute("type"))+"/"+e.type,e}function We(e){return"true/"===(e.type||"").slice(0,5)?e.type=e.type.slice(5):e.removeAttribute("type"),e}function Fe(e,t){var n,r,i,o,a,s;if(1===t.nodeType){if(_.hasData(e)&&(s=_.get(e).events))for(i in _.remove(t,"handle events"),s)for(n=0,r=s[i].length;n<r;n++)ce.event.add(t,i,s[i][n]);z.hasData(e)&&(o=z.access(e),a=ce.extend({},o),z.set(t,a))}}function $e(n,r,i,o){r=g(r);var e,t,a,s,u,l,c=0,f=n.length,p=f-1,d=r[0],h=v(d);if(h||1<f&&"string"==typeof d&&!le.checkClone&&Pe.test(d))return n.each(function(e){var t=n.eq(e);h&&(r[0]=d.call(this,e,t.html())),$e(t,r,i,o)});if(f&&(t=(e=Ae(r,n[0].ownerDocument,!1,n,o)).firstChild,1===e.childNodes.length&&(e=t),t||o)){for(s=(a=ce.map(Se(e,"script"),Ie)).length;c<f;c++)u=e,c!==p&&(u=ce.clone(u,!0,!0),s&&ce.merge(a,Se(u,"script"))),i.call(n[c],u,c);if(s)for(l=a[a.length-1].ownerDocument,ce.map(a,We),c=0;c<s;c++)u=a[c],Ce.test(u.type||"")&&!_.access(u,"globalEval")&&ce.contains(l,u)&&(u.src&&"module"!==(u.type||"").toLowerCase()?ce._evalUrl&&!u.noModule&&ce._evalUrl(u.src,{nonce:u.nonce||u.getAttribute("nonce")},l):m(u.textContent.replace(Me,""),u,l))}return n}function Be(e,t,n){for(var r,i=t?ce.filter(t,e):e,o=0;null!=(r=i[o]);o++)n||1!==r.nodeType||ce.cleanData(Se(r)),r.parentNode&&(n&&K(r)&&Ee(Se(r,"script")),r.parentNode.removeChild(r));return e}ce.extend({htmlPrefilter:function(e){return e},clone:function(e,t,n){var r,i,o,a,s,u,l,c=e.cloneNode(!0),f=K(e);if(!(le.noCloneChecked||1!==e.nodeType&&11!==e.nodeType||ce.isXMLDoc(e)))for(a=Se(c),r=0,i=(o=Se(e)).length;r<i;r++)s=o[r],u=a[r],void 0,"input"===(l=u.nodeName.toLowerCase())&&we.test(s.type)?u.checked=s.checked:"input"!==l&&"textarea"!==l||(u.defaultValue=s.defaultValue);if(t)if(n)for(o=o||Se(e),a=a||Se(c),r=0,i=o.length;r<i;r++)Fe(o[r],a[r]);else Fe(e,c);return 0<(a=Se(c,"script")).length&&Ee(a,!f&&Se(e,"script")),c},cleanData:function(e){for(var t,n,r,i=ce.event.special,o=0;void 0!==(n=e[o]);o++)if($(n)){if(t=n[_.expando]){if(t.events)for(r in t.events)i[r]?ce.event.remove(n,r):ce.removeEvent(n,r,t.handle);n[_.expando]=void 0}n[z.expando]&&(n[z.expando]=void 0)}}}),ce.fn.extend({detach:function(e){return Be(this,e,!0)},remove:function(e){return Be(this,e)},text:function(e){return M(this,function(e){return void 0===e?ce.text(this):this.empty().each(function(){1!==this.nodeType&&11!==this.nodeType&&9!==this.nodeType||(this.textContent=e)})},null,e,arguments.length)},append:function(){return $e(this,arguments,function(e){1!==this.nodeType&&11!==this.nodeType&&9!==this.nodeType||Re(this,e).appendChild(e)})},prepend:function(){return $e(this,arguments,function(e){if(1===this.nodeType||11===this.nodeType||9===this.nodeType){var t=Re(this,e);t.insertBefore(e,t.firstChild)}})},before:function(){return $e(this,arguments,function(e){this.parentNode&&this.parentNode.insertBefore(e,this)})},after:function(){return $e(this,arguments,function(e){this.parentNode&&this.parentNode.insertBefore(e,this.nextSibling)})},empty:function(){for(var e,t=0;null!=(e=this[t]);t++)1===e.nodeType&&(ce.cleanData(Se(e,!1)),e.textContent="");return this},clone:function(e,t){return e=null!=e&&e,t=null==t?e:t,this.map(function(){return ce.clone(this,e,t)})},html:function(e){return M(this,function(e){var t=this[0]||{},n=0,r=this.length;if(void 0===e&&1===t.nodeType)return t.innerHTML;if("string"==typeof e&&!Oe.test(e)&&!ke[(Te.exec(e)||["",""])[1].toLowerCase()]){e=ce.htmlPrefilter(e);try{for(;n<r;n++)1===(t=this[n]||{}).nodeType&&(ce.cleanData(Se(t,!1)),t.innerHTML=e);t=0}catch(e){}}t&&this.empty().append(e)},null,e,arguments.length)},replaceWith:function(){var n=[];return $e(this,arguments,function(e){var t=this.parentNode;ce.inArray(this,n)<0&&(ce.cleanData(Se(this)),t&&t.replaceChild(e,this))},n)}}),ce.each({appendTo:"append",prependTo:"prepend",insertBefore:"before",insertAfter:"after",replaceAll:"replaceWith"},function(e,a){ce.fn[e]=function(e){for(var t,n=[],r=ce(e),i=r.length-1,o=0;o<=i;o++)t=o===i?this:this.clone(!0),ce(r[o])[a](t),s.apply(n,t.get());return this.pushStack(n)}});var _e=new RegExp("^("+G+")(?!px)[a-z%]+$","i"),ze=/^--/,Xe=function(e){var t=e.ownerDocument.defaultView;return t&&t.opener||(t=ie),t.getComputedStyle(e)},Ue=function(e,t,n){var r,i,o={};for(i in t)o[i]=e.style[i],e.style[i]=t[i];for(i in r=n.call(e),t)e.style[i]=o[i];return r},Ve=new RegExp(Q.join("|"),"i");function Ge(e,t,n){var r,i,o,a,s=ze.test(t),u=e.style;return(n=n||Xe(e))&&(a=n.getPropertyValue(t)||n[t],s&&a&&(a=a.replace(ve,"$1")||void 0),""!==a||K(e)||(a=ce.style(e,t)),!le.pixelBoxStyles()&&_e.test(a)&&Ve.test(t)&&(r=u.width,i=u.minWidth,o=u.maxWidth,u.minWidth=u.maxWidth=u.width=a,a=n.width,u.width=r,u.minWidth=i,u.maxWidth=o)),void 0!==a?a+"":a}function Ye(e,t){return{get:function(){if(!e())return(this.get=t).apply(this,arguments);delete this.get}}}!function(){function e(){if(l){u.style.cssText="position:absolute;left:-11111px;width:60px;margin-top:1px;padding:0;border:0",l.style.cssText="position:relative;display:block;box-sizing:border-box;overflow:scroll;margin:auto;border:1px;padding:1px;width:60%;top:1%",J.appendChild(u).appendChild(l);var e=ie.getComputedStyle(l);n="1%"!==e.top,s=12===t(e.marginLeft),l.style.right="60%",o=36===t(e.right),r=36===t(e.width),l.style.position="absolute",i=12===t(l.offsetWidth/3),J.removeChild(u),l=null}}function t(e){return Math.round(parseFloat(e))}var n,r,i,o,a,s,u=C.createElement("div"),l=C.createElement("div");l.style&&(l.style.backgroundClip="content-box",l.cloneNode(!0).style.backgroundClip="",le.clearCloneStyle="content-box"===l.style.backgroundClip,ce.extend(le,{boxSizingReliable:function(){return e(),r},pixelBoxStyles:function(){return e(),o},pixelPosition:function(){return e(),n},reliableMarginLeft:function(){return e(),s},scrollboxSize:function(){return e(),i},reliableTrDimensions:function(){var e,t,n,r;return null==a&&(e=C.createElement("table"),t=C.createElement("tr"),n=C.createElement("div"),e.style.cssText="position:absolute;left:-11111px;border-collapse:separate",t.style.cssText="box-sizing:content-box;border:1px solid",t.style.height="1px",n.style.height="9px",n.style.display="block",J.appendChild(e).appendChild(t).appendChild(n),r=ie.getComputedStyle(t),a=parseInt(r.height,10)+parseInt(r.borderTopWidth,10)+parseInt(r.borderBottomWidth,10)===t.offsetHeight,J.removeChild(e)),a}}))}();var Qe=["Webkit","Moz","ms"],Je=C.createElement("div").style,Ke={};function Ze(e){var t=ce.cssProps[e]||Ke[e];return t||(e in Je?e:Ke[e]=function(e){var t=e[0].toUpperCase()+e.slice(1),n=Qe.length;while(n--)if((e=Qe[n]+t)in Je)return e}(e)||e)}var et=/^(none|table(?!-c[ea]).+)/,tt={position:"absolute",visibility:"hidden",display:"block"},nt={letterSpacing:"0",fontWeight:"400"};function rt(e,t,n){var r=Y.exec(t);return r?Math.max(0,r[2]-(n||0))+(r[3]||"px"):t}function it(e,t,n,r,i,o){var a="width"===t?1:0,s=0,u=0,l=0;if(n===(r?"border":"content"))return 0;for(;a<4;a+=2)"margin"===n&&(l+=ce.css(e,n+Q[a],!0,i)),r?("content"===n&&(u-=ce.css(e,"padding"+Q[a],!0,i)),"margin"!==n&&(u-=ce.css(e,"border"+Q[a]+"Width",!0,i))):(u+=ce.css(e,"padding"+Q[a],!0,i),"padding"!==n?u+=ce.css(e,"border"+Q[a]+"Width",!0,i):s+=ce.css(e,"border"+Q[a]+"Width",!0,i));return!r&&0<=o&&(u+=Math.max(0,Math.ceil(e["offset"+t[0].toUpperCase()+t.slice(1)]-o-u-s-.5))||0),u+l}function ot(e,t,n){var r=Xe(e),i=(!le.boxSizingReliable()||n)&&"border-box"===ce.css(e,"boxSizing",!1,r),o=i,a=Ge(e,t,r),s="offset"+t[0].toUpperCase()+t.slice(1);if(_e.test(a)){if(!n)return a;a="auto"}return(!le.boxSizingReliable()&&i||!le.reliableTrDimensions()&&fe(e,"tr")||"auto"===a||!parseFloat(a)&&"inline"===ce.css(e,"display",!1,r))&&e.getClientRects().length&&(i="border-box"===ce.css(e,"boxSizing",!1,r),(o=s in e)&&(a=e[s])),(a=parseFloat(a)||0)+it(e,t,n||(i?"border":"content"),o,r,a)+"px"}function at(e,t,n,r,i){return new at.prototype.init(e,t,n,r,i)}ce.extend({cssHooks:{opacity:{get:function(e,t){if(t){var n=Ge(e,"opacity");return""===n?"1":n}}}},cssNumber:{animationIterationCount:!0,aspectRatio:!0,borderImageSlice:!0,columnCount:!0,flexGrow:!0,flexShrink:!0,fontWeight:!0,gridArea:!0,gridColumn:!0,gridColumnEnd:!0,gridColumnStart:!0,gridRow:!0,gridRowEnd:!0,gridRowStart:!0,lineHeight:!0,opacity:!0,order:!0,orphans:!0,scale:!0,widows:!0,zIndex:!0,zoom:!0,fillOpacity:!0,floodOpacity:!0,stopOpacity:!0,strokeMiterlimit:!0,strokeOpacity:!0},cssProps:{},style:function(e,t,n,r){if(e&&3!==e.nodeType&&8!==e.nodeType&&e.style){var i,o,a,s=F(t),u=ze.test(t),l=e.style;if(u||(t=Ze(s)),a=ce.cssHooks[t]||ce.cssHooks[s],void 0===n)return a&&"get"in a&&void 0!==(i=a.get(e,!1,r))?i:l[t];"string"===(o=typeof n)&&(i=Y.exec(n))&&i[1]&&(n=te(e,t,i),o="number"),null!=n&&n==n&&("number"!==o||u||(n+=i&&i[3]||(ce.cssNumber[s]?"":"px")),le.clearCloneStyle||""!==n||0!==t.indexOf("background")||(l[t]="inherit"),a&&"set"in a&&void 0===(n=a.set(e,n,r))||(u?l.setProperty(t,n):l[t]=n))}},css:function(e,t,n,r){var i,o,a,s=F(t);return ze.test(t)||(t=Ze(s)),(a=ce.cssHooks[t]||ce.cssHooks[s])&&"get"in a&&(i=a.get(e,!0,n)),void 0===i&&(i=Ge(e,t,r)),"normal"===i&&t in nt&&(i=nt[t]),""===n||n?(o=parseFloat(i),!0===n||isFinite(o)?o||0:i):i}}),ce.each(["height","width"],function(e,u){ce.cssHooks[u]={get:function(e,t,n){if(t)return!et.test(ce.css(e,"display"))||e.getClientRects().length&&e.getBoundingClientRect().width?ot(e,u,n):Ue(e,tt,function(){return ot(e,u,n)})},set:function(e,t,n){var r,i=Xe(e),o=!le.scrollboxSize()&&"absolute"===i.position,a=(o||n)&&"border-box"===ce.css(e,"boxSizing",!1,i),s=n?it(e,u,n,a,i):0;return a&&o&&(s-=Math.ceil(e["offset"+u[0].toUpperCase()+u.slice(1)]-parseFloat(i[u])-it(e,u,"border",!1,i)-.5)),s&&(r=Y.exec(t))&&"px"!==(r[3]||"px")&&(e.style[u]=t,t=ce.css(e,u)),rt(0,t,s)}}}),ce.cssHooks.marginLeft=Ye(le.reliableMarginLeft,function(e,t){if(t)return(parseFloat(Ge(e,"marginLeft"))||e.getBoundingClientRect().left-Ue(e,{marginLeft:0},function(){return e.getBoundingClientRect().left}))+"px"}),ce.each({margin:"",padding:"",border:"Width"},function(i,o){ce.cssHooks[i+o]={expand:function(e){for(var t=0,n={},r="string"==typeof e?e.split(" "):[e];t<4;t++)n[i+Q[t]+o]=r[t]||r[t-2]||r[0];return n}},"margin"!==i&&(ce.cssHooks[i+o].set=rt)}),ce.fn.extend({css:function(e,t){return M(this,function(e,t,n){var r,i,o={},a=0;if(Array.isArray(t)){for(r=Xe(e),i=t.length;a<i;a++)o[t[a]]=ce.css(e,t[a],!1,r);return o}return void 0!==n?ce.style(e,t,n):ce.css(e,t)},e,t,1<arguments.length)}}),((ce.Tween=at).prototype={constructor:at,init:function(e,t,n,r,i,o){this.elem=e,this.prop=n,this.easing=i||ce.easing._default,this.options=t,this.start=this.now=this.cur(),this.end=r,this.unit=o||(ce.cssNumber[n]?"":"px")},cur:function(){var e=at.propHooks[this.prop];return e&&e.get?e.get(this):at.propHooks._default.get(this)},run:function(e){var t,n=at.propHooks[this.prop];return this.options.duration?this.pos=t=ce.easing[this.easing](e,this.options.duration*e,0,1,this.options.duration):this.pos=t=e,this.now=(this.end-this.start)*t+this.start,this.options.step&&this.options.step.call(this.elem,this.now,this),n&&n.set?n.set(this):at.propHooks._default.set(this),this}}).init.prototype=at.prototype,(at.propHooks={_default:{get:function(e){var t;return 1!==e.elem.nodeType||null!=e.elem[e.prop]&&null==e.elem.style[e.prop]?e.elem[e.prop]:(t=ce.css(e.elem,e.prop,""))&&"auto"!==t?t:0},set:function(e){ce.fx.step[e.prop]?ce.fx.step[e.prop](e):1!==e.elem.nodeType||!ce.cssHooks[e.prop]&&null==e.elem.style[Ze(e.prop)]?e.elem[e.prop]=e.now:ce.style(e.elem,e.prop,e.now+e.unit)}}}).scrollTop=at.propHooks.scrollLeft={set:function(e){e.elem.nodeType&&e.elem.parentNode&&(e.elem[e.prop]=e.now)}},ce.easing={linear:function(e){return e},swing:function(e){return.5-Math.cos(e*Math.PI)/2},_default:"swing"},ce.fx=at.prototype.init,ce.fx.step={};var st,ut,lt,ct,ft=/^(?:toggle|show|hide)$/,pt=/queueHooks$/;function dt(){ut&&(!1===C.hidden&&ie.requestAnimationFrame?ie.requestAnimationFrame(dt):ie.setTimeout(dt,ce.fx.interval),ce.fx.tick())}function ht(){return ie.setTimeout(function(){st=void 0}),st=Date.now()}function gt(e,t){var n,r=0,i={height:e};for(t=t?1:0;r<4;r+=2-t)i["margin"+(n=Q[r])]=i["padding"+n]=e;return t&&(i.opacity=i.width=e),i}function vt(e,t,n){for(var r,i=(yt.tweeners[t]||[]).concat(yt.tweeners["*"]),o=0,a=i.length;o<a;o++)if(r=i[o].call(n,t,e))return r}function yt(o,e,t){var n,a,r=0,i=yt.prefilters.length,s=ce.Deferred().always(function(){delete u.elem}),u=function(){if(a)return!1;for(var e=st||ht(),t=Math.max(0,l.startTime+l.duration-e),n=1-(t/l.duration||0),r=0,i=l.tweens.length;r<i;r++)l.tweens[r].run(n);return s.notifyWith(o,[l,n,t]),n<1&&i?t:(i||s.notifyWith(o,[l,1,0]),s.resolveWith(o,[l]),!1)},l=s.promise({elem:o,props:ce.extend({},e),opts:ce.extend(!0,{specialEasing:{},easing:ce.easing._default},t),originalProperties:e,originalOptions:t,startTime:st||ht(),duration:t.duration,tweens:[],createTween:function(e,t){var n=ce.Tween(o,l.opts,e,t,l.opts.specialEasing[e]||l.opts.easing);return l.tweens.push(n),n},stop:function(e){var t=0,n=e?l.tweens.length:0;if(a)return this;for(a=!0;t<n;t++)l.tweens[t].run(1);return e?(s.notifyWith(o,[l,1,0]),s.resolveWith(o,[l,e])):s.rejectWith(o,[l,e]),this}}),c=l.props;for(!function(e,t){var n,r,i,o,a;for(n in e)if(i=t[r=F(n)],o=e[n],Array.isArray(o)&&(i=o[1],o=e[n]=o[0]),n!==r&&(e[r]=o,delete e[n]),(a=ce.cssHooks[r])&&"expand"in a)for(n in o=a.expand(o),delete e[r],o)n in e||(e[n]=o[n],t[n]=i);else t[r]=i}(c,l.opts.specialEasing);r<i;r++)if(n=yt.prefilters[r].call(l,o,c,l.opts))return v(n.stop)&&(ce._queueHooks(l.elem,l.opts.queue).stop=n.stop.bind(n)),n;return ce.map(c,vt,l),v(l.opts.start)&&l.opts.start.call(o,l),l.progress(l.opts.progress).done(l.opts.done,l.opts.complete).fail(l.opts.fail).always(l.opts.always),ce.fx.timer(ce.extend(u,{elem:o,anim:l,queue:l.opts.queue})),l}ce.Animation=ce.extend(yt,{tweeners:{"*":[function(e,t){var n=this.createTween(e,t);return te(n.elem,e,Y.exec(t),n),n}]},tweener:function(e,t){v(e)?(t=e,e=["*"]):e=e.match(D);for(var n,r=0,i=e.length;r<i;r++)n=e[r],yt.tweeners[n]=yt.tweeners[n]||[],yt.tweeners[n].unshift(t)},prefilters:[function(e,t,n){var r,i,o,a,s,u,l,c,f="width"in t||"height"in t,p=this,d={},h=e.style,g=e.nodeType&&ee(e),v=_.get(e,"fxshow");for(r in n.queue||(null==(a=ce._queueHooks(e,"fx")).unqueued&&(a.unqueued=0,s=a.empty.fire,a.empty.fire=function(){a.unqueued||s()}),a.unqueued++,p.always(function(){p.always(function(){a.unqueued--,ce.queue(e,"fx").length||a.empty.fire()})})),t)if(i=t[r],ft.test(i)){if(delete t[r],o=o||"toggle"===i,i===(g?"hide":"show")){if("show"!==i||!v||void 0===v[r])continue;g=!0}d[r]=v&&v[r]||ce.style(e,r)}if((u=!ce.isEmptyObject(t))||!ce.isEmptyObject(d))for(r in f&&1===e.nodeType&&(n.overflow=[h.overflow,h.overflowX,h.overflowY],null==(l=v&&v.display)&&(l=_.get(e,"display")),"none"===(c=ce.css(e,"display"))&&(l?c=l:(re([e],!0),l=e.style.display||l,c=ce.css(e,"display"),re([e]))),("inline"===c||"inline-block"===c&&null!=l)&&"none"===ce.css(e,"float")&&(u||(p.done(function(){h.display=l}),null==l&&(c=h.display,l="none"===c?"":c)),h.display="inline-block")),n.overflow&&(h.overflow="hidden",p.always(function(){h.overflow=n.overflow[0],h.overflowX=n.overflow[1],h.overflowY=n.overflow[2]})),u=!1,d)u||(v?"hidden"in v&&(g=v.hidden):v=_.access(e,"fxshow",{display:l}),o&&(v.hidden=!g),g&&re([e],!0),p.done(function(){for(r in g||re([e]),_.remove(e,"fxshow"),d)ce.style(e,r,d[r])})),u=vt(g?v[r]:0,r,p),r in v||(v[r]=u.start,g&&(u.end=u.start,u.start=0))}],prefilter:function(e,t){t?yt.prefilters.unshift(e):yt.prefilters.push(e)}}),ce.speed=function(e,t,n){var r=e&&"object"==typeof e?ce.extend({},e):{complete:n||!n&&t||v(e)&&e,duration:e,easing:n&&t||t&&!v(t)&&t};return ce.fx.off?r.duration=0:"number"!=typeof r.duration&&(r.duration in ce.fx.speeds?r.duration=ce.fx.speeds[r.duration]:r.duration=ce.fx.speeds._default),null!=r.queue&&!0!==r.queue||(r.queue="fx"),r.old=r.complete,r.complete=function(){v(r.old)&&r.old.call(this),r.queue&&ce.dequeue(this,r.queue)},r},ce.fn.extend({fadeTo:function(e,t,n,r){return this.filter(ee).css("opacity",0).show().end().animate({opacity:t},e,n,r)},animate:function(t,e,n,r){var i=ce.isEmptyObject(t),o=ce.speed(e,n,r),a=function(){var e=yt(this,ce.extend({},t),o);(i||_.get(this,"finish"))&&e.stop(!0)};return a.finish=a,i||!1===o.queue?this.each(a):this.queue(o.queue,a)},stop:function(i,e,o){var a=function(e){var t=e.stop;delete e.stop,t(o)};return"string"!=typeof i&&(o=e,e=i,i=void 0),e&&this.queue(i||"fx",[]),this.each(function(){var e=!0,t=null!=i&&i+"queueHooks",n=ce.timers,r=_.get(this);if(t)r[t]&&r[t].stop&&a(r[t]);else for(t in r)r[t]&&r[t].stop&&pt.test(t)&&a(r[t]);for(t=n.length;t--;)n[t].elem!==this||null!=i&&n[t].queue!==i||(n[t].anim.stop(o),e=!1,n.splice(t,1));!e&&o||ce.dequeue(this,i)})},finish:function(a){return!1!==a&&(a=a||"fx"),this.each(function(){var e,t=_.get(this),n=t[a+"queue"],r=t[a+"queueHooks"],i=ce.timers,o=n?n.length:0;for(t.finish=!0,ce.queue(this,a,[]),r&&r.stop&&r.stop.call(this,!0),e=i.length;e--;)i[e].elem===this&&i[e].queue===a&&(i[e].anim.stop(!0),i.splice(e,1));for(e=0;e<o;e++)n[e]&&n[e].finish&&n[e].finish.call(this);delete t.finish})}}),ce.each(["toggle","show","hide"],function(e,r){var i=ce.fn[r];ce.fn[r]=function(e,t,n){return null==e||"boolean"==typeof e?i.apply(this,arguments):this.animate(gt(r,!0),e,t,n)}}),ce.each({slideDown:gt("show"),slideUp:gt("hide"),slideToggle:gt("toggle"),fadeIn:{opacity:"show"},fadeOut:{opacity:"hide"},fadeToggle:{opacity:"toggle"}},function(e,r){ce.fn[e]=function(e,t,n){return this.animate(r,e,t,n)}}),ce.timers=[],ce.fx.tick=function(){var e,t=0,n=ce.timers;for(st=Date.now();t<n.length;t++)(e=n[t])()||n[t]!==e||n.splice(t--,1);n.length||ce.fx.stop(),st=void 0},ce.fx.timer=function(e){ce.timers.push(e),ce.fx.start()},ce.fx.interval=13,ce.fx.start=function(){ut||(ut=!0,dt())},ce.fx.stop=function(){ut=null},ce.fx.speeds={slow:600,fast:200,_default:400},ce.fn.delay=function(r,e){return r=ce.fx&&ce.fx.speeds[r]||r,e=e||"fx",this.queue(e,function(e,t){var n=ie.setTimeout(e,r);t.stop=function(){ie.clearTimeout(n)}})},lt=C.createElement("input"),ct=C.createElement("select").appendChild(C.createElement("option")),lt.type="checkbox",le.checkOn=""!==lt.value,le.optSelected=ct.selected,(lt=C.createElement("input")).value="t",lt.type="radio",le.radioValue="t"===lt.value;var mt,xt=ce.expr.attrHandle;ce.fn.extend({attr:function(e,t){return M(this,ce.attr,e,t,1<arguments.length)},removeAttr:function(e){return this.each(function(){ce.removeAttr(this,e)})}}),ce.extend({attr:function(e,t,n){var r,i,o=e.nodeType;if(3!==o&&8!==o&&2!==o)return"undefined"==typeof e.getAttribute?ce.prop(e,t,n):(1===o&&ce.isXMLDoc(e)||(i=ce.attrHooks[t.toLowerCase()]||(ce.expr.match.bool.test(t)?mt:void 0)),void 0!==n?null===n?void ce.removeAttr(e,t):i&&"set"in i&&void 0!==(r=i.set(e,n,t))?r:(e.setAttribute(t,n+""),n):i&&"get"in i&&null!==(r=i.get(e,t))?r:null==(r=ce.find.attr(e,t))?void 0:r)},attrHooks:{type:{set:function(e,t){if(!le.radioValue&&"radio"===t&&fe(e,"input")){var n=e.value;return e.setAttribute("type",t),n&&(e.value=n),t}}}},removeAttr:function(e,t){var n,r=0,i=t&&t.match(D);if(i&&1===e.nodeType)while(n=i[r++])e.removeAttribute(n)}}),mt={set:function(e,t,n){return!1===t?ce.removeAttr(e,n):e.setAttribute(n,n),n}},ce.each(ce.expr.match.bool.source.match(/\w+/g),function(e,t){var a=xt[t]||ce.find.attr;xt[t]=function(e,t,n){var r,i,o=t.toLowerCase();return n||(i=xt[o],xt[o]=r,r=null!=a(e,t,n)?o:null,xt[o]=i),r}});var bt=/^(?:input|select|textarea|button)$/i,wt=/^(?:a|area)$/i;function Tt(e){return(e.match(D)||[]).join(" ")}function Ct(e){return e.getAttribute&&e.getAttribute("class")||""}function kt(e){return Array.isArray(e)?e:"string"==typeof e&&e.match(D)||[]}ce.fn.extend({prop:function(e,t){return M(this,ce.prop,e,t,1<arguments.length)},removeProp:function(e){return this.each(function(){delete this[ce.propFix[e]||e]})}}),ce.extend({prop:function(e,t,n){var r,i,o=e.nodeType;if(3!==o&&8!==o&&2!==o)return 1===o&&ce.isXMLDoc(e)||(t=ce.propFix[t]||t,i=ce.propHooks[t]),void 0!==n?i&&"set"in i&&void 0!==(r=i.set(e,n,t))?r:e[t]=n:i&&"get"in i&&null!==(r=i.get(e,t))?r:e[t]},propHooks:{tabIndex:{get:function(e){var t=ce.find.attr(e,"tabindex");return t?parseInt(t,10):bt.test(e.nodeName)||wt.test(e.nodeName)&&e.href?0:-1}}},propFix:{"for":"htmlFor","class":"className"}}),le.optSelected||(ce.propHooks.selected={get:function(e){var t=e.parentNode;return t&&t.parentNode&&t.parentNode.selectedIndex,null},set:function(e){var t=e.parentNode;t&&(t.selectedIndex,t.parentNode&&t.parentNode.selectedIndex)}}),ce.each(["tabIndex","readOnly","maxLength","cellSpacing","cellPadding","rowSpan","colSpan","useMap","frameBorder","contentEditable"],function(){ce.propFix[this.toLowerCase()]=this}),ce.fn.extend({addClass:function(t){var e,n,r,i,o,a;return v(t)?this.each(function(e){ce(this).addClass(t.call(this,e,Ct(this)))}):(e=kt(t)).length?this.each(function(){if(r=Ct(this),n=1===this.nodeType&&" "+Tt(r)+" "){for(o=0;o<e.length;o++)i=e[o],n.indexOf(" "+i+" ")<0&&(n+=i+" ");a=Tt(n),r!==a&&this.setAttribute("class",a)}}):this},removeClass:function(t){var e,n,r,i,o,a;return v(t)?this.each(function(e){ce(this).removeClass(t.call(this,e,Ct(this)))}):arguments.length?(e=kt(t)).length?this.each(function(){if(r=Ct(this),n=1===this.nodeType&&" "+Tt(r)+" "){for(o=0;o<e.length;o++){i=e[o];while(-1<n.indexOf(" "+i+" "))n=n.replace(" "+i+" "," ")}a=Tt(n),r!==a&&this.setAttribute("class",a)}}):this:this.attr("class","")},toggleClass:function(t,n){var e,r,i,o,a=typeof t,s="string"===a||Array.isArray(t);return v(t)?this.each(function(e){ce(this).toggleClass(t.call(this,e,Ct(this),n),n)}):"boolean"==typeof n&&s?n?this.addClass(t):this.removeClass(t):(e=kt(t),this.each(function(){if(s)for(o=ce(this),i=0;i<e.length;i++)r=e[i],o.hasClass(r)?o.removeClass(r):o.addClass(r);else void 0!==t&&"boolean"!==a||((r=Ct(this))&&_.set(this,"__className__",r),this.setAttribute&&this.setAttribute("class",r||!1===t?"":_.get(this,"__className__")||""))}))},hasClass:function(e){var t,n,r=0;t=" "+e+" ";while(n=this[r++])if(1===n.nodeType&&-1<(" "+Tt(Ct(n))+" ").indexOf(t))return!0;return!1}});var St=/\r/g;ce.fn.extend({val:function(n){var r,e,i,t=this[0];return arguments.length?(i=v(n),this.each(function(e){var t;1===this.nodeType&&(null==(t=i?n.call(this,e,ce(this).val()):n)?t="":"number"==typeof t?t+="":Array.isArray(t)&&(t=ce.map(t,function(e){return null==e?"":e+""})),(r=ce.valHooks[this.type]||ce.valHooks[this.nodeName.toLowerCase()])&&"set"in r&&void 0!==r.set(this,t,"value")||(this.value=t))})):t?(r=ce.valHooks[t.type]||ce.valHooks[t.nodeName.toLowerCase()])&&"get"in r&&void 0!==(e=r.get(t,"value"))?e:"string"==typeof(e=t.value)?e.replace(St,""):null==e?"":e:void 0}}),ce.extend({valHooks:{option:{get:function(e){var t=ce.find.attr(e,"value");return null!=t?t:Tt(ce.text(e))}},select:{get:function(e){var t,n,r,i=e.options,o=e.selectedIndex,a="select-one"===e.type,s=a?null:[],u=a?o+1:i.length;for(r=o<0?u:a?o:0;r<u;r++)if(((n=i[r]).selected||r===o)&&!n.disabled&&(!n.parentNode.disabled||!fe(n.parentNode,"optgroup"))){if(t=ce(n).val(),a)return t;s.push(t)}return s},set:function(e,t){var n,r,i=e.options,o=ce.makeArray(t),a=i.length;while(a--)((r=i[a]).selected=-1<ce.inArray(ce.valHooks.option.get(r),o))&&(n=!0);return n||(e.selectedIndex=-1),o}}}}),ce.each(["radio","checkbox"],function(){ce.valHooks[this]={set:function(e,t){if(Array.isArray(t))return e.checked=-1<ce.inArray(ce(e).val(),t)}},le.checkOn||(ce.valHooks[this].get=function(e){return null===e.getAttribute("value")?"on":e.value})});var Et=ie.location,jt={guid:Date.now()},At=/\?/;ce.parseXML=function(e){var t,n;if(!e||"string"!=typeof e)return null;try{t=(new ie.DOMParser).parseFromString(e,"text/xml")}catch(e){}return n=t&&t.getElementsByTagName("parsererror")[0],t&&!n||ce.error("Invalid XML: "+(n?ce.map(n.childNodes,function(e){return e.textContent}).join("\n"):e)),t};var Dt=/^(?:focusinfocus|focusoutblur)$/,Nt=function(e){e.stopPropagation()};ce.extend(ce.event,{trigger:function(e,t,n,r){var i,o,a,s,u,l,c,f,p=[n||C],d=ue.call(e,"type")?e.type:e,h=ue.call(e,"namespace")?e.namespace.split("."):[];if(o=f=a=n=n||C,3!==n.nodeType&&8!==n.nodeType&&!Dt.test(d+ce.event.triggered)&&(-1<d.indexOf(".")&&(d=(h=d.split(".")).shift(),h.sort()),u=d.indexOf(":")<0&&"on"+d,(e=e[ce.expando]?e:new ce.Event(d,"object"==typeof e&&e)).isTrigger=r?2:3,e.namespace=h.join("."),e.rnamespace=e.namespace?new RegExp("(^|\\.)"+h.join("\\.(?:.*\\.|)")+"(\\.|$)"):null,e.result=void 0,e.target||(e.target=n),t=null==t?[e]:ce.makeArray(t,[e]),c=ce.event.special[d]||{},r||!c.trigger||!1!==c.trigger.apply(n,t))){if(!r&&!c.noBubble&&!y(n)){for(s=c.delegateType||d,Dt.test(s+d)||(o=o.parentNode);o;o=o.parentNode)p.push(o),a=o;a===(n.ownerDocument||C)&&p.push(a.defaultView||a.parentWindow||ie)}i=0;while((o=p[i++])&&!e.isPropagationStopped())f=o,e.type=1<i?s:c.bindType||d,(l=(_.get(o,"events")||Object.create(null))[e.type]&&_.get(o,"handle"))&&l.apply(o,t),(l=u&&o[u])&&l.apply&&$(o)&&(e.result=l.apply(o,t),!1===e.result&&e.preventDefault());return e.type=d,r||e.isDefaultPrevented()||c._default&&!1!==c._default.apply(p.pop(),t)||!$(n)||u&&v(n[d])&&!y(n)&&((a=n[u])&&(n[u]=null),ce.event.triggered=d,e.isPropagationStopped()&&f.addEventListener(d,Nt),n[d](),e.isPropagationStopped()&&f.removeEventListener(d,Nt),ce.event.triggered=void 0,a&&(n[u]=a)),e.result}},simulate:function(e,t,n){var r=ce.extend(new ce.Event,n,{type:e,isSimulated:!0});ce.event.trigger(r,null,t)}}),ce.fn.extend({trigger:function(e,t){return this.each(function(){ce.event.trigger(e,t,this)})},triggerHandler:function(e,t){var n=this[0];if(n)return ce.event.trigger(e,t,n,!0)}});var qt=/\[\]$/,Lt=/\r?\n/g,Ht=/^(?:submit|button|image|reset|file)$/i,Ot=/^(?:input|select|textarea|keygen)/i;function Pt(n,e,r,i){var t;if(Array.isArray(e))ce.each(e,function(e,t){r||qt.test(n)?i(n,t):Pt(n+"["+("object"==typeof t&&null!=t?e:"")+"]",t,r,i)});else if(r||"object"!==x(e))i(n,e);else for(t in e)Pt(n+"["+t+"]",e[t],r,i)}ce.param=function(e,t){var n,r=[],i=function(e,t){var n=v(t)?t():t;r[r.length]=encodeURIComponent(e)+"="+encodeURIComponent(null==n?"":n)};if(null==e)return"";if(Array.isArray(e)||e.jquery&&!ce.isPlainObject(e))ce.each(e,function(){i(this.name,this.value)});else for(n in e)Pt(n,e[n],t,i);return r.join("&")},ce.fn.extend({serialize:function(){return ce.param(this.serializeArray())},serializeArray:function(){return this.map(function(){var e=ce.prop(this,"elements");return e?ce.makeArray(e):this}).filter(function(){var e=this.type;return this.name&&!ce(this).is(":disabled")&&Ot.test(this.nodeName)&&!Ht.test(e)&&(this.checked||!we.test(e))}).map(function(e,t){var n=ce(this).val();return null==n?null:Array.isArray(n)?ce.map(n,function(e){return{name:t.name,value:e.replace(Lt,"\r\n")}}):{name:t.name,value:n.replace(Lt,"\r\n")}}).get()}});var Mt=/%20/g,Rt=/#.*$/,It=/([?&])_=[^&]*/,Wt=/^(.*?):[ \t]*([^\r\n]*)$/gm,Ft=/^(?:GET|HEAD)$/,$t=/^\/\//,Bt={},_t={},zt="*/".concat("*"),Xt=C.createElement("a");function Ut(o){return function(e,t){"string"!=typeof e&&(t=e,e="*");var n,r=0,i=e.toLowerCase().match(D)||[];if(v(t))while(n=i[r++])"+"===n[0]?(n=n.slice(1)||"*",(o[n]=o[n]||[]).unshift(t)):(o[n]=o[n]||[]).push(t)}}function Vt(t,i,o,a){var s={},u=t===_t;function l(e){var r;return s[e]=!0,ce.each(t[e]||[],function(e,t){var n=t(i,o,a);return"string"!=typeof n||u||s[n]?u?!(r=n):void 0:(i.dataTypes.unshift(n),l(n),!1)}),r}return l(i.dataTypes[0])||!s["*"]&&l("*")}function Gt(e,t){var n,r,i=ce.ajaxSettings.flatOptions||{};for(n in t)void 0!==t[n]&&((i[n]?e:r||(r={}))[n]=t[n]);return r&&ce.extend(!0,e,r),e}Xt.href=Et.href,ce.extend({active:0,lastModified:{},etag:{},ajaxSettings:{url:Et.href,type:"GET",isLocal:/^(?:about|app|app-storage|.+-extension|file|res|widget):$/.test(Et.protocol),global:!0,processData:!0,async:!0,contentType:"application/x-www-form-urlencoded; charset=UTF-8",accepts:{"*":zt,text:"text/plain",html:"text/html",xml:"application/xml, text/xml",json:"application/json, text/javascript"},contents:{xml:/\bxml\b/,html:/\bhtml/,json:/\bjson\b/},responseFields:{xml:"responseXML",text:"responseText",json:"responseJSON"},converters:{"* text":String,"text html":!0,"text json":JSON.parse,"text xml":ce.parseXML},flatOptions:{url:!0,context:!0}},ajaxSetup:function(e,t){return t?Gt(Gt(e,ce.ajaxSettings),t):Gt(ce.ajaxSettings,e)},ajaxPrefilter:Ut(Bt),ajaxTransport:Ut(_t),ajax:function(e,t){"object"==typeof e&&(t=e,e=void 0),t=t||{};var c,f,p,n,d,r,h,g,i,o,v=ce.ajaxSetup({},t),y=v.context||v,m=v.context&&(y.nodeType||y.jquery)?ce(y):ce.event,x=ce.Deferred(),b=ce.Callbacks("once memory"),w=v.statusCode||{},a={},s={},u="canceled",T={readyState:0,getResponseHeader:function(e){var t;if(h){if(!n){n={};while(t=Wt.exec(p))n[t[1].toLowerCase()+" "]=(n[t[1].toLowerCase()+" "]||[]).concat(t[2])}t=n[e.toLowerCase()+" "]}return null==t?null:t.join(", ")},getAllResponseHeaders:function(){return h?p:null},setRequestHeader:function(e,t){return null==h&&(e=s[e.toLowerCase()]=s[e.toLowerCase()]||e,a[e]=t),this},overrideMimeType:function(e){return null==h&&(v.mimeType=e),this},statusCode:function(e){var t;if(e)if(h)T.always(e[T.status]);else for(t in e)w[t]=[w[t],e[t]];return this},abort:function(e){var t=e||u;return c&&c.abort(t),l(0,t),this}};if(x.promise(T),v.url=((e||v.url||Et.href)+"").replace($t,Et.protocol+"//"),v.type=t.method||t.type||v.method||v.type,v.dataTypes=(v.dataType||"*").toLowerCase().match(D)||[""],null==v.crossDomain){r=C.createElement("a");try{r.href=v.url,r.href=r.href,v.crossDomain=Xt.protocol+"//"+Xt.host!=r.protocol+"//"+r.host}catch(e){v.crossDomain=!0}}if(v.data&&v.processData&&"string"!=typeof v.data&&(v.data=ce.param(v.data,v.traditional)),Vt(Bt,v,t,T),h)return T;for(i in(g=ce.event&&v.global)&&0==ce.active++&&ce.event.trigger("ajaxStart"),v.type=v.type.toUpperCase(),v.hasContent=!Ft.test(v.type),f=v.url.replace(Rt,""),v.hasContent?v.data&&v.processData&&0===(v.contentType||"").indexOf("application/x-www-form-urlencoded")&&(v.data=v.data.replace(Mt,"+")):(o=v.url.slice(f.length),v.data&&(v.processData||"string"==typeof v.data)&&(f+=(At.test(f)?"&":"?")+v.data,delete v.data),!1===v.cache&&(f=f.replace(It,"$1"),o=(At.test(f)?"&":"?")+"_="+jt.guid+++o),v.url=f+o),v.ifModified&&(ce.lastModified[f]&&T.setRequestHeader("If-Modified-Since",ce.lastModified[f]),ce.etag[f]&&T.setRequestHeader("If-None-Match",ce.etag[f])),(v.data&&v.hasContent&&!1!==v.contentType||t.contentType)&&T.setRequestHeader("Content-Type",v.contentType),T.setRequestHeader("Accept",v.dataTypes[0]&&v.accepts[v.dataTypes[0]]?v.accepts[v.dataTypes[0]]+("*"!==v.dataTypes[0]?", "+zt+"; q=0.01":""):v.accepts["*"]),v.headers)T.setRequestHeader(i,v.headers[i]);if(v.beforeSend&&(!1===v.beforeSend.call(y,T,v)||h))return T.abort();if(u="abort",b.add(v.complete),T.done(v.success),T.fail(v.error),c=Vt(_t,v,t,T)){if(T.readyState=1,g&&m.trigger("ajaxSend",[T,v]),h)return T;v.async&&0<v.timeout&&(d=ie.setTimeout(function(){T.abort("timeout")},v.timeout));try{h=!1,c.send(a,l)}catch(e){if(h)throw e;l(-1,e)}}else l(-1,"No Transport");function l(e,t,n,r){var i,o,a,s,u,l=t;h||(h=!0,d&&ie.clearTimeout(d),c=void 0,p=r||"",T.readyState=0<e?4:0,i=200<=e&&e<300||304===e,n&&(s=function(e,t,n){var r,i,o,a,s=e.contents,u=e.dataTypes;while("*"===u[0])u.shift(),void 0===r&&(r=e.mimeType||t.getResponseHeader("Content-Type"));if(r)for(i in s)if(s[i]&&s[i].test(r)){u.unshift(i);break}if(u[0]in n)o=u[0];else{for(i in n){if(!u[0]||e.converters[i+" "+u[0]]){o=i;break}a||(a=i)}o=o||a}if(o)return o!==u[0]&&u.unshift(o),n[o]}(v,T,n)),!i&&-1<ce.inArray("script",v.dataTypes)&&ce.inArray("json",v.dataTypes)<0&&(v.converters["text script"]=function(){}),s=function(e,t,n,r){var i,o,a,s,u,l={},c=e.dataTypes.slice();if(c[1])for(a in e.converters)l[a.toLowerCase()]=e.converters[a];o=c.shift();while(o)if(e.responseFields[o]&&(n[e.responseFields[o]]=t),!u&&r&&e.dataFilter&&(t=e.dataFilter(t,e.dataType)),u=o,o=c.shift())if("*"===o)o=u;else if("*"!==u&&u!==o){if(!(a=l[u+" "+o]||l["* "+o]))for(i in l)if((s=i.split(" "))[1]===o&&(a=l[u+" "+s[0]]||l["* "+s[0]])){!0===a?a=l[i]:!0!==l[i]&&(o=s[0],c.unshift(s[1]));break}if(!0!==a)if(a&&e["throws"])t=a(t);else try{t=a(t)}catch(e){return{state:"parsererror",error:a?e:"No conversion from "+u+" to "+o}}}return{state:"success",data:t}}(v,s,T,i),i?(v.ifModified&&((u=T.getResponseHeader("Last-Modified"))&&(ce.lastModified[f]=u),(u=T.getResponseHeader("etag"))&&(ce.etag[f]=u)),204===e||"HEAD"===v.type?l="nocontent":304===e?l="notmodified":(l=s.state,o=s.data,i=!(a=s.error))):(a=l,!e&&l||(l="error",e<0&&(e=0))),T.status=e,T.statusText=(t||l)+"",i?x.resolveWith(y,[o,l,T]):x.rejectWith(y,[T,l,a]),T.statusCode(w),w=void 0,g&&m.trigger(i?"ajaxSuccess":"ajaxError",[T,v,i?o:a]),b.fireWith(y,[T,l]),g&&(m.trigger("ajaxComplete",[T,v]),--ce.active||ce.event.trigger("ajaxStop")))}return T},getJSON:function(e,t,n){return ce.get(e,t,n,"json")},getScript:function(e,t){return ce.get(e,void 0,t,"script")}}),ce.each(["get","post"],function(e,i){ce[i]=function(e,t,n,r){return v(t)&&(r=r||n,n=t,t=void 0),ce.ajax(ce.extend({url:e,type:i,dataType:r,data:t,success:n},ce.isPlainObject(e)&&e))}}),ce.ajaxPrefilter(function(e){var t;for(t in e.headers)"content-type"===t.toLowerCase()&&(e.contentType=e.headers[t]||"")}),ce._evalUrl=function(e,t,n){return ce.ajax({url:e,type:"GET",dataType:"script",cache:!0,async:!1,global:!1,converters:{"text script":function(){}},dataFilter:function(e){ce.globalEval(e,t,n)}})},ce.fn.extend({wrapAll:function(e){var t;return this[0]&&(v(e)&&(e=e.call(this[0])),t=ce(e,this[0].ownerDocument).eq(0).clone(!0),this[0].parentNode&&t.insertBefore(this[0]),t.map(function(){var e=this;while(e.firstElementChild)e=e.firstElementChild;return e}).append(this)),this},wrapInner:function(n){return v(n)?this.each(function(e){ce(this).wrapInner(n.call(this,e))}):this.each(function(){var e=ce(this),t=e.contents();t.length?t.wrapAll(n):e.append(n)})},wrap:function(t){var n=v(t);return this.each(function(e){ce(this).wrapAll(n?t.call(this,e):t)})},unwrap:function(e){return this.parent(e).not("body").each(function(){ce(this).replaceWith(this.childNodes)}),this}}),ce.expr.pseudos.hidden=function(e){return!ce.expr.pseudos.visible(e)},ce.expr.pseudos.visible=function(e){return!!(e.offsetWidth||e.offsetHeight||e.getClientRects().length)},ce.ajaxSettings.xhr=function(){try{return new ie.XMLHttpRequest}catch(e){}};var Yt={0:200,1223:204},Qt=ce.ajaxSettings.xhr();le.cors=!!Qt&&"withCredentials"in Qt,le.ajax=Qt=!!Qt,ce.ajaxTransport(function(i){var o,a;if(le.cors||Qt&&!i.crossDomain)return{send:function(e,t){var n,r=i.xhr();if(r.open(i.type,i.url,i.async,i.username,i.password),i.xhrFields)for(n in i.xhrFields)r[n]=i.xhrFields[n];for(n in i.mimeType&&r.overrideMimeType&&r.overrideMimeType(i.mimeType),i.crossDomain||e["X-Requested-With"]||(e["X-Requested-With"]="XMLHttpRequest"),e)r.setRequestHeader(n,e[n]);o=function(e){return function(){o&&(o=a=r.onload=r.onerror=r.onabort=r.ontimeout=r.onreadystatechange=null,"abort"===e?r.abort():"error"===e?"number"!=typeof r.status?t(0,"error"):t(r.status,r.statusText):t(Yt[r.status]||r.status,r.statusText,"text"!==(r.responseType||"text")||"string"!=typeof r.responseText?{binary:r.response}:{text:r.responseText},r.getAllResponseHeaders()))}},r.onload=o(),a=r.onerror=r.ontimeout=o("error"),void 0!==r.onabort?r.onabort=a:r.onreadystatechange=function(){4===r.readyState&&ie.setTimeout(function(){o&&a()})},o=o("abort");try{r.send(i.hasContent&&i.data||null)}catch(e){if(o)throw e}},abort:function(){o&&o()}}}),ce.ajaxPrefilter(function(e){e.crossDomain&&(e.contents.script=!1)}),ce.ajaxSetup({accepts:{script:"text/javascript, application/javascript, application/ecmascript, application/x-ecmascript"},contents:{script:/\b(?:java|ecma)script\b/},converters:{"text script":function(e){return ce.globalEval(e),e}}}),ce.ajaxPrefilter("script",function(e){void 0===e.cache&&(e.cache=!1),e.crossDomain&&(e.type="GET")}),ce.ajaxTransport("script",function(n){var r,i;if(n.crossDomain||n.scriptAttrs)return{send:function(e,t){r=ce("<script>").attr(n.scriptAttrs||{}).prop({charset:n.scriptCharset,src:n.url}).on("load error",i=function(e){r.remove(),i=null,e&&t("error"===e.type?404:200,e.type)}),C.head.appendChild(r[0])},abort:function(){i&&i()}}});var Jt,Kt=[],Zt=/(=)\?(?=&|$)|\?\?/;ce.ajaxSetup({jsonp:"callback",jsonpCallback:function(){var e=Kt.pop()||ce.expando+"_"+jt.guid++;return this[e]=!0,e}}),ce.ajaxPrefilter("json jsonp",function(e,t,n){var r,i,o,a=!1!==e.jsonp&&(Zt.test(e.url)?"url":"string"==typeof e.data&&0===(e.contentType||"").indexOf("application/x-www-form-urlencoded")&&Zt.test(e.data)&&"data");if(a||"jsonp"===e.dataTypes[0])return r=e.jsonpCallback=v(e.jsonpCallback)?e.jsonpCallback():e.jsonpCallback,a?e[a]=e[a].replace(Zt,"$1"+r):!1!==e.jsonp&&(e.url+=(At.test(e.url)?"&":"?")+e.jsonp+"="+r),e.converters["script json"]=function(){return o||ce.error(r+" was not called"),o[0]},e.dataTypes[0]="json",i=ie[r],ie[r]=function(){o=arguments},n.always(function(){void 0===i?ce(ie).removeProp(r):ie[r]=i,e[r]&&(e.jsonpCallback=t.jsonpCallback,Kt.push(r)),o&&v(i)&&i(o[0]),o=i=void 0}),"script"}),le.createHTMLDocument=((Jt=C.implementation.createHTMLDocument("").body).innerHTML="<form></form><form></form>",2===Jt.childNodes.length),ce.parseHTML=function(e,t,n){return"string"!=typeof e?[]:("boolean"==typeof t&&(n=t,t=!1),t||(le.createHTMLDocument?((r=(t=C.implementation.createHTMLDocument("")).createElement("base")).href=C.location.href,t.head.appendChild(r)):t=C),o=!n&&[],(i=w.exec(e))?[t.createElement(i[1])]:(i=Ae([e],t,o),o&&o.length&&ce(o).remove(),ce.merge([],i.childNodes)));var r,i,o},ce.fn.load=function(e,t,n){var r,i,o,a=this,s=e.indexOf(" ");return-1<s&&(r=Tt(e.slice(s)),e=e.slice(0,s)),v(t)?(n=t,t=void 0):t&&"object"==typeof t&&(i="POST"),0<a.length&&ce.ajax({url:e,type:i||"GET",dataType:"html",data:t}).done(function(e){o=arguments,a.html(r?ce("<div>").append(ce.parseHTML(e)).find(r):e)}).always(n&&function(e,t){a.each(function(){n.apply(this,o||[e.responseText,t,e])})}),this},ce.expr.pseudos.animated=function(t){return ce.grep(ce.timers,function(e){return t===e.elem}).length},ce.offset={setOffset:function(e,t,n){var r,i,o,a,s,u,l=ce.css(e,"position"),c=ce(e),f={};"static"===l&&(e.style.position="relative"),s=c.offset(),o=ce.css(e,"top"),u=ce.css(e,"left"),("absolute"===l||"fixed"===l)&&-1<(o+u).indexOf("auto")?(a=(r=c.position()).top,i=r.left):(a=parseFloat(o)||0,i=parseFloat(u)||0),v(t)&&(t=t.call(e,n,ce.extend({},s))),null!=t.top&&(f.top=t.top-s.top+a),null!=t.left&&(f.left=t.left-s.left+i),"using"in t?t.using.call(e,f):c.css(f)}},ce.fn.extend({offset:function(t){if(arguments.length)return void 0===t?this:this.each(function(e){ce.offset.setOffset(this,t,e)});var e,n,r=this[0];return r?r.getClientRects().length?(e=r.getBoundingClientRect(),n=r.ownerDocument.defaultView,{top:e.top+n.pageYOffset,left:e.left+n.pageXOffset}):{top:0,left:0}:void 0},position:function(){if(this[0]){var e,t,n,r=this[0],i={top:0,left:0};if("fixed"===ce.css(r,"position"))t=r.getBoundingClientRect();else{t=this.offset(),n=r.ownerDocument,e=r.offsetParent||n.documentElement;while(e&&(e===n.body||e===n.documentElement)&&"static"===ce.css(e,"position"))e=e.parentNode;e&&e!==r&&1===e.nodeType&&((i=ce(e).offset()).top+=ce.css(e,"borderTopWidth",!0),i.left+=ce.css(e,"borderLeftWidth",!0))}return{top:t.top-i.top-ce.css(r,"marginTop",!0),left:t.left-i.left-ce.css(r,"marginLeft",!0)}}},offsetParent:function(){return this.map(function(){var e=this.offsetParent;while(e&&"static"===ce.css(e,"position"))e=e.offsetParent;return e||J})}}),ce.each({scrollLeft:"pageXOffset",scrollTop:"pageYOffset"},function(t,i){var o="pageYOffset"===i;ce.fn[t]=function(e){return M(this,function(e,t,n){var r;if(y(e)?r=e:9===e.nodeType&&(r=e.defaultView),void 0===n)return r?r[i]:e[t];r?r.scrollTo(o?r.pageXOffset:n,o?n:r.pageYOffset):e[t]=n},t,e,arguments.length)}}),ce.each(["top","left"],function(e,n){ce.cssHooks[n]=Ye(le.pixelPosition,function(e,t){if(t)return t=Ge(e,n),_e.test(t)?ce(e).position()[n]+"px":t})}),ce.each({Height:"height",Width:"width"},function(a,s){ce.each({padding:"inner"+a,content:s,"":"outer"+a},function(r,o){ce.fn[o]=function(e,t){var n=arguments.length&&(r||"boolean"!=typeof e),i=r||(!0===e||!0===t?"margin":"border");return M(this,function(e,t,n){var r;return y(e)?0===o.indexOf("outer")?e["inner"+a]:e.document.documentElement["client"+a]:9===e.nodeType?(r=e.documentElement,Math.max(e.body["scroll"+a],r["scroll"+a],e.body["offset"+a],r["offset"+a],r["client"+a])):void 0===n?ce.css(e,t,i):ce.style(e,t,n,i)},s,n?e:void 0,n)}})}),ce.each(["ajaxStart","ajaxStop","ajaxComplete","ajaxError","ajaxSuccess","ajaxSend"],function(e,t){ce.fn[t]=function(e){return this.on(t,e)}}),ce.fn.extend({bind:function(e,t,n){return this.on(e,null,t,n)},unbind:function(e,t){return this.off(e,null,t)},delegate:function(e,t,n,r){return this.on(t,e,n,r)},undelegate:function(e,t,n){return 1===arguments.length?this.off(e,"**"):this.off(t,e||"**",n)},hover:function(e,t){return this.on("mouseenter",e).on("mouseleave",t||e)}}),ce.each("blur focus focusin focusout resize scroll click dblclick mousedown mouseup mousemove mouseover mouseout mouseenter mouseleave change select submit keydown keypress keyup contextmenu".split(" "),function(e,n){ce.fn[n]=function(e,t){return 0<arguments.length?this.on(n,null,e,t):this.trigger(n)}});var en=/^[\s\uFEFF\xA0]+|([^\s\uFEFF\xA0])[\s\uFEFF\xA0]+$/g;ce.proxy=function(e,t){var n,r,i;if("string"==typeof t&&(n=e[t],t=e,e=n),v(e))return r=ae.call(arguments,2),(i=function(){return e.apply(t||this,r.concat(ae.call(arguments)))}).guid=e.guid=e.guid||ce.guid++,i},ce.holdReady=function(e){e?ce.readyWait++:ce.ready(!0)},ce.isArray=Array.isArray,ce.parseJSON=JSON.parse,ce.nodeName=fe,ce.isFunction=v,ce.isWindow=y,ce.camelCase=F,ce.type=x,ce.now=Date.now,ce.isNumeric=function(e){var t=ce.type(e);return("number"===t||"string"===t)&&!isNaN(e-parseFloat(e))},ce.trim=function(e){return null==e?"":(e+"").replace(en,"$1")},"function"==typeof define&&define.amd&&define("jquery",[],function(){return ce});var tn=ie.jQuery,nn=ie.$;return ce.noConflict=function(e){return ie.$===ce&&(ie.$=nn),e&&ie.jQuery===ce&&(ie.jQuery=tn),ce},"undefined"==typeof e&&(ie.jQuery=ie.$=ce),ce});
+</script>
+
+
+<body onload="">
 <div id="fireplace" style="">
-<!--
-<div class="rowz" id="row30">
-<div class="pixel" id="a30"></div>
-<div class="pixel" id="b30"></div>
-<div class="pixel" id="c30"></div>
-<div class="pixel" id="d30"></div>
-<div class="pixel" id="e30"></div>
-<div class="pixel" id="f30"></div>
-<div class="pixel" id="g30"></div>
-<div class="pixel" id="h30"></div>
-<div class="pixel" id="i30"></div>
-<div class="pixel" id="j30"></div>
-<div class="pixel" id="k30"></div>
-<div class="pixel" id="l30"></div>
-<div class="pixel" id="m30"></div>
-<div class="pixel" id="n30"></div>
-<div class="pixel" id="o30"></div>
-<div class="pixel" id="p30"></div>
-<div class="pixel" id="za30"></div>
-<div class="pixel" id="zb30"></div>
-<div class="pixel" id="zc30"></div>
-<div class="pixel" id="zd30"></div>
-<div class="pixel" id="ze30"></div>
-<div class="pixel" id="zf30"></div>
-<div class="pixel" id="zg30"></div>
-<div class="pixel" id="zh30"></div>
-<div class="pixel" id="zi30"></div>
-<div class="pixel" id="zj30"></div>
-<div class="pixel" id="zk30"></div>
-<div class="pixel" id="zl30"></div>
-<div class="pixel" id="zm30"></div>
-<div class="pixel" id="zn30"></div>
-<div class="pixel" id="zo30"></div>
-<div class="pixel" id="zp30"></div>
-</div>
-<div class="rowz" id="row29">
-<div class="pixel" id="a29"></div>
-<div class="pixel" id="b29"></div>
-<div class="pixel" id="c29"></div>
-<div class="pixel" id="d29"></div>
-<div class="pixel" id="e29"></div>
-<div class="pixel" id="f29"></div>
-<div class="pixel" id="g29"></div>
-<div class="pixel" id="h29"></div>
-<div class="pixel" id="i29"></div>
-<div class="pixel" id="j29"></div>
-<div class="pixel" id="k29"></div>
-<div class="pixel" id="l29"></div>
-<div class="pixel" id="m29"></div>
-<div class="pixel" id="n29"></div>
-<div class="pixel" id="o29"></div>
-<div class="pixel" id="p29"></div>
-<div class="pixel" id="za29"></div>
-<div class="pixel" id="zb29"></div>
-<div class="pixel" id="zc29"></div>
-<div class="pixel" id="zd29"></div>
-<div class="pixel" id="ze29"></div>
-<div class="pixel" id="zf29"></div>
-<div class="pixel" id="zg29"></div>
-<div class="pixel" id="zh29"></div>
-<div class="pixel" id="zi29"></div>
-<div class="pixel" id="zj29"></div>
-<div class="pixel" id="zk29"></div>
-<div class="pixel" id="zl29"></div>
-<div class="pixel" id="zm29"></div>
-<div class="pixel" id="zn29"></div>
-<div class="pixel" id="zo29"></div>
-<div class="pixel" id="zp29"></div>
-</div>
-<div class="rowz" id="row28">
-<div class="pixel" id="a28"></div>
-<div class="pixel" id="b28"></div>
-<div class="pixel" id="c28"></div>
-<div class="pixel" id="d28"></div>
-<div class="pixel" id="e28"></div>
-<div class="pixel" id="f28"></div>
-<div class="pixel" id="g28"></div>
-<div class="pixel" id="h28"></div>
-<div class="pixel" id="i28"></div>
-<div class="pixel" id="j28"></div>
-<div class="pixel" id="k28"></div>
-<div class="pixel" id="l28"></div>
-<div class="pixel" id="m28"></div>
-<div class="pixel" id="n28"></div>
-<div class="pixel" id="o28"></div>
-<div class="pixel" id="p28"></div>
-<div class="pixel" id="za28"></div>
-<div class="pixel" id="zb28"></div>
-<div class="pixel" id="zc28"></div>
-<div class="pixel" id="zd28"></div>
-<div class="pixel" id="ze28"></div>
-<div class="pixel" id="zf28"></div>
-<div class="pixel" id="zg28"></div>
-<div class="pixel" id="zh28"></div>
-<div class="pixel" id="zi28"></div>
-<div class="pixel" id="zj28"></div>
-<div class="pixel" id="zk28"></div>
-<div class="pixel" id="zl28"></div>
-<div class="pixel" id="zm28"></div>
-<div class="pixel" id="zn28"></div>
-<div class="pixel" id="zo28"></div>
-<div class="pixel" id="zp28"></div>
-</div>
-<div class="rowz" id="row27">
-<div class="pixel" id="a27"></div>
-<div class="pixel" id="b27"></div>
-<div class="pixel" id="c27"></div>
-<div class="pixel" id="d27"></div>
-<div class="pixel" id="e27"></div>
-<div class="pixel" id="f27"></div>
-<div class="pixel" id="g27"></div>
-<div class="pixel" id="h27"></div>
-<div class="pixel" id="i27"></div>
-<div class="pixel" id="j27"></div>
-<div class="pixel" id="k27"></div>
-<div class="pixel" id="l27"></div>
-<div class="pixel" id="m27"></div>
-<div class="pixel" id="n27"></div>
-<div class="pixel" id="o27"></div>
-<div class="pixel" id="p27"></div>
-<div class="pixel" id="za27"></div>
-<div class="pixel" id="zb27"></div>
-<div class="pixel" id="zc27"></div>
-<div class="pixel" id="zd27"></div>
-<div class="pixel" id="ze27"></div>
-<div class="pixel" id="zf27"></div>
-<div class="pixel" id="zg27"></div>
-<div class="pixel" id="zh27"></div>
-<div class="pixel" id="zi27"></div>
-<div class="pixel" id="zj27"></div>
-<div class="pixel" id="zk27"></div>
-<div class="pixel" id="zl27"></div>
-<div class="pixel" id="zm27"></div>
-<div class="pixel" id="zn27"></div>
-<div class="pixel" id="zo27"></div>
-<div class="pixel" id="zp27"></div>
-</div>
-<div class="rowz" id="row26">
-<div class="pixel" id="a26"></div>
-<div class="pixel" id="b26"></div>
-<div class="pixel" id="c26"></div>
-<div class="pixel" id="d26"></div>
-<div class="pixel" id="e26"></div>
-<div class="pixel" id="f26"></div>
-<div class="pixel" id="g26"></div>
-<div class="pixel" id="h26"></div>
-<div class="pixel" id="i26"></div>
-<div class="pixel" id="j26"></div>
-<div class="pixel" id="k26"></div>
-<div class="pixel" id="l26"></div>
-<div class="pixel" id="m26"></div>
-<div class="pixel" id="n26"></div>
-<div class="pixel" id="o26"></div>
-<div class="pixel" id="p26"></div>
-<div class="pixel" id="za26"></div>
-<div class="pixel" id="zb26"></div>
-<div class="pixel" id="zc26"></div>
-<div class="pixel" id="zd26"></div>
-<div class="pixel" id="ze26"></div>
-<div class="pixel" id="zf26"></div>
-<div class="pixel" id="zg26"></div>
-<div class="pixel" id="zh26"></div>
-<div class="pixel" id="zi26"></div>
-<div class="pixel" id="zj26"></div>
-<div class="pixel" id="zk26"></div>
-<div class="pixel" id="zl26"></div>
-<div class="pixel" id="zm26"></div>
-<div class="pixel" id="zn26"></div>
-<div class="pixel" id="zo26"></div>
-<div class="pixel" id="zp26"></div>
-</div>
-<div class="rowz" id="row25">
-<div class="pixel" id="a25"></div>
-<div class="pixel" id="b25"></div>
-<div class="pixel" id="c25"></div>
-<div class="pixel" id="d25"></div>
-<div class="pixel" id="e25"></div>
-<div class="pixel" id="f25"></div>
-<div class="pixel" id="g25"></div>
-<div class="pixel" id="h25"></div>
-<div class="pixel" id="i25"></div>
-<div class="pixel" id="j25"></div>
-<div class="pixel" id="k25"></div>
-<div class="pixel" id="l25"></div>
-<div class="pixel" id="m25"></div>
-<div class="pixel" id="n25"></div>
-<div class="pixel" id="o25"></div>
-<div class="pixel" id="p25"></div>
-<div class="pixel" id="za25"></div>
-<div class="pixel" id="zb25"></div>
-<div class="pixel" id="zc25"></div>
-<div class="pixel" id="zd25"></div>
-<div class="pixel" id="ze25"></div>
-<div class="pixel" id="zf25"></div>
-<div class="pixel" id="zg25"></div>
-<div class="pixel" id="zh25"></div>
-<div class="pixel" id="zi25"></div>
-<div class="pixel" id="zj25"></div>
-<div class="pixel" id="zk25"></div>
-<div class="pixel" id="zl25"></div>
-<div class="pixel" id="zm25"></div>
-<div class="pixel" id="zn25"></div>
-<div class="pixel" id="zo25"></div>
-<div class="pixel" id="zp25"></div>
-</div>
 
-<div class="rowz" id="row24">
-<div class="pixel" id="a24"></div>
-<div class="pixel" id="b24"></div>
-<div class="pixel" id="c24"></div>
-<div class="pixel" id="d24"></div>
-<div class="pixel" id="e24"></div>
-<div class="pixel" id="f24"></div>
-<div class="pixel" id="g24"></div>
-<div class="pixel" id="h24"></div>
-<div class="pixel" id="i24"></div>
-<div class="pixel" id="j24"></div>
-<div class="pixel" id="k24"></div>
-<div class="pixel" id="l24"></div>
-<div class="pixel" id="m24"></div>
-<div class="pixel" id="n24"></div>
-<div class="pixel" id="o24"></div>
-<div class="pixel" id="p24"></div>
-<div class="pixel" id="za24"></div>
-<div class="pixel" id="zb24"></div>
-<div class="pixel" id="zc24"></div>
-<div class="pixel" id="zd24"></div>
-<div class="pixel" id="ze24"></div>
-<div class="pixel" id="zf24"></div>
-<div class="pixel" id="zg24"></div>
-<div class="pixel" id="zh24"></div>
-<div class="pixel" id="zi24"></div>
-<div class="pixel" id="zj24"></div>
-<div class="pixel" id="zk24"></div>
-<div class="pixel" id="zl24"></div>
-<div class="pixel" id="zm24"></div>
-<div class="pixel" id="zn24"></div>
-<div class="pixel" id="zo24"></div>
-<div class="pixel" id="zp24"></div>
-</div>
-<div class="rowz" id="row23">
-<div class="pixel" id="a23"></div>
-<div class="pixel" id="b23"></div>
-<div class="pixel" id="c23"></div>
-<div class="pixel" id="d23"></div>
-<div class="pixel" id="e23"></div>
-<div class="pixel" id="f23"></div>
-<div class="pixel" id="g23"></div>
-<div class="pixel" id="h23"></div>
-<div class="pixel" id="i23"></div>
-<div class="pixel" id="j23"></div>
-<div class="pixel" id="k23"></div>
-<div class="pixel" id="l23"></div>
-<div class="pixel" id="m23"></div>
-<div class="pixel" id="n23"></div>
-<div class="pixel" id="o23"></div>
-<div class="pixel" id="p23"></div>
-<div class="pixel" id="za23"></div>
-<div class="pixel" id="zb23"></div>
-<div class="pixel" id="zc23"></div>
-<div class="pixel" id="zd23"></div>
-<div class="pixel" id="ze23"></div>
-<div class="pixel" id="zf23"></div>
-<div class="pixel" id="zg23"></div>
-<div class="pixel" id="zh23"></div>
-<div class="pixel" id="zi23"></div>
-<div class="pixel" id="zj23"></div>
-<div class="pixel" id="zk23"></div>
-<div class="pixel" id="zl23"></div>
-<div class="pixel" id="zm23"></div>
-<div class="pixel" id="zn23"></div>
-<div class="pixel" id="zo23"></div>
-<div class="pixel" id="zp23"></div>
-</div>
-
-<div class="rowz" id="row22">
-<div class="pixel" id="a22"></div>
-<div class="pixel" id="b22"></div>
-<div class="pixel" id="c22"></div>
-<div class="pixel" id="d22"></div>
-<div class="pixel" id="e22"></div>
-<div class="pixel" id="f22"></div>
-<div class="pixel" id="g22"></div>
-<div class="pixel" id="h22"></div>
-<div class="pixel" id="i22"></div>
-<div class="pixel" id="j22"></div>
-<div class="pixel" id="k22"></div>
-<div class="pixel" id="l22"></div>
-<div class="pixel" id="m22"></div>
-<div class="pixel" id="n22"></div>
-<div class="pixel" id="o22"></div>
-<div class="pixel" id="p22"></div>
-<div class="pixel" id="za22"></div>
-<div class="pixel" id="zb22"></div>
-<div class="pixel" id="zc22"></div>
-<div class="pixel" id="zd22"></div>
-<div class="pixel" id="ze22"></div>
-<div class="pixel" id="zf22"></div>
-<div class="pixel" id="zg22"></div>
-<div class="pixel" id="zh22"></div>
-<div class="pixel" id="zi22"></div>
-<div class="pixel" id="zj22"></div>
-<div class="pixel" id="zk22"></div>
-<div class="pixel" id="zl22"></div>
-<div class="pixel" id="zm22"></div>
-<div class="pixel" id="zn22"></div>
-<div class="pixel" id="zo22"></div>
-<div class="pixel" id="zp22"></div>
-</div>
-<div class="rowz" id="row21">
-<div class="pixel" id="a21"></div>
-<div class="pixel" id="b21"></div>
-<div class="pixel" id="c21"></div>
-<div class="pixel" id="d21"></div>
-<div class="pixel" id="e21"></div>
-<div class="pixel" id="f21"></div>
-<div class="pixel" id="g21"></div>
-<div class="pixel" id="h21"></div>
-<div class="pixel" id="i21"></div>
-<div class="pixel" id="j21"></div>
-<div class="pixel" id="k21"></div>
-<div class="pixel" id="l21"></div>
-<div class="pixel" id="m21"></div>
-<div class="pixel" id="n21"></div>
-<div class="pixel" id="o21"></div>
-<div class="pixel" id="p21"></div>
-<div class="pixel" id="za21"></div>
-<div class="pixel" id="zb21"></div>
-<div class="pixel" id="zc21"></div>
-<div class="pixel" id="zd21"></div>
-<div class="pixel" id="ze21"></div>
-<div class="pixel" id="zf21"></div>
-<div class="pixel" id="zg21"></div>
-<div class="pixel" id="zh21"></div>
-<div class="pixel" id="zi21"></div>
-<div class="pixel" id="zj21"></div>
-<div class="pixel" id="zk21"></div>
-<div class="pixel" id="zl21"></div>
-<div class="pixel" id="zm21"></div>
-<div class="pixel" id="zn21"></div>
-<div class="pixel" id="zo21"></div>
-<div class="pixel" id="zp21"></div>
-</div>-->
-<div class="rowz" id="row20">
-<div class="pixel" id="a20"></div>
-<div class="pixel" id="b20"></div>
-<div class="pixel" id="c20"></div>
-<div class="pixel" id="d20"></div>
-<div class="pixel" id="e20"></div>
-<div class="pixel" id="f20"></div>
-<div class="pixel" id="g20"></div>
-<div class="pixel" id="h20"></div>
-<div class="pixel" id="i20"></div>
-<div class="pixel" id="j20"></div>
-<div class="pixel" id="k20"></div>
-<div class="pixel" id="l20"></div>
-<div class="pixel" id="m20"></div>
-<div class="pixel" id="n20"></div>
-<div class="pixel" id="o20"></div>
-<div class="pixel" id="p20"></div>
-<div class="pixel" id="za20"></div>
-<div class="pixel" id="zb20"></div>
-<div class="pixel" id="zc20"></div>
-<div class="pixel" id="zd20"></div>
-<div class="pixel" id="ze20"></div>
-<div class="pixel" id="zf20"></div>
-<div class="pixel" id="zg20"></div>
-<div class="pixel" id="zh20"></div>
-<div class="pixel" id="zi20"></div>
-<div class="pixel" id="zj20"></div>
-<div class="pixel" id="zk20"></div>
-<div class="pixel" id="zl20"></div>
-<div class="pixel" id="zm20"></div>
-<div class="pixel" id="zn20"></div>
-<div class="pixel" id="zo20"></div>
-<div class="pixel" id="zp20"></div>
-</div>
-
-<div class="rowz" id="row19">
-<div class="pixel" id="a19"></div>
-<div class="pixel" id="b19"></div>
-<div class="pixel" id="c19"></div>
-<div class="pixel" id="d19"></div>
-<div class="pixel" id="e19"></div>
-<div class="pixel" id="f19"></div>
-<div class="pixel" id="g19"></div>
-<div class="pixel" id="h19"></div>
-<div class="pixel" id="i19"></div>
-<div class="pixel" id="j19"></div>
-<div class="pixel" id="k19"></div>
-<div class="pixel" id="l19"></div>
-<div class="pixel" id="m19"></div>
-<div class="pixel" id="n19"></div>
-<div class="pixel" id="o19"></div>
-<div class="pixel" id="p19"></div>
-<div class="pixel" id="za19"></div>
-<div class="pixel" id="zb19"></div>
-<div class="pixel" id="zc19"></div>
-<div class="pixel" id="zd19"></div>
-<div class="pixel" id="ze19"></div>
-<div class="pixel" id="zf19"></div>
-<div class="pixel" id="zg19"></div>
-<div class="pixel" id="zh19"></div>
-<div class="pixel" id="zi19"></div>
-<div class="pixel" id="zj19"></div>
-<div class="pixel" id="zk19"></div>
-<div class="pixel" id="zl19"></div>
-<div class="pixel" id="zm19"></div>
-<div class="pixel" id="zn19"></div>
-<div class="pixel" id="zo19"></div>
-<div class="pixel" id="zp19"></div>
-</div>
-<div class="rowz" id="row18">
-<div class="pixel" id="a18"></div>
-<div class="pixel" id="b18"></div>
-<div class="pixel" id="c18"></div>
-<div class="pixel" id="d18"></div>
-<div class="pixel" id="e18"></div>
-<div class="pixel" id="f18"></div>
-<div class="pixel" id="g18"></div>
-<div class="pixel" id="h18"></div>
-<div class="pixel" id="i18"></div>
-<div class="pixel" id="j18"></div>
-<div class="pixel" id="k18"></div>
-<div class="pixel" id="l18"></div>
-<div class="pixel" id="m18"></div>
-<div class="pixel" id="n18"></div>
-<div class="pixel" id="o18"></div>
-<div class="pixel" id="p18"></div>
-<div class="pixel" id="za18"></div>
-<div class="pixel" id="zb18"></div>
-<div class="pixel" id="zc18"></div>
-<div class="pixel" id="zd18"></div>
-<div class="pixel" id="ze18"></div>
-<div class="pixel" id="zf18"></div>
-<div class="pixel" id="zg18"></div>
-<div class="pixel" id="zh18"></div>
-<div class="pixel" id="zi18"></div>
-<div class="pixel" id="zj18"></div>
-<div class="pixel" id="zk18"></div>
-<div class="pixel" id="zl18"></div>
-<div class="pixel" id="zm18"></div>
-<div class="pixel" id="zn18"></div>
-<div class="pixel" id="zo18"></div>
-<div class="pixel" id="zp18"></div>
-</div>
-<div class="rowz" id="row17">
-<div class="pixel" id="a17"></div>
-<div class="pixel" id="b17"></div>
-<div class="pixel" id="c17"></div>
-<div class="pixel" id="d17"></div>
-<div class="pixel" id="e17"></div>
-<div class="pixel" id="f17"></div>
-<div class="pixel" id="g17"></div>
-<div class="pixel" id="h17"></div>
-<div class="pixel" id="i17"></div>
-<div class="pixel" id="j17"></div>
-<div class="pixel" id="k17"></div>
-<div class="pixel" id="l17"></div>
-<div class="pixel" id="m17"></div>
-<div class="pixel" id="n17"></div>
-<div class="pixel" id="o17"></div>
-<div class="pixel" id="p17"></div>
-<div class="pixel" id="za17"></div>
-<div class="pixel" id="zb17"></div>
-<div class="pixel" id="zc17"></div>
-<div class="pixel" id="zd17"></div>
-<div class="pixel" id="ze17"></div>
-<div class="pixel" id="zf17"></div>
-<div class="pixel" id="zg17"></div>
-<div class="pixel" id="zh17"></div>
-<div class="pixel" id="zi17"></div>
-<div class="pixel" id="zj17"></div>
-<div class="pixel" id="zk17"></div>
-<div class="pixel" id="zl17"></div>
-<div class="pixel" id="zm17"></div>
-<div class="pixel" id="zn17"></div>
-<div class="pixel" id="zo17"></div>
-<div class="pixel" id="zp17"></div>
-</div>
-<div class="rowz" id="row16">
-<div class="pixel" id="a16"></div>
-<div class="pixel" id="b16"></div>
-<div class="pixel" id="c16"></div>
-<div class="pixel" id="d16"></div>
-<div class="pixel" id="e16"></div>
-<div class="pixel" id="f16"></div>
-<div class="pixel" id="g16"></div>
-<div class="pixel" id="h16"></div>
-<div class="pixel" id="i16"></div>
-<div class="pixel" id="j16"></div>
-<div class="pixel" id="k16"></div>
-<div class="pixel" id="l16"></div>
-<div class="pixel" id="m16"></div>
-<div class="pixel" id="n16"></div>
-<div class="pixel" id="o16"></div>
-<div class="pixel" id="p16"></div>
-<div class="pixel" id="za16"></div>
-<div class="pixel" id="zb16"></div>
-<div class="pixel" id="zc16"></div>
-<div class="pixel" id="zd16"></div>
-<div class="pixel" id="ze16"></div>
-<div class="pixel" id="zf16"></div>
-<div class="pixel" id="zg16"></div>
-<div class="pixel" id="zh16"></div>
-<div class="pixel" id="zi16"></div>
-<div class="pixel" id="zj16"></div>
-<div class="pixel" id="zk16"></div>
-<div class="pixel" id="zl16"></div>
-<div class="pixel" id="zm16"></div>
-<div class="pixel" id="zn16"></div>
-<div class="pixel" id="zo16"></div>
-<div class="pixel" id="zp16"></div>
-</div>
 <div class="rowz" id="row15">
 <div class="pixel" id="a15"></div>
 <div class="pixel" id="b15"></div>
@@ -545,24 +35,7 @@ v26.0 > 12/10/2023
 <div class="pixel" id="n15"></div>
 <div class="pixel" id="o15"></div>
 <div class="pixel" id="p15"></div>
-<div class="pixel" id="za15"></div>
-<div class="pixel" id="zb15"></div>
-<div class="pixel" id="zc15"></div>
-<div class="pixel" id="zd15"></div>
-<div class="pixel" id="ze15"></div>
-<div class="pixel" id="zf15"></div>
-<div class="pixel" id="zg15"></div>
-<div class="pixel" id="zh15"></div>
-<div class="pixel" id="zi15"></div>
-<div class="pixel" id="zj15"></div>
-<div class="pixel" id="zk15"></div>
-<div class="pixel" id="zl15"></div>
-<div class="pixel" id="zm15"></div>
-<div class="pixel" id="zn15"></div>
-<div class="pixel" id="zo15"></div>
-<div class="pixel" id="zp15"></div>
 </div>
-
 <div class="rowz" id="row14">
 <div class="pixel" id="a14"></div>
 <div class="pixel" id="b14"></div>
@@ -580,22 +53,6 @@ v26.0 > 12/10/2023
 <div class="pixel" id="n14"></div>
 <div class="pixel" id="o14"></div>
 <div class="pixel" id="p14"></div>
-<div class="pixel" id="za14"></div>
-<div class="pixel" id="zb14"></div>
-<div class="pixel" id="zc14"></div>
-<div class="pixel" id="zd14"></div>
-<div class="pixel" id="ze14"></div>
-<div class="pixel" id="zf14"></div>
-<div class="pixel" id="zg14"></div>
-<div class="pixel" id="zh14"></div>
-<div class="pixel" id="zi14"></div>
-<div class="pixel" id="zj14"></div>
-<div class="pixel" id="zk14"></div>
-<div class="pixel" id="zl14"></div>
-<div class="pixel" id="zm14"></div>
-<div class="pixel" id="zn14"></div>
-<div class="pixel" id="zo14"></div>
-<div class="pixel" id="zp14"></div>
 </div>
 <div class="rowz" id="row13">
 <div class="pixel" id="a13"></div>
@@ -614,22 +71,6 @@ v26.0 > 12/10/2023
 <div class="pixel" id="n13"></div>
 <div class="pixel" id="o13"></div>
 <div class="pixel" id="p13"></div>
-<div class="pixel" id="za13"></div>
-<div class="pixel" id="zb13"></div>
-<div class="pixel" id="zc13"></div>
-<div class="pixel" id="zd13"></div>
-<div class="pixel" id="ze13"></div>
-<div class="pixel" id="zf13"></div>
-<div class="pixel" id="zg13"></div>
-<div class="pixel" id="zh13"></div>
-<div class="pixel" id="zi13"></div>
-<div class="pixel" id="zj13"></div>
-<div class="pixel" id="zk13"></div>
-<div class="pixel" id="zl13"></div>
-<div class="pixel" id="zm13"></div>
-<div class="pixel" id="zn13"></div>
-<div class="pixel" id="zo13"></div>
-<div class="pixel" id="zp13"></div>
 </div>
 
 <div class="rowz" id="row12">
@@ -649,22 +90,6 @@ v26.0 > 12/10/2023
 <div class="pixel" id="n12"></div>
 <div class="pixel" id="o12"></div>
 <div class="pixel" id="p12"></div>
-<div class="pixel" id="za12"></div>
-<div class="pixel" id="zb12"></div>
-<div class="pixel" id="zc12"></div>
-<div class="pixel" id="zd12"></div>
-<div class="pixel" id="ze12"></div>
-<div class="pixel" id="zf12"></div>
-<div class="pixel" id="zg12"></div>
-<div class="pixel" id="zh12"></div>
-<div class="pixel" id="zi12"></div>
-<div class="pixel" id="zj12"></div>
-<div class="pixel" id="zk12"></div>
-<div class="pixel" id="zl12"></div>
-<div class="pixel" id="zm12"></div>
-<div class="pixel" id="zn12"></div>
-<div class="pixel" id="zo12"></div>
-<div class="pixel" id="zp12"></div>
 </div>
 <div class="rowz" id="row11">
 <div class="pixel" id="a11"></div>
@@ -683,22 +108,6 @@ v26.0 > 12/10/2023
 <div class="pixel" id="n11"></div>
 <div class="pixel" id="o11"></div>
 <div class="pixel" id="p11"></div>
-<div class="pixel" id="za11"></div>
-<div class="pixel" id="zb11"></div>
-<div class="pixel" id="zc11"></div>
-<div class="pixel" id="zd11"></div>
-<div class="pixel" id="ze11"></div>
-<div class="pixel" id="zf11"></div>
-<div class="pixel" id="zg11"></div>
-<div class="pixel" id="zh11"></div>
-<div class="pixel" id="zi11"></div>
-<div class="pixel" id="zj11"></div>
-<div class="pixel" id="zk11"></div>
-<div class="pixel" id="zl11"></div>
-<div class="pixel" id="zm11"></div>
-<div class="pixel" id="zn11"></div>
-<div class="pixel" id="zo11"></div>
-<div class="pixel" id="zp11"></div>
 </div>
 <div class="rowz" id="row10">
 <div class="pixel" id="a10"></div>
@@ -717,22 +126,6 @@ v26.0 > 12/10/2023
 <div class="pixel" id="n10"></div>
 <div class="pixel" id="o10"></div>
 <div class="pixel" id="p10"></div>
-<div class="pixel" id="za10"></div>
-<div class="pixel" id="zb10"></div>
-<div class="pixel" id="zc10"></div>
-<div class="pixel" id="zd10"></div>
-<div class="pixel" id="ze10"></div>
-<div class="pixel" id="zf10"></div>
-<div class="pixel" id="zg10"></div>
-<div class="pixel" id="zh10"></div>
-<div class="pixel" id="zi10"></div>
-<div class="pixel" id="zj10"></div>
-<div class="pixel" id="zk10"></div>
-<div class="pixel" id="zl10"></div>
-<div class="pixel" id="zm10"></div>
-<div class="pixel" id="zn10"></div>
-<div class="pixel" id="zo10"></div>
-<div class="pixel" id="zp10"></div>
 </div>
 <div class="rowz" id="row9">
 <div class="pixel" id="a9"></div>
@@ -751,22 +144,6 @@ v26.0 > 12/10/2023
 <div class="pixel" id="n9"></div>
 <div class="pixel" id="o9"></div>
 <div class="pixel" id="p9"></div>
-<div class="pixel" id="za9"></div>
-<div class="pixel" id="zb9"></div>
-<div class="pixel" id="zc9"></div>
-<div class="pixel" id="zd9"></div>
-<div class="pixel" id="ze9"></div>
-<div class="pixel" id="zf9"></div>
-<div class="pixel" id="zg9"></div>
-<div class="pixel" id="zh9"></div>
-<div class="pixel" id="zi9"></div>
-<div class="pixel" id="zj9"></div>
-<div class="pixel" id="zk9"></div>
-<div class="pixel" id="zl9"></div>
-<div class="pixel" id="zm9"></div>
-<div class="pixel" id="zn9"></div>
-<div class="pixel" id="zo9"></div>
-<div class="pixel" id="zp9"></div>
 </div>
 <div class="rowz" id="row8">
 <div class="pixel" id="a8"></div>
@@ -785,22 +162,6 @@ v26.0 > 12/10/2023
 <div class="pixel" id="n8"></div>
 <div class="pixel" id="o8"></div>
 <div class="pixel" id="p8"></div>
-<div class="pixel" id="za8"></div>
-<div class="pixel" id="zb8"></div>
-<div class="pixel" id="zc8"></div>
-<div class="pixel" id="zd8"></div>
-<div class="pixel" id="ze8"></div>
-<div class="pixel" id="zf8"></div>
-<div class="pixel" id="zg8"></div>
-<div class="pixel" id="zh8"></div>
-<div class="pixel" id="zi8"></div>
-<div class="pixel" id="zj8"></div>
-<div class="pixel" id="zk8"></div>
-<div class="pixel" id="zl8"></div>
-<div class="pixel" id="zm8"></div>
-<div class="pixel" id="zn8"></div>
-<div class="pixel" id="zo8"></div>
-<div class="pixel" id="zp8"></div>
 </div>
 <div class="rowz" id="row7">
 <div class="pixel" id="a7"></div>
@@ -819,22 +180,6 @@ v26.0 > 12/10/2023
 <div class="pixel" id="n7"></div>
 <div class="pixel" id="o7"></div>
 <div class="pixel" id="p7"></div>
-<div class="pixel" id="za7"></div>
-<div class="pixel" id="zb7"></div>
-<div class="pixel" id="zc7"></div>
-<div class="pixel" id="zd7"></div>
-<div class="pixel" id="ze7"></div>
-<div class="pixel" id="zf7"></div>
-<div class="pixel" id="zg7"></div>
-<div class="pixel" id="zh7"></div>
-<div class="pixel" id="zi7"></div>
-<div class="pixel" id="zj7"></div>
-<div class="pixel" id="zk7"></div>
-<div class="pixel" id="zl7"></div>
-<div class="pixel" id="zm7"></div>
-<div class="pixel" id="zn7"></div>
-<div class="pixel" id="zo7"></div>
-<div class="pixel" id="zp7"></div>
 </div>
 <div class="rowz" id="row6">
 <div class="pixel" id="a6"></div>
@@ -853,22 +198,6 @@ v26.0 > 12/10/2023
 <div class="pixel" id="n6"></div>
 <div class="pixel" id="o6"></div>
 <div class="pixel" id="p6"></div>
-<div class="pixel" id="za6"></div>
-<div class="pixel" id="zb6"></div>
-<div class="pixel" id="zc6"></div>
-<div class="pixel" id="zd6"></div>
-<div class="pixel" id="ze6"></div>
-<div class="pixel" id="zf6"></div>
-<div class="pixel" id="zg6"></div>
-<div class="pixel" id="zh6"></div>
-<div class="pixel" id="zi6"></div>
-<div class="pixel" id="zj6"></div>
-<div class="pixel" id="zk6"></div>
-<div class="pixel" id="zl6"></div>
-<div class="pixel" id="zm6"></div>
-<div class="pixel" id="zn6"></div>
-<div class="pixel" id="zo6"></div>
-<div class="pixel" id="zp6"></div>
 </div>
 <div class="rowz" id="row5">
 <div class="pixel" id="a5"></div>
@@ -887,22 +216,6 @@ v26.0 > 12/10/2023
 <div class="pixel" id="n5"></div>
 <div class="pixel" id="o5"></div>
 <div class="pixel" id="p5"></div>
-<div class="pixel" id="za5"></div>
-<div class="pixel" id="zb5"></div>
-<div class="pixel" id="zc5"></div>
-<div class="pixel" id="zd5"></div>
-<div class="pixel" id="ze5"></div>
-<div class="pixel" id="zf5"></div>
-<div class="pixel" id="zg5"></div>
-<div class="pixel" id="zh5"></div>
-<div class="pixel" id="zi5"></div>
-<div class="pixel" id="zj5"></div>
-<div class="pixel" id="zk5"></div>
-<div class="pixel" id="zl5"></div>
-<div class="pixel" id="zm5"></div>
-<div class="pixel" id="zn5"></div>
-<div class="pixel" id="zo5"></div>
-<div class="pixel" id="zp5"></div>
 </div>
 <div class="rowz" id="row4">
 <div class="pixel" id="a4"></div>
@@ -921,22 +234,6 @@ v26.0 > 12/10/2023
 <div class="pixel" id="n4"></div>
 <div class="pixel" id="o4"></div>
 <div class="pixel" id="p4"></div>
-<div class="pixel" id="za4"></div>
-<div class="pixel" id="zb4"></div>
-<div class="pixel" id="zc4"></div>
-<div class="pixel" id="zd4"></div>
-<div class="pixel" id="ze4"></div>
-<div class="pixel" id="zf4"></div>
-<div class="pixel" id="zg4"></div>
-<div class="pixel" id="zh4"></div>
-<div class="pixel" id="zi4"></div>
-<div class="pixel" id="zj4"></div>
-<div class="pixel" id="zk4"></div>
-<div class="pixel" id="zl4"></div>
-<div class="pixel" id="zm4"></div>
-<div class="pixel" id="zn4"></div>
-<div class="pixel" id="zo4"></div>
-<div class="pixel" id="zp4"></div>
 </div>
 <div class="rowz" id="row3">
 <div class="pixel" id="a3"></div>
@@ -955,22 +252,6 @@ v26.0 > 12/10/2023
 <div class="pixel" id="n3"></div>
 <div class="pixel" id="o3"></div>
 <div class="pixel" id="p3"></div>
-<div class="pixel" id="za3"></div>
-<div class="pixel" id="zb3"></div>
-<div class="pixel" id="zc3"></div>
-<div class="pixel" id="zd3"></div>
-<div class="pixel" id="ze3"></div>
-<div class="pixel" id="zf3"></div>
-<div class="pixel" id="zg3"></div>
-<div class="pixel" id="zh3"></div>
-<div class="pixel" id="zi3"></div>
-<div class="pixel" id="zj3"></div>
-<div class="pixel" id="zk3"></div>
-<div class="pixel" id="zl3"></div>
-<div class="pixel" id="zm3"></div>
-<div class="pixel" id="zn3"></div>
-<div class="pixel" id="zo3"></div>
-<div class="pixel" id="zp3"></div>
 </div>
 <div class="rowz" id="row2">
 <div class="pixel" id="a2"></div>
@@ -989,22 +270,6 @@ v26.0 > 12/10/2023
 <div class="pixel" id="n2"></div>
 <div class="pixel" id="o2"></div>
 <div class="pixel" id="p2"></div>
-<div class="pixel" id="za2"></div>
-<div class="pixel" id="zb2"></div>
-<div class="pixel" id="zc2"></div>
-<div class="pixel" id="zd2"></div>
-<div class="pixel" id="ze2"></div>
-<div class="pixel" id="zf2"></div>
-<div class="pixel" id="zg2"></div>
-<div class="pixel" id="zh2"></div>
-<div class="pixel" id="zi2"></div>
-<div class="pixel" id="zj2"></div>
-<div class="pixel" id="zk2"></div>
-<div class="pixel" id="zl2"></div>
-<div class="pixel" id="zm2"></div>
-<div class="pixel" id="zn2"></div>
-<div class="pixel" id="zo2"></div>
-<div class="pixel" id="zp2"></div>
 </div>
 <div class="rowz" id="row1">
 <div class="pixel" id="a1"></div>
@@ -1023,22 +288,25 @@ v26.0 > 12/10/2023
 <div class="pixel" id="n1"></div>
 <div class="pixel" id="o1"></div>
 <div class="pixel" id="p1"></div>
-<div class="pixel" id="za1"></div>
-<div class="pixel" id="zb1"></div>
-<div class="pixel" id="zc1"></div>
-<div class="pixel" id="zd1"></div>
-<div class="pixel" id="ze1"></div>
-<div class="pixel" id="zf1"></div>
-<div class="pixel" id="zg1"></div>
-<div class="pixel" id="zh1"></div>
-<div class="pixel" id="zi1"></div>
-<div class="pixel" id="zj1"></div>
-<div class="pixel" id="zk1"></div>
-<div class="pixel" id="zl1"></div>
-<div class="pixel" id="zm1"></div>
-<div class="pixel" id="zn1"></div>
-<div class="pixel" id="zo1"></div>
-<div class="pixel" id="zp1"></div>
+</div>
+
+<div class="rowz" id="row0">
+<div class="pixel" id="a0"></div>
+<div class="pixel" id="b0"></div>
+<div class="pixel" id="c0"></div>
+<div class="pixel" id="d0"></div>
+<div class="pixel" id="e0"></div>
+<div class="pixel" id="f0"></div>
+<div class="pixel" id="g0"></div>
+<div class="pixel" id="h0"></div>
+<div class="pixel" id="i0"></div>
+<div class="pixel" id="j0"></div>
+<div class="pixel" id="k0"></div>
+<div class="pixel" id="l0"></div>
+<div class="pixel" id="m0"></div>
+<div class="pixel" id="n0"></div>
+<div class="pixel" id="o0"></div>
+<div class="pixel" id="p0"></div>
 </div>
 </div>
 <style>
@@ -1050,7 +318,6 @@ float: left;
 }
 .pixel {
   
-  float: left;
   background:transparent;
 }
 #fireplace {
@@ -1077,2322 +344,385 @@ html {
 }
 </style>
 <script>
-var myflames=["fl1", "fl2", "fl3", "fl4", "fl5", "fl6", "fl7", "fl8", "fl9", "fl10", "fl11", "fl12", "fl13", "fl14", "fl15", "fl16", "fl17", "fl18", "fl19", "fl20", "fl21", "fl22", "fl23", "fl24", "fl25", "fl26", "fl27", "fl28", "fl29", "fl30"]
-  for (countzzz = 0; countzzz < myflames.length; countzzz++)
-{
-   myflames[countzzz] = 0;
-}
-var flamelocks=["lockfl1", "lockfl2", "lockfl3", "lockfl4", "lockfl5", "lockfl6", "lockfl7", "lockfl8", "lockfl9", "lockfl10", "lockfl11", "lockfl12", "lockfl13", "lockfl14", "lockfl15", "lockfl16", "lockfl17", "lockfl18", "lockfl19", "lockfl20", "lockfl21", "lockfl22", "lockfl23", "lockfl24", "lockfl25", "lockfl26", "lockfl27", "lockfl28", "lockfl29", "lockfl30"];
-for (countzzz = 0; countzzz < flamelocks.length; countzzz++)
-{
-   flamelocks[countzzz] = 0;
-}
-
-var lockfl1 = 0;
-var lockfl2 = 0;
-var lockfl3 = 0;
-var lockfl4 = 0;
-var lockfl5 = 0;
-var lockfl6 = 0;
-var lockfl7 = 0;
-var lockfl8 = 0;
-var lockfl9 = 0;
-var lockfl10 = 0;
-var lockfl11 = 0;
-var lockfl12 = 0;
-var lockfl13 = 0;
-var lockfl14 = 0;
-var lockfl15 = 0;
-var lockfl16 = 0;
-var lockfl17 = 0;
-var lockfl18 = 0;
-var lockfl19 = 0;
-var lockfl20 = 0;
-var lockfl21 = 0;
-var lockfl22 = 0;
-var lockfl23 = 0;
-var lockfl24 = 0;
-var lockfl25 = 0;
-var lockfl26 = 0;
-var lockfl27 = 0;
-var lockfl28 = 0;
-var lockfl29 = 0;
-var lockfl30 = 0;
-var fl1 = 0;
-var fl2 = 0;
-var fl3 = 0;
-var fl4 = 0;
-var fl5 = 0;
-var fl6 = 0;
-var fl7 = 0;
-var fl8 = 0;
-var fl9 = 0;
-var fl10 =0;
-var fl11 = 0;
-var fl12 = 0;
-var fl13 = 0;
-var fl14 = 0;
-var fl15 = 0;
-var fl16 = 0;
-var fl17 = 0;
-var fl18 = 0;
-var fl19 = 0;
-var fl20 = 0;
-var fl21 = 0;
-var fl22 = 0;
-var fl23 = 0;
-var fl24 = 0;
-var fl25 = 0;
-var fl26 = 0;
-var fl27 = 0;
-var fl28 = 0;
-var fl29 = 0;
-var fl30 = 0;
-
-var flametrans1 = 0;
-var flametrans2 = 0;
-var flametrans3 = 0;
-var flametrans4 = 0;
-var flametrans5 = 0;
-var flametrans6 = 0;
-var flametrans7 = 0;
-var flametrans8 = 0;
-var flametrans9 = 0;
-var flametrans10 = 0;
-
-var flametrans11 = 0;
-var flametrans12 = 0;
-var flametrans13 = 0;
-var flametrans14 = 0;
-var flametrans15 = 0;
-var flametrans16 = 0;
-var flametrans17 = 0;
-var flametrans18 = 0;
-var flametrans19 = 0;
-var flametrans20 = 0;
-
-var flametrans21 = 0;
-var flametrans22 = 0;
-var flametrans23 = 0;
-var flametrans24 = 0;
-var flametrans25 = 0;
-var flametrans26 = 0;
-var flametrans27 = 0;
-var flametrans28 = 0;
-var flametrans29 = 0;
-var flametrans30 = 0;
-
-var varz=["b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "z1", "z2", "z3", "z4", "z5", "z6", "z7", "z8", "z9", "z10", "z11", "z12", "z13", "z14", "z15"];
-var varo=["b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "za", "zb", "zc", "zd", "ze", "zf", "zg", "zh", "zi", "zj", "zk", "zl", "zm", "zn", "zo"];
-var smoke =0;
+var smoke =1;
 var smokewait = 0;
 var lock = 0;
 var smoketransition=0;
 var chooserandomsmoke=0;
 var bounce = 0;
-var smoke2 =0;
+var smoke2 =1;
 var lock2 = 0;
 var smoketransition1=0;
 var smoketransition2=0;
 var chooserandomsmoke2=0;
 
-var smoke3 =0;
+var smoke3 =1;
 var lock3 = 0;
 var smoketransition3=0;
 var chooserandomsmoke3=0;
 
-var smoke4 =0;
+var smoke4 =1;
 var lock4 = 0;
 var smoketransition4=0;
 var chooserandomsmoke4=0;
 
-var smoke5 =0;
+var smoke5 =1;
 var lock5 = 0;
 var smoketransition5=0;
 var chooserandomsmoke5=0;
-
-
-var extrawait =1;
-var extra = 0;
-var lock6 = 0;
-var extratransition1=0;
-var chooserandomextra=0;
-
-var extrawait1 =2;
-var extra1 = 3;
-var lock7 = 0;
-var extratransition1=0;
-var chooserandomextra1=0;
-
-var extrawait2 =3;
-var extra2 = 3;
-var lock8 = 0;
-var extratransition2=0;
-var chooserandomextra2=0;
-
-
-var extrawait3 =4;
-var extra3 = 3;
-var lock9 = 0;
-var extratransition3=0;
-var chooserandomextra3=0;
-
-var extrawait4 =5;
-var extra4 = 3;
-var lock10 = 0;
-var extratransition4=0;
-var chooserandomextra4=0;
-//sparks
-
-var smokex =16;
-var smokewaitx = 0;
-var lockx = 0;
-var smoketransitionx=0;
-var chooserandomsmokex=0;
-
-var smoke2x =20;
-var lock2x = 0;
-var smoketransition1x=0;
-var smoketransition2x=0;
-var chooserandomsmoke2x=0;
-
-var smoke3x =24;
-var lock3x = 0;
-var smoketransition3x=0;
-var chooserandomsmoke3x=0;
-
-var smoke4x =20;
-var lock4x = 0;
-var smoketransition4x=0;
-var chooserandomsmoke4x=0;
-
-var smoke5x =15;
-var lock5x = 0;
-var smoketransition5x=0;
-var chooserandomsmoke5x=0;
-
-var prevval = 3;
-for (count = 0; count < varz.length; count++)
-{
-   varz[count] = 0;
-}
-var forever=true;
-var flamep =["red", "#ff5a00", "#ff9a00", "#ffce00", "#ffe808", "#ffed39","#fff16b" ]
-var level1on = ["#563601"];
-var level2on = ["#8f5b01"];
-var level3on = ["#b57401"];
-var level4on = ["#da8c00"];
-var level5on = ["orange"];
+var fireplaceColors = ['0%', '18%', '17%', '19%', '9%', '63%', '56%', '50%'];
+var flamep =["#000000", "#ff5a00", "#ff9a00", "#ffce00", "#ffe808", "#ffed39","#fff16b" ]
+var level3 = ["#2a1b0e","#2a1b0e","#2a1b0e","#2a1b0e","#2a1b0e","#2a1b0e","#2a1b0e","#2a1b0e","#2a1b0e","#2a1b0e", "#342211"];
 var level5 = ["#140e00","#140e00","#140e00","#140e00","#140e00","#140e00","#140e00","#140e00","#140e00","#140e00", "#22160b"];
 var level4 = ["#22160b","#22160b","#22160b","#22160b","#22160b","#22160b","#22160b","#22160b","#22160b","#22160b", "#2a1b0e"];
-var level3 = ["#2a1b0e","#2a1b0e","#2a1b0e","#2a1b0e","#2a1b0e","#2a1b0e","#2a1b0e","#2a1b0e","#2a1b0e","#2a1b0e", "#342211"];
-var level2 = ["#342211","#342211","#342211","#342211","#342211","#342211","#342211","#342211","#342211","#342211"];
-var level1 = ["#412b15","#412b15","#412b15","#412b15","#412b15","#412b15","#412b15","#412b15","#412b15","#412b15"];
-var myfirecolorsmidnoglowlev1=["#ff9a00","transparent","transparent","transparent","transparent"];
-var myfirecolorsmidnoglowlev2=["#ff9a00", "transparent","transparent","transparent","transparent"];
-var myfirecolorsmidnoglowlev3=["#ff9a00", "yellow"];
-var myfirecolorsmidnoglowlev4=["#ffce00", "yellow"];
-var myfirecolorsmidnoglowlev5=["#ffe808", "yellow"];
-var myfirecolorsmidnoglowlev1t=["#ff9a00"];
-var myfirecolorsmidnoglowlev2t=["#ff9a00"];
-var myfirecolorsmidnoglowlev3t=["#ff9a00", "yellow"];
-var myfirecolorsmidnoglowlev4t=["#ffce00", "yellow"];
-var myfirecolorsmidnoglowlev5t=["#ffe808", "yellow"];
-var myfirecolorsmidnoglowlev1tx=["#ff9a00", "#ff9a00","#ff9a00","#ff9a00","#ff9a00","transparent"];
-var topz=["orange", "gold"];
-var myfirecolorsmidnoglowlev2tx=["#ff9a00","#ff9a00","#ff9a00","#ff9a00","#ff9a00","transparent"];
-var myfirecolorsmidnoglowlev3tx=["#ff9a00", "yellow","#ff9a00","#ff9a00","#ff9a00"];
-var myfirecolorsmidnoglowlev4tx=["#ffce00", "yellow","#ffce00","#ffce00","#ffce00"];
-var myfirecolorsmidnoglowlev5tx=["#ffe808", "yellow","#ffe808","#ffe808","#ffe808"];
-var myfirecolorsmid=[ "#fff16b"];
-var myfirecolorshigh=[ "transparent"];
-var bounceit=[1,2];
-var bounceitmodulus=0;
-var myfirecolorshighx=[  "transparent", "transparent","orange", "transparent", "transparent", "orange", "transparent","  transparent","orange"];
-
-var mypixels=["b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15",]
-var randfcolor1 = "";
-
-
-
-
-function firex()
-{
-
-//var edgeztopz = ["3", "3", "3", "3", "3", "3", "7", "12",  "26", "26", "26", "26", "26", "26", "32", "32", "26", "26", "26", "26", "3", "3", "3", "3", "3", "2", "2", "1", "1", "1"];
-if (varz[0] > 3)
-varz[0] = 1;
-if (varz[1] > 3)
-varz[1] =1;
-if (varz[2] > 3)
-varz[2] = 1;
-if (varz[3] > 3)
-varz[3] = 1;
-if (varz[4] > 3)
-varz[4] = 1;
-if (varz[5] > 3)
-varz[5] = 1;
-if (varz[6] > 7 )
-varz[6] = 1;
-if (varz[7] > 12)
-varz[7] = 1;
-if (varz[8] > 26)
-varz[8] = 1;
-if (varz[9] > 26)
-varz[9] = 1;
-if (varz[10] > 26)
-varz[10] = 1;
-if (varz[11] > 26)
-varz[11] = 1;
-if (varz[12] > 26)
-varz[12] = 1;
-if (varz[13] > 26)
-varz[13] = 1;
-if (varz[14] > 26)
-varz[14] = 1;
-
-if (varz[15] > 26)
-varz[15] = 1;
-if (varz[16] > 26)
-varz[16] = 1;
-if (varz[17] > 26)
-varz[17] = 1;
-if (varz[18] > 26)
-varz[18] = 1;
-if (varz[19] > 26)
-varz[19] = 1;
-if (varz[20] > 26)
-varz[20] = 1;
-if (varz[21] > 26)
-varz[21] = 1;
-if (varz[22] > 13)
-varz[22] = 1;
-if (varz[23] > 7)
-varz[23] = 1;
-if (varz[24] > 3)
-varz[24] = 1;
-if (varz[25] > 3)
-varz[25] = 1;
-if (varz[26] > 3)
-varz[26] = 1;
-if (varz[27] > 3)
-varz[27] = 1;
-if (varz[28] > 3)
-varz[28] = 1;
-if (varz[29] > 3)
-varz[29] = 1;
-
-
-
-for (count = 0; count < varz.length; count++)
-{
-
-    if (varz[count] < 2)
-    randfcolor1 = level3[Math.floor(Math.random()*level3.length)];
-	if (varz[count] < 3 && varz[count] > 1)
-    randfcolor1 = level4[Math.floor(Math.random()*level4.length)];
-    if (varz[count] < 4 && varz[count] > 2)
-    randfcolor1 = level5[Math.floor(Math.random()*level5.length)];
-    if (varz[count] < 5 && varz[count] > 3)
-    randfcolor1 = level5[Math.floor(Math.random()*level5.length)];	
-    if (varz[count] < 6 && varz[count] > 4)
-    randfcolor1 = level5[Math.floor(Math.random()*level5.length)];	
-
-
-//log 
-if (varz[count] > 2)
-randfcolor1 ="transparent";
-if (varz[count] > 2 && varz[count] < 32)
-randfcolor1 = "transparent";
-
-
-if (varz[count] > 2 && varz[count] < 32)
-    if (count == 4 || count == 25)
-    randfcolor1 = "transparent";
-if (varz[count] > 2&& varz[count] < 32)
-    if (count == 3 || count == 26)
-    randfcolor1 = "transparent";
-if (varz[count] > 2 && varz[count] < 32)
-    if (count == 2 || count == 27)
-    randfcolor1 = "transparent";
-if (varz[count] > 2 && varz[count] < 32)
-    if (count == 1 || count == 28)
-    randfcolor1 = "transparent";
-if (varz[count] > 1 && varz[count] < 32)
-    if (count == 0)
-    randfcolor1 = "transparent";
-    if (varz[count] == 2 && varz[count] < 32)
-    if (count == 29 || count==28 ||count == 27)
-    randfcolor1 = "transparent";
-    if (varz[count] == 3 && varz[count] < 32)
-    if (count == 29)
-    randfcolor1 = "transparent";
-    
-    
-    //actual flames
-    
-	if (lockfl1 == 0)
-	{
-	lockfl1 = 1;
-	randomx1 = 6;
-	if (bounceitmodulus%2 == 0)
-	randomx1h = Math.floor(Math.random()*3) + 1 + bounceit[0];
-	if (bounceitmodulus%2 != 0)
-	randomx1h = Math.floor(Math.random()*3) + 1 + bounceit[1];
-	}
-  if (lockfl2 == 0)
-	{
-	lockfl2 = 1;
-	randomx2 = 6;
-	if (bounceitmodulus%2 == 0)
-	randomx2h = Math.floor(Math.random()*3) + 2 + bounceit[0];
-	if (bounceitmodulus%2 != 0)
-	randomx2h = Math.floor(Math.random()*3) + 2 + bounceit[1];
-	}
-	if (lockfl3 == 0)
-	{
-	lockfl3 = 1;
-	randomx3 = 7;
-	if (bounceitmodulus%2 == 0)
-	randomx3h = Math.floor(Math.random()*3) + 4 + bounceit[0];
-	if (bounceitmodulus%2 != 0)
-	randomx3h = Math.floor(Math.random()*3) + 4 + bounceit[1];
-	}
-	if (lockfl4 == 0)
-	{
-	lockfl4 = 1;
-	randomx4 = 8;
-	if (bounceitmodulus%2 == 0)
-	randomx4h = Math.floor(Math.random()*3) + 5 + bounceit[0];
-	if (bounceitmodulus%2 != 0)
-	randomx4h = Math.floor(Math.random()*3) + 5 + bounceit[1];
-	}
-	if (lockfl5 == 0)
-	{
-	lockfl5 = 1;
-	randomx5 = 9;
-	if (bounceitmodulus%2 == 0)
-	randomx5h = Math.floor(Math.random()*3) + 8 + bounceit[0];
-	if (bounceitmodulus%2 != 0)
-	randomx5h = Math.floor(Math.random()*3) + 8 + bounceit[1];
-	}
-	if (lockfl6 == 0)
-	{
-	lockfl6 = 1;
-	randomx6 = 10;
-	if (bounceitmodulus%2 == 0)
-    randomx6h = Math.floor(Math.random()*3) + 7 + bounceit[0];
-	if (bounceitmodulus%2 != 0)
-    randomx6h = Math.floor(Math.random()*3) + 7 + bounceit[1];
-	}
-	if (lockfl7 == 0)
-	{
-	lockfl7 = 1;
-	randomx7 = 11;
-	if (bounceitmodulus%2 == 0)
-	randomx7h = Math.floor(Math.random()*3) + 8 + bounceit[0];
-	if (bounceitmodulus%2 != 0)
-	randomx7h = Math.floor(Math.random()*3) + 8 + bounceit[1];
-	}
-	if (lockfl8 == 0)
-	{
-	lockfl8 = 1;
-	randomx8 = 12;
-	if (bounceitmodulus%2 == 0)
-	randomx8h = Math.floor(Math.random()*3) + 8 + bounceit[0];
-	if (bounceitmodulus%2 != 0)
-	randomx8h = Math.floor(Math.random()*3) + 8 + bounceit[1];
-	}
-	if (lockfl9 == 0)
-	{
-	lockfl9 = 1;
-	randomx9 = 13;
-	if (bounceitmodulus%2 == 0)
-	randomx9h = Math.floor(Math.random()*3) +9 + bounceit[0];
-	if (bounceitmodulus%2 != 0)
-	randomx9h = Math.floor(Math.random()*3) +9 + bounceit[1];
-	}
-	if (lockfl10 == 0)
-	{
-	lockfl10 = 1;
-	randomx10 = 14;
-	if (bounceitmodulus%2 == 0)
-	randomx10h = Math.floor(Math.random()*3) +9 + bounceit[0];
-	if (bounceitmodulus%2 != 0)
-	randomx10h = Math.floor(Math.random()*3) +9 + bounceit[1];
-	}
- 
- 
-	if (lockfl11 == 0)
-	{
-	lockfl11 = 1;
-	randomx11 = 15;
-	if (bounceitmodulus%2 == 0)
-	randomx11h = Math.floor(Math.random()*3) +9 + bounceit[0];
-	if (bounceitmodulus%2 != 0)
-	randomx11h = Math.floor(Math.random()*3) +9 + bounceit[1];
-	}
-  if (lockfl12 == 0)
-	{
-	lockfl12 = 1;
-	randomx12 = 16;
-	if (bounceitmodulus%2 == 0)
-	randomx12h = Math.floor(Math.random()*3) +9 + bounceit[0];
-	if (bounceitmodulus%2 != 0)
-	randomx12h = Math.floor(Math.random()*3) +9 + bounceit[1];
-	}
-	
-	if (lockfl13 == 0)
-	{
-	lockfl13 = 1;
-	randomx13 = 17;
-	if (bounceitmodulus%2 == 0)
-	randomx13h = Math.floor(Math.random()*3) +8 + bounceit[0];
-	if (bounceitmodulus%2 != 0)
-	randomx13h = Math.floor(Math.random()*3) +8 + bounceit[1];
-	}
-	if (lockfl14 == 0)
-	{
-	lockfl14 = 1;
-	randomx14 = 18;
-	if (bounceitmodulus%2 == 0)
-	randomx14h = Math.floor(Math.random()*3) +7 + bounceit[0];
-	if (bounceitmodulus%2 != 0)
-	randomx14h = Math.floor(Math.random()*3) +7 + bounceit[1];
-	}
-	if (lockfl15 == 0)
-	{
-	lockfl15 = 1;
-	randomx15 = 19;
-	if (bounceitmodulus%2 == 0)
-	randomx15h = Math.floor(Math.random()*3) +8 + bounceit[0];
-	if (bounceitmodulus%2 != 0)
-	randomx15h = Math.floor(Math.random()*3) +8 + bounceit[1];
-	}
-	
-	
-	
-	
-	
-	if (lockfl16 == 0)
-	{
-	lockfl16 = 1;
-	randomx16 = 19;
-	if (bounceitmodulus%2 == 0)
-	randomx16h = Math.floor(Math.random()*3) +6 + bounceit[0];
-	if (bounceitmodulus%2 != 0)
-	randomx16h = Math.floor(Math.random()*3) +6 + bounceit[1];
-	}
-	
-	if (lockfl17 == 0)
-	{
-	lockfl17 = 1;
-	randomx17 = 20;
-	if (bounceitmodulus%2 == 0)
-	randomx17h = Math.floor(Math.random()*3) +5 + bounceit[0];
-	if (bounceitmodulus%2 != 0)
-	randomx17h = Math.floor(Math.random()*3) +5 + bounceit[1];
-	}
-	if (lockfl18 == 0)
-	{
-	lockfl18 = 1;
-	randomx18 = 21;
-	if (bounceitmodulus%2 == 0)
-	randomx18h = Math.floor(Math.random()*3) +4 + bounceit[0];
-	if (bounceitmodulus%2 != 0)
-	randomx18h = Math.floor(Math.random()*3) +4 + bounceit[1];
-	}
-	if (lockfl19 == 0)
-	{
-	lockfl19 = 1;
-	randomx19 = 22;
-	if (bounceitmodulus%2 == 0)
-	randomx19h = Math.floor(Math.random()*3) +2 + bounceit[0];
-	if (bounceitmodulus%2 != 0)
-	randomx19h = Math.floor(Math.random()*3) +2 + bounceit[1];
-	}
-	if (lockfl20 == 0)
-	{
-	lockfl20 = 1;
-	randomx20 = 23;
-	if (bounceitmodulus%2 == 0)
-	randomx20h = Math.floor(Math.random()*3) +1 + bounceit[0];
-	if (bounceitmodulus%2 != 0)
-	randomx20h = Math.floor(Math.random()*3) +1 + bounceit[1];
-	}
-	bounceitmodulus++;
-	if (bounceitmodulus > 30)
-	bounceitmodulus == 1;
- /*
-	if (lockfl21 == 0)
-	{
-	lockfl21 = 1;
-	randomx21 = 24;
-	randomx21h = Math.floor(Math.random()*4) +  8;
-	}
-  if (lockfl22 == 0)
-	{
-	lockfl22 = 1;
-	randomx22 = 25;
-	randomx22h = Math.floor(Math.random()*4) + 8;
-	}
-	
-	if (lockfl23 == 0)
-	{
-	lockfl23 = 1;
-	randomx23 = 14;
-	randomx23h = Math.floor(Math.random()*6) +8;
-	}
-
-	if (lockfl24 == 0)
-	{
-	lockfl24 = 1;
-	randomx24 = 15;
-	randomx24h = Math.floor(Math.random()*6) + 8;
-	}
-	if (lockfl25 == 0)
-	{
-	lockfl25 = 1;
-	randomx25 = 16;
-	randomx25h = Math.floor(Math.random()*4) + 8;
-	}
-	if (lockfl26 == 0)
-	{
-	lockfl26 = 1;
-	randomx26 = 17;
-	randomx26h = Math.floor(Math.random()*4) + 8;
-	}
-	if (lockfl27 == 0)
-	{
-	lockfl27 = 1;
-	randomx27 = 18;
-	randomx27h = Math.floor(Math.random()*4) + 8;
-	}
-	if (lockfl28 == 0)
-	{
-	lockfl28 = 1;
-	randomx28 = 19;
-	randomx28h = Math.floor(Math.random()*3) + 6;
-	}
-	if (lockfl29 == 0)
-	{
-	lockfl29 = 1;
-	randomx29 = 20;
-	randomx29h = Math.floor(Math.random()*3) + 4;
-	}
-	if (lockfl30 == 0)
-	{
-	lockfl30 = 1;
-	randomx30 = 21;
-	randomx30h = Math.floor(Math.random()*2) + 3;
-	}
- 
- 
-
- */
- 
- 
- 
-	
-	if (varz[fl1] > 2 && varz[fl1] < randomx1h)
-	{
-	var flammy = "#" + varo[randomx1].toString() + varz[fl1].toString();
-	var randinner = myfirecolorsmid[Math.floor(Math.random()*myfirecolorsmid.length)];
-	if (varz[fl1] > 2 &&  varz[fl1] < randomx1h)
-    $( flammy).css("background", randinner);
-	if (varz[fl1] > (randomx1h - 6))
-	$( flammy).css("background", flamep[5]);
-	if (varz[fl1] > (randomx1h - 5))
-	$( flammy).css("background", flamep[4]);
-	if (varz[fl1] > (randomx1h - 4))
-	$( flammy).css("background", flamep[3]);
-	if (varz[fl1] > (randomx1h - 3))
-	$( flammy).css("background", flamep[2]);
-	if (varz[fl1] > (randomx1h - 2))
-	$( flammy).css("background", flamep[1]);
-	if (varz[fl1] > (randomx1h - 1))
-	$( flammy).css("background", flamep[0]);
-	}
-	flametrans1++;
-	if (flametrans1 > 60)
-	{
-	  flametrans1=0;
-	  fl1++;
-	}
-	if (varz[fl2] > 2 && varz[fl2] < randomx2h)
-	{
-	var flammy = "#" + varo[randomx2].toString() + varz[fl2].toString();
-	var randinner = myfirecolorsmid[Math.floor(Math.random()*myfirecolorsmid.length)];
-	if (varz[fl2] > 2 &&  varz[fl2] < randomx2h)
-    $( flammy).css("background", randinner);
-	if (varz[fl2] > (randomx2h - 6))
-	$( flammy).css("background", flamep[5]);
-	if (varz[fl2] > (randomx2h - 5))
-	$( flammy).css("background", flamep[4]);
-	if (varz[fl2] > (randomx2h - 4))
-	$( flammy).css("background", flamep[3]);
-	if (varz[fl2] > (randomx2h - 3))
-	$( flammy).css("background", flamep[2]);
-	if (varz[fl2] > (randomx2h - 2))
-	$( flammy).css("background", flamep[1]);
-	if (varz[fl2] > (randomx2h - 1))
-	$( flammy).css("background", flamep[0]);
-	}
-	flametrans2++;
-	if (flametrans2 > 60)
-	{
-	  flametrans2=0;
-	  fl2++;
-	}	
-	
-	if (varz[fl3] > 2 && varz[fl3] < randomx3h)
-	{
-	var flammy = "#" + varo[randomx3].toString() + varz[fl3].toString();
-	var randinner = myfirecolorsmid[Math.floor(Math.random()*myfirecolorsmid.length)];
-	if (varz[fl3] > 2 &&  varz[fl3] < randomx3h)
-    $( flammy).css("background", randinner);
-	if (varz[fl3] > (randomx3h - 6))
-	$( flammy).css("background", flamep[5]);
-	if (varz[fl3] > (randomx3h - 5))
-	$( flammy).css("background", flamep[4]);
-	if (varz[fl3] > (randomx3h - 4))
-	$( flammy).css("background", flamep[3]);
-	if (varz[fl3] > (randomx3h - 3))
-	$( flammy).css("background", flamep[2]);
-	if (varz[fl3] > (randomx3h - 2))
-	$( flammy).css("background", flamep[1]);
-	if (varz[fl3] > (randomx3h - 1))
-	$( flammy).css("background", flamep[0]);
-	}
-	flametrans3++;
-	if (flametrans3 > 60)
-	{
-	  flametrans3=0;
-	  fl3++;
-	}
-	
-	if (varz[fl4] > 2 && varz[fl4] < randomx4h)
-	{
-	var flammy = "#" + varo[randomx4].toString() + varz[fl4].toString();
-	var randinner = myfirecolorsmid[Math.floor(Math.random()*myfirecolorsmid.length)];
-	if (varz[fl4] > 2 &&  varz[fl4] < randomx4h)
-    $( flammy).css("background", randinner);
-	if (varz[fl4] > (randomx4h - 6))
-	$( flammy).css("background", flamep[5]);
-	if (varz[fl4] > (randomx4h - 5))
-	$( flammy).css("background", flamep[4]);
-	if (varz[fl4] > (randomx4h - 4))
-	$( flammy).css("background", flamep[3]);
-	if (varz[fl4] > (randomx4h - 3))
-	$( flammy).css("background", flamep[2]);
-	if (varz[fl4] > (randomx4h - 2))
-	$( flammy).css("background", flamep[1]);
-	if (varz[fl4] > (randomx4h - 1))
-	$( flammy).css("background", flamep[0]);
-	}
-	flametrans4++;
-	if (flametrans4 > 60)
-	{
-	  flametrans4=0;
-	  fl4++;
-	}
-	if (varz[fl5] > 2 && varz[fl5] < randomx5h)
-	{
-	var flammy = "#" + varo[randomx5].toString() + varz[fl5].toString();
-	var randinner = myfirecolorsmid[Math.floor(Math.random()*myfirecolorsmid.length)];
-	if (varz[fl5] > 2 &&  varz[fl5] < randomx5h)
-    $( flammy).css("background", randinner);
-	if (varz[fl5] > (randomx5h - 6))
-	$( flammy).css("background", flamep[5]);
-	if (varz[fl5] > (randomx5h - 5))
-	$( flammy).css("background", flamep[4]);
-	if (varz[fl5] > (randomx5h - 4))
-	$( flammy).css("background", flamep[3]);
-	if (varz[fl5] > (randomx5h - 3))
-	$( flammy).css("background", flamep[2]);
-	if (varz[fl5] > (randomx5h - 2))
-	$( flammy).css("background", flamep[1]);
-	if (varz[fl5] > (randomx5h - 1))
-	$( flammy).css("background", flamep[0]);
-	}
-	flametrans5++;
-	if (flametrans5 > 60)
-	{
-	  flametrans5=0;
-	  fl5++;
-	}
-	
-	if (varz[fl6] > 2 && varz[fl6] < randomx6h)
-	{
-	var flammy = "#" + varo[randomx6].toString() + varz[fl6].toString();
-	var randinner = myfirecolorsmid[Math.floor(Math.random()*myfirecolorsmid.length)];
-	if (varz[fl6] > 2 &&  varz[fl6] < randomx6h)
-    $( flammy).css("background", randinner);
-	if (varz[fl6] > (randomx6h - 6))
-	$( flammy).css("background", flamep[5]);
-	if (varz[fl6] > (randomx6h - 5))
-	$( flammy).css("background", flamep[4]);
-	if (varz[fl6] > (randomx6h - 4))
-	$( flammy).css("background", flamep[3]);
-	if (varz[fl6] > (randomx6h - 3))
-	$( flammy).css("background", flamep[2]);
-	if (varz[fl6] > (randomx6h - 2))
-	$( flammy).css("background", flamep[1]);
-	if (varz[fl6] > (randomx6h - 1))
-	$( flammy).css("background", flamep[0]);
-	}
-	flametrans6++;
-	if (flametrans6 > 60)
-	{
-	  flametrans6=0;
-	  fl6++;
-	}
-	if (varz[fl7] > 2 && varz[fl7] < randomx7h)
-	{
-	var flammy = "#" + varo[randomx7].toString() + varz[fl7].toString();
-	var randinner = myfirecolorsmid[Math.floor(Math.random()*myfirecolorsmid.length)];
-	if (varz[fl7] > 2 &&  varz[fl7] < randomx7h)
-    $( flammy).css("background", randinner);
-	if (varz[fl7] > (randomx7h - 6))
-	$( flammy).css("background", flamep[5]);
-	if (varz[fl7] > (randomx7h - 5))
-	$( flammy).css("background", flamep[4]);
-	if (varz[fl7] > (randomx7h - 4))
-	$( flammy).css("background", flamep[3]);
-	if (varz[fl7] > (randomx7h - 3))
-	$( flammy).css("background", flamep[2]);
-	if (varz[fl7] > (randomx7h - 2))
-	$( flammy).css("background", flamep[1]);
-	if (varz[fl7] > (randomx7h - 1))
-	$( flammy).css("background", flamep[0]);
-	}
-	flametrans7++;
-	if (flametrans7 > 60)
-	{
-	  flametrans7=0;
-	  fl7++;
-	}	
-	if (varz[fl8] > 2 && varz[fl8] < randomx8h)
-	{
-	var flammy = "#" + varo[randomx8].toString() + varz[fl8].toString();
-	var randinner = myfirecolorsmid[Math.floor(Math.random()*myfirecolorsmid.length)];
-	if (varz[fl8] > 2 &&  varz[fl8] < randomx8h)
-    $( flammy).css("background", randinner);
-	if (varz[fl8] > (randomx8h - 6))
-	$( flammy).css("background", flamep[5]);
-	if (varz[fl8] > (randomx8h - 5))
-	$( flammy).css("background", flamep[4]);
-	if (varz[fl8] > (randomx8h - 4))
-	$( flammy).css("background", flamep[3]);
-	if (varz[fl8] > (randomx8h - 3))
-	$( flammy).css("background", flamep[2]);
-	if (varz[fl8] > (randomx8h - 2))
-	$( flammy).css("background", flamep[1]);
-	if (varz[fl8] > (randomx8h - 1))
-	$( flammy).css("background", flamep[0]);
-	}
-	flametrans8++;
-	if (flametrans8 > 60)
-	{
-	  flametrans8=0;
-	  fl8++;
-	}
-	if (varz[fl9] > 2 && varz[fl9] < randomx9h)
-	{
-	var flammy = "#" + varo[randomx9].toString() + varz[fl9].toString();
-	var randinner = myfirecolorsmid[Math.floor(Math.random()*myfirecolorsmid.length)];
-	if (varz[fl9] > 2 &&  varz[fl9] < randomx9h)
-    $( flammy).css("background", randinner);
-	if (varz[fl9] > (randomx9h - 6))
-	$( flammy).css("background", flamep[5]);
-	if (varz[fl9] > (randomx9h - 5))
-	$( flammy).css("background", flamep[4]);
-	if (varz[fl9] > (randomx9h - 4))
-	$( flammy).css("background", flamep[3]);
-	if (varz[fl9] > (randomx9h - 3))
-	$( flammy).css("background", flamep[2]);
-	if (varz[fl9] > (randomx9h - 2))
-	$( flammy).css("background", flamep[1]);
-	if (varz[fl9] > (randomx9h - 1))
-	$( flammy).css("background", flamep[0]);
-	}
-	flametrans9++;
-	if (flametrans9 > 60)
-	{
-	  flametrans9=0;
-	  fl9++;
-	}
- 	if (varz[fl10] > 2 && varz[fl10] < randomx10h)
-	{
-	var flammy = "#" + varo[randomx10].toString() + varz[fl10].toString();
-	var randinner = myfirecolorsmid[Math.floor(Math.random()*myfirecolorsmid.length)];
-	if (varz[fl10] > 2 &&  varz[fl10] < randomx10h)
-    $( flammy).css("background", randinner);
-	if (varz[fl10] > (randomx10h - 6))
-	$( flammy).css("background", flamep[5]);
-	if (varz[fl10] > (randomx10h - 5))
-	$( flammy).css("background", flamep[4]);
-	if (varz[fl10] > (randomx10h - 4))
-	$( flammy).css("background", flamep[3]);
-	if (varz[fl10] > (randomx10h - 3))
-	$( flammy).css("background", flamep[2]);
-	if (varz[fl10] > (randomx10h - 2))
-	$( flammy).css("background", flamep[1]);
-	if (varz[fl10] > (randomx10h - 1))
-	$( flammy).css("background", flamep[0]);
-	}
-	flametrans10++;
-	if (flametrans10 > 60)
-	{
-	  flametrans10=0;
-	  fl10++;
-	}
-	
-	
-	
-	
-	
-
-	if (varz[fl11] > 2 && varz[fl11] < randomx11h)
-	{
-	var flammy = "#" + varo[randomx11].toString() + varz[fl11].toString();
-	var randinner = myfirecolorsmid[Math.floor(Math.random()*myfirecolorsmid.length)];
-	if (varz[fl11] > 2 &&  varz[fl11] < randomx11h)
-    $( flammy).css("background", randinner);
-	if (varz[fl11] > (randomx11h - 6))
-	$( flammy).css("background", flamep[5]);
-	if (varz[fl11] > (randomx11h - 5))
-	$( flammy).css("background", flamep[4]);
-	if (varz[fl11] > (randomx11h - 4))
-	$( flammy).css("background", flamep[3]);
-	if (varz[fl11] > (randomx11h - 3))
-	$( flammy).css("background", flamep[2]);
-	if (varz[fl11] > (randomx11h - 2))
-	$( flammy).css("background", flamep[1]);
-	if (varz[fl11] > (randomx11h - 1))
-	$( flammy).css("background", flamep[0]);
-	}
-	flametrans11++;
-	if (flametrans11 > 60)
-	{
-	  flametrans11=0;
-	  fl11++;
-	}
-	if (varz[fl12] > 2 && varz[fl12] < randomx12h)
-	{
-	var flammy = "#" + varo[randomx12].toString() + varz[fl12].toString();
-	var randinner = myfirecolorsmid[Math.floor(Math.random()*myfirecolorsmid.length)];
-	if (varz[fl12] > 2 &&  varz[fl12] < randomx12h)
-    $( flammy).css("background", randinner);
-	if (varz[fl12] > (randomx12h - 6))
-	$( flammy).css("background", flamep[5]);
-	if (varz[fl12] > (randomx12h - 5))
-	$( flammy).css("background", flamep[4]);
-	if (varz[fl12] > (randomx12h - 4))
-	$( flammy).css("background", flamep[3]);
-	if (varz[fl12] > (randomx12h - 3))
-	$( flammy).css("background", flamep[2]);
-	if (varz[fl12] > (randomx12h - 2))
-	$( flammy).css("background", flamep[1]);
-	if (varz[fl12] > (randomx12h - 1))
-	$( flammy).css("background", flamep[0]);
-	}
-	flametrans12++;
-	if (flametrans12 > 60)
-	{
-	  flametrans12=0;
-	  fl12++;
-	}	
-	
-	if (varz[fl13] > 2 && varz[fl13] < randomx13h)
-	{
-	var flammy = "#" + varo[randomx13].toString() + varz[fl13].toString();
-	var randinner = myfirecolorsmid[Math.floor(Math.random()*myfirecolorsmid.length)];
-	if (varz[fl13] > 2 &&  varz[fl13] < randomx13h)
-    $( flammy).css("background", randinner);
-	if (varz[fl13] > (randomx13h - 6))
-	$( flammy).css("background", flamep[5]);
-	if (varz[fl13] > (randomx13h - 5))
-	$( flammy).css("background", flamep[4]);
-	if (varz[fl13] > (randomx13h - 4))
-	$( flammy).css("background", flamep[3]);
-	if (varz[fl13] > (randomx13h - 3))
-	$( flammy).css("background", flamep[2]);
-	if (varz[fl13] > (randomx13h - 2))
-	$( flammy).css("background", flamep[1]);
-	if (varz[fl13] > (randomx13h - 1))
-	$( flammy).css("background", flamep[0]);
-	}
-	flametrans13++;
-	if (flametrans13 > 60)
-	{
-	  flametrans13=0;
-	  fl13++;
-	}
-	
-	if (varz[fl14] > 2 && varz[fl14] < randomx14h)
-	{
-	var flammy = "#" + varo[randomx14].toString() + varz[fl14].toString();
-	var randinner = myfirecolorsmid[Math.floor(Math.random()*myfirecolorsmid.length)];
-	if (varz[fl14] > 2 &&  varz[fl14] < randomx14h)
-    $( flammy).css("background", randinner);
-	if (varz[fl14] > (randomx14h - 6))
-	$( flammy).css("background", flamep[5]);
-	if (varz[fl14] > (randomx14h - 5))
-	$( flammy).css("background", flamep[4]);
-	if (varz[fl14] > (randomx14h - 4))
-	$( flammy).css("background", flamep[3]);
-	if (varz[fl14] > (randomx14h - 3))
-	$( flammy).css("background", flamep[2]);
-	if (varz[fl14] > (randomx14h - 2))
-	$( flammy).css("background", flamep[1]);
-	if (varz[fl14] > (randomx14h - 1))
-	$( flammy).css("background", flamep[0]);
-	}
-	flametrans14++;
-	if (flametrans14 > 60)
-	{
-	  flametrans14=0;
-	  fl14++;
-	}
-	if (varz[fl15] > 2 && varz[fl15] < randomx15h)
-	{
-	var flammy = "#" + varo[randomx15].toString() + varz[fl15].toString();
-	var randinner = myfirecolorsmid[Math.floor(Math.random()*myfirecolorsmid.length)];
-	if (varz[fl15] > 2 &&  varz[fl15] < randomx15h)
-    $( flammy).css("background", randinner);
-	if (varz[fl15] > (randomx15h - 6))
-	$( flammy).css("background", flamep[5]);
-	if (varz[fl15] > (randomx15h - 5))
-	$( flammy).css("background", flamep[4]);
-	if (varz[fl15] > (randomx15h - 4))
-	$( flammy).css("background", flamep[3]);
-	if (varz[fl15] > (randomx15h - 3))
-	$( flammy).css("background", flamep[2]);
-	if (varz[fl15] > (randomx15h - 2))
-	$( flammy).css("background", flamep[1]);
-	if (varz[fl15] > (randomx15h - 1))
-	$( flammy).css("background", flamep[0]);
-	}
-	flametrans15++;
-	if (flametrans15 > 60)
-	{
-	  flametrans15=0;
-	  fl15++;
-	}
-	
-	if (varz[fl16] > 2 && varz[fl16] < randomx16h)
-	{
-	var flammy = "#" + varo[randomx16].toString() + varz[fl16].toString();
-	var randinner = myfirecolorsmid[Math.floor(Math.random()*myfirecolorsmid.length)];
-	if (varz[fl16] > 2 &&  varz[fl16] < randomx16h)
-    $( flammy).css("background", randinner);
-	if (varz[fl16] > (randomx16h - 6))
-	$( flammy).css("background", flamep[5]);
-	if (varz[fl16] > (randomx16h - 5))
-	$( flammy).css("background", flamep[4]);
-	if (varz[fl16] > (randomx16h - 4))
-	$( flammy).css("background", flamep[3]);
-	if (varz[fl16] > (randomx16h - 3))
-	$( flammy).css("background", flamep[2]);
-	if (varz[fl16] > (randomx16h - 2))
-	$( flammy).css("background", flamep[1]);
-	if (varz[fl16] > (randomx16h - 1))
-	$( flammy).css("background", flamep[0]);
-	}
-	flametrans16++;
-	if (flametrans16 > 60)
-	{
-	  flametrans16=0;
-	  fl16++;
-	}
-	
-	
-	
-	if (varz[fl17] > 2 && varz[fl17] < randomx17h)
-	{
-	var flammy = "#" + varo[randomx17].toString() + varz[fl17].toString();
-	var randinner = myfirecolorsmid[Math.floor(Math.random()*myfirecolorsmid.length)];
-	if (varz[fl17] > 2 &&  varz[fl17] < randomx17h)
-    $( flammy).css("background", randinner);
-	if (varz[fl17] > (randomx17h - 6))
-	$( flammy).css("background", flamep[5]);
-	if (varz[fl17] > (randomx17h - 5))
-	$( flammy).css("background", flamep[4]);
-	if (varz[fl17] > (randomx17h - 4))
-	$( flammy).css("background", flamep[3]);
-	if (varz[fl17] > (randomx17h - 3))
-	$( flammy).css("background", flamep[2]);
-	if (varz[fl17] > (randomx17h - 2))
-	$( flammy).css("background", flamep[1]);
-	if (varz[fl17] > (randomx17h - 1))
-	$( flammy).css("background", flamep[0]);
-	}
-	flametrans17++;
-	if (flametrans17 > 60)
-	{
-	  flametrans17=0;
-	  fl17++;
-	}	
-	if (varz[fl18] > 2 && varz[fl18] < randomx18h)
-	{
-	var flammy = "#" + varo[randomx18].toString() + varz[fl18].toString();
-	var randinner = myfirecolorsmid[Math.floor(Math.random()*myfirecolorsmid.length)];
-	if (varz[fl18] > 2 &&  varz[fl18] < randomx18h)
-    $( flammy).css("background", randinner);
-	if (varz[fl18] > (randomx18h - 6))
-	$( flammy).css("background", flamep[5]);
-	if (varz[fl18] > (randomx18h - 5))
-	$( flammy).css("background", flamep[4]);
-	if (varz[fl18] > (randomx18h - 4))
-	$( flammy).css("background", flamep[3]);
-	if (varz[fl18] > (randomx18h - 3))
-	$( flammy).css("background", flamep[2]);
-	if (varz[fl18] > (randomx18h - 2))
-	$( flammy).css("background", flamep[1]);
-	if (varz[fl18] > (randomx18h - 1))
-	$( flammy).css("background", flamep[0]);
-	}
-	flametrans18++;
-	if (flametrans18 > 60)
-	{
-	  flametrans18=0;
-	  fl18++;
-	}
-	if (varz[fl19] > 2 && varz[fl19] < randomx19h)
-	{
-	var flammy = "#" + varo[randomx19].toString() + varz[fl19].toString();
-	var randinner = myfirecolorsmid[Math.floor(Math.random()*myfirecolorsmid.length)];
-	if (varz[fl19] > 2 &&  varz[fl19] < randomx19h)
-    $( flammy).css("background", randinner);
-	if (varz[fl19] > (randomx19h - 6))
-	$( flammy).css("background", flamep[5]);
-	if (varz[fl19] > (randomx19h - 5))
-	$( flammy).css("background", flamep[4]);
-	if (varz[fl19] > (randomx19h - 4))
-	$( flammy).css("background", flamep[3]);
-	if (varz[fl19] > (randomx19h - 3))
-	$( flammy).css("background", flamep[2]);
-	if (varz[fl19] > (randomx19h - 2))
-	$( flammy).css("background", flamep[1]);
-	if (varz[fl19] > (randomx19h - 1))
-	$( flammy).css("background", flamep[0]);
-	}
-	flametrans19++;
-	if (flametrans19 > 60)
-	{
-	  flametrans19=0;
-	  fl19++;
-	}
- 	if (varz[fl20] > 2 && varz[fl20] < randomx20h)
-	{
-	var flammy = "#" + varo[randomx20].toString() + varz[fl20].toString();
-	var randinner = myfirecolorsmid[Math.floor(Math.random()*myfirecolorsmid.length)];
-	if (varz[fl20] > 2 &&  varz[fl20] < randomx20h)
-    $( flammy).css("background", randinner);
-	if (varz[fl20] > (randomx20h - 6))
-	$( flammy).css("background", flamep[5]);
-	if (varz[fl20] > (randomx20h - 5))
-	$( flammy).css("background", flamep[4]);
-	if (varz[fl20] > (randomx20h - 4))
-	$( flammy).css("background", flamep[3]);
-	if (varz[fl20] > (randomx20h - 3))
-	$( flammy).css("background", flamep[2]);
-	if (varz[fl20] > (randomx20h - 2))
-	$( flammy).css("background", flamep[1]);
-	if (varz[fl20] > (randomx20h - 1))
-	$( flammy).css("background", flamep[0]);
-	}
-	flametrans20++;
-	if (flametrans20 > 60)
-	{
-	  flametrans20=0;
-	  fl20++;
-	}
-	
-	
-	
-	
-	/*
-	
-	
-	
-	
-	
-	
-	if (varz[fl21] > 2 && varz[fl21] < randomx21h)
-	{
-	var flammy = "#" + varo[randomx21].toString() + varz[fl21].toString();
-	if (varz[fl21] > 2 &&  varz[fl21] < randomx21h)
-    $( flammy).css("background", flamep[4]);
-	if (varz[fl21] > (randomx21h - 4))
-	$( flammy).css("background", flamep[3]);
-	if (varz[fl21] > (randomx21h - 3))
-	$( flammy).css("background", flamep[2]);
-	if (varz[fl21] > (randomx21h - 2))
-	$( flammy).css("background", flamep[1]);
-	if (varz[fl21] > (randomx21h - 1))
-	$( flammy).css("background", flamep[0]);
-	}
-	flametrans21++;
-	if (flametrans21 > 60)
-	{
-	  flametrans21=0;
-	  fl21++;
-	}
-	if (varz[fl22] > 2 && varz[fl22] < randomx22h)
-	{
-	var flammy = "#" + varo[randomx22].toString() + varz[fl22].toString();
-	if (varz[fl22] > 2 &&  varz[fl22] < randomx22h)
-    $( flammy).css("background", flamep[4]);
-	if (varz[fl22] > (randomx22h - 4))
-	$( flammy).css("background", flamep[3]);
-	if (varz[fl22] > (randomx22h - 3))
-	$( flammy).css("background", flamep[2]);
-	if (varz[fl22] > (randomx22h - 2))
-	$( flammy).css("background", flamep[1]);
-	if (varz[fl22] > (randomx22h - 1))
-	$( flammy).css("background", flamep[0]);
-	}
-	flametrans22++;
-	if (flametrans22 > 60)
-	{
-	  flametrans22=0;
-	  fl22++;
-	}	
-	
-	if (varz[fl23] > 2 && varz[fl23] < randomx23h)
-	{
-	var flammy = "#" + varo[randomx23].toString() + varz[fl23].toString();
-	if (varz[fl23] > 2 &&  varz[fl23] < randomx23h)
-    $( flammy).css("background", flamep[4]);
-	if (varz[fl23] > (randomx23h - 4))
-	$( flammy).css("background", flamep[3]);
-	if (varz[fl23] > (randomx23h - 3))
-	$( flammy).css("background", flamep[2]);
-	if (varz[fl23] > (randomx23h - 2))
-	$( flammy).css("background", flamep[1]);
-	if (varz[fl23] > (randomx23h - 1))
-	$( flammy).css("background", flamep[0]);
-	}
-	flametrans23++;
-	if (flametrans23 > 60)
-	{
-	  flametrans23=0;
-	  fl23++;
-	}
-	
-	if (varz[fl24] > 2 && varz[fl24] < randomx24h)
-	{
-	var flammy = "#" + varo[randomx24].toString() + varz[fl24].toString();
-	if (varz[fl24] > 2 &&  varz[fl24] < randomx24h)
-    $( flammy).css("background", flamep[4]);
-	if (varz[fl24] > (randomx24h - 4))
-	$( flammy).css("background", flamep[3]);
-	if (varz[fl24] > (randomx24h - 3))
-	$( flammy).css("background", flamep[2]);
-	if (varz[fl24] > (randomx24h - 2))
-	$( flammy).css("background", flamep[1]);
-	if (varz[fl24] > (randomx24h - 1))
-	$( flammy).css("background", flamep[0]);
-	}
-	flametrans24++;
-	if (flametrans24 > 60)
-	{
-	  flametrans24=0;
-	  fl24++;
-	}
-	if (varz[fl25] > 2 && varz[fl25] < randomx25h)
-	{
-	var flammy = "#" + varo[randomx25].toString() + varz[fl25].toString();
-	if (varz[fl25] > 2 &&  varz[fl25] < randomx25h)
-    $( flammy).css("background", flamep[4]);
-	if (varz[fl25] > (randomx25h - 4))
-	$( flammy).css("background", flamep[3]);
-	if (varz[fl25] > (randomx25h - 3))
-	$( flammy).css("background", flamep[2]);
-	if (varz[fl25] > (randomx25h - 2))
-	$( flammy).css("background", flamep[1]);
-	if (varz[fl25] > (randomx25h - 1))
-	$( flammy).css("background", flamep[0]);
-	}
-	flametrans25++;
-	if (flametrans25 > 60)
-	{
-	  flametrans25=0;
-	  fl25++;
-	}
-	
-	if (varz[fl26] > 2 && varz[fl26] < randomx26h)
-	{
-	var flammy = "#" + varo[randomx26].toString() + varz[fl26].toString();
-	if (varz[fl26] > 2 &&  varz[fl26] < randomx26h)
-    $( flammy).css("background", flamep[4]);
-	if (varz[fl26] > (randomx26h - 4))
-	$( flammy).css("background", flamep[3]);
-	if (varz[fl26] > (randomx26h - 3))
-	$( flammy).css("background", flamep[2]);
-	if (varz[fl26] > (randomx26h - 2))
-	$( flammy).css("background", flamep[1]);
-	if (varz[fl26] > (randomx26h - 1))
-	$( flammy).css("background", flamep[0]);
-	}
-	flametrans26++;
-	if (flametrans26 > 60)
-	{
-	  flametrans26=0;
-	  fl26++;
-	}
-	if (varz[fl27] > 2 && varz[fl27] < randomx27h)
-	{
-	var flammy = "#" + varo[randomx27].toString() + varz[fl27].toString();
-	if (varz[fl27] > 2 &&  varz[fl27] < randomx27h)
-    $( flammy).css("background", flamep[4]);
-	if (varz[fl27] > (randomx27h - 4))
-	$( flammy).css("background", flamep[3]);
-	if (varz[fl27] > (randomx27h - 3))
-	$( flammy).css("background", flamep[2]);
-	if (varz[fl27] > (randomx27h - 2))
-	$( flammy).css("background", flamep[1]);
-	if (varz[fl27] > (randomx27h - 1))
-	$( flammy).css("background", flamep[0]);
-	}
-	flametrans27++;
-	if (flametrans27 > 60)
-	{
-	  flametrans27=0;
-	  fl27++;
-	}	
-	if (varz[fl28] > 2 && varz[fl28] < randomx28h)
-	{
-	var flammy = "#" + varo[randomx18].toString() + varz[fl28].toString();
-	if (varz[fl28] > 2 &&  varz[fl28] < randomx28h)
-    $( flammy).css("background", flamep[4]);
-	if (varz[fl28] > (randomx28h - 4))
-	$( flammy).css("background", flamep[3]);
-	if (varz[fl28] > (randomx28h - 3))
-	$( flammy).css("background", flamep[2]);
-	if (varz[fl28] > (randomx28h - 2))
-	$( flammy).css("background", flamep[1]);
-	if (varz[fl28] > (randomx28h - 1))
-	$( flammy).css("background", flamep[0]);
-	}
-	flametrans28++;
-	if (flametrans28 > 60)
-	{
-	  flametrans28=0;
-	  fl28++;
-	}
-	if (varz[fl29] > 2 && varz[fl29] < randomx29h)
-	{
-	var flammy = "#" + varo[randomx29].toString() + varz[fl29].toString();
-	if (varz[fl29] > 2 &&  varz[fl29] < randomx29h)
-    $( flammy).css("background", flamep[4]);
-	if (varz[fl29] > (randomx29h - 4))
-	$( flammy).css("background", flamep[3]);
-	if (varz[fl29] > (randomx29h - 3))
-	$( flammy).css("background", flamep[2]);
-	if (varz[fl29] > (randomx29h - 2))
-	$( flammy).css("background", flamep[1]);
-	if (varz[fl29] > (randomx29h - 1))
-	$( flammy).css("background", flamep[0]);
-	}
-	flametrans29++;
-	if (flametrans29 > 60)
-	{
-	  flametrans29=0;
-	  fl29++;
-	}
- 	if (varz[fl30] > 2 && varz[fl30] < randomx30h)
-	{
-	var flammy = "#" + varo[randomx30].toString() + varz[fl30].toString();
-	if (varz[fl30] > 2 &&  varz[fl30] < randomx30h)
-    $( flammy).css("background", flamep[4]);
-	if (varz[fl30] > (randomx30h - 4))
-	$( flammy).css("background", flamep[3]);
-	if (varz[fl30] > (randomx30h - 3))
-	$( flammy).css("background", flamep[2]);
-	if (varz[fl30] > (randomx30h - 2))
-	$( flammy).css("background", flamep[1]);
-	if (varz[fl30] > (randomx30h - 1))
-	$( flammy).css("background", flamep[0]);
-	}
-	flametrans30++;
-	if (flametrans30 > 60)
-	{
-	  flametrans30=0;
-	  fl30++;
-	}
-	
-
-   */
-	
-	
- if (fl1 > randomx1h)
-	{
-	lockfl1 = 0;
-	fl1 = 1;
-	}
-  if (fl2 > randomx2h)
-	{
-	lockfl2 = 0;
-	fl2 = 2;
-	}
- if (fl3 > randomx3h)
-	{
-	lockfl3 = 0;
-	fl3 = 3;
-	}
-  if (fl4 > randomx4h)
-	{
-	lockfl4 = 0;
-	fl4 = 4;
-	}
-  if (fl5 > randomx5h)
-	{
-	lockfl5 = 0;
-	fl5 = 5;
-	}
-  if (fl6 > randomx6h)
-	{
-	lockfl6 = 0;
-	fl6 = 6;
-	}
-  if (fl7 > randomx7h)
-	{
-	lockfl7= 0;
-	fl7 = 7;
-	}
-  if (fl8 > randomx8h)
-	{
-	lockfl8= 0;
-	fl8 = 8;
-	}
-   if (fl9 > randomx9h)
-	{
-	lockfl9= 0;
-	fl9 = 9;
-	}
-
-
-   if (fl10 > randomx10h)
-	{
-	lockfl10= 0;
-	fl10 = 10;
-	}	
- if (fl11 > randomx11h)
-	{
-	lockfl11 = 0;
-	fl11 = 10;
-	}
-  if (fl12 > randomx12h)
-	{
-	lockfl12 = 0;
-	fl12 = 9;
-	}
- if (fl13 > randomx13h)
-	{
-	lockfl13 = 0;
-	fl13 = 8;
-	}
-  if (fl14 > randomx14h)
-	{
-	lockfl14 = 0;
-	fl14 = 7;
-	}
-  if (fl15 > randomx15h)
-	{
-	lockfl15 = 0;
-	fl15 = 6;
-	}
-  if (fl16 > randomx16h)
-	{
-	lockfl16 = 0;
-	fl16 = 5;
-	}
-	
-	
-  if (fl17 > randomx17h)
-	{
-	lockfl17= 0;
-	fl17 = 4;
-	}
-  if (fl18 > randomx18h)
-	{
-	lockfl18= 0;
-	fl18 = 3;
-	}
-   if (fl19 > randomx19h)
-	{
-	lockfl19= 0;
-	fl19 = 2;
-	}  
-if (fl20 > randomx20h)
-	{
-	lockfl20 = 0;
-	fl20 = 1;
-	}	
-	/*
- if (fl21 > randomx21h)
-	{
-	lockfl21 = 0;
-	fl21 = 10;
-	}
-  if (fl22 > randomx22h)
-	{
-	lockfl22 = 0;
-	fl22 = 10;
-	} 
- if (fl23 > randomx23h)
-	{
-	lockfl23 = 0;
-	fl23 = 10;
-	}
-  if (fl24 > randomx24h)
-	{
-	lockfl24 = 0;
-	fl24 = 10;
-	}
-  if (fl25 > randomx25h)
-	{
-	lockfl25 = 0;
-	fl25 = 10;
-	}
-  if (fl26 > randomx26h)
-	{
-	lockfl26 = 0;
-	fl26 = 10;
-	}
-  if (fl27 > randomx27h)
-	{
-	lockfl27= 0;
-	fl27 = 8;
-	}
-  if (fl28 > randomx28h)
-	{
-	lockfl28= 0;
-	fl28 = 6;
-	}
-   if (fl29 > randomx29h)
-	{
-	lockfl29= 0;
-	fl29 = 6;
-	}
-   if (fl30 > randomx30h)
-	{
-	lockfl30= 0;
-	fl30 = 6;
-	}	*/
-	
-    //MID 
-    /*
-    if (varz[count] > 2 && varz[count] < 32)
-    if (count == 6 || count == 23)
-    randfcolor1 = myfirecolorsmidnoglowlev2[Math.floor(Math.random()*myfirecolorsmidnoglowlev1.length)];
-    if (varz[count] > 2 && varz[count] < 32)
-    if (count == 7 || count == 22)
-    randfcolor1 = myfirecolorsmidnoglowlev3[Math.floor(Math.random()*myfirecolorsmidnoglowlev2.length)];
-    if (varz[count] > 2 && varz[count] < 32)
-    if (count == 8 || count == 21)
-    randfcolor1 = myfirecolorsmidnoglowlev3[Math.floor(Math.random()*myfirecolorsmidnoglowlev2.length)];
-    if (varz[count] > 2 && varz[count] < 32)
-    if (count == 9 || count == 20)
-    randfcolor1 = myfirecolorsmidnoglowlev4[Math.floor(Math.random()*myfirecolorsmidnoglowlev3.length)];
-    if (varz[count] > 2 && varz[count] < 32)
-    if (count == 10 || count == 19)
-    randfcolor1 = myfirecolorsmidnoglowlev4[Math.floor(Math.random()*myfirecolorsmidnoglowlev3.length)];
-   if (varz[count] > 3 && varz[count] < 32)
-    if (count == 11 || count == 18)
-    randfcolor1 = myfirecolorsmidnoglowlev5[Math.floor(Math.random()*myfirecolorsmidnoglowlev5.length)];
-   if (varz[count] > 3 && varz[count] < 32)
-    if (count == 12 || count == 17)
-    randfcolor1 = myfirecolorsmidnoglowlev5[Math.floor(Math.random()*myfirecolorsmidnoglowlev5.length)];
-  if (varz[count] > 3 && varz[count] < 32)
-    if (count == 13 || count == 16)
-    randfcolor1 = myfirecolorsmidnoglowlev5[Math.floor(Math.random()*myfirecolorsmidnoglowlev5.length)];
-  if (varz[count] > 2 && varz[count] < 32)
-    if (count == 14 || count == 15)
-    randfcolor1 = myfirecolorsmidnoglowlev5[Math.floor(Math.random()*myfirecolorsmidnoglowlev5.length)];
-  if (varz[count] > 1 && varz[count] < 32)
-    if (count == 15)
-    randfcolor1 = myfirecolorsmidnoglowlev5[Math.floor(Math.random()*myfirecolorsmidnoglowlev5.length)];
-  if (varz[count] > 1 && varz[count] < 3)
-    if (count == 16)
-    randfcolor1 = myfirecolorsmidnoglowlev5[Math.floor(Math.random()*myfirecolorsmidnoglowlev5.length)];
- /*
-     //MIDt
-    if (varz[count] > 10)
-    if (count == 6 || count == 23)
-    randfcolor1 = myfirecolorsmidnoglowlev2t[Math.floor(Math.random()*myfirecolorsmidnoglowlev1t.length)];
-    if (varz[count] > 10)
-    if (count == 7 || count == 22)
-    randfcolor1 = myfirecolorsmidnoglowlev3t[Math.floor(Math.random()*myfirecolorsmidnoglowlev2t.length)];
-    if (varz[count] > 10)
-    if (count == 8 || count == 21)
-    randfcolor1 = myfirecolorsmidnoglowlev3t[Math.floor(Math.random()*myfirecolorsmidnoglowlev2t.length)];
-    if (varz[count] > 10)
-    if (count == 9 || count == 20)
-    randfcolor1 = myfirecolorsmidnoglowlev4t[Math.floor(Math.random()*myfirecolorsmidnoglowlev3t.length)];
-    if (varz[count] > 10)
-    if (count == 10 || count == 19)
-    randfcolor1 = myfirecolorsmidnoglowlev4t[Math.floor(Math.random()*myfirecolorsmidnoglowlev3t.length)];
-	if (varz[count] > 10)
-    if (count == 11 || count == 18)
-    randfcolor1 = myfirecolorsmidnoglowlev5t[Math.floor(Math.random()*myfirecolorsmidnoglowlev5t.length)];
-	if (varz[count] > 10)
-    if (count == 12 || count == 17)
-    randfcolor1 = myfirecolorsmidnoglowlev5t[Math.floor(Math.random()*myfirecolorsmidnoglowlev5t.length)];
-	if (varz[count] > 10)
-    if (count == 13 || count == 16)
-    randfcolor1 = myfirecolorsmidnoglowlev5t[Math.floor(Math.random()*myfirecolorsmidnoglowlev5t.length)];
-	if (varz[count] > 10)
-    if (count == 14 || count == 15)
-    randfcolor1 = myfirecolorsmidnoglowlev5t[Math.floor(Math.random()*myfirecolorsmidnoglowlev5t.length)];
- 
-     //MIDtx
-    if (varz[count] > 5)
-    if (count == 6 || count == 23)
-    randfcolor1 = myfirecolorsmidnoglowlev2tx[Math.floor(Math.random()*myfirecolorsmidnoglowlev1tx.length)];
-    if (varz[count] > 5)
-    if (count == 7 || count == 22)
-    randfcolor1 = myfirecolorsmidnoglowlev3tx[Math.floor(Math.random()*myfirecolorsmidnoglowlev2tx.length)];
-    if (varz[count] > 5)
-    if (count == 8 || count == 21)
-    randfcolor1 = myfirecolorsmidnoglowlev3tx[Math.floor(Math.random()*myfirecolorsmidnoglowlev2tx.length)];
-    if (varz[count] > 5)
-    if (count == 9 || count == 20)
-    randfcolor1 = myfirecolorsmidnoglowlev4tx[Math.floor(Math.random()*myfirecolorsmidnoglowlev3tx.length)];
-    if (varz[count] > 5)
-    if (count == 10 || count == 19)
-    randfcolor1 = myfirecolorsmidnoglowlev4tx[Math.floor(Math.random()*myfirecolorsmidnoglowlev3tx.length)];
-	if (varz[count] > 5)
-    if (count == 11 || count == 18)
-    randfcolor1 = myfirecolorsmidnoglowlev5tx[Math.floor(Math.random()*myfirecolorsmidnoglowlev5tx.length)];
-	if (varz[count] > 5)
-    if (count == 12 || count == 17)
-    randfcolor1 = myfirecolorsmidnoglowlev5tx[Math.floor(Math.random()*myfirecolorsmidnoglowlev5tx.length)];
-	if (varz[count] > 5)
-    if (count == 13 || count == 16)
-    randfcolor1 = myfirecolorsmidnoglowlev5tx[Math.floor(Math.random()*myfirecolorsmidnoglowlev5tx.length)];
-	if (varz[count] > 5)
-    if (count == 14 || count == 15)
-    randfcolor1 = myfirecolorsmidnoglowlev5tx[Math.floor(Math.random()*myfirecolorsmidnoglowlev5tx.length)];
-   */
-   //topzorange
-   /*
-   var fheight = varz[count];
-   if (varz[count] > 2)
-   
-   randfcolor1 = flamep[4];
-   if (varz[count] > (fheight - 4))
-   randfcolor1 = flamep[3];
-   if (varz[count] > (fheight - 3))
-   randfcolor1 = flamep[2];
-   if (varz[count] > (fheight - 2))
-   randfcolor1 = flamep[1];
-   if (varz[count] > (fheight - 1))
-   randfcolor1 = flamep[0];
-   /*
-     //MIDtx
-    if (varz[count] > 10)
-    if (count == 6 || count == 23)
-    randfcolor1 = topz[Math.floor(Math.random()*topz.length)];
-    if (varz[count] > 10)
-    if (count == 7 || count == 22)
-    randfcolor1 = topz[Math.floor(Math.random()*topz.length)];
-    if (varz[count] > 10)
-    if (count == 8 || count == 21)
-    randfcolor1 = topz[Math.floor(Math.random()*topz.length)];
-    if (varz[count] > 10)
-    if (count == 9 || count == 20)
-    randfcolor1 = topz[Math.floor(Math.random()*topz.length)];
-    if (varz[count] > 10)
-    if (count == 10 || count == 19)
-    randfcolor1 = topz[Math.floor(Math.random()*topz.length)];
-	if (varz[count] > 10)
-    if (count == 11 || count == 18)
-    randfcolor1 = topz[Math.floor(Math.random()*topz.length)];
-	if (varz[count] > 10)
-    if (count == 12 || count == 17)
-    randfcolor1 = topz[Math.floor(Math.random()*topz.length)];
-	if (varz[count] > 10)
-    if (count == 13 || count == 16)
-    randfcolor1 = topz[Math.floor(Math.random()*topz.length)];
-	if (varz[count] > 10)
-    if (count == 14 || count == 15)
-    randfcolor1 = topz[Math.floor(Math.random()*topz.length)];*/
-   /*
-   if (bounce%2 == 0)
-   {
-   //superhigh
-   var randtop = Math.floor(Math.random()*3) + 10;
-   var randtop1 = Math.floor(Math.random()*3) + 10;
-   var randtop2 = Math.floor(Math.random()*3) + 10;
-   var randtop3 = Math.floor(Math.random()*3) + 10;
-   var randtop4 = Math.floor(Math.random()*3) + 10;
-   var randtop5 = Math.floor(Math.random()*3) + 9;
-   var randtop7 = Math.floor(Math.random()*3) + 9;
-   var randtop6 = Math.floor(Math.random()*3) + 7;
-   var randtop8 = Math.floor(Math.random()*3) + 6;
-   var randtop9 = Math.floor(Math.random()*3) + 3;
-  var randtop11 = Math.floor(Math.random()*3) + 3;
-   }
-   if (bounce%2 !=0 )
-   {
-      //superhigh
-   var randtop = Math.floor(Math.random()*2) + 10;
-   var randtop1 = Math.floor(Math.random()*2) + 10;
-   var randtop2 = Math.floor(Math.random()*2) + 10;
-   var randtop3 = Math.floor(Math.random()*2) + 10;
-   var randtop4 = Math.floor(Math.random()*2) + 10;
-   var randtop5 = Math.floor(Math.random()*2) + 9;
-   var randtop7 = Math.floor(Math.random()*2) + 9;
-   var randtop6 = Math.floor(Math.random()*2) + 7;
-   var randtop8 = Math.floor(Math.random()*2) + 6;
-   var randtop9 = Math.floor(Math.random()*2) + 3;
-  var randtop11 = Math.floor(Math.random()*2) + 3;
-   }
-   bounce++;
-   if (bounce  >11)
-   bounce =0;
-   if (varz[count] > randtop11 && varz[count] < 32)
-    if (count == 5 || count == 24)
-    randfcolor1 = myfirecolorshigh[Math.floor(Math.random()*myfirecolorshigh.length)];
-    if (varz[count] > randtop11 && varz[count] < 32)
-    if (count == 6 || count == 23)
-    randfcolor1 = myfirecolorshigh[Math.floor(Math.random()*myfirecolorshigh.length)];
-    if (varz[count] > randtop9 && varz[count] < 32)
-    if (count == 7 || count == 22)
-    randfcolor1 = myfirecolorshigh[Math.floor(Math.random()*myfirecolorshigh.length)];
-    if (varz[count] > randtop8 && varz[count] < 32)
-    if (count == 8 || count == 21)
-    randfcolor1 = myfirecolorshigh[Math.floor(Math.random()*myfirecolorshigh.length)];
-    if (varz[count] > randtop6 && varz[count] < 32)
-    if (count == 9 || count == 20)
-    randfcolor1 = myfirecolorshigh[Math.floor(Math.random()*myfirecolorshigh.length)];
-    if (varz[count] > randtop5 && varz[count] < 32)
-    if (count == 10 || count == 19)
-    randfcolor1 = myfirecolorshigh[Math.floor(Math.random()*myfirecolorshigh.length)];
-	if (varz[count] > randtop3 && varz[count] < 32)
-    if (count == 11 || count == 18)
-    randfcolor1 = myfirecolorshigh[Math.floor(Math.random()*myfirecolorshigh.length)];
-	if (varz[count] > randtop1 && varz[count] < 32)
-    if (count == 12 || count == 17)
-    randfcolor1 = myfirecolorshigh[Math.floor(Math.random()*myfirecolorshigh.length)];
-	if (varz[count] > randtop2 && varz[count] < 32)
-    if (count == 13 || count == 16)
-    randfcolor1 = myfirecolorshigh[Math.floor(Math.random()*myfirecolorshigh.length)];
-	if (varz[count] > randtop && varz[count] < 32)
-    if (count == 14 || count == 15)
-    randfcolor1 = myfirecolorshigh[Math.floor(Math.random()*myfirecolorshigh.length)];
-    
-    //highx
-  */
-
-   
-   // if (varz[count] > 20 && varz[count] < 32)
-  //  randfcolor1 = myfirecolorshigh[Math.floor(Math.random()*myfirecolorshigh.length)];
-	
-	var currstrb = "#" + varo[count].toString() + varz[count].toString();
-    $(currstrb).css("background", randfcolor1);
+var varo=["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p"];
+function hex2rgb(hex) {
+  return ['0x' + hex[1] + hex[2] | 0, '0x' + hex[3] + hex[4] | 0, '0x' + hex[5] + hex[6] | 0];
 }
 
 
-// Smoke1
+var fireplaceArray = new Array(256);
+//var fireplaceColors = ['0%', '73%', '70%', '65%', '60%', '55%', '50%', '45%'];
 
-	if (lock == 0)
+
+var poligon = 1;
+var fireplacePosition = 0;
+
+function fireplaceArrayInit() {
+	for (var i = 0; i < 230; i ++) {
+		fireplaceArray[i] = 0;
+	}
+	for (var i = 230; i < 235; i ++) {
+		fireplaceArray[i] = Math.round(Math.random() * 1) + 1;
+	}
+	
+}
+fireplaceArrayInit();
+function fireplaceMove() {
+	for (var x = 0; x < 16; x ++) {
+		for (var y = 0; y < 16; y ++) {
+			var id = fireplaceArray[(y << 4) + x];
+			if (id == 1 || id == 2 || id == 3) {
+				var r = Math.random();
+				var upID = fireplaceArray[(y - 1 << 4) + x];
+				if (upID != 1 && upID != 2 && upID != 3) {
+					var r = Math.random();
+					if (r > 0.2) {fireplaceArray[(y - 1 << 4) + x] = Math.round(Math.random() * 3) + 5}
+					if (r > 0.9) {fireplaceArray[(y << 4) + x] = Math.round(Math.random() * 2 + 1)}
+					//if (r < 0.1) {fireplaceArray[(y - 1 << 4) + x] = 0}
+				}
+			}
+			if (id == 5 || id == 6 || id == 7) {
+				var r = Math.random();
+				if (r > 0.99) fireplaceArray[(y - 1 << 4) + x] = 4;
+				if (r < 0.6) fireplaceArray[(y - 1 << 4) + x] = Math.round(Math.random() * 2 + 1) + 4;
+				//if (r > 0.5 && r < 0.999) fireplaceArray[(y - 1 << 4) + x] = 0;	
+				fireplaceArray[(y << 4) + x] = 0;
+			}
+			if (id == 4) {
+				fireplaceArray[(y - 1 << 4) + x] = 4;
+				fireplaceArray[(y << 4) + x] = 0;
+			}
+		}
+	}
+	//fireanim();
+}
+function fireplaceDraw() {
+	for (var x = 1; x < 15; x ++) {
+		for (var y = 7; y < 16; y ++) {
+			var id = fireplaceArray[(y << 4) + x];
+			
+			
+			var colour = "hsl(40, 100%, " + fireplaceColors[id] + ")";
+			
+			
+			
+			var flammy = "#" + varo[y].toString() + x.toString();
+			
+			if (y > 14 && y < 16)
+      colour = level3[Math.floor(Math.random()*level3.length)];
+      if (y > 13 && y < 15 && x > 2 && x < 14)
+      colour = level4[Math.floor(Math.random()*level4.length)];
+      if (y > 14 && y < 16 &&  x < 3)
+      colour = level3[Math.floor(Math.random()*level3.length)];
+      if (y > 12 && y < 14&&  x < 12 && x > 9)
+      colour = level5[Math.floor(Math.random()*level5.length)];
+			$(flammy).css("background", colour)
+			
+      
+      
+  if (lock == 0)
 	{
 	lock = 1;
-	chooserandomsmoke = Math.floor(Math.random()*30);
+	chooserandomsmoke = Math.floor(Math.random()*14);
 	}
- 
-
-	if (varz[smoke] > smoke && varz[smoke] < (smoke + 2))
+	if (x == chooserandomsmoke)
+	if (y < (16 + smoke) && y > (16+smoke-2))
 	{
-	var currstrb = "#" + varo[chooserandomsmoke].toString() + varz[smoke].toString();
-	if (smoke == 0)
-    $(currstrb).css("background", "orange");
-	if (smoke == 1)
-    $(currstrb).css("background", "gold");
-	if (smoke == 2)
-    $(currstrb).css("background", "gold");
-	if (smoke == 3)
-    $(currstrb).css("background", "gold");
-	if (smoke == 4)
-    $(currstrb).css("background", "yellow");
-  if (smoke == 5)
-    $(currstrb).css("background", "yellow");
-	
-	
+  if (smoke == 0)
+    $(flammy).css("background", "#fff16b");
+	if (smoke == -1)
+    $(flammy).css("background", "gold");
+	if (smoke == -2)
+    $(flammy).css("background", "gold");
+	if (smoke == -3)
+    $(flammy).css("background", "gold");
+	if (smoke == -4)
+    $(flammy).css("background", "orange");
+  if (smoke == -5)
+    $(flammy).css("background", "yellow");    
 	}
 	smoketransition++;
-	if (smoketransition > 15)
+	if (smoketransition  >  500)
 	{
 	  smoketransition=0;
-	  smoke++;
+	  smoke--;
 
 	}
-  if (smoke > 3)
+  if (smoke < -3)
 	{
 	lock = 0;
-	smoke = 0;
+	smoke = 1;
 	}
 	
-// Smoke2
-
-	if (lock2 == 0)
+  if (lock2 == 0)
 	{
 	lock2 = 1;
-	chooserandomsmoke2 = Math.floor(Math.random()*30);
+	chooserandomsmoke2 = Math.floor(Math.random()*14);
 	}
-  
-   
- 	if (varz[smoke2] > smoke2 && varz[smoke2] < (smoke2 + 2))
+	if (x == chooserandomsmoke2)
+	if (y < (16 + smoke2) && y > (16+smoke2-2))
 	{
-	var currstrb2 = "#" + varo[chooserandomsmoke2].toString() + varz[smoke2].toString();
-	if (smoke2 == 0)
-    $(currstrb2).css("background", "orange");
-	if (smoke2 == 1)
-    $(currstrb2).css("background", "gold");
-	if (smoke2 == 2)
-    $(currstrb2).css("background", "gold");
-	if (smoke2 == 3)
-    $(currstrb2).css("background", "gold");
-	if (smoke2 == 4)
-    $(currstrb2).css("background", "yellow");
-if (smoke2 == 5)
-    $(currstrb2).css("background", "yellow");
-	
+  if (smoke2 == 0)
+    $(flammy).css("background", "#fff16b");
+	if (smoke2 == -1)
+    $(flammy).css("background", "gold");
+	if (smoke2 == -2)
+    $(flammy).css("background", "gold");
+	if (smoke2 == -3)
+    $(flammy).css("background", "gold");
+	if (smoke2 == -4)
+    $(flammy).css("background", "orange");
+  if (smoke2 == -5)
+    $(flammy).css("background", "yellow");    
 	}
-    smoketransition1++;
-	if (smoketransition1 > 20)
-	{
-	  smoketransition1=0;
-	  smoke2++;
-
-	}
-  if (smoke2 > 3)
-	{
-	lock2 = 0;
-	smoke2 = 0;
-	}
-// Smoke3
-
-	if (lock3 == 0)
-	{
-	lock3 = 1;
-	chooserandomsmoke3 = Math.floor(Math.random()*30);
-	}
-  
-   if (varz[smoke3] > smoke3 && varz[smoke3] < (smoke3 + 2))
-	{
-	var currstrb3 = "#" + varo[chooserandomsmoke3].toString() + varz[smoke3].toString();
-	if (smoke3 == 0)
-    $(currstrb3).css("background", "orange");
-	if (smoke3 == 1)
-    $(currstrb3).css("background", "gold");
-	if (smoke3 == 2)
-    $(currstrb3).css("background", "gold");
-	if (smoke3 == 3)
-    $(currstrb3).css("background", "gold");
-	if (smoke3 == 4)
-    $(currstrb3).css("background", "yellow");
-	if (smoke3 == 5)
-    $(currstrb3).css("background", "yellow");
-
-	}
-    smoketransition2++;
-	if (smoketransition2 > 15)
+	smoketransition2++;
+	if (smoketransition2  >  500)
 	{
 	  smoketransition2=0;
-	  smoke3++;
+	  smoke2--;
 
 	}
-  if (smoke3 > 3)
+  if (smoke2 < -3)
 	{
-	lock3 = 0;
-	smoke3 = 0;
+	lock2 = 0;
+	smoke2 = 1;
 	}
-
-// Smoke4
-
-	if (lock4 == 0)
-	{
-	lock4 = 1;
-	chooserandomsmoke4 = Math.floor(Math.random()*30);
-	}
-  
-   
-	if (varz[smoke4] > smoke4 && varz[smoke4] < (smoke4 + 2))
-	{
-	var currstrb4 = "#" + varo[chooserandomsmoke4].toString() + varz[smoke4].toString();
-	if (smoke4 == 0)
-    $(currstrb4).css("background", "orange");
-	if (smoke4 == 1)
-    $(currstrb4).css("background", "gold");
-	if (smoke4 == 2)
-    $(currstrb4).css("background", "gold");
-	if (smoke4 == 3)
-    $(currstrb4).css("background", "gold");
-	if (smoke4 == 4)
-    $(currstrb4).css("background", "yellow");
-	if (smoke4 == 5)
-    $(currstrb4).css("background", "yellow");
 	
+	
+  if (lock3 == 0)
+	{
+	lock3 = 1;
+	chooserandomsmoke3 = Math.floor(Math.random()*14);
 	}
-    smoketransition3++;
-	if (smoketransition3 > 20)
+	if (x == chooserandomsmoke3)
+	if (y < (16 + smoke3) && y > (16+smoke3-2))
+	{
+  if (smoke3 == 0)
+    $(flammy).css("background", "#fff16b");
+	if (smoke3 == -1)
+    $(flammy).css("background", "gold");
+	if (smoke3 == -2)
+    $(flammy).css("background", "gold");
+	if (smoke3 == -3)
+    $(flammy).css("background", "gold");
+	if (smoke3 == -4)
+    $(flammy).css("background", "orange");
+  if (smoke3 == -5)
+    $(flammy).css("background", "yellow");    
+	}
+	smoketransition3++;
+	if (smoketransition3  >  400)
 	{
 	  smoketransition3=0;
-	  smoke4++;
+	  smoke3--;
 
 	}
-  if (smoke4 > 3)
+  if (smoke3 < -3)
 	{
-	lock4 = 0;
-	smoke4 = 0;
+	lock3 = 0;
+	smoke3 = 1;
 	}
 	
-
-// Smoke5
-
-	if (lock5 == 0)
+  if (lock4 == 0)
 	{
-	lock5 = 1;
-	chooserandomsmoke5 = Math.floor(Math.random()*30);
+	lock4 = 1;
+	chooserandomsmoke4 = Math.floor(Math.random()*14);
 	}
-  
-  
-	if (varz[smoke5] > smoke5 && varz[smoke5] < (smoke5 + 2))
+	if (x == chooserandomsmoke4)
+	if (y < (16 + smoke4) && y > (16+smoke4-2))
 	{
-	var currstrb5 = "#" + varo[chooserandomsmoke5].toString() + varz[smoke5].toString();
-	if (smoke5 == 0)
-    $(currstrb5).css("background", "orange");
-	if (smoke5 == 1)
-    $(currstrb5).css("background", "gold");
-	if (smoke5 == 2)
-    $(currstrb5).css("background", "gold");
-	if (smoke5 == 3)
-    $(currstrb5).css("background", "gold");
-	if (smoke5 == 4)
-    $(currstrb5).css("background", "yellow");
-  if (smoke5 == 5)
-    $(currstrb5).css("background", "yellow");
-	
+  if (smoke4 == 0)
+    $(flammy).css("background", "#fff16b");
+	if (smoke4 == -1)
+    $(flammy).css("background", "gold");
+	if (smoke4 == -2)
+    $(flammy).css("background", "gold");
+	if (smoke4 == -3)
+    $(flammy).css("background", "gold");
+	if (smoke4 == -4)
+    $(flammy).css("background", "orange");
+  if (smoke4 == -5)
+    $(flammy).css("background", "yellow");    
 	}
-    smoketransition4++;
-	if (smoketransition4 > 15)
+	smoketransition4++;
+	if (smoketransition4  >  300)
 	{
 	  smoketransition4=0;
-	  smoke5++;
+	  smoke4--;
 
 	}
-  if (smoke5 > 3)
+  if (smoke4 < -3)
+	{
+	lock4 = 0;
+	smoke4 = 1;
+	}
+	
+	
+  if (lock5 == 0)
+	{
+	lock5 = 1;
+	chooserandomsmoke5 = Math.floor(Math.random()*14);
+	}
+	if (x == chooserandomsmoke5)
+	if (y < (16 + smoke5) && y > (16+smoke5-2))
+	{
+  if (smoke5 == 0)
+    $(flammy).css("background", "#fff16b");
+	if (smoke5 == -1)
+    $(flammy).css("background", "gold");
+	if (smoke5 == -2)
+    $(flammy).css("background", "gold");
+	if (smoke5 == -3)
+    $(flammy).css("background", "gold");
+	if (smoke5 == -4)
+    $(flammy).css("background", "orange");
+  if (smoke5 == -5)
+    $(flammy).css("background", "yellow");    
+	}
+	smoketransition5++;
+	if (smoketransition5  >  500)
+	{
+	  smoketransition5=0;
+	  smoke5--;
+
+	}
+  if (smoke5 < -3)
 	{
 	lock5 = 0;
-	smoke5 = 0;
+	smoke5 = 1;
 	}
 	
-	//sparks
-	
-	
-
-// Smoke1
-
-	if (lockx == 0)
-	{
-	lockx = 1;
-	chooserandomsmokex = Math.floor(Math.random()*10) + 10;
-	}
- 
-  
-	if (varz[smokex] > smokex && varz[smokex] < (smokex + 2))
-	{
-	var currstrbx = "#" + varo[chooserandomsmokex].toString() + varz[smokex].toString();
-	
-	
-    $(currstrbx).css("background", flamep[1]);
-	
-	
-	}
-	smoketransitionx++;
-	if (smoketransitionx > 15)
-	{
-	  smoketransitionx=0;
-	  smokex++;
-
-	}
-  if (smokex > 26)
-	{
-	lockx = 0;
-	smokex = 10;
-	}
-	
-// Smoke2
-
-	if (lock2x == 0)
-	{
-	lock2x = 1;
-	chooserandomsmoke2x = Math.floor(Math.random()*10) + 10;
-	}
-  
-   
-    
- 	if (varz[smoke2x] > smoke2x && varz[smoke2x] < (smoke2x + 2))
-	{
-	var currstrb2x = "#" + varo[chooserandomsmoke2x].toString() + varz[smoke2x].toString();
-
-    $(currstrb2x).css("background", flamep[1]);
-	
-	}
-    smoketransition1x++;
-	if (smoketransition1x > 20)
-	{
-	  smoketransition1x=0;
-	  smoke2x++;
-
-	}
-  if (smoke2x > 26)
-	{
-	lock2x = 0;
-	smoke2x = 10;
-	}
-// Smoke3
-
-	if (lock3x == 0)
-	{
-	lock3x = 1;
-	chooserandomsmoke3x = Math.floor(Math.random()*10) + 10;
-	}
-  
-   
-   	if (varz[smoke3x] > smoke3x && varz[smoke3x] < (smoke3x + 2))
-	{
-	var currstrb3x = "#" + varo[chooserandomsmoke3x].toString() + varz[smoke3x].toString();
-	
-    $(currstrb3x).css("background", flamep[1]);
-
-
-	}
-    smoketransition2x++;
-	if (smoketransition2x > 15)
-	{
-	  smoketransition2x=0;
-	  smoke3x++;
-
-	}
-  if (smoke3x > 26)
-	{
-	lock3x = 0;
-	smoke3x = 10;
-	}
-
-// Smoke4
-
-	if (lock4x == 0)
-	{
-	lock4x = 1;
-	chooserandomsmoke4x = Math.floor(Math.random()*10) + 10;
-	}
-  
-   
-	if (varz[smoke4x] > smoke4x && varz[smoke4x] < (smoke4x + 2))
-	{
-	var currstrb4x = "#" + varo[chooserandomsmoke4x].toString() + varz[smoke4x].toString();
-	
-    $(currstrb4x).css("background",flamep[1]);
-
-	}
-    smoketransition3x++;
-	if (smoketransition3x > 20)
-	{
-	  smoketransition3x=0;
-	  smoke4x++;
-
-	}
-  if (smoke4x > 26)
-	{
-	lock4x = 0;
-	smoke4x = 10;
-	}
-	
-
-// Smoke5
-
-	if (lock5x == 0)
-	{
-	lock5x = 1;
-	chooserandomsmoke5x = Math.floor(Math.random()*10) + 10;
-	}
-  
-   
-	if (varz[smoke5x] > smoke5x && varz[smoke5x] < (smoke5x + 2))
-	{
-	var currstrb5x = "#" + varo[chooserandomsmoke5x].toString() + varz[smoke5x].toString();
-
-    $(currstrb5x).css("background",flamep[1]);
-	
-	
-	}
-    smoketransition4x++;
-	if (smoketransition4x > 15)
-	{
-	  smoketransition4x=0;
-	  smoke5x++;
-
-	}
-  if (smoke5x > 26)
-	{
-	lock5x = 0;
-	smoke5x = 10;
-	}
-
-
-// extrafire 
-
-	if (lock6 == 0)
-	{
-	lock6 = 1;
-	chooserandomextra = Math.floor(Math.random()*10) + 10;
-	}
- 
- // if (extrawait > 1)
- if (varz[extra] > 2)
-  if (varz[extra] < (extra -2) && varz[extra] > (extra -4))
-	{
-	  
-	
-	var currstrzzz = "#" + varo[chooserandomextra].toString() + varz[extra].toString();
-    $(currstrzzz).css("background", "transparent");
-
-	
-	}
-  
-//	if (extrawait > 10)
-//	extrawait =0;
-	
-  if (extrawait > 30)
-	{
-	extra++;	
-	extrawait=0;
-	}
-	if (extra > 16)
-	{
-	lock6 = 0;
-	extra = 4;
-	}
-	
-
-// extrafire2 
-
-	if (lock7 == 0)
-	{
-	lock7 = 1;
-	chooserandomextra1 = Math.floor(Math.random()*10) + 10;
-	}
- 
-   if (varz[extra1] > 2)
-  if (varz[extra1] < (extra1-2) && varz[extra1] > (extra1 -4))
-	{
-	var currstrzzz1 = "#" + varo[chooserandomextra1].toString() + varz[extra1].toString();
-    $(currstrzzz1).css("background", "transparent");
-    
-	}
-	if (extrawait1 > 5)
-	{
-	extra1++;	
-	extrawait1=0;
-	}
-	if (extra1 > 18)
-	{
-	lock7 = 0;
-	extra1 = 4;
-	}
+	fireplacePosition + x * poligon, y * poligon, poligon + 1, poligon + 1;
 		
-// extrafire3 
-
-	if (lock8 == 0)
-	{
-	lock8 = 1;
-	chooserandomextra2 = Math.floor(Math.random()*10) + 10;
+		}
 	}
- 
-   if (varz[extra2] > 2)
-    if (varz[extra2] < (extra2-2) && varz[extra2] > (extra2 -4))
-	{
-	var currstrzzz2 = "#" + varo[chooserandomextra2].toString() + varz[extra2].toString();
-    $(currstrzzz2).css("background", "transparent");
-    
-	}
-	if (extrawait2 > 5)
-	{
-	extra2++;	
-	extrawait2=0;
-	}
-	if (extra2 > 18)
-	{
-	lock8 = 0;
-	extra2 = 4;
-	}
-
-// extrafire4 
-
-	if (lock9 == 0)
-	{
-	lock9 = 1;
-	chooserandomextra3 = Math.floor(Math.random()*10) + 10;
-	}
- 
- if (varz[extra3] > 2)
-    if (varz[extra3] < (extra3-2) && varz[extra3] > (extra3 -4))
-	{
-	var currstrzzz3 = "#" + varo[chooserandomextra3].toString() + varz[extra3].toString();
-    $(currstrzzz3).css("background", "transparent");
-    
-	}
-	if (extrawait3 > 10)
-	{
-	extra3++;	
-	extrawait3=0;
-	}
-	if (extra3 > 18)
-	{
-	lock9 = 0;
-	extra3 = 4;
-	}
-// extrafire5 
-
-	if (lock10 == 0)
-	{
-	lock10 = 1;
-	chooserandomextra4 = Math.floor(Math.random()*10) + 10;
-	}
- 
-  if (varz[extra4] > 2)
-    if (varz[extra4] < (extra4-2) && varz[extra4] > (extra4 -4))
-	{
-	var currstrzzz4 = "#" + varo[chooserandomextra4].toString() + varz[extra4].toString();
-    $(currstrzzz4).css("background", "transparent");
-    
-	}
-	if (extrawait4 > 15)
-	{
-	extra4++;	
-	extrawait4=0;
-	}
-	if (extra4 > 18)
-	{
-	lock10 = 0;
-	extra4 = 4;
-	}
-	
-extrawait++;
-extrawait1++;
-extrawait2++;
-extrawait3++;
-extrawait4++;
-
-for (count = 0; count < varz.length; count++)
-{
-   varz[count] = varz[count] + 1;
 }
-if (count > 31)
-{
-count = 0;
-
-
-}
-fireanim();  
-}
+/*
 function fireanim()
 {
-setTimeout(firex,10);
+  setTimeout(fireplaceMove,120);
+setTimeout(fireplaceDraw,200);
+//setTimeout(setup, 100);
 }
-fireanim();
-adaptsize();
 
+fireanim();
+adaptsize();*/
 function adaptsize()
 {
 
-var width = $(document).width();
-var height = $(document).height();
+var width = $(window).width();
+var height = $(window).height();
 
 if (height > width)
 {
-var pixelsizew= (width / 32);
-var pixelsizeh = (height / 20);
+var pixelsizew= (width / 16);
+var pixelsizeh = (height / 16);
 var pxw = Math.round(pixelsizew);
 var pxh = Math.round(pixelsizeh);
+var actualh = pxw * 16;
 $(".pixel").width(pxw);
 $(".pixel").height(pxw);
   
-var myrows = pxw * 32;
-var mycols = pxh * 20;
+var myrows = pxw * 16;
+var mycols = pxw * 16;
 $(".rows").width(myrows);
 $(".rows").height(pxw);
 $("#fireplace").width(myrows);
 $("#fireplace").height(mycols);
+$("#fireplace").css("bottom", "0 !important");
 }
 
 if (height < width)
 {
-var pixelsizeh = (height / 20);
-var pixelsizew= (width / 32);
+var pixelsizeh = (height / 16);
+var pixelsizew= (width / 16);
 var pxh = Math.round(pixelsizeh);
 var pxw = Math.round(pixelsizew);
 $(".pixel").width(pxh);
 $(".pixel").height(pxh);
   
-var myrows = pxh * 20;
-var mycols = pxh * 32;
+var myrows = pxh * 16;
+var mycols = pxh * 16;
 $(".rows").width(myrows);
 $(".rows").height(pxh);
 $("#fireplace").width(mycols);
 $("#fireplace").height(myrows);
+$("#fireplace").css("bottom", "0 !important");
 }
 
 
 
 }
  
-$(window).resize(adaptsize);
+//$(window).resize(adaptsize)
+
+const fps = 5;
 
 
 
-function chimx()
-{
+
+var animationFrame;
+
+function frame() {
   
-  var randcolorpit= Math.floor(Math.random()*4);
-  var colorstr = "0." + (5 + randcolorpit);
-  $("#pit").css("opacity", colorstr);
-  chimanim();
+  setTimeout(() => {
+  
+  animationFrame = requestAnimationFrame(frame);
+  
+  // Actually draw
+  
+  // Let the host app know
+  adaptsize();
+fireplaceMove()
+fireplaceDraw();
+  }, 1000 / fps);
+  window.androidWallpaperInterface.drawFrame();
 }
-chimx();
-function chimanim()
-{
-setTimeout(chimx,100);
+
+function pauseWallpaper() {
+  cancelAnimationFrame(animationFrame);
+} 
+
+function resumeWallpaper() {
+  frame();
 }
-    $( document ).ready(function() {
-       
+
+frame();
 
 
-var firesound = new Pizzicato.Sound({ 
-  source: 'file', 
-  options: { 
-    path: 'fire.ogg', 
-    loop: true 
-  }
-});
-
-window.addEventListener( 'click', () => {
-
-firesound.play();
-
-      
-    });
-    });
-
-</script>
-
+</script><!--
+<script src="eruda.js"></script>
+<script>eruda.init();</script>-->
 </body>
 </html>
