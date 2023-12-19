@@ -72,7 +72,9 @@ var pixelsizeh = (height / 200);
 var pxw = Math.round(pixelsizew);
 var pxh = Math.round(pixelsizeh);
 var actual = pxw * 100;
-$("body").css("zoom", actual.toString() + "%")
+$("body").css("zoom", actual.toString() + "%");
+$("body").css("-ms-zoom", actual.toString() + "%");
+$("body").css("-moz-transform", "scale("+ pxw + ")");
   
 }
 
@@ -83,7 +85,9 @@ var pixelsizeh = (width / 200);
 var pxw = Math.round(pixelsizew);
 var pxh = Math.round(pixelsizeh);
 var actual = pxw * 100;
-$("body").css("zoom", actual.toString() + "%")
+$("body").css("zoom", actual.toString() + "%");
+$("body").css("-ms-zoom", actual.toString() + "%");
+$("body").css("-moz-transform", "scale("+ pxw + ")");
 }
 
 
